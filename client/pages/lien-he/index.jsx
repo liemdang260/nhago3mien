@@ -1,6 +1,4 @@
-import type {NextPage} from "next";
-
-const Contact: NextPage = () => {
+const Contact = () => {
   return (
     <div className="underline decoration-sky-500/30">
       <div>Trang hien thi lien he</div>

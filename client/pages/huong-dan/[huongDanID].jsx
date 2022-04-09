@@ -1,7 +1,6 @@
-import type {NextPage} from "next";
 import {useRouter} from "next/router";
 
-const Guild: NextPage = () => {
+const Guild = () => {
   const router = useRouter();
   const {huongDanID} = router.query;
 

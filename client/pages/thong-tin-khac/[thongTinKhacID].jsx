@@ -1,6 +1,4 @@
-import type {NextPage} from "next";
-
-const MoreInfomation: NextPage = () => {
+const MoreInfomation = () => {
   return (
     <div className="underline decoration-sky-500/30">
       <div>

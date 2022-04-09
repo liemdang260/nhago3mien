@@ -1,7 +1,6 @@
-import type {NextPage} from "next";
 import {useRouter} from "next/router";
 
-const News: NextPage = () => {
+const News = () => {
   const router = useRouter();
   const {tinTucID} = router.query;
 

@@ -1,7 +1,6 @@
-import type {NextPage} from "next";
 import {useRouter} from "next/router";
 
-const HomeTemplate: NextPage = () => {
+const HomeTemplate = () => {
   const router = useRouter();
   const {loaiNhaID} = router.query;
 
