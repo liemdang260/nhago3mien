@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { useState } from "react";
+import { useEffect } from "react";
 import Title from "./Title";
 
 const data = [
@@ -23,24 +25,650 @@ const data = [
     content:
       "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
   },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/catalog/mau-nha-go/nha-tho-tu-duong/NTD-02/nha-tu-duong-2.1.JPG",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
+  {
+    image:
+      "https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-nam-bo/mau-hue4/nha-hue1-300x300.jpg",
+    title: "Tư vấn và thiết kế theo yêu cầu",
+    content:
+      "Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...",
+  },
 ];
-//style={{display:'flex', justifyContent:'space-between'}}
-function Post({image, title, content}) {
+
+function Post({ image, title, content }) {
   return (
     <div className=" flex justify-between items-center">
-      {/* <div className=' mr-3 border-primary-color overflow-hidden'  style={{borderRadius:'50%', height:'96px', border:'3px solid'}}>
-        <img src={image} style={{borderRadius:'50%', width:'300px',height:'100px'}}></img>
-        <Image src={image} alt={title} width={300} height={300} ></Image>
-      </div> */}
-      <div style={{width: "150px", height: "150px"}} className="p-4">
+      <div style={{ width: "150px", height: "150px" }} className="p-4">
         <div
           className="overflow-hidden relative "
-          style={{width: "100%", height: "100%", borderRadius: "50%"}}
+          style={{ width: "100%", height: "100%", borderRadius: "50%" }}
         >
           <Image src={image} alt={title} layout="fill"></Image>
         </div>
       </div>
-      <div style={{width: "75%"}} className="p-3">
+      <div style={{ width: "75%" }} className="p-3">
         <h4 className="font-medium">{title}</h4>
         <span className="text-xs">{content}</span>
       </div>
@@ -48,12 +676,40 @@ function Post({image, title, content}) {
   );
 }
 
-function Posts() {
+function LandingPage({ index, active, setActive }) {
   return (
-    <div className="flex-1 mr-2 relative">
+    <div
+      className={
+        "inline-block p-1 text-center mx-1 w-[30px] " +
+        (active
+          ? "bg-primary-color text-white"
+          : "text-primary-color hover:bg-gray-200 ")
+      }
+      onClick={() => setActive(index)}
+    >
+      {index + 1}
+    </div>
+  );
+}
+
+function Posts() {
+  const [landingIndex, setLandingIndex] = useState(0);
+  const [landingVisionIndex, setLandingVisionIndex] = useState(0);
+  const handleLandingVision = (action) => {
+    setLandingVisionIndex(landingVisionIndex + action);
+  };
+
+  useEffect(() => {
+    setLandingIndex(landingVisionIndex * 10);
+  }, [landingVisionIndex]);
+  const handleLandingIndex = (index) => {
+    setLandingIndex(index);
+  };
+  return (
+    <div className="flex-1 ml-2 relative">
       <Title title={"Tin tức"} />
       <div className="">
-        {data.map((d, index) => (
+        {data.slice(landingIndex * 3, landingIndex * 3 + 3).map((d, index) => (
           <div key={index}>
             <Post image={d.image} title={d.title} content={d.content} />
             <hr className="border-dashed border-primary-color border-2 border-b-0 border-l-0 border-r-0 " />
@@ -63,6 +719,42 @@ function Posts() {
       <a href="" className="absolute right-2 px-2 text-xl text-primary-color ">
         Xem tất cả
       </a>
+      <div className="mt-8 mx-auto w-[500px]">
+        <div
+          className={
+            "inline-block p-1 text-center mx-1 w-[30px] hover:bg-gray-200 text-primary-color " +
+            (landingVisionIndex == 0 ? "invisible" : "")
+          }
+          onClick={() => handleLandingVision(-1)}
+        >
+          «
+        </div>
+        {Array.from(
+          new Array(
+            (data.length - landingVisionIndex * 10 * 3) / 3 < 10
+              ? (data.length - landingVisionIndex * 10 * 3) / 3
+              : 10
+          ),
+          (a, b) => (
+            <LandingPage
+              index={landingVisionIndex * 10 + b}
+              active={landingVisionIndex * 10 + b == landingIndex}
+              setActive={handleLandingIndex}
+            />
+          )
+        )}
+        <div
+          className={
+            "inline-block p-1 text-center mx-1 w-[30px] hover:bg-gray-200 text-primary-color " +
+            ((data.length - landingVisionIndex * 10 * 3) / 3 < 10
+              ? "hidden"
+              : "")
+          }
+          onClick={() => handleLandingVision(1)}
+        >
+          »
+        </div>
+      </div>
     </div>
   );
 }
