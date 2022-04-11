@@ -18,6 +18,9 @@ module.exports = {
         },
         center: true,
       },
+      fontFamily: {
+        edwardianKT: ["EdwardianKT", "cursive"],
+      },
     },
   },
   plugins: [],
