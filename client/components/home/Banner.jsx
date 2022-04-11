@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styles from 'styles/Home.module.css';
 
 
-function Banner({ images, height = "475px", isControl = false, duration = 5000 }) {
+function Banner({ images, height, isControl = false, duration = 5000 }) {
     const [selectedImage, setSelectedImage] = useState(0);
     const handleSlide = i => _ => {
         const handleSelectedImage = (currentIndex) => {
@@ -26,8 +26,8 @@ function Banner({ images, height = "475px", isControl = false, duration = 5000 }
         <div className='relative'>
             {
                 images && images.map((img, index) => (
-                    <div key={index} className={`${selectedImage === index ? styles.bannerImageVisible : styles.bannerImageHide}`}>
-                        <img key={index} src={img} alt='img' className={`w-full h-[${height}]`} />
+                    <div key={index} className={`w-full h-[${height}] relative ${selectedImage === index ? styles.bannerImageVisible : styles.bannerImageHide}`}>
+                        <Image key={index} src={img} alt='img' layout='fill' />
                     </div>
                 ))
             }

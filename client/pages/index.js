@@ -23,7 +23,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <Banner images={images} isControl />
+        <Banner images={images} height="475px" isControl />
         <About />
       </main>
     </div>
