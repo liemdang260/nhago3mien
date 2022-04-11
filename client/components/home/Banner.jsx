@@ -46,7 +46,7 @@ function Banner({ images, size, isControl = false, duration = 5000 }) {
             <div className='absolute bottom-3 left-1/2 -translate-x-1/2'>
                 {
                     images && images.map((_, index) => (
-                        <span key={index} className={`w-4 h-4 bg-slate-50 opacity-50 inline-block rounded-full mx-2 ${index === selectedImage ? 'bg-white opacity-100' : ''}`} onClick={setSelectedImage.bind(null, index)}></span>
+                        <span key={index} className={`w-3 h-3 bg-slate-50 opacity-50 inline-block rounded-full mx-2 ${index === selectedImage ? 'bg-white opacity-100' : ''}`} onClick={setSelectedImage.bind(null, index)}></span>
                     ))
                 }
             </div>

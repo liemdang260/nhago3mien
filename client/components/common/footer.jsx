@@ -14,20 +14,20 @@ const footerContent = [
 
 const additionalData = [
     { title: 'Địa chỉ', data: '410 đường 3/2 phường 12, quận 10, TP.HCM.', icon: faLocationDot },
-    { title: 'Điện thoại', data: ['0932.112.365 - 1900.55.88.05 - 0909.377.365', faEnvelope, 'anphu365@gmail.com.'], icon: faPhone },
+    { title: 'Điện thoại', data: '0932.112.365 - 1900.55.88.05 - 0909.377.365 - anphu365@gmail.com.', icon: faPhone },
     { title: 'Xưởng', data: 'Ấp 2, Nhị Bình 15, Nhị Bình, Hóc Môn, TP. Hồ Chí Minh.', icon: faLocationDot },
 ]
 
 function Footer() {
     return (
-        <footer className='min-h-screen bg-[#6D594C] mt-10 text-white'>
+        <footer className='min-h-screen bg-[#6D594C] text-white'>
             <div className="container flex pt-24 pb-4">
                 <div className='w-full px-3'>
                     <p className='text-lg text-[#EBC804] font-semibold mb-2'>THÔNG TIN</p>
                     <ul className='mb-5'>
                         {
                             footerContent && footerContent.map((value, index) => (
-                                <li key={index} className='border-b-[1px] border-b-slate-700'><a href="#" className='text-xs font-medium inline-block py-3'>{value}</a></li>
+                                <li key={index} className='border-b-[1px] border-b-slate-700'><a href="#" className='text-xs font-medium block py-3 hover:text-slate-900'>{value}</a></li>
                             ))
                         }
                     </ul>

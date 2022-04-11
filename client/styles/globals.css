@@ -6,3 +6,7 @@
     font-family: "EdwardianKT";
     src: url("../public/fonts/00085-UTM-EdwardianKT.ttf");
   }
+
+:root {
+    --swiper-theme-color: #fff !important;
+}
