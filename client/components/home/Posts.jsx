@@ -50,9 +50,9 @@ function Post({ image, title, content }) {
 
 function Posts() {
   return (
-    <div className="flex-1 mr-2 p-2 relative">
+    <div className="flex-1 mr-2 relative">
       <Title title={"Tin tức"} />
-      <div>
+      <div className="mt-2">
         {data.map((d, index) => (
           <div key={index}>
             <Post image={d.image} title={d.title} content={d.content} />

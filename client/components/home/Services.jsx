@@ -82,7 +82,7 @@ function Services() {
   return (
     <div className="flex-1">
       <Title title="Dịch vụ" />
-      <div className="relative mt-4">
+      <div className="relative mt-2">
         {datas.map((data, index) => (
           <Service
             key={index}
