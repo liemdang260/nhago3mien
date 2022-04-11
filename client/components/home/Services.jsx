@@ -1,8 +1,8 @@
-import { data } from "autoprefixer";
+import {data} from "autoprefixer";
 import Image from "next/image";
-import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import {useState} from "react";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faChevronRight} from "@fortawesome/free-solid-svg-icons";
 import Title from "./Title";
 
 const datas = [
@@ -45,7 +45,7 @@ const datas = [
 
 import React from "react";
 
-function Service({ title, image, content, expand, index, handleExpand }) {
+function Service({title, image, content, expand, index, handleExpand}) {
   return (
     <div className="cursor-pointer p-2">
       <div
@@ -76,13 +76,13 @@ function Service({ title, image, content, expand, index, handleExpand }) {
 
 function Services() {
   const [expandIndex, setExpandIndex] = useState(null);
-  const handleExpand = (index) => {
+  const handleExpand = index => {
     index === expandIndex ? setExpandIndex(null) : setExpandIndex(index);
   };
   return (
     <div className="flex-1">
       <Title title="Dịch vụ" />
-      <div className="relative mt-2">
+      <div className="relative">
         {datas.map((data, index) => (
           <Service
             key={index}
