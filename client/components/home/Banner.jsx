@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styles from 'styles/Home.module.css';
 
 
-function Banner({ images, height, isControl = false, duration = 5000 }) {
+function Banner({ images, size, isControl = false, duration = 5000 }) {
     const [selectedImage, setSelectedImage] = useState(0);
     const handleSlide = i => _ => {
         const handleSelectedImage = (currentIndex) => {
@@ -24,13 +24,15 @@ function Banner({ images, height, isControl = false, duration = 5000 }) {
     }, [])
     return (
         <div className='relative'>
-            {
-                images && images.map((img, index) => (
-                    <div key={index} className={`w-full h-[${height}] relative ${selectedImage === index ? styles.bannerImageVisible : styles.bannerImageHide}`}>
-                        <Image key={index} src={img} alt='img' layout='fill' />
-                    </div>
-                ))
-            }
+            <div className={`w-full ${size === 'small' ? 'h-[300px]' : 'h-[475px]'}`}>
+                {
+                    images && images.map((img, index) => (
+                        <div key={index} className={`w-full h-full ${selectedImage === index ? styles.bannerImageVisible : styles.bannerImageHide}`}>
+                            <Image key={index} src={img} alt='img' layout='fill' />
+                        </div>
+                    ))
+                }
+            </div>
             {
                 isControl && <>
                     <span className='absolute text-[2.5rem] top-1/2 -translate-y-1/2 cursor-pointer select-none text-slate-100 px-2'
@@ -44,7 +46,7 @@ function Banner({ images, height, isControl = false, duration = 5000 }) {
             <div className='absolute bottom-3 left-1/2 -translate-x-1/2'>
                 {
                     images && images.map((_, index) => (
-                        <span key={index} className={`w-4 h-4 bg-gray-800 opacity-50 inline-block rounded-full mx-2 ${index === selectedImage ? 'bg-slate-50 opacity-100' : ''}`} onClick={setSelectedImage.bind(null, index)}></span>
+                        <span key={index} className={`w-4 h-4 bg-slate-50 opacity-50 inline-block rounded-full mx-2 ${index === selectedImage ? 'bg-white opacity-100' : ''}`} onClick={setSelectedImage.bind(null, index)}></span>
                     ))
                 }
             </div>

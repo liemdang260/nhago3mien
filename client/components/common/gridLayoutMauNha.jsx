@@ -3,7 +3,7 @@ import mauHinhAnh from "../../public/nhago.jpg";
 import Title from "components/home/Title";
 
 const GridLayoutMauNha = () => {
-  const Item = ({params}) => {
+  const Item = ({ params }) => {
     return (
       <>
         <div
@@ -18,8 +18,8 @@ const GridLayoutMauNha = () => {
           >
             <ItemHover />
             <div className="absolute w-full flex justify-center">
-              <div class="w-16 overflow-hidden inline-block">
-                <div class=" h-3 w-3 bg-primary-color -rotate-45 transform origin-top-left" />
+              <div className="w-16 overflow-hidden inline-block">
+                <div className=" h-3 w-3 bg-primary-color -rotate-45 transform origin-top-left" />
               </div>
             </div>
           </div>
@@ -66,18 +66,18 @@ const GridLayoutMauNha = () => {
     <div className="container flex flex-col justify-around  hover:first:block">
       <Title title="Mẫu nhà gỗ đẹp" />
       <div className="grid grid-cols-4 gap-7 w-full">
-        <Item params={{title: "Nhà 1", codeProduct: "1245D5"}} />
-        <Item params={{title: "Nhà 2", codeProduct: "1245D5"}} />
-        <Item params={{title: "Nhà 3", codeProduct: "1245D5"}} />
-        <Item params={{title: "Nhà 4", codeProduct: "1245D5"}} />
-        <Item params={{title: "Nhà 5", codeProduct: "1245D5"}} />
-        <Item params={{title: "Nhà 6", codeProduct: "1245D5"}} />
-        <Item params={{title: "Nhà 7", codeProduct: "1245D5"}} />
-        <Item params={{title: "Nhà 8", codeProduct: "1245D5"}} />
-        <Item params={{title: "Nhà 9", codeProduct: "1245D5"}} />
-        <Item params={{title: "Nhà 9", codeProduct: "1245D5"}} />
-        <Item params={{title: "Nhà 9", codeProduct: "1245D5"}} />
-        <Item params={{title: "Nhà 9", codeProduct: "1245D5"}} />
+        <Item params={{ title: "Nhà 1", codeProduct: "1245D5" }} />
+        <Item params={{ title: "Nhà 2", codeProduct: "1245D5" }} />
+        <Item params={{ title: "Nhà 3", codeProduct: "1245D5" }} />
+        <Item params={{ title: "Nhà 4", codeProduct: "1245D5" }} />
+        <Item params={{ title: "Nhà 5", codeProduct: "1245D5" }} />
+        <Item params={{ title: "Nhà 6", codeProduct: "1245D5" }} />
+        <Item params={{ title: "Nhà 7", codeProduct: "1245D5" }} />
+        <Item params={{ title: "Nhà 8", codeProduct: "1245D5" }} />
+        <Item params={{ title: "Nhà 9", codeProduct: "1245D5" }} />
+        <Item params={{ title: "Nhà 9", codeProduct: "1245D5" }} />
+        <Item params={{ title: "Nhà 9", codeProduct: "1245D5" }} />
+        <Item params={{ title: "Nhà 9", codeProduct: "1245D5" }} />
       </div>
     </div>
   );

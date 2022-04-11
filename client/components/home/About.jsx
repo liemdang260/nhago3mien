@@ -11,7 +11,7 @@ function AboutTitle({ title }) {
     return (
         <div className='relative text-center my-6'>
             <div className='absolute bg-primary-color w-full h-[1.5px] top-1/2'></div>
-            <h3 className='bg-white text-primary-color inline-block relative px-8 text-2xl font-semibold'>{title}</h3>
+            <h3 className='bg-white text-primary-color inline-block relative px-8 text-5xl font-bold font-edwardianKT'>{title}</h3>
         </div>
     )
 }
@@ -41,7 +41,7 @@ function About() {
                         <p className='text-right text-primary-color underline'><a href="#" className='hover:font-semibold'>Xem chi tiết</a></p>
                     </div>
                     <div className='basis-1/2 p-4'>
-                        <Banner images={images} height="275px" duration={7000} />
+                        <Banner images={images} size="small" duration={7000} />
                     </div>
                 </div>
             </div>
