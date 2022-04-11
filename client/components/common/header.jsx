@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import styles from 'styles/Header.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
 const navTitle = [
@@ -32,10 +34,12 @@ export default function Header() {
                 <div className='col-span-2 px-3'>
                     <div className='border-[3px] border-primary-color rounded-3xl p-[5px]'>
                         <ul className='bg-primary-color text-white rounded-3xl flex flex-col items-center p-3'>
-                            <li>icon</li>
-                            <li><a href='tel:0932.112.365'>0932.112.365</a></li>
-                            <li><a href='tel:1900.55.88.05'>1900.55.88.05</a></li>
-                            <li><a href='tel:0909.377.365'>0909.377.365</a></li>
+                            <li className='h-9 w-9 border-2 border-white rounded-full text-center leading-8'>
+                                <FontAwesomeIcon icon={faPhone} />
+                            </li>
+                            <li className='font-semibold'><a href='tel:0932.112.365'>0932.112.365</a></li>
+                            <li className='font-semibold'><a href='tel:1900.55.88.05'>1900.55.88.05</a></li>
+                            <li className='font-semibold'><a href='tel:0909.377.365'>0909.377.365</a></li>
                         </ul>
                     </div>
                 </div>
@@ -43,9 +47,11 @@ export default function Header() {
                     <div className='mb-2'>
                         <Image src="https://nhagoanphu.com/image/slogan_anphu.png" alt="slogan" width={381} height={66} />
                     </div>
-                    <div className="flex">
-                        <input className='bg-primary-color text-white outline-0 text-sm grow py-2 px-3 rounded-l-md' type="text" placeholder='Tìm kiếm' />
-                        <button className='bg-primary-color text-white py-[6px] px-3 rounded-r-md'>Tìm</button>
+                    <div className="flex bg-primary-color px-4 py-2 rounded-md">
+                        <input className='bg-primary-color text-white outline-0 text-sm grow' type="text" placeholder='Tìm kiếm' />
+                        <button className='bg-primary-color text-white rounded-r-md'>
+                            <FontAwesomeIcon icon={faMagnifyingGlass} />
+                        </button>
                     </div>
                 </div>
             </div>
