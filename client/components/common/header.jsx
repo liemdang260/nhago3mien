@@ -1,7 +1,18 @@
 import Image from 'next/image';
 import styles from 'styles/Header.module.css';
+import { useState } from 'react';
 
+const navTitle = [
+    'TRANG CHỦ',
+    'GIỚI THIỆU',
+    'MẪU NHÀ GỖ ĐẸP',
+    'DỊCH VỤ',
+    'TIN TỨC',
+    'HƯỚNG DẪN',
+    'LIÊN HỆ',
+]
 export default function Header() {
+    const [index, setIndex] = useState(0);
     return (
         <header>
             <div className="bg-[#6D594C] text-white py-2">
@@ -39,14 +50,15 @@ export default function Header() {
                 </div>
             </div>
             <nav className='bg-primary-color'>
-                <ul className='flex justify-between container text-white px-16 text-'>
-                    <li><a className={`p-4 inline-block font-semibold ${styles.active}`} href="#">TRANG CHỦ</a></li>
-                    <li><a className='p-4 inline-block font-semibold' href="#">GIỚI THIỆU</a></li>
-                    <li><a className='p-4 inline-block font-semibold' href="#">MẪU NHÀ GỖ ĐẸP</a></li>
-                    <li><a className='p-4 inline-block font-semibold' href="#">DỊCH VỤ</a></li>
-                    <li><a className='p-4 inline-block font-semibold' href="#">TIN TỨC</a></li>
-                    <li><a className='p-4 inline-block font-semibold' href="#">HƯỚNG DẪN</a></li>
-                    <li><a className='p-4 inline-block font-semibold' href="#">LIÊN HỆ</a></li>
+                <ul className='flex container text-white px-16'>
+                    {
+                        navTitle && navTitle.map((title, i) => (
+                            <li key={i} className="grow">
+                                <a className={`py-4 w-full text-center inline-block font-semibold ${index === i ? styles.active : ''} hover:border-b-[5px] hover:border-white hover:bg-[#3B2414] transition ease-in-out duration-200`} href="#">{title}
+                                </a>
+                            </li>
+                        ))
+                    }
                 </ul>
             </nav>
         </header>
