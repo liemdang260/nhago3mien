@@ -24,7 +24,7 @@ function Banner({ images, size, isControl = false, duration = 5000 }) {
     }, [])
     return (
         <div className='relative'>
-            <div className={`w-full ${size === 'small' ? 'h-[300px]' : 'h-[475px]'}`}>
+            <div className={`w-full ${size === 'small' ? 'h-[300px]' : 'h-[462px]'}`}>
                 {
                     images && images.map((img, index) => (
                         <div key={index} className={`w-full h-full ${selectedImage === index ? styles.bannerImageVisible : styles.bannerImageHide}`}>
