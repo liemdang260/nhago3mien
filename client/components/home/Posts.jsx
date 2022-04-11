@@ -693,7 +693,6 @@ function LandingPage({ index, active, setActive }) {
 }
 
 function Posts() {
-  console.log(data.length)
   const [landingIndex, setLandingIndex] = useState(0);
   const [landingVisionIndex, setLandingVisionIndex] = useState(0);
   const handleLandingVision = (action) => {
