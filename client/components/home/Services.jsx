@@ -80,7 +80,7 @@ function Services() {
     index === expandIndex ? setExpandIndex(null) : setExpandIndex(index);
   };
   return (
-    <div className="flex-1 mr-2">
+    <div className="flex-1 mr-4">
       <Title title="Dịch vụ" />
       <div className="relative">
         {datas.map((data, index) => (

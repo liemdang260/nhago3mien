@@ -706,7 +706,7 @@ function Posts() {
     setLandingIndex(index);
   };
   return (
-    <div className="flex-1 ml-2 relative">
+    <div className="flex-1 ml-4 relative">
       <Title title={"Tin tức"} />
       <div className="">
         {data.slice(landingIndex * 3, landingIndex * 3 + 3).map((d, index) => (
