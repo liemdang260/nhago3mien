@@ -9,7 +9,7 @@ const images = [
 
 function AboutTitle({ title }) {
     return (
-        <div className='relative text-center my-6'>
+        <div className='relative text-center my-8'>
             <div className='absolute bg-primary-color w-full h-[1.5px] top-1/2'></div>
             <h3 className='bg-white text-primary-color inline-block relative px-8 text-5xl font-bold font-edwardianKT'>{title}</h3>
         </div>
