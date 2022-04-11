@@ -1,7 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
 import Banner from "components/home/Banner";
+import About from "components/home/About";
 import styles from "../styles/Home.module.css";
+
+const images = [
+  "/banner1.jpg",
+  "/banner2.jpg",
+  "/banner3.jpg",
+];
 
 export default function Home() {
   return (
@@ -16,7 +23,8 @@ export default function Home() {
       </Head>
 
       <main>
-        <Banner />
+        <Banner images={images} isControl />
+        <About />
       </main>
     </div>
   );
