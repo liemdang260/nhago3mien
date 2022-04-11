@@ -1,7 +1,18 @@
 import Image from 'next/image';
 import styles from 'styles/Header.module.css';
+import { useState } from 'react';
 
+const navTitle = [
+    { title: 'TRANG CHỦ', isDropdown: false },
+    { title: 'GIỚI THIỆU', isDropdown: false },
+    { title: 'MẪU NHÀ GỖ ĐẸP', isDropdown: true, dropDownContent: ['NHÀ TỪ ĐƯỜNG', 'NHÀ GỖ HIỆN ĐẠI', 'NHÀ SÀN GỖ (DÂN TỘC)', 'NHÀ CỔ TRUYỀN', 'NHÀ LỤC GIÁC'] },
+    { title: 'DỊCH VỤ', isDropdown: true, dropDownContent: ['THIẾT KẾ VÀ THI CÔNG NHÀ GỖ', 'THIẾT KẾ, THI CÔNG NỘI THẤT', 'THIẾT KẾ, THI CÔNG KHÔNG GIAN THỜ', 'CUNG CẤP ĐỒ GỖ THÀNH PHẨM'] },
+    { title: 'TIN TỨC', isDropdown: false },
+    { title: 'HƯỚNG DẪN', isDropdown: true, dropDownContent: ['HƯỚNG DẪN THANH TOÁN', 'HƯỚNG DẪN ĐẶT HÀNG'] },
+    { title: 'LIÊN HỆ', isDropdown: false },
+]
 export default function Header() {
+    const [index, setIndex] = useState(0);
     return (
         <header>
             <div className="bg-[#6D594C] text-white py-2">
@@ -39,14 +50,29 @@ export default function Header() {
                 </div>
             </div>
             <nav className='bg-primary-color'>
-                <ul className='flex justify-between container text-white px-16 text-'>
-                    <li><a className={`p-4 inline-block font-semibold ${styles.active}`} href="#">TRANG CHỦ</a></li>
-                    <li><a className='p-4 inline-block font-semibold' href="#">GIỚI THIỆU</a></li>
-                    <li><a className='p-4 inline-block font-semibold' href="#">MẪU NHÀ GỖ ĐẸP</a></li>
-                    <li><a className='p-4 inline-block font-semibold' href="#">DỊCH VỤ</a></li>
-                    <li><a className='p-4 inline-block font-semibold' href="#">TIN TỨC</a></li>
-                    <li><a className='p-4 inline-block font-semibold' href="#">HƯỚNG DẪN</a></li>
-                    <li><a className='p-4 inline-block font-semibold' href="#">LIÊN HỆ</a></li>
+                <ul className='flex container text-white px-16'>
+                    {
+                        navTitle && navTitle.map((title, i) => (
+                            <li key={i} className={`group grow relative hover:border-b-[5px] hover:border-white hover:bg-[#3B2414] transition ease-in-out duration-200 ${index === i ? styles.active : ''} `}>
+                                <a className={`py-4 w-full text-center inline-block font-semibold`} href="#">{title.title}
+                                    {
+                                        title.isDropdown &&
+                                        <p className='inline-block ml-3 text-xs -rotate-90'>&#10094;</p>
+                                    }
+                                </a>
+                                {
+                                    title.isDropdown && <ul className='absolute z-10 w-auto whitespace-nowrap bg-primary-color mt-1 hidden group-hover:block'>
+                                        {
+                                            title.dropDownContent && title.dropDownContent.map((item, index) => (
+                                                <li key={index}><a href="#" className='block px-6 py-2 hover:bg-[#3B2414]'>{item}</a></li>
+                                            ))
+                                        }
+                                        <li><a href="#" className='block px-6 py-3 hover:bg-[#3B2414] text-[0.8rem] border-t-2 border-slate-100 font-medium'>XEM TẤT CẢ {title.title}</a></li>
+                                    </ul>
+                                }
+                            </li>
+                        ))
+                    }
                 </ul>
             </nav>
         </header>
