@@ -3,7 +3,7 @@ import Image from "next/image";
 import {useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faChevronRight} from "@fortawesome/free-solid-svg-icons";
-import Title from "./Title";
+import Title from "../common/Title";
 
 const datas = [
   {

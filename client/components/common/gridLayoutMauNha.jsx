@@ -1,6 +1,6 @@
 import Image from "next/image";
 import mauHinhAnh from "../../public/nhago.jpg";
-import Title from "components/home/Title";
+import Title from "components/common/Title";
 
 const GridLayoutMauNha = () => {
   const Item = ({ params }) => {
