@@ -1,5 +1,13 @@
+import { PageWrapper, PageItem } from "components/common/PageWrapper";
+
 const AllServices = () => {
-  return <div>Trang hien thi tat ca dich vut</div>;
+  return (
+    <PageWrapper>
+      <PageItem>Breadcrumbs</PageItem>
+      <PageItem>Sidebar</PageItem>
+      <PageItem>Content</PageItem>
+    </PageWrapper>
+  )
 };
 
 export default AllServices;
