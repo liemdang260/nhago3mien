@@ -1,6 +1,6 @@
 import Image from "next/image";
-import {useState} from "react";
-import {useEffect} from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 import Title from "./Title";
 
 const data = [
@@ -657,18 +657,18 @@ const data = [
   },
 ];
 
-function Post({image, title, content}) {
+function Post({ image, title, content }) {
   return (
     <div className=" flex justify-between items-center">
-      <div style={{width: "150px", height: "150px"}} className="p-4">
+      <div style={{ width: "150px", height: "150px" }} className="p-4">
         <div
           className="overflow-hidden relative "
-          style={{width: "100%", height: "100%", borderRadius: "50%"}}
+          style={{ width: "100%", height: "100%", borderRadius: "50%" }}
         >
           <Image src={image} alt={title} layout="fill"></Image>
         </div>
       </div>
-      <div style={{width: "75%"}} className="p-3">
+      <div style={{ width: "75%" }} className="p-3">
         <h4 className="font-medium">{title}</h4>
         <span className="text-xs">{content}</span>
       </div>
@@ -676,7 +676,7 @@ function Post({image, title, content}) {
   );
 }
 
-function LandingPage({index, active, setActive}) {
+function LandingPage({ index, active, setActive }) {
   return (
     <div
       className={
@@ -695,14 +695,14 @@ function LandingPage({index, active, setActive}) {
 function Posts() {
   const [landingIndex, setLandingIndex] = useState(0);
   const [landingVisionIndex, setLandingVisionIndex] = useState(0);
-  const handleLandingVision = action => {
+  const handleLandingVision = (action) => {
     setLandingVisionIndex(landingVisionIndex + action);
   };
 
   useEffect(() => {
     setLandingIndex(landingVisionIndex * 10);
   }, [landingVisionIndex]);
-  const handleLandingIndex = index => {
+  const handleLandingIndex = (index) => {
     setLandingIndex(index);
   };
   return (
@@ -737,6 +737,7 @@ function Posts() {
           ),
           (a, b) => (
             <LandingPage
+              key={b}
               index={landingVisionIndex * 10 + b}
               active={landingVisionIndex * 10 + b == landingIndex}
               setActive={handleLandingIndex}
