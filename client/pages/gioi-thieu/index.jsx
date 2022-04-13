@@ -18,9 +18,9 @@ const Introduction = () => {
       <PageItem>
         <h2 className="font-bold text-xl text-primary-color">Giới thiệu</h2>
         <p className="border-2 p-3 text-sm">
-          <h6 className="text-primary-color font-semibold">
+          <span className="text-primary-color font-semibold">
             Nhà gỗ An Phú xin kính chào Quý khách hàng!
-          </h6>
+          </span>
           <span className="indent-[70px] inline-block">
             Lời đầu tiên Nhà gỗ An Phú xin gửi tới Quý khách hàng lới chào trân
             trọng, lời cảm ơn chân thành nhất đến Quý khách hàng đã và đang sử
@@ -113,7 +113,7 @@ const Introduction = () => {
           </span>
           <br />
           <br />
-          <p className="text-center text-primary-color">
+          <span className="text-center text-primary-color">
             <span>
               Mọi chi tiết xin liên hệ:
               <br />
@@ -123,10 +123,10 @@ const Introduction = () => {
               <br />
               Điện thoại : 02873.00.83.88- 1900 55 88 05 - 0909 377 365
             </span>
-          </p>
+          </span>
           <br />
           <br />
-          <p className="text-center text-primary-color">
+          <span className="text-center text-primary-color">
             <span>
               Xưởng sản xuất
               <br />
@@ -136,7 +136,7 @@ const Introduction = () => {
               Điện thoại : 02873.00.83.88- 0932.112.365
               <br /> Hoặc truy cập: https://nhagoanphu.com/
             </span>
-          </p>
+          </span>
         </p>
       </PageItem>
     </PageWrapper>
