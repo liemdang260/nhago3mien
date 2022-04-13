@@ -737,7 +737,6 @@ function Posts() {
           ),
           (a, b) => (
             <LandingPage
-              key={b}
               index={landingVisionIndex * 10 + b}
               active={landingVisionIndex * 10 + b == landingIndex}
               setActive={handleLandingIndex}
