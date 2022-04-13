@@ -8,7 +8,7 @@ import { PageItem, PageWrapper } from "components/common/PageWrapper";
 const Introduction = () => {
   return (
     <PageWrapper>
-      <PageItem><BreadCrumb location={['Trang chủ','Giới Thiệu']}/></PageItem>
+      <PageItem><BreadCrumb location={['Trang chủ', 'Giới Thiệu']} /></PageItem>
       <PageItem>
         <PostsTitle />
         <Category />
