@@ -2,13 +2,15 @@ import PostsTitle from "components/common/SideBar/PostsTitle";
 import Category from "components/common/SideBar/Category";
 import Support from "components/common/SideBar/Support";
 import Contact from "components/common/SideBar/Contact";
-import BreadCrumb from 'components/common/SideBar/Breadcrumb'
+import BreadCrumb from "components/common/SideBar/Breadcrumb";
 import { PageItem, PageWrapper } from "components/common/PageWrapper";
 
 const Introduction = () => {
   return (
     <PageWrapper>
-      <PageItem><BreadCrumb location={['Trang chủ','Giới Thiệu']}/></PageItem>
+      <PageItem>
+        <BreadCrumb location={[{title:"Trang chủ",link:'/'},{title: "Giới Thiệu",link:'/gioi-thieu'}]} />
+      </PageItem>
       <PageItem>
         <PostsTitle />
         <Category />
@@ -21,6 +23,8 @@ const Introduction = () => {
           <span className="text-primary-color font-semibold">
             Nhà gỗ An Phú xin kính chào Quý khách hàng!
           </span>
+          <br />
+          <br />
           <span className="indent-[70px] inline-block">
             Lời đầu tiên Nhà gỗ An Phú xin gửi tới Quý khách hàng lới chào trân
             trọng, lời cảm ơn chân thành nhất đến Quý khách hàng đã và đang sử
@@ -30,14 +34,17 @@ const Introduction = () => {
           <br />
           <br />
           <span className="indent-[70px] inline-block">
-            <span className="font-semibold text-primary-color">Nhà gỗ An Phú</span> là một thương hiệu uy tín trong lĩnh vực
-            thiết kế, thi công và cung cấp nhà gỗ tại TPHCM cũng như ở nhiều
-            tỉnh thành khác trên toàn quốc. Với kinh nghiệm đã tích lũy được
-            trong thời gian dài hoạt động cùng đội ngũ nhân viên chuyên nghiệp,
-            có tay nghề và trình độ cao, nhà gỗ An Phú tự hào mang đến cho Quý
-            khách hàng những sản phẩm và dịch vụ tốt nhất với chi phí về tài
-            chính và thời gian là thấp nhất.
+            <span className="font-semibold text-primary-color">
+              Nhà gỗ An Phú
+            </span>
+            là một thương hiệu uy tín trong lĩnh vực thiết kế, thi công và cung
+            cấp nhà gỗ tại TPHCM cũng như ở nhiều tỉnh thành khác trên toàn
+            quốc. Với kinh nghiệm đã tích lũy được trong thời gian dài hoạt động
+            cùng đội ngũ nhân viên chuyên nghiệp, có tay nghề và trình độ cao,
+            nhà gỗ An Phú tự hào mang đến cho Quý khách hàng những sản phẩm và
+            dịch vụ tốt nhất với chi phí về tài chính và thời gian là thấp nhất.
           </span>
+          <br />
           <br />
           <span className="indent-[70px] inline-block text-sm">
             Nhà gỗ An Phú được thành lập với nghành nghề kinh doanh chính:
@@ -113,7 +120,7 @@ const Introduction = () => {
           </span>
           <br />
           <br />
-          <span className="text-center text-primary-color">
+          <span className="text-center text-primary-color block mx-auto">
             <span>
               Mọi chi tiết xin liên hệ:
               <br />
@@ -126,7 +133,7 @@ const Introduction = () => {
           </span>
           <br />
           <br />
-          <span className="text-center text-primary-color">
+          <span className="text-center text-primary-color block">
             <span>
               Xưởng sản xuất
               <br />
