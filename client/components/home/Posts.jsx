@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { useEffect } from "react";
 import Title from "../common/Title";
+import LandingPages from "components/common/LandingPages";
 
 const data = [
   {
@@ -719,7 +720,16 @@ function Posts() {
       <a href="" className="absolute right-2 px-2 text-xl text-primary-color ">
         Xem tất cả
       </a>
-      <div className="mt-8 mx-auto w-[500px]">
+      <LandingPages
+        handleLandingIndex={handleLandingIndex}
+        itemsPerPage={3}
+        landingVisionIndex={landingVisionIndex}
+        landingIndex={landingIndex}
+        length={data.length}
+        handleLandingVision={handleLandingVision}
+        // countOfPageVision={20}
+      />
+      {/* <div className="mt-8 mx-auto w-[500px]">
         <div
           className={
             "inline-block p-1 text-center mx-1 w-[30px] hover:bg-gray-200 text-primary-color " +
@@ -754,7 +764,7 @@ function Posts() {
         >
           »
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
