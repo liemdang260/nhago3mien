@@ -6,7 +6,7 @@ import Image from "next/image";
 function Contact() {
   return (
     <div className="text-primary-color">
-      <Title title={"Liên hệ"} size={"30px"} />
+      <Title title={"Liên hệ"} size={"25px"} />
       <div className="w-[25px] mx-auto">
         <FontAwesomeIcon
           icon={faPhone}

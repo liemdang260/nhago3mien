@@ -11,7 +11,7 @@ const data = [
 function Category() {
   return (
     <div>
-      <Title title={"Danh mục sản phẩm"} size={"30px"} />
+      <Title title={"Danh mục sản phẩm"} size={"25px"} />
       <ul className="text-white">
         {data.map((d, index) => (
           <li key={index} className="p-2 my-2 bg-primary-color font-bold hover:text-red-600 rounded-md">
