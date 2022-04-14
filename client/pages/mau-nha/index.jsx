@@ -10,6 +10,11 @@ import {useEffect, useState} from "react";
 import {Item} from "components/common/gridLayoutMauNha";
 import Image from "next/image";
 import mauHinhAnh from "../../public/nhago.jpg";
+import LandingPages from "components/common/LandingPages";
+import Category from "components/common/SideBar/Category";
+import Support from "components/common/SideBar/Support";
+import Contact from "components/common/SideBar/Contact";
+import BreadCrumb from "components/common/SideBar/Breadcrumb";
 
 const dummyData = [
   {
@@ -112,6 +117,26 @@ const dummyData = [
     title: "Nẫu nhà gỗ hiện đại 03",
     codeProduct: "NGBG-01",
   },
+  {
+    title: "Nẫu nhà gỗ hiện đại 03",
+    codeProduct: "NGBG-01",
+  },
+  {
+    title: "Nẫu nhà gỗ hiện đại 03",
+    codeProduct: "NGBG-01",
+  },
+  {
+    title: "Nẫu nhà gỗ hiện đại 03",
+    codeProduct: "NGBG-01",
+  },
+  {
+    title: "Nẫu nhà gỗ hiện đại 03",
+    codeProduct: "NGBG-01",
+  },
+  {
+    title: "Nẫu nhà gỗ hiện đại 03",
+    codeProduct: "NGBG-01",
+  },
 ];
 
 const Item2 = ({params}) => {
@@ -146,6 +171,9 @@ const Item2 = ({params}) => {
 const AllHomeTemplate = () => {
   const [data, setData] = useState(dummyData);
   const [gridLayout, setGridLayout] = useState(true);
+  const [landingIndex, setLandingIndex] = useState(0);
+  const [landingVisionIndex, setLandingVisionIndex] = useState(0);
+
   const [selectedOption, setSelectedOption] = useState({
     value: "Default",
     label: "Mặc định",
@@ -172,6 +200,16 @@ const AllHomeTemplate = () => {
     {value: "TypeDESC", label: "Kiểu (Z-A)"},
   ];
 
+  const handleLandingIndex = index => {
+    setLandingIndex(index);
+  };
+  const handleLandingVision = action => {
+    setLandingVisionIndex(landingVisionIndex + action);
+  };
+  useEffect(() => {
+    setLandingIndex(landingVisionIndex * 10);
+  }, [landingVisionIndex]);
+
   const handleChangeOption = change => {
     switch (change.value) {
       case "NameASC":
@@ -193,8 +231,20 @@ const AllHomeTemplate = () => {
 
   return (
     <PageWrapper>
-      <PageItem>Breadcums</PageItem>
-      <PageItem>Sidebar</PageItem>
+      <PageItem>
+        {" "}
+        <BreadCrumb
+          location={[
+            {title: "Trang chủ", link: "/"},
+            {title: "Tất cả sản phẩm", link: "/mau-nha"},
+          ]}
+        />
+      </PageItem>
+      <PageItem>
+        <Category />
+        <Support />
+        <Contact />
+      </PageItem>
       <PageItem>
         <div className="pl-4 pt-4 pr-4">
           <div className="w-full flex justify-between">
@@ -209,7 +259,7 @@ const AllHomeTemplate = () => {
               </span>
               <span
                 onClick={() => setGridLayout(false)}
-                className={`border border-solid border-primary-color py-2 px-3 rounded-r-md ${
+                className={`border-solid border-primary-color py-2 px-3 rounded-r-md ${
                   !gridLayout ? "border-4" : "border"
                 }`}
               >
@@ -242,7 +292,11 @@ const AllHomeTemplate = () => {
           >
             {gridLayout
               ? data
-                  .slice(0, Number(selectedOption2.value))
+                  .slice(
+                    landingIndex * Number(selectedOption2.value),
+                    landingIndex * Number(selectedOption2.value) +
+                      Number(selectedOption2.value)
+                  )
                   .map((_item, _index) => (
                     <Item
                       key={_index}
@@ -252,17 +306,33 @@ const AllHomeTemplate = () => {
                       }}
                     />
                   ))
-              : data.map((_item, _index) => (
-                  <Item2
-                    key={_index}
-                    params={{
-                      title: _item.title,
-                      codeProduct: _item.codeProduct,
-                      url: _item.url,
-                    }}
-                  />
-                ))}
+              : data
+                  .slice(
+                    landingIndex * Number(selectedOption2.value),
+                    landingIndex * Number(selectedOption2.value) +
+                      Number(selectedOption2.value)
+                  )
+                  .map((_item, _index) => (
+                    <Item2
+                      key={_index}
+                      params={{
+                        title: _item.title,
+                        codeProduct: _item.codeProduct,
+                        url: _item.url,
+                      }}
+                    />
+                  ))}
           </div>
+        </div>
+        <div>
+          <LandingPages
+            handleLandingIndex={handleLandingIndex}
+            itemsPerPage={Number(selectedOption2.value)}
+            landingVisionIndex={landingVisionIndex}
+            landingIndex={landingIndex}
+            length={data.length}
+            handleLandingVision={handleLandingVision}
+          />
         </div>
       </PageItem>
     </PageWrapper>

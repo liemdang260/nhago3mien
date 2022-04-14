@@ -1,6 +1,6 @@
 import Image from "next/image";
 import mauHinhAnh from "../../public/nhago.jpg";
-import Title from "components/home/Title";
+import Title from "components/common/Title";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPhoneFlip} from "@fortawesome/free-solid-svg-icons";
 
@@ -40,7 +40,7 @@ const Item = ({params}) => {
             params.title.split(" ").length > 7 ? "text-sm mt-2" : "text-lg"
           }`}
         >
-          {params.title.substring(0, 40)}
+          {params.title.substring(0, 35)}
         </div>
         <div className="text-base font-semibold text-primary-color">
           Mã SP: {params.codeProduct}
