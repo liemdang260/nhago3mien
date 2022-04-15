@@ -1,6 +1,6 @@
 import Title from "../Title";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faCaretRight} from '@fortawesome/free-solid-svg-icons'
+import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
 const data = [
   { title: "MẪU NHÀ SÀN", link: "" },
   { title: "MẪU NHÀ HIỆN ĐẠI", link: "" },
@@ -15,7 +15,7 @@ function Category() {
       <ul className="text-white">
         {data.map((d, index) => (
           <li key={index} className="p-2 my-2 bg-primary-color font-bold hover:text-red-600 rounded-md">
-            <FontAwesomeIcon icon={faCaretRight} className='mr-3'/>
+            <FontAwesomeIcon icon={faCaretRight} className='mr-3' />
             <a href={d.link}>{d.title}</a>
           </li>
         ))}

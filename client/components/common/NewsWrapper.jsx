@@ -4,6 +4,10 @@ import { faClock, faEye } from '@fortawesome/free-regular-svg-icons';
 import { faList, } from '@fortawesome/free-solid-svg-icons';
 import Link from "next/link";
 import Image from "next/image";
+import Category from './SideBar/Category';
+import Support from './SideBar/Support';
+import Contact from './SideBar/Contact';
+import ArticleInsights from './ArticleInsights'
 import Tooltip from "./Tooltip";
 
 const mostViewedNews = [
@@ -46,14 +50,12 @@ export const MostViewedItem = ({ item }) => {
         <Tooltip title={item.title}>
             <Link href={'#'}>
                 <a className="flex px-3 py-2 border-b-[1px] border-gray-200">
-                    <Image src={item.imgLink} alt="Hinh anh tin tuc 1" width={60} height={40} objectFit="contain" />
-                    <div className="ml-3 w-9/12">
+                    <Image src={item.imgLink} alt="Hinh anh tin tuc 1" width={60} height={45} objectFit="contain" />
+                    <div className="ml-3 w-8/12">
                         <p className="text-sm mb-1 truncate">{item.title}</p>
-                        <p className="text-[0.8rem] text-gray-700">
-                            <FontAwesomeIcon icon={faClock} size="sm" className="mr-[1px]" />
-                            <span className="mr-2">{item.createAt}</span>
-                            <FontAwesomeIcon icon={faEye} size="sm" className="mr-[1px]" />
-                            <span>{item.views}</span>
+                        <p className="text-[0.8rem] text-gray-500">
+                            <ArticleInsights data={item.createAt} icon={faClock} />
+                            <ArticleInsights data={item.views} icon={faEye} />
                         </p>
                     </div>
                 </a>
@@ -93,9 +95,11 @@ export const NewsSidebar = () => {
                             <li key={index}><HotViewedItem item={item} /></li>
                         ))
                     }
-
                 </ul>
             </ViewList>
+            <Category />
+            <Support />
+            <Contact />
         </div>
     )
 
