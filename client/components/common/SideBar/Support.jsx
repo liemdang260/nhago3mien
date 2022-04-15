@@ -10,7 +10,7 @@ const data = [
 function Support() {
   return (
     <div>
-      <Title title={"Hỗ trọ trực tuyến"} size={"30px"} />
+      <Title title={"Hỗ trọ trực tuyến"} size={"25px"} />
       <div className="text-primary-color border-primary-color border-4 rounded-xl border-double py-5 px-3">
         {data.map((d, index) => (
           <div key={index} className="flex items-center my-1">

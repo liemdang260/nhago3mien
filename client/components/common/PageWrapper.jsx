@@ -13,14 +13,14 @@ function PageWrapper({ children }) {
     const childrenArray = React.Children.toArray(children);
     return (
         <div className='container grid grid-cols-12'>
-            <div className='col-span-12 border-b-[1px] border-slate-400 py-2'>
+            <div className='col-span-12 border-b-[1px] border-gray-300 py-2'>
                 {childrenArray[0]}
             </div>
 
-            <div className='col-span-3 border-r-[1px] border-slate-400 py-2 pr-4'>
+            <div className='col-span-3 border-r-[1px] border-gray-300 py-2 pr-4'>
                 {childrenArray[1]}
             </div>
-            <div className='col-span-9 border-l-[1px] border-slate-400 py-2 pl-4'>
+            <div className='col-span-9 border-l-[1px] border-gray-300 py-2 pl-4'>
                 {childrenArray[2]}
             </div>
         </div>
