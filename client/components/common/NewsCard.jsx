@@ -8,24 +8,35 @@ import Link from 'next/link';
 import Tooltip from './Tooltip';
 
 function NewsCard({ item }) {
-  return (
-    <Link href={"#"} passHref>
-      <div className='w-full md:w-1/2 p-8 border-t-[1px] border-dotted border-primary-color'>
-        <Tooltip title={item.title}>
-          {/* <div className='w-full h-[276px] relative border-[1px] border-dotted border-gray-200'> */}
-          <Image src={item.imgLink} alt="anh dich vu 1" width={375} height={275} />
-          {/* </div> */}
-          <p className='text-primary-color text-lg font-medium mt-2'>{item.title}</p>
-          <p className="text-[0.8rem] text-gray-400 mt-3">
-            <ArticleInsights data={item.createAt} icon={faClock} />
-            <ArticleInsights data={item.views} icon={faEye} />
-            <ArticleInsights data={item.tag} icon={faServicestack} />
-          </p>
-          <p className='mt-2 text-gray-600 text-sm'>{item.description}</p>
-        </Tooltip>
-      </div>
-    </Link>
-  )
+    return (
+        <Link href={'#'} passHref>
+            <div className='w-full md:w-1/2 p-8 border-t-[1px] border-dotted border-primary-color'>
+                <Tooltip title={item.title}>
+                    <Image
+                        src={item.imgLink}
+                        alt='anh dich vu 1'
+                        width={375}
+                        height={275}
+                    />
+
+                    <p className='text-primary-color text-lg font-medium mt-2'>
+                        {item.title}
+                    </p>
+                    <p className='text-[0.8rem] text-gray-400 mt-3'>
+                        <ArticleInsights data={item.createAt} icon={faClock} />
+                        <ArticleInsights data={item.views} icon={faEye} />
+                        <ArticleInsights
+                            data={item.tag}
+                            icon={faServicestack}
+                        />
+                    </p>
+                    <p className='mt-2 text-gray-600 text-sm'>
+                        {item.description}
+                    </p>
+                </Tooltip>
+            </div>
+        </Link>
+    );
 }
 
-export default NewsCard
+export default NewsCard;
