@@ -42,6 +42,7 @@ function LandingPages({
         ),
         (a, b) => (
           <LandingPage
+            key={b}
             index={landingVisionIndex * countOfPageVision + b}
             active={landingVisionIndex * countOfPageVision + b == landingIndex}
             setActive={handleLandingIndex}
@@ -51,7 +52,7 @@ function LandingPages({
       <div
         className={
           "inline-block p-1 text-center mx-1 w-[30px] hover:bg-gray-200 text-primary-color " +
-          ((length - landingVisionIndex * countOfPageVision *itemsPerPage) / itemsPerPage < countOfPageVision ? "hidden" : "")
+          ((length - landingVisionIndex * countOfPageVision * itemsPerPage) / itemsPerPage < countOfPageVision ? "hidden" : "")
         }
         onClick={() => handleLandingVision(1)}
       >

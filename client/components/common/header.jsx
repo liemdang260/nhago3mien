@@ -5,13 +5,13 @@ import { faPhone, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
 const navTitle = [
-    { title: 'TRANG CHỦ', isDropdown: false },
-    { title: 'GIỚI THIỆU', isDropdown: false },
-    { title: 'MẪU NHÀ GỖ ĐẸP', isDropdown: true, dropDownContent: ['NHÀ TỪ ĐƯỜNG', 'NHÀ GỖ HIỆN ĐẠI', 'NHÀ SÀN GỖ (DÂN TỘC)', 'NHÀ CỔ TRUYỀN', 'NHÀ LỤC GIÁC'] },
-    { title: 'DỊCH VỤ', isDropdown: true, dropDownContent: ['THIẾT KẾ VÀ THI CÔNG NHÀ GỖ', 'THIẾT KẾ, THI CÔNG NỘI THẤT', 'THIẾT KẾ, THI CÔNG KHÔNG GIAN THỜ', 'CUNG CẤP ĐỒ GỖ THÀNH PHẨM'] },
-    { title: 'TIN TỨC', isDropdown: false },
-    { title: 'HƯỚNG DẪN', isDropdown: true, dropDownContent: ['HƯỚNG DẪN THANH TOÁN', 'HƯỚNG DẪN ĐẶT HÀNG'] },
-    { title: 'LIÊN HỆ', isDropdown: false },
+    { link: '/', title: 'TRANG CHỦ', isDropdown: false },
+    { link: '/gioi-thieu', title: 'GIỚI THIỆU', isDropdown: false },
+    { link: '/mau-nha', title: 'MẪU NHÀ GỖ ĐẸP', isDropdown: true, dropDownContent: ['NHÀ TỪ ĐƯỜNG', 'NHÀ GỖ HIỆN ĐẠI', 'NHÀ SÀN GỖ (DÂN TỘC)', 'NHÀ CỔ TRUYỀN', 'NHÀ LỤC GIÁC'] },
+    { link: '/dich-vu', title: 'DỊCH VỤ', isDropdown: true, dropDownContent: ['THIẾT KẾ VÀ THI CÔNG NHÀ GỖ', 'THIẾT KẾ, THI CÔNG NỘI THẤT', 'THIẾT KẾ, THI CÔNG KHÔNG GIAN THỜ', 'CUNG CẤP ĐỒ GỖ THÀNH PHẨM'] },
+    { link: '/tin-tuc', title: 'TIN TỨC', isDropdown: false },
+    { link: '/huong-dan', title: 'HƯỚNG DẪN', isDropdown: true, dropDownContent: ['HƯỚNG DẪN THANH TOÁN', 'HƯỚNG DẪN ĐẶT HÀNG'] },
+    { link: '/lien-he', title: 'LIÊN HỆ', isDropdown: false },
 ]
 export default function Header() {
     const [index, setIndex] = useState(0);
