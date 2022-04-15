@@ -9,7 +9,7 @@ const data = [
 function PostsTitle() {
   return (
     <div className="w-[100%] bg-primary-color text-white p-4 text-base">
-      <p className="text-center font-bold text-[20px]">Nội dung bài viết</p>
+      <p className="text-center font-bold text-[25px]">Nội dung bài viết</p>
       <ul>
         {data.map((d, index) => (
           <li key={index} className='my-2'>
