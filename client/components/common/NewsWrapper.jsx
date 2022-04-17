@@ -155,7 +155,7 @@ const NewsWrapper = ({ children, pathname }) => {
                 <Breadcrumb
                     location={[
                         { title: 'Trang chủ', link: '/' },
-                        { title: 'Dịch vụ', link: '/dich-vu' },
+                        { title: pathname.title, link: pathname.link },
                     ]}
                 />
             </PageItem>

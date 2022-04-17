@@ -62,7 +62,7 @@ const data = [
 const AllServices = () => {
     const { pathname } = useRouter();
     return (
-        <NewsWrapper pathname={pathname}>
+        <NewsWrapper pathname={{ title: 'Dịch vụ', link: pathname }}>
             <p className='text-primary-color font-bold text-xl text-center p-4 '>
                 DỊCH VỤ
             </p>
