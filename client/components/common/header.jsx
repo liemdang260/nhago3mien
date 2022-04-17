@@ -134,7 +134,7 @@ export default function Header() {
                             <li
                                 key={i}
                                 className={`group grow relative hover:border-b-[5px] hover:border-white hover:bg-[#3B2414] transition ease-in-out duration-200 ${
-                                    pathname === '/' ||
+                                    title.link === pathname ||
                                     (title.link !== '/' &&
                                         pathname.startsWith(title.link))
                                         ? styles.active

@@ -7,23 +7,30 @@ import { faPhoneFlip } from '@fortawesome/free-solid-svg-icons';
 const Item = ({ params }) => {
     return (
         <div
-            className='bg-slate-50 shadow-[0px_3px_5px_0px_rgba(0,0,0,0.3)] 
+            className='relative bg-slate-50 shadow-[0px_3px_5px_0px_rgba(0,0,0,0.3)] 
         flex flex-col items-center text-base cursor-pointer ease-in-out duration-300
-      hover:shadow-primary-color hover:bg-slate-200 hover:scale-105 group
+      hover:shadow-primary-color hover:bg-slate-200 group
       '
         >
             <div
                 className='hidden w-[450px] h-[290px] group-hover:first:block absolute -translate-y-full -m-2
           border-2 border-solid border-primary-color'
             >
-                <ItemHover />
+                <Image
+                    className='z-20'
+                    alt='Error while display image'
+                    src={mauHinhAnh}
+                    layout='fill'
+                    // width={450}
+                    // height={290}
+                />
                 <div className='absolute left-1/2 top-[100.5%] w-16 overflow-hidden'>
                     <div className=' h-2 w-2 bg-primary-color -rotate-45 transform origin-top-left'></div>
                 </div>
             </div>
             <div className=''>
                 <Image
-                    className='z-0'
+                    className='z-0 group-hover:scale-110 group-hover:brightness-75 transition ease-out duration-500'
                     layout='intrinsic'
                     height={900}
                     priority
@@ -44,8 +51,8 @@ const Item = ({ params }) => {
             <div className='text-base font-semibold text-primary-color'>
                 Mã SP: {params.codeProduct}
             </div>
-            <div className='w-full border-2 bg-slate-300 mb-3 mt-2 bg-gradient-to-l'></div>
-            <div className='uppercase text-gray-500 font-medium w-full text-center'>
+            <div className='w-full border-2 bg-slate-300  mt-2 bg-gradient-to-l'></div>
+            <div className='uppercase text-gray-500 font-medium text-center py-2'>
                 Liên hệ: 0333619358{' '}
                 <FontAwesomeIcon icon={faPhoneFlip} className='mr-4' />
             </div>
@@ -68,7 +75,7 @@ const ItemHover = (urlImage) => {
 
 const GridLayoutMauNha = () => {
     return (
-        <div className='container flex flex-col justify-around  hover:first:block'>
+        <div className='container flex flex-col justify-around '>
             <Title title='Mẫu nhà gỗ đẹp' />
             <div className='grid grid-cols-4 gap-7 w-full'>
                 <Item params={{ title: 'Nhà 1', codeProduct: '1245D5' }} />
