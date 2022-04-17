@@ -162,12 +162,11 @@ export default function Header() {
                                                 ),
                                             )}
                                         <li>
-                                            <a
-                                                href='#'
-                                                className='block px-6 py-3 hover:bg-[#3B2414] text-[0.8rem] border-t-2 border-slate-100 font-medium'
-                                            >
-                                                XEM TẤT CẢ {title.title}
-                                            </a>
+                                            <Link href={title.link}>
+                                                <a className='block px-6 py-3 hover:bg-[#3B2414] text-[0.8rem] border-t-2 border-slate-100 font-medium'>
+                                                    XEM TẤT CẢ {title.title}
+                                                </a>
+                                            </Link>
                                         </li>
                                     </ul>
                                 )}

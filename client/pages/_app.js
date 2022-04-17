@@ -4,8 +4,10 @@ import Footer from 'components/common/footer';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { useEffect, useState } from 'react';
+import { faFacebook, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faLongArrowUp, faFaceAngry } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Image from 'next/image';
 
 config.autoAddCss = false;
 
@@ -44,17 +46,32 @@ function MyApp({ Component, pageProps }) {
                 <FontAwesomeIcon icon={faLongArrowUp} color='white' size='2x' />
             </button>
             {/* Social media button */}
-            <div className='fixed bg-[#3B5998] w-12 h-12 bottom-9 left-8 z-10'>
-                <FontAwesomeIcon icon={faFaceAngry} />
+            <div className='fixed w-9 h-w-9 bottom-9 left-8 z-10'>
+                <Image
+                    src={'/youtube.png'}
+                    alt='zalo icon'
+                    width={32}
+                    height={32}
+                />
             </div>
-            <div className='fixed bg-[#bb0000] w-12 h-12 bottom-9 left-8  translate-x-full z-10'>
-                <FontAwesomeIcon icon={faFaceAngry} />
+            <div className='fixed w-9 h-w-9 bottom-9 left-8  translate-x-full z-10'>
+                <Image
+                    src={'/facebooks.png'}
+                    alt='zalo icon'
+                    width={32}
+                    height={32}
+                />
             </div>
             <div
-                className='fixed bg-[#00aff0] w-12 h-12 bottom-9 left-8 z-10'
+                className='fixed w-9 h-w-9 bottom-9 left-8 z-10'
                 style={{ transform: 'translateX(200%)' }}
             >
-                <FontAwesomeIcon icon={faFaceAngry} />
+                <Image
+                    src={'/zalo.png'}
+                    alt='zalo icon'
+                    width={32}
+                    height={32}
+                />
             </div>
             <Header />
             <Component {...pageProps} />
