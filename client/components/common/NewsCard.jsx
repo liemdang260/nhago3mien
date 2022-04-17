@@ -17,9 +17,9 @@ function NewsCard({ item }) {
                         alt='anh dich vu 1'
                         width={375}
                         height={275}
+                        className='cursor-pointer'
                     />
-
-                    <p className='text-primary-color text-lg font-medium mt-2'>
+                    <p className='text-primary-color text-lg font-medium mt-2 cursor-pointer hover:text-green-700'>
                         {item.title}
                     </p>
                     <p className='text-[0.8rem] text-gray-400 mt-3'>
