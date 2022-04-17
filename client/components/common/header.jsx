@@ -4,6 +4,7 @@ import styles from 'styles/Header.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 const navTitle = [
     { link: '/', title: 'TRANG CHỦ', isDropdown: false },
@@ -63,6 +64,7 @@ const navTitle = [
 ];
 export default function Header() {
     const [index, setIndex] = useState(0);
+    const { pathname } = useRouter();
     return (
         <header>
             <div className='bg-[#6D594C] text-white py-2'>
@@ -132,7 +134,11 @@ export default function Header() {
                             <li
                                 key={i}
                                 className={`group grow relative hover:border-b-[5px] hover:border-white hover:bg-[#3B2414] transition ease-in-out duration-200 ${
-                                    index === i ? styles.active : ''
+                                    pathname === '/' ||
+                                    (title.link !== '/' &&
+                                        pathname.startsWith(title.link))
+                                        ? styles.active
+                                        : ''
                                 } `}
                             >
                                 <Link href={title.link}>
