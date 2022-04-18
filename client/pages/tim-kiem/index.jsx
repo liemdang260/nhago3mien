@@ -1,9 +1,12 @@
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+
 const Search = () => {
-  return (
-    <div className="underline decoration-sky-500/30">
-      <div>Trang hien thi ket qua tim kiem </div>
-    </div>
-  );
+    return (
+        <AnimationOnScroll animateIn='animate__bounceIn'>
+            <h2>Some Text</h2>
+        </AnimationOnScroll>
+    );
 };
 
 export default Search;
+

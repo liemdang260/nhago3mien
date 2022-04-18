@@ -7,10 +7,6 @@ import Image from 'next/image';
 import About from 'components/home/About';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/autoplay';
 import Commit from 'components/home/Commit';
 
 const images = ['/banner1.jpg', '/banner2.jpg', '/banner3.jpg'];
