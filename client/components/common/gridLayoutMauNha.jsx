@@ -1,8 +1,15 @@
+import { useState } from 'react';
 import Image from 'next/image';
 import mauHinhAnh from '../../public/nhago.jpg';
 import Title from 'components/common/Title';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhoneFlip } from '@fortawesome/free-solid-svg-icons';
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Pagination, Navigation } from 'swiper';
 
 const Item = ({ params }) => {
     return (
@@ -17,7 +24,7 @@ const Item = ({ params }) => {
           border-2 border-solid border-primary-color'
             >
                 <Image
-                    className='z-20'
+                    className='z-50'
                     alt='Error while display image'
                     src={mauHinhAnh}
                     layout='fill'
@@ -28,16 +35,21 @@ const Item = ({ params }) => {
                     <div className=' h-2 w-2 bg-primary-color -rotate-45 transform origin-top-left'></div>
                 </div>
             </div>
-            <div className=''>
+            <figure
+                className='relative before:absolute before:top-0 before:-left-3/4
+                before:z-[2] before:block before:w-1/2 before:h-full 
+                before:bg-gradient-to-r before:from-[#fff] before:to[#fff] before:-skew-x-[25deg] before:opacity-30
+                group-hover:before:duration-750 group-hover:before:animate-shineToLetf overflow-hidden'
+            >
                 <Image
-                    className='z-0 group-hover:scale-110 group-hover:brightness-75 transition ease-out duration-500'
+                    className='z-0 group-hover:scale-110 group-hover:brightness-90 transition ease-out duration-500'
                     layout='intrinsic'
                     height={900}
                     priority
                     src={mauHinhAnh}
                     alt='Error while display image'
                 />
-            </div>
+            </figure>
 
             <div
                 className={`font-semibold text-primary-color text-center ${
@@ -74,23 +86,51 @@ const ItemHover = (urlImage) => {
 };
 
 const GridLayoutMauNha = () => {
+    // Swiper
+
     return (
         <div className='container flex flex-col justify-around '>
             <Title title='Mẫu nhà gỗ đẹp' />
-            <div className='grid grid-cols-4 gap-7 w-full'>
-                <Item params={{ title: 'Nhà 1', codeProduct: '1245D5' }} />
-                <Item params={{ title: 'Nhà 2', codeProduct: '1245D5' }} />
-                <Item params={{ title: 'Nhà 3', codeProduct: '1245D5' }} />
-                <Item params={{ title: 'Nhà 4', codeProduct: '1245D5' }} />
-                <Item params={{ title: 'Nhà 5', codeProduct: '1245D5' }} />
-                <Item params={{ title: 'Nhà 6', codeProduct: '1245D5' }} />
-                <Item params={{ title: 'Nhà 7', codeProduct: '1245D5' }} />
-                <Item params={{ title: 'Nhà 8', codeProduct: '1245D5' }} />
-                <Item params={{ title: 'Nhà 9', codeProduct: '1245D5' }} />
-                <Item params={{ title: 'Nhà 9', codeProduct: '1245D5' }} />
-                <Item params={{ title: 'Nhà 9', codeProduct: '1245D5' }} />
-                <Item params={{ title: 'Nhà 9', codeProduct: '1245D5' }} />
+            <div className='h-[320px]'>
+                <Swiper
+                    slidesPerView={4}
+                    spaceBetween={30}
+                    slidesPerGroup={3}
+                    loop={true}
+                    loopFillGroupWithBlank={true}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    navigation={true}
+                    modules={[Pagination, Navigation]}
+                    className='mySwiper w-full h-full'
+                >
+                    <SwiperSlide>
+                        {' '}
+                        <Item
+                            params={{ title: 'Nhà 1', codeProduct: '1245D5' }}
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        {' '}
+                        <Item
+                            params={{ title: 'Nhà 12', codeProduct: '1245D5' }}
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        {' '}
+                        <Item
+                            params={{ title: 'Nhà 13', codeProduct: '1245D5' }}
+                        />
+                    </SwiperSlide>
+                </Swiper>
             </div>
+            <style>{`
+                .swiper-button-prev,
+                .swiper-button-next {
+                    background-color: rgba(0, 0, 0, 0.7);
+                }
+            `}</style>
         </div>
     );
 };
