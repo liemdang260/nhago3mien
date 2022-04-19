@@ -45,21 +45,6 @@ const navTitle = [
         ],
     },
     { link: '/tin-tuc', title: 'TIN TỨC', isDropdown: false },
-    {
-        link: '/huong-dan',
-        title: 'HƯỚNG DẪN',
-        isDropdown: true,
-        dropDownContent: [
-            {
-                title: 'HƯỚNG DẪN THANH TOÁN',
-                link: '/huong-dan/huong-dan-thanh-toan',
-            },
-            {
-                title: 'HƯỚNG DẪN ĐẶT HÀNG',
-                link: '/huong-dan/huong-dan-dat-hang',
-            },
-        ],
-    },
     { link: '/lien-he', title: 'LIÊN HỆ', isDropdown: false },
 ];
 export default function Header() {
@@ -68,15 +53,10 @@ export default function Header() {
     return (
         <header>
             <div className='bg-[#6D594C] text-white py-2'>
-                <div className='container flex justify-between px-16 font-medium'>
-                    <p className='text-[13px]'>
-                        CHÀO MỪNG QUÝ KHÁCH ĐẾN VỚI: NHAGO3MIEN.VN
-                    </p>
-                    <p>
-                        <a href='tel:0932.112.365'>0932.112.365</a> -&nbsp;
-                        <a href='tel:1900.55.88.05'>1900.55.88.05</a> -&nbsp;
-                        <a href='tel:0909.377.365'>0909.377.365</a>
-                    </p>
+                <div className='container overflow-hidden'>
+                    <span className='text-[13px] inline-block font-medium animate-textScrolling'>
+                        CHÀO MỪNG QUÝ KHÁCH ĐẾN VỚI NHÀ GỖ BA MIỀN!
+                    </span>
                 </div>
             </div>
             <div className='container px-8 py-6 grid grid-cols-12 gap-4'>
@@ -128,7 +108,7 @@ export default function Header() {
                 </div>
             </div>
             <nav className='bg-primary-color'>
-                <ul className='flex container text-white px-16'>
+                <ul className='flex container text-white px-28'>
                     {navTitle &&
                         navTitle.map((title, i) => (
                             <li
