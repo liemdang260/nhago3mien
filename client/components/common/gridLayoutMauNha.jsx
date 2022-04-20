@@ -89,7 +89,7 @@ const GridLayoutMauNha = () => {
     // Swiper
 
     return (
-        <div className='container flex flex-col justify-around '>
+        <div className='container flex flex-col justify-around mt-6'>
             <Title title='Mẫu nhà gỗ đẹp' />
             <div className='h-[320px]'>
                 <Swiper

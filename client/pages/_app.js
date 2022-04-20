@@ -4,11 +4,19 @@ import Footer from 'components/common/footer';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { useEffect, useState } from 'react';
-import { faFacebook, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faLongArrowUp, faFaceAngry } from '@fortawesome/free-solid-svg-icons';
+import { faLongArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 
+// Swiper
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+import 'swiper/css/effect-cube';
+
+//Animation on scrolling
+import 'animate.css';
 config.autoAddCss = false;
 
 function MyApp({ Component, pageProps }) {
