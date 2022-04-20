@@ -75,7 +75,7 @@ const ItemHover = (urlImage) => {
 
 const GridLayoutMauNha = () => {
     return (
-        <div className='container flex flex-col justify-around '>
+        <div className='container flex flex-col justify-around mt-6'>
             <Title title='Mẫu nhà gỗ đẹp' />
             <div className='grid grid-cols-4 gap-7 w-full'>
                 <Item params={{ title: 'Nhà 1', codeProduct: '1245D5' }} />

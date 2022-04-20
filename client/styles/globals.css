@@ -3,10 +3,44 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "EdwardianKT";
-    src: url("../public/fonts/00085-UTM-EdwardianKT.ttf");
-  }
+    font-family: 'EdwardianKT';
+    src: url('../public/fonts/00085-UTM-EdwardianKT.ttf');
+}
 
+@font-face {
+    font-family: 'Nunito';
+    src: url('../public/fonts/Nunito-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../public/fonts/Roboto-Light.ttf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../public/fonts/Roboto-Regular.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../public/fonts/Roboto-Medium.ttf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../public/fonts/Roboto-Bold.ttf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../public/fonts/Roboto-Black.ttf');
+    font-weight: 900;
+}
+
+body {
+    font-family: 'Roboto';
+}
 :root {
     --swiper-theme-color: #f5f5f5 !important;
 }
+

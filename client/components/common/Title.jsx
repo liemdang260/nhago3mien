@@ -1,15 +1,13 @@
-function Title({ title, size = '5xl' }) {
+function Title({ title, size = '3xl' }) {
     return (
-        <div className='flex items-center my-6'>
-            <div className='border-solid border-primary-color border-t-2 flex-grow my-0'></div>
+        <div className='relative text-center py-8'>
             <h3
-                className={`px-6 font-bold text-${
-                    size == '5xl' ? size : `[${size}]`
-                } font-edwardianKT text-primary-color`}
+                className={`bg-white text-color inline-block relative px-8 text-${size} font-bold font-nunito after:`}
             >
                 {title}
+
+                <div className='relative z-10 w-[6px] h-[6px] mx-auto mt-3 bg-color rounded-full before:absolute before:w-16 before:h-[2px] before:bg-[#6D594C] before:right-[200%] before:top-1/2 before:-translate-y-1/2 after:absolute after:w-16 after:h-[2px] after:bg-[#6D594C] after:left-[200%] after:top-1/2 after:-translate-y-1/2'></div>
             </h3>
-            <div className='border-solid border-primary-color border-t-2 flex-grow my-0'></div>
         </div>
     );
 }

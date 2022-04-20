@@ -3,19 +3,9 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay, EffectCube } from 'swiper';
 import Image from 'next/image';
+import Title from 'components/common/Title';
 
 const images = ['/banner1.jpg', '/banner2.jpg', '/banner3.jpg'];
-
-function AboutTitle({ title }) {
-    return (
-        <div className='relative text-center my-8'>
-            <div className='absolute bg-primary-color w-full h-[1.5px] top-1/2'></div>
-            <h3 className='bg-white text-primary-color inline-block relative px-8 text-5xl font-bold font-edwardianKT'>
-                {title}
-            </h3>
-        </div>
-    );
-}
 
 function AboutStrength({ strengthTitle, strengthSubTitle }) {
     return (
@@ -35,21 +25,21 @@ function AboutStrength({ strengthTitle, strengthSubTitle }) {
 function About() {
     return (
         <div className='container'>
-            <div>
-                <AboutTitle title='Về chúng tôi' />
+            <div className='mt-6'>
+                <Title title='Về chúng tôi' />
                 <div className='flex flex-col lg:flex-row px-10'>
-                    <div className='w-1/2 p-4 '>
-                        <p className='text-primary-color font-bold text-sm mb-4'>
+                    <div className='w-1/2 p-4 font-nunito'>
+                        <p className='text-primary-color font-bold text-lg mb-4'>
                             Nhà gỗ Ba miền xin kính chào Quý khách hàng!
                         </p>
-                        <p className='text-sm mb-6 leading-6'>
+                        <p className='mb-6 leading-6 text-color'>
                             &emsp;&emsp;&emsp;Lời đầu tiên Nhà gỗ Ba miền xin
                             gửi tới Quý khách hàng lới chào trân trọng, lời cảm
                             ơn chân thành nhất đến Quý khách hàng đã và đang sử
                             dụng sản phẩm, cũng như quan tâm và gắn bó với Nhà
                             gỗ Ba miền trong suốt thời gian qua!
                         </p>
-                        <p className='text-sm mb-6 leading-6'>
+                        <p className='mb-6 leading-6 text-color'>
                             &emsp;&emsp;&emsp;
                             <span className='text-primary-color font-medium'>
                                 Nhà gỗ Ba miền
@@ -101,9 +91,9 @@ function About() {
                     </div>
                 </div>
             </div>
-            <div>
-                <AboutTitle title='Nhà gỗ Ba miền' />
-                <div className='flex flex-col md:flex-row justify-between mx-10'>
+            <div className='mt-6'>
+                <Title title='Nhà gỗ Ba miền' />
+                <div className='flex flex-col md:flex-row justify-between'>
                     <AboutStrength
                         strengthTitle='CHUYÊN NGHIỆP'
                         strengthSubTitle='TRONG THIẾT KẾ VÀ THI CÔNG'

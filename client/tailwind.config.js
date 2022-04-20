@@ -7,6 +7,7 @@ module.exports = {
         extend: {
             colors: {
                 'primary-color': '#603814',
+                color: '#333',
             },
             container: {
                 screens: {
@@ -20,6 +21,7 @@ module.exports = {
             },
             fontFamily: {
                 edwardianKT: ['EdwardianKT', 'cursive'],
+                nunito: ['Nunito', 'cursive'],
             },
             keyframes: {
                 textScrolling: {

@@ -27,7 +27,7 @@ export default function Home() {
                     modules={[Navigation, Pagination, Autoplay]}
                     slidesPerView={1}
                     navigation
-                    autoplay={{ delay: 3000 }}
+                    autoplay={{ delay: 4000 }}
                     loop={true}
                     pagination={{ clickable: true }}
                     onSlideChange={() => console.log('slide change')}
@@ -35,7 +35,7 @@ export default function Home() {
                     {images &&
                         images.map((value, index) => (
                             <SwiperSlide key={index}>
-                                <div className='w-full h-[460px]'>
+                                <div className='w-full h-[calc(100vh_-_280px)]'>
                                     <Image
                                         src={value}
                                         alt='banner 1'
@@ -48,10 +48,6 @@ export default function Home() {
                 <About />
                 <div className='mb-5'>
                     <GridLayoutMauNha />
-                </div>
-                <div className='flex justify-start container mb-10'>
-                    <Services />
-                    <Posts />
                 </div>
                 <div>
                     <Commit />

@@ -2,9 +2,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from 'styles/Header.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import {
+    faMagnifyingGlass,
+    faQuoteLeft,
+    faPhone,
+    faEnvelope,
+} from '@fortawesome/free-solid-svg-icons';
+// import { useState } from 'react';
 import { useRouter } from 'next/router';
+import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
 const navTitle = [
     { link: '/', title: 'TRANG CHỦ', isDropdown: false },
@@ -48,19 +54,25 @@ const navTitle = [
     { link: '/lien-he', title: 'LIÊN HỆ', isDropdown: false },
 ];
 export default function Header() {
-    const [index, setIndex] = useState(0);
     const { pathname } = useRouter();
+    const { text } = useTypewriter({
+        words: ['Không gian sống đậm nét truyền thống'],
+        loop: 1,
+        typeSpeed: 100,
+        deleteSpeed: 90,
+    });
     return (
         <header>
             <div className='bg-[#6D594C] text-white py-2'>
                 <div className='container overflow-hidden'>
-                    <span className='text-[13px] inline-block font-medium animate-textScrolling'>
-                        CHÀO MỪNG QUÝ KHÁCH ĐẾN VỚI NHÀ GỖ BA MIỀN!
+                    <span className='text-[13px] inline-block font-semibold animate-textScrolling'>
+                        CHÀO&nbsp; MỪNG&nbsp; QUÝ&nbsp; KHÁCH&nbsp; ĐẾN&nbsp;
+                        VỚI&nbsp; NHÀ&nbsp; GỖ&nbsp; BA MIỀN!
                     </span>
                 </div>
             </div>
-            <div className='container px-8 py-6 grid grid-cols-12 gap-4'>
-                <div className='col-span-5'>
+            <div className='container px-8 py-6 flex justify-between items-center'>
+                <div className=''>
                     <Image
                         src='https://nhagoanphu.com/image/catalog/logo/Nha-go-An-Phu_03.png'
                         alt='logo'
@@ -68,34 +80,53 @@ export default function Header() {
                         height={107}
                     />
                 </div>
-                <div className='col-span-2 px-3'>
-                    <div className='border-[3px] border-primary-color rounded-3xl p-[5px]'>
-                        <ul className='bg-primary-color text-white rounded-3xl flex flex-col items-center p-3'>
-                            <li className='h-9 w-9 border-2 border-white rounded-full text-center leading-8'>
-                                <FontAwesomeIcon icon={faPhone} />
+                <div className='px-3 text-[1.625rem]'>
+                    <blockquote className='font-nunito text-color'>
+                        <FontAwesomeIcon icon={faQuoteLeft} />
+                        <span className='font-semibold ml-2 align-sub'>
+                            {text}
+                        </span>
+                    </blockquote>
+                </div>
+                <div className='flex flex-col basis-[250px]'>
+                    <div className='mb-2'>
+                        <ul>
+                            <li>
+                                <a href='tel:0962116789'>
+                                    <FontAwesomeIcon
+                                        icon={faPhone}
+                                        color='#003F5C'
+                                    />
+                                    <span className='font-normal ml-2 text-lg text-color'>
+                                        096.211.6789
+                                    </span>
+                                </a>
                             </li>
-                            <li className='font-semibold'>
-                                <a href='tel:0932.112.365'>0932.112.365</a>
+                            <li>
+                                <a href='tel:0977325561'>
+                                    <FontAwesomeIcon
+                                        icon={faPhone}
+                                        color='#003F5C'
+                                    />
+                                    <span className='font-normal ml-2 text-lg text-color'>
+                                        0977.325.561
+                                    </span>
+                                </a>
                             </li>
-                            <li className='font-semibold'>
-                                <a href='tel:1900.55.88.05'>1900.55.88.05</a>
-                            </li>
-                            <li className='font-semibold'>
-                                <a href='tel:0909.377.365'>0909.377.365</a>
+                            <li>
+                                <a href='mailto:info@nhagobamien.vn'>
+                                    <FontAwesomeIcon
+                                        icon={faEnvelope}
+                                        color='#003F5C'
+                                    />
+                                    <span className='font-normal ml-2 text-lg text-color'>
+                                        info@nhagobamien.vn
+                                    </span>
+                                </a>
                             </li>
                         </ul>
                     </div>
-                </div>
-                <div className='col-span-5 flex flex-col ml-auto'>
-                    <div className='mb-2'>
-                        <Image
-                            src='https://nhagoanphu.com/image/slogan_anphu.png'
-                            alt='slogan'
-                            width={381}
-                            height={66}
-                        />
-                    </div>
-                    <div className='flex bg-primary-color px-4 py-2 rounded-md'>
+                    <div className='flex bg-primary-color px-4 py-2 rounded-md w-full'>
                         <input
                             className='bg-primary-color text-white outline-0 text-sm grow'
                             type='text'
