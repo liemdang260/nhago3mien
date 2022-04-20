@@ -11,6 +11,45 @@ import Commit from 'components/home/Commit';
 
 const images = ['/banner1.jpg', '/banner2.jpg', '/banner3.jpg'];
 
+const MauNhaData = [
+    { id: 1, title: 'Nhà 1', codeProduct: '1245D5' },
+    { id: 2, title: 'Nhà 2', codeProduct: '1245D5' },
+    { id: 3, title: 'Nhà 3', codeProduct: '1245D5' },
+    { id: 4, title: 'Nhà 4', codeProduct: '1245D5' },
+];
+
+const ServicesData = [
+    {
+        id: 1,
+        title: 'Tư vấn và thiết kế theo yêu cầu',
+        description:
+            'Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...',
+    },
+    {
+        id: 2,
+        title: 'Thiết kế và thi công không gian thờ',
+        description:
+            'Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...',
+    },
+    {
+        id: 3,
+        title: 'Cung cấp đồ gỗ thành phẩm',
+        description:
+            'Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...',
+    },
+    {
+        id: 4,
+        title: 'Thiết kế và thi công nội thất',
+        description:
+            'Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...',
+    },
+    {
+        id: 5,
+        title: 'Thiết kế và thi công nhà gỗ',
+        description:
+            'Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...',
+    },
+];
 export default function Home() {
     return (
         <div>
@@ -46,10 +85,20 @@ export default function Home() {
                         ))}
                 </Swiper>
                 <About />
-                <div className='mb-5'>
-                    <GridLayoutMauNha />
+                <div>
+                    <GridLayoutMauNha
+                        title='Dịch vụ cung cấp'
+                        data={ServicesData}
+                    />
                 </div>
                 <div>
+                    <GridLayoutMauNha
+                        title='Mẫu nhà gỗ đẹp'
+                        data={MauNhaData}
+                        hasPagination
+                    />
+                </div>
+                <div className='mt-6'>
                     <Commit />
                 </div>
             </main>

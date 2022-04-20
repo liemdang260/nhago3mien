@@ -5,10 +5,6 @@ import Title from 'components/common/Title';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhoneFlip } from '@fortawesome/free-solid-svg-icons';
 import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper';
 
 const Item = ({ params }) => {
@@ -60,75 +56,105 @@ const Item = ({ params }) => {
             >
                 {params.title.substring(0, 35)}
             </div>
-            <div className='text-base font-semibold text-primary-color'>
-                Mã SP: {params.codeProduct}
-            </div>
+            {params.codeProduct && (
+                <div className='text-base font-semibold text-primary-color'>
+                    Mã SP: {params.codeProduct}
+                </div>
+            )}
+            {params.description && (
+                <div className='py-2 px-3 text-sm text-color text-justify'>
+                    {params.description}
+                </div>
+            )}
             <div className='w-full border-2 bg-slate-300  mt-2 bg-gradient-to-l'></div>
-            <div className='uppercase text-gray-500 font-medium text-center py-2'>
-                Liên hệ: 0333619358{' '}
-                <FontAwesomeIcon icon={faPhoneFlip} className='mr-4' />
-            </div>
+            {params.codeProduct && (
+                <div className='uppercase text-gray-500 font-medium text-center py-2'>
+                    Liên hệ: 0333619358{' '}
+                    <FontAwesomeIcon icon={faPhoneFlip} className='mr-4' />
+                </div>
+            )}
         </div>
     );
 };
 
-const ItemHover = (urlImage) => {
-    return (
-        <Image
-            className='z-20'
-            alt='Error while display image'
-            src={mauHinhAnh}
-            layout='fill'
-            // width={450}
-            // height={290}
-        />
-    );
-};
+// const ItemHover = (urlImage) => {
+//     return (
+//         <Image
+//             className='z-20'
+//             alt='Error while display image'
+//             src={mauHinhAnh}
+//             layout='fill'
+//             // width={450}
+//             // height={290}
+//         />
+//     );
+// };
 
-const GridLayoutMauNha = () => {
+const GridLayoutMauNha = ({ title, data, hasPagination = false }) => {
     // Swiper
 
     return (
         <div className='container flex flex-col justify-around mt-6'>
-            <Title title='Mẫu nhà gỗ đẹp' />
-            <div className='h-[320px]'>
-                <Swiper
-                    slidesPerView={4}
-                    spaceBetween={30}
-                    slidesPerGroup={3}
-                    loop={true}
-                    loopFillGroupWithBlank={true}
-                    pagination={{
+            <Title title={title} />
+            {/* <div className='h-[320px]'> */}
+            <Swiper
+                slidesPerView={4}
+                spaceBetween={30}
+                loop={true}
+                pagination={
+                    hasPagination && {
                         clickable: true,
-                    }}
-                    navigation={true}
-                    modules={[Pagination, Navigation]}
-                    className='mySwiper w-full h-full'
-                >
-                    <SwiperSlide>
-                        {' '}
-                        <Item
-                            params={{ title: 'Nhà 1', codeProduct: '1245D5' }}
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        {' '}
-                        <Item
-                            params={{ title: 'Nhà 12', codeProduct: '1245D5' }}
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        {' '}
-                        <Item
-                            params={{ title: 'Nhà 13', codeProduct: '1245D5' }}
-                        />
-                    </SwiperSlide>
-                </Swiper>
-            </div>
+                        type: 'fraction',
+                    }
+                }
+                navigation={true}
+                modules={[Pagination, Navigation]}
+                className='mySwiper w-full h-full'
+            >
+                {data &&
+                    data.map((item) => (
+                        <SwiperSlide key={item.id}>
+                            {' '}
+                            <Item
+                                params={{
+                                    title: item.title,
+                                    codeProduct: item.codeProduct || '',
+                                    description: item.description || '',
+                                }}
+                            />
+                        </SwiperSlide>
+                    ))}
+            </Swiper>
+            {/* </div> */}
             <style>{`
+                .swiper:hover .swiper-button-prev, .swiper:hover .swiper-button-next {                    
+                    transform: translateX(0) translateY(-40%);
+                }
                 .swiper-button-prev,
                 .swiper-button-next {
-                    background-color: rgba(0, 0, 0, 0.7);
+                    background-color: rgba(0, 0, 0, 0.3);
+                    padding: 2rem 1.5rem;                            
+                    transition: transform 0.3s;
+                    will-change: transform;
+                    transform-origin: top;                    
+                }
+                .swiper-button-prev:hover,
+                .swiper-button-next:hover {                    
+                    transform: scale(1.1) translateY(-45%) translateX(0) !important;
+                }
+                .swiper-button-prev {
+                    left: 0;
+                    transform: translateY(-40%) translateX(-100%);
+                }
+                .swiper-button-next {
+                    right: 0;
+                    transform: translateY(-40%) translateX(100%);
+                }
+                .mySwiper {                    
+                    min-height: 350px
+                }      
+                .mySwiper .swiper-pagination {
+                    bottom: 0
                 }
             `}</style>
         </div>

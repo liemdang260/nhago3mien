@@ -42,5 +42,6 @@ body {
 }
 :root {
     --swiper-theme-color: #f5f5f5 !important;
+    --swiper-navigation-size: 34px !important;
 }
 
