@@ -28,10 +28,14 @@ module.exports = {
                     '0%': { transform: 'translateX(-100%)' },
                     '100%': { transform: 'translateX(400%)' },
                 },
+               shine: {
+                    '100%': { left: '125%' },
+                },
             },
             animation: {
                 textScrolling: 'textScrolling 20s linear infinite',
-            },
+                shineToLetf: 'shine 0.75s',
+            },         
         },
     },
     plugins: [require('@tailwindcss/typography')],
