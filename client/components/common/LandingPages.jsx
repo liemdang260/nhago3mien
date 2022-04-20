@@ -40,11 +40,13 @@ function LandingPages({
                         landingVisionIndex * countOfPageVision * itemsPerPage) /
                         itemsPerPage <
                     countOfPageVision
-                        ? (length -
-                              landingVisionIndex *
-                                  countOfPageVision *
-                                  itemsPerPage) /
-                          itemsPerPage
+                        ? Math.ceil(
+                              (length -
+                                  landingVisionIndex *
+                                      countOfPageVision *
+                                      itemsPerPage) /
+                                  itemsPerPage,
+                          )
                         : countOfPageVision,
                 ),
                 (a, b) => (
@@ -78,4 +80,3 @@ function LandingPages({
 }
 
 export default LandingPages;
-
