@@ -1,6 +1,5 @@
-import { useState } from 'react';
 import Image from 'next/image';
-import mauHinhAnh from '../../public/nhago.jpg';
+
 import Title from 'components/common/Title';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhoneFlip } from '@fortawesome/free-solid-svg-icons';
@@ -22,7 +21,7 @@ const Item = ({ params }) => {
                 <Image
                     className='z-50'
                     alt='Error while display image'
-                    src={mauHinhAnh}
+                    src={params.linkImage}
                     layout='fill'
                     // width={450}
                     // height={290}
@@ -38,11 +37,11 @@ const Item = ({ params }) => {
                 group-hover:before:duration-750 group-hover:before:animate-shineToLetf overflow-hidden'
             >
                 <Image
-                    className='z-0 group-hover:scale-110 group-hover:brightness-90 transition ease-out duration-500'
+                    className='z-0  group-hover:brightness-90 transition ease-out duration-500'
                     layout='intrinsic'
-                    height={900}
+                    // height={900}
                     priority
-                    src={mauHinhAnh}
+                    src={params.linkImage}
                     alt='Error while display image'
                 />
             </figure>
