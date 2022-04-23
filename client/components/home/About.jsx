@@ -7,105 +7,78 @@ import Title from 'components/common/Title';
 
 const images = ['/banner1.jpg', '/banner2.jpg', '/banner3.jpg'];
 
-function AboutStrength({ strengthTitle, strengthSubTitle }) {
-    return (
-        <div className='w-full border-primary-color border-[3px] p-1 m-4'>
-            <div className='border-primary-color border-2 p-2'>
-                <a
-                    href='#'
-                    className='text-primary-color text-center hover:underline'
-                >
-                    <p className='font-bold text-lg'>{strengthTitle}</p>
-                    <p className='font-medium text-md'>{strengthSubTitle}</p>
-                </a>
-            </div>
-        </div>
-    );
-}
 function About() {
     return (
         <div className='container'>
-            <div className='mt-6'>
-                <Title title='Về chúng tôi' />
-                <div className='flex flex-col lg:flex-row px-10'>
-                    <div className='w-1/2 p-4 font-nunito'>
-                        <p className='text-primary-color font-bold text-lg mb-4'>
-                            Nhà gỗ Ba miền xin kính chào Quý khách hàng!
-                        </p>
-                        <p className='mb-6 leading-6 text-color'>
-                            &emsp;&emsp;&emsp;Lời đầu tiên Nhà gỗ Ba miền xin
-                            gửi tới Quý khách hàng lới chào trân trọng, lời cảm
-                            ơn chân thành nhất đến Quý khách hàng đã và đang sử
-                            dụng sản phẩm, cũng như quan tâm và gắn bó với Nhà
-                            gỗ Ba miền trong suốt thời gian qua!
-                        </p>
-                        <p className='mb-6 leading-6 text-color'>
-                            &emsp;&emsp;&emsp;
-                            <span className='text-primary-color font-medium'>
-                                Nhà gỗ Ba miền
-                            </span>{' '}
-                            là một thương hiệu uy tín trong lĩnh vực thiết kế,
-                            thi công và cung cấp nhà gỗ tại TPHCM cũng như ở
-                            nhiều tỉnh thành khác trên toàn quốc. Với kinh
-                            nghiệm đã tích lũy được trong thời gian dài hoạt
-                            động cùng đội ngũ nhân viên chuyên nghiệp, có tay
-                            nghề và trình độ cao, nhà gỗ Ba miền tự hào mang đến
-                            cho Quý khách hàng những sản phẩm và dịch vụ t...
-                        </p>
-                        <p className='text-right text-primary-color underline'>
-                            <a href='#' className='hover:font-semibold'>
-                                Xem chi tiết
-                            </a>
-                        </p>
-                    </div>
-                    <div className='w-1/2 p-4'>
-                        <Swiper
-                            modules={[Pagination, Autoplay, EffectCube]}
-                            effect='cube'
-                            slidesPerView={1}
-                            autoplay={{ delay: 5000 }}
-                            loop={true}
-                            pagination={{ clickable: true }}
-                            onSlideChange={() => console.log('slide change')}
-                            grabCursor={true}
-                            cubeEffect={{
-                                shadow: true,
-                                slideShadows: true,
-                                shadowOffset: 20,
-                                shadowScale: 0.94,
-                            }}
-                        >
-                            {images &&
-                                images.map((value, index) => (
-                                    <SwiperSlide key={index}>
-                                        <div className='w-full h-[300px]'>
-                                            <Image
-                                                src={value}
-                                                alt='banner 1'
-                                                layout='fill'
-                                            />
-                                        </div>
-                                    </SwiperSlide>
-                                ))}
-                        </Swiper>
-                    </div>
+            <Title title='Về chúng tôi' />
+            <div className='flex justify-end relative mt-8'>
+                <div className='z-10 w-[533.3333px] absolute top-1/2 -translate-y-1/2 left-0 after:absolute after:w-full after:h-6 after:bg-white before:absolute before:w-full before:h-6 before:bg-white before:bottom-full'>
+                    <Swiper
+                        modules={[Pagination, Autoplay, EffectCube]}
+                        effect='cube'
+                        slidesPerView={1}
+                        autoplay={{ delay: 5000 }}
+                        loop={true}
+                        pagination={{ clickable: true }}
+                        // onSlideChange={() => console.log('slide change')}
+                        grabCursor={true}
+                        cubeEffect={{
+                            shadow: true,
+                            slideShadows: true,
+                            shadowOffset: 20,
+                            shadowScale: 0.94,
+                        }}
+                    >
+                        {images &&
+                            images.map((value, index) => (
+                                <SwiperSlide key={index}>
+                                    <div className='w-full h-[300px]'>
+                                        <Image
+                                            src={value}
+                                            alt='banner 1'
+                                            layout='fill'
+                                        />
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                    </Swiper>
                 </div>
-            </div>
-            <div className='mt-6'>
-                <Title title='Nhà gỗ Ba miền' />
-                <div className='flex flex-col md:flex-row justify-between'>
-                    <AboutStrength
-                        strengthTitle='CHUYÊN NGHIỆP'
-                        strengthSubTitle='TRONG THIẾT KẾ VÀ THI CÔNG'
-                    />
-                    <AboutStrength
-                        strengthTitle='CHẤT LƯỢNG'
-                        strengthSubTitle='SẢN PHẨM CAO'
-                    />
-                    <AboutStrength
-                        strengthTitle='DỊCH VỤ'
-                        strengthSubTitle='KHÁCH HÀNG TẬN TÂM'
-                    />
+                <div className='w-3/4 pl-[17rem] py-10 pr-8 font-nunito border-2 border-primary-color relative'>
+                    <p className='text-primary-color font-bold text-lg mb-4'>
+                        Nhà gỗ Ba miền xin kính chào Quý khách hàng!
+                    </p>
+                    <p className='mb-2 leading-7 text-color text-justify'>
+                        <span className='text-primary-color font-medium'>
+                            Nhà gỗ Ba miền
+                        </span>{' '}
+                        Là những người con của quê hương Làng mộc Đạt Tài, trải
+                        qua nhiều thế hệ cha chuyền con nối, chúng tôi tự hào
+                        với đội ngũ thợ kinh nghiệm có tay nghề và trình độ cao
+                        cùng với nhóm thiết kế tận tâm, chuyên nghiệp, áp dụng
+                        các công nghệ mô phỏng, diễn họa 3D mới nhất trên máy
+                        tính, chúng tôi có thể thể hiện chính xác bằng hình ảnh
+                        3D, video ngôi nhà mà khách hàng mong muốn trên máy tính
+                        trước khi được thi công. Công ty nhà gỗ Ba Miền chúng
+                        tôi chuyên thiết kế, thi công, lắp đặt nhà gỗ và cung
+                        cấp các sản phẩm từ gỗ trên toàn quốc. Chúng tôi tự tin
+                        mang đến cho bạn sự hài lòng về sản phẩm chất lượng với
+                        giá hợp lý nhất!
+                    </p>
+                    <h5 className='text-color mb-2'>Quy trình làm việc:</h5>
+                    <ol className='list-decimal ml-4 text-color leading-7 text-justify'>
+                        <li>
+                            Lấy ý tưởng của khách hàng (nếu khách hàng chưa có ý
+                            tưởng, chúng tôi sẽ tư vấn).
+                        </li>
+                        <li>
+                            Thiết kế và diễn họa 3D cho khách hàng xem để xác
+                            nhận trước khi làm.
+                        </li>
+                        <li>Gia công và láp giáp.</li>
+                    </ol>
+                    <p className='bg-white px-4 absolute bottom-0 translate-y-1/2 text-2xl italic font-semibold text-primary-color right-10'>
+                        Nhà gỗ Ba miền
+                    </p>
                 </div>
             </div>
         </div>

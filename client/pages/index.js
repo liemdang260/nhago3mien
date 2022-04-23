@@ -8,7 +8,7 @@ import About from 'components/home/About';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper';
 import Commit from 'components/home/Commit';
-
+import Trait from 'components/home/Trait';
 const images = ['/banner1.jpg', '/banner2.jpg', '/banner3.jpg'];
 
 const MauNhaData = [
@@ -84,21 +84,26 @@ export default function Home() {
                             </SwiperSlide>
                         ))}
                 </Swiper>
-                <About />
-                <div>
+                <div className='py-20'>
+                    <About />
+                </div>
+                <div className='py-20'>
+                    <Trait />
+                </div>
+                <div className='bg-primary-color/5 py-20 pb-24'>
                     <GridLayoutMauNha
                         title='Dịch vụ cung cấp'
                         data={ServicesData}
                     />
                 </div>
-                <div>
+                <div className='py-20'>
                     <GridLayoutMauNha
                         title='Mẫu nhà gỗ đẹp'
                         data={MauNhaData}
                         hasPagination
                     />
                 </div>
-                <div className='mt-6'>
+                <div>
                     <Commit />
                 </div>
             </main>

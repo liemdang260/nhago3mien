@@ -94,9 +94,8 @@ const GridLayoutMauNha = ({ title, data, hasPagination = false }) => {
     // Swiper
 
     return (
-        <div className='container flex flex-col justify-around mt-6'>
+        <div className='container flex flex-col justify-around'>
             <Title title={title} />
-            {/* <div className='h-[320px]'> */}
             <Swiper
                 slidesPerView={4}
                 spaceBetween={30}
@@ -151,7 +150,8 @@ const GridLayoutMauNha = ({ title, data, hasPagination = false }) => {
                     transform: translateY(-40%) translateX(100%);
                 }
                 .mySwiper {                    
-                    min-height: 350px
+                    min-height: 350px;
+                    margin-top: 40px;
                 }      
                 .mySwiper .swiper-pagination {
                     bottom: 0

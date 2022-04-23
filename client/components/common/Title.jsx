@@ -1,8 +1,8 @@
 function Title({ title, size = '3xl' }) {
     return (
-        <div className='relative text-center py-8'>
+        <div className='relative text-center'>
             <h3
-                className={`bg-white text-color inline-block relative px-8 text-${size} font-bold font-nunito after:`}
+                className={`text-color inline-block relative px-8 text-${size} font-bold font-nunito after:`}
             >
                 {title}
 
