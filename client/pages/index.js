@@ -14,27 +14,27 @@ const images = ['/banner1.jpg', '/banner2.jpg', '/banner3.jpg'];
 const MauNhaData = [
     {
         id: 1,
-        title: 'Nhà 1',
+        title: 'Nhà 5 gian truyền thống',
         codeProduct: '1245D5',
-        imgLink: '/thiet-ke-theo-yeu-cau.jpg',
+        imgLink: '/nha-5-gian.jpg',
     },
     {
         id: 2,
-        title: 'Nhà 2',
+        title: 'Nhà từ đường',
         codeProduct: '1245D5',
-        imgLink: '/thiet-ke-theo-yeu-cau.jpg',
+        imgLink: '/nha-tu-duong.jpg',
     },
     {
         id: 3,
-        title: 'Nhà 3',
+        title: 'Nhà gỗ',
         codeProduct: '1245D5',
-        imgLink: '/thiet-ke-theo-yeu-cau.jpg',
+        imgLink: '/nha-go-truyen-thong.jpg',
     },
     {
         id: 4,
-        title: 'Nhà 4',
+        title: 'Chòi hóng mát',
         codeProduct: '1245D5',
-        imgLink: '/thiet-ke-theo-yeu-cau.jpg',
+        imgLink: '/choi-hong-mat.jpg',
     },
 ];
 

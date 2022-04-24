@@ -53,7 +53,6 @@ const navTitle = [
             },
         ],
     },
-    { link: '/tin-tuc', title: 'TIN TỨC', isDropdown: false },
     { link: '/lien-he', title: 'LIÊN HỆ', isDropdown: false },
 ];
 export default function Header() {
@@ -228,7 +227,7 @@ export default function Header() {
                                     </a>
                                 </Link>
                                 {title.isDropdown && (
-                                    <ul className='absolute z-10 w-auto whitespace-nowrap bg-primary-color mt-1 hidden group-hover:block'>
+                                    <ul className='absolute z-10 min-w-full whitespace-nowrap bg-primary-color mt-1 hidden group-hover:block'>
                                         {title.dropDownContent &&
                                             title.dropDownContent.map(
                                                 (item, index) => (
