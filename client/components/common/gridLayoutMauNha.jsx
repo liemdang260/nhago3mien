@@ -9,7 +9,7 @@ const Item = ({ params }) => {
     return (
         <div
             className='relative bg-slate-50 shadow-[0px_3px_5px_0px_rgba(0,0,0,0.3)] 
-        flex flex-col items-center text-base cursor-pointer ease-in-out duration-300
+        flex flex-col items-center text-base cursor-pointer ease-in-out duration-700
       hover:shadow-primary-color hover:bg-slate-200 group
       '
         >

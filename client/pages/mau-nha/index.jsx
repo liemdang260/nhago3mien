@@ -241,7 +241,7 @@ const Item2 = ({ params }) => {
     return (
         <div
             className='border bg-slate-50 shadow-[0px_3px_5px_0px_rgba(0,0,0,0.3)] border-[#ccc] mb-3 h-52
-      flex flex-row hover:shadow-primary-color hover:bg-slate-200
+      flex flex-row hover:shadow-primary-color hover:bg-slate-200 duration-700
     '
         >
             <div className='grow overflow-hidden px-4 border-r border-primary-color flex-1'>
@@ -451,7 +451,7 @@ const AllHomeTemplate = () => {
                               ))}
                 </div>
             </div>
-            <div>
+            <div className='mb-5'>
                 <LandingPages
                     handleLandingIndex={handleLandingIndex}
                     itemsPerPage={Number(selectedOption2.value)}
