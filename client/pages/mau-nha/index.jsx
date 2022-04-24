@@ -9,41 +9,42 @@ import Select from 'react-select';
 import { useEffect, useState } from 'react';
 import { Item } from 'components/common/gridLayoutMauNha';
 import Image from 'next/image';
-import mauNhaGoCoTruyen from '../../public/images/mau-nha-co-truyen.Mau-nha-go-kieu-Hue.jpg';
-import mauNhaGoCoTruyen2 from '../../public/images/mau-nha-co-truyen.Mau-nha-ruong-hue.jpg';
-import mauNhaGoCoTruyen3 from '../../public/images/mau-nha-co-truyen.Mau-nha-truyen-thong-dep.jpg';
-import mauNhaGoCoTruyen4 from '../../public/images/mau-nha-co-truyen.Nha-co-truyen-5-gian.jpg';
-import mauNhaGoCoTruyen5 from '../../public/images/mau-nha-co-truyen.Nha-go-3-gian-go-Lim.jpg';
-import mauNhaGoCoTruyen6 from '../../public/images/mau-nha-co-truyen.Nha-go-3-gian-kieu-Bac-Bo.jpg';
-import mauNhaGoCoTruyen7 from '../../public/images/mau-nha-co-truyen.Nha-go-5-gian-dep.png';
-//
-import mauNhaTuDuong from '../../public/images/nha_tu_duong.Mau-nha-tho-co.jpg';
-import mauNhaTuDuong2 from '../../public/images/nha_tu_duong.Mau-nha-tho-ho-hai-mai.jpg';
-import mauNhaTuDuong3 from '../../public/images/nha_tu_duong.Mau-nha-tho.png';
-import mauNhaTuDuong4 from '../../public/images/nha_tu_duong.Mau-nha-tu-duong-bang-go-dep.png';
-import mauNhaTuDuong5 from '../../public/images/nha_tu_duong.Mau-nha-tu-duong-dep.jpg';
-import mauNhaTuDuong6 from '../../public/images/nha_tu_duong.Mau-nha-tu-duong-mai-cong.jpg';
-import mauNhaTuDuong7 from '../../public/images/nha_tu_duong.Mau-nha-tu-duong.jpg';
 
-import mauNhaHienDai from '../../public/images/mau-nha-hien-dai.Mau-nha-go-hien-dai-02.jpg';
-import mauNhaHienDai2 from '../../public/images/mau-nha-hien-dai.Mau-nha-go-hien-dai-03.jpg';
-import mauNhaHienDai3 from '../../public/images/mau-nha-hien-dai.Mau-nha-go-hien-dai-04.jpg';
-import mauNhaHienDai4 from '../../public/images/mau-nha-hien-dai.Mau-nha-go-hien-dai.jpg';
-import mauNhaHienDai5 from '../../public/images/mau-nha-hien-dai.Mau-nha-go-lam-homestay.jpg';
-import mauNhaHienDai6 from '../../public/images/mau-nha-hien-dai.Mau-nha-go-hien-dai-06.jpg';
+// import mauNhaGoCoTruyen from '/images/mau-nha-co-truyen.Mau-nha-go-kieu-Hue.jpg';
+// import mauNhaGoCoTruyen2 from '/images/mau-nha-co-truyen.Mau-nha-ruong-hue.jpg';
+// import mauNhaGoCoTruyen3 from '/images/mau-nha-co-truyen.Mau-nha-truyen-thong-dep.jpg';
+// import mauNhaGoCoTruyen4 from '/images/mau-nha-co-truyen.Nha-co-truyen-5-gian.jpg';
+// import mauNhaGoCoTruyen5 from '/images/mau-nha-co-truyen.Nha-go-3-gian-go-Lim.jpg';
+// import mauNhaGoCoTruyen6 from '/images/mau-nha-co-truyen.Nha-go-3-gian-kieu-Bac-Bo.jpg';
+// import mauNhaGoCoTruyen7 from '/images/mau-nha-co-truyen.Nha-go-5-gian-dep.png';
 
-import mauNhaLucGiac from '../../public/images/mau-nha-luc-giac.Choi-hong-mat.jpg';
-import mauNhaLucGiac2 from '../../public/images/mau-nha-luc-giac.Choi-ngam-canh.jpg';
-import mauNhaLucGiac3 from '../../public/images/mau-nha-luc-giac.Mau-nha-luc-giac.jpg';
-import mauNhaLucGiac4 from '../../public/images/mau-nha-luc-giac.Nha-choi-kieu-co.jpg';
+// import mauNhaTuDuong from '/images/nha_tu_duong.Mau-nha-tho-co.jpg';
+// import mauNhaTuDuong2 from '/images/nha_tu_duong.Mau-nha-tho-ho-hai-mai.jpg';
+// import mauNhaTuDuong3 from '/images/nha_tu_duong.Mau-nha-tho.png';
+// import mauNhaTuDuong4 from '/images/nha_tu_duong.Mau-nha-tu-duong-bang-go-dep.png';
+// import mauNhaTuDuong5 from '/images/nha_tu_duong.Mau-nha-tu-duong-dep.jpg';
+// import mauNhaTuDuong6 from '/images/nha_tu_duong.Mau-nha-tu-duong-mai-cong.jpg';
+// import mauNhaTuDuong7 from '/images/nha_tu_duong.Mau-nha-tu-duong.jpg';
 
-import mauNhaSan from '../../public/images/mau-nha-san.Mau-nha-go-3-gian-co-truyen.jpg';
-import mauNhaSan2 from '../../public/images/mau-nha-san.Mau-nha-go-5-gian-truyen-thong.png';
-import mauNhaSan3 from '../../public/images/mau-nha-san.Mau-nha-san-3-gian-2-trai.jpg';
-import mauNhaSan4 from '../../public/images/mau-nha-san.Mau-nha-san-3-gian-truyen-thong.jpg';
-import mauNhaSan5 from '../../public/images/mau-nha-san.Mau-nha-san-5-gian-mai-thai.jpg';
-import mauNhaSan6 from '../../public/images/mau-nha-san.Mau-nha-san-go-kieu-thai.jpg';
-import mauNhaSan7 from '../../public/images/mau-nha-san.Mau-nha-san-go-liem.jpeg';
+// import mauNhaHienDai from '/images/mau-nha-hien-dai.Mau-nha-go-hien-dai-02.jpg';
+// import mauNhaHienDai2 from '/images/mau-nha-hien-dai.Mau-nha-go-hien-dai-03.jpg';
+// import mauNhaHienDai3 from '/images/mau-nha-hien-dai.Mau-nha-go-hien-dai-04.jpg';
+// import mauNhaHienDai4 from '/images/mau-nha-hien-dai.Mau-nha-go-hien-dai.jpg';
+// import mauNhaHienDai5 from '/images/mau-nha-hien-dai.Mau-nha-go-lam-homestay.jpg';
+// import mauNhaHienDai6 from '/images/mau-nha-hien-dai.Mau-nha-go-hien-dai-06.jpg';
+
+// import mauNhaLucGiac from '/images/mau-nha-luc-giac.Choi-hong-mat.jpg';
+// import mauNhaLucGiac2 from '/images/mau-nha-luc-giac.Choi-ngam-canh.jpg';
+// import mauNhaLucGiac3 from '/images/mau-nha-luc-giac.Mau-nha-luc-giac.jpg';
+// import mauNhaLucGiac4 from '/images/mau-nha-luc-giac.Nha-choi-kieu-co.jpg';
+
+// import mauNhaSan from '/images/mau-nha-san.Mau-nha-go-3-gian-co-truyen.jpg';
+// import mauNhaSan2 from '/images/mau-nha-san.Mau-nha-go-5-gian-truyen-thong.png';
+// import mauNhaSan3 from '/images/mau-nha-san.Mau-nha-san-3-gian-2-trai.jpg';
+// import mauNhaSan4 from '/images/mau-nha-san.Mau-nha-san-3-gian-truyen-thong.jpg';
+// import mauNhaSan5 from '/images/mau-nha-san.Mau-nha-san-5-gian-mai-thai.jpg';
+// import mauNhaSan6 from '/images/mau-nha-san.Mau-nha-san-go-kieu-thai.jpg';
+// import mauNhaSan7 from '/images/mau-nha-san.Mau-nha-san-go-liem.jpeg';
 
 import LandingPages from 'components/common/LandingPages';
 
@@ -51,187 +52,187 @@ const dummyData = [
     {
         title: 'Chòi hóng mát',
         codeProduct: '12345A',
-        linkImage: mauNhaLucGiac,
+        linkImage: '/images/mau-nha-luc-giac.Choi-hong-mat.jpg',
         type: 'mauNhaLucGiac',
     },
     {
         title: 'Chòi ngắm cảnh',
         codeProduct: '12345A',
-        linkImage: mauNhaLucGiac2,
+        linkImage: '/images/mau-nha-luc-giac.Choi-ngam-canh.jpg',
         type: 'mauNhaLucGiac',
     },
     {
         title: 'Mẫu nhà lục giác',
         codeProduct: '12345A',
-        linkImage: mauNhaLucGiac3,
+        linkImage: '/images/mau-nha-luc-giac.Mau-nha-luc-giac.jpg',
         type: 'mauNhaLucGiac',
     },
     {
         title: 'Nhà chòi kiểu cổ',
         codeProduct: '12345A',
-        linkImage: mauNhaLucGiac4,
+        linkImage: '/images/mau-nha-luc-giac.Nha-choi-kieu-co.jpg',
         type: 'mauNhaLucGiac',
     },
     {
         title: 'Mẫu nhà gỗ 3 gian cổ truyền',
         codeProduct: '12345A',
-        linkImage: mauNhaSan,
+        linkImage: '/images/mau-nha-san.Mau-nha-go-3-gian-co-truyen.jpg',
         type: 'mauNhaSan',
     },
     {
         title: 'Mẫu nhà gỗ 5 gian truyền thống',
         codeProduct: '12345A',
-        linkImage: mauNhaSan2,
+        linkImage: '/images/mau-nha-san.Mau-nha-go-5-gian-truyen-thong.png',
         type: 'mauNhaSan',
     },
     {
         title: 'Mẫu nhà gỗ 3 gian 2 trái',
         codeProduct: '12345A',
-        linkImage: mauNhaSan3,
+        linkImage: '/images/mau-nha-san.Mau-nha-san-3-gian-2-trai.jpg',
         type: 'mauNhaSan',
     },
     {
         title: 'Mẫu nhà gỗ 3 gian truyền thống',
         codeProduct: '12345A',
-        linkImage: mauNhaSan4,
+        linkImage: '/images/mau-nha-san.Mau-nha-san-3-gian-truyen-thong.jpg',
         type: 'mauNhaSan',
     },
     {
         title: 'Mẫu nhà gỗ 5 gian mái thái',
         codeProduct: '12345A',
-        linkImage: mauNhaSan5,
+        linkImage: '/images/mau-nha-san.Mau-nha-san-5-gian-mai-thai.jpg',
         type: 'mauNhaSan',
     },
     {
         title: 'Mẫu nhà gỗ kiểu thái',
         codeProduct: '12345A',
-        linkImage: mauNhaSan6,
+        linkImage: '/images/mau-nha-san.Mau-nha-san-go-kieu-thai.jpg',
         type: 'mauNhaSan',
     },
     {
         title: 'Mẫu nhà gỗ Liêm',
         codeProduct: '12345A',
-        linkImage: mauNhaSan7,
+        linkImage: '/images/mau-nha-san.Mau-nha-san-go-liem.jpeg',
         type: 'mauNhaSan',
     },
     {
         title: 'Mẫu nhà gỗ hiện đại',
         codeProduct: '12345A',
-        linkImage: mauNhaHienDai,
+        linkImage: '/images/mau-nha-hien-dai.Mau-nha-go-hien-dai-02.jpg',
         type: 'nhaGoHienDai',
     },
     {
         title: 'Mẫu nhà gỗ hiện đại 02',
         codeProduct: '12345A',
-        linkImage: mauNhaHienDai2,
+        linkImage: '/images/mau-nha-hien-dai.Mau-nha-go-hien-dai-03.jpg',
         type: 'nhaGoHienDai',
     },
     {
         title: 'Mẫu nhà gỗ hiện đại 03',
         codeProduct: '12345A',
-        linkImage: mauNhaHienDai3,
+        linkImage: '/images/mau-nha-hien-dai.Mau-nha-go-hien-dai-04.jpg',
         type: 'nhaGoHienDai',
     },
     {
         title: 'Mẫu nhà gỗ hiện đại 04',
         codeProduct: '12345A',
-        linkImage: mauNhaHienDai4,
+        linkImage: '/images/mau-nha-hien-dai.Mau-nha-go-hien-dai.jpg',
         type: 'nhaGoHienDai',
     },
     {
         title: 'Mẫu nhà gỗ hiện đại 06',
         codeProduct: '12345A',
-        linkImage: mauNhaHienDai5,
+        linkImage: '/images/mau-nha-hien-dai.Mau-nha-go-lam-homestay.jpg',
         type: 'nhaGoHienDai',
     },
     {
         title: 'Mẫu nhà gỗ làm homestay',
         codeProduct: '12345A',
-        linkImage: mauNhaHienDai6,
+        linkImage: '/images/mau-nha-hien-dai.Mau-nha-go-hien-dai-06.jpg',
         type: 'nhaGoHienDai',
     },
     {
         title: 'Mẫu nhà gỗ kiểu Huế',
         codeProduct: '12345A',
-        linkImage: mauNhaGoCoTruyen,
+        linkImage: '/images/mau-nha-co-truyen.Mau-nha-go-kieu-Hue.jpg',
         type: 'nhaGoCoTruyen',
     },
     {
         title: 'Mẫu nhà rường Huế',
         codeProduct: '12345A',
-        linkImage: mauNhaGoCoTruyen2,
+        linkImage: '/images/mau-nha-co-truyen.Mau-nha-ruong-hue.jpg',
         type: 'nhaGoCoTruyen',
     },
     {
         title: 'Mẫu nhà truyền thống đẹp',
         codeProduct: '12345A',
-        linkImage: mauNhaGoCoTruyen3,
+        linkImage: '/images/mau-nha-co-truyen.Mau-nha-truyen-thong-dep.jpg',
         type: 'nhaGoCoTruyen',
     },
     {
         title: 'Nhà cổ truyền 5 gian',
         codeProduct: '12345A',
-        linkImage: mauNhaGoCoTruyen4,
+        linkImage: '/images/mau-nha-co-truyen.Nha-co-truyen-5-gian.jpg',
         type: 'nhaGoCoTruyen',
     },
     {
         title: 'Nhà 3 gian gỗ Lim',
         codeProduct: '12345A',
-        linkImage: mauNhaGoCoTruyen5,
+        linkImage: '/images/mau-nha-co-truyen.Nha-go-3-gian-go-Lim.jpg',
         type: 'nhaGoCoTruyen',
     },
     {
         title: 'Nhà gỗ 3 gian kiểu Bắc bộ',
         codeProduct: '12345A',
-        linkImage: mauNhaGoCoTruyen6,
+        linkImage: '/images/mau-nha-co-truyen.Nha-go-3-gian-kieu-Bac-Bo.jpg',
         type: 'nhaGoCoTruyen',
     },
     {
         title: 'Nhà gỗ 5 gian đẹp',
         codeProduct: '12345A',
-        linkImage: mauNhaGoCoTruyen7,
+        linkImage: '/images/mau-nha-co-truyen.Nha-go-5-gian-dep.png',
         type: 'nhaGoCoTruyen',
     },
     {
         title: 'Mẫu nhà thờ cổ',
         codeProduct: '12345A',
-        linkImage: mauNhaTuDuong,
+        linkImage: '/images/nha_tu_duong.Mau-nha-tho-co.jpg',
         type: 'nhaTuDuong',
     },
     {
         title: 'Mẫu nhà thờ cổ hai mái',
         codeProduct: '12345A',
-        linkImage: mauNhaTuDuong2,
+        linkImage: '/images/nha_tu_duong.Mau-nha-tho-ho-hai-mai.jpg',
         type: 'nhaTuDuong',
     },
     {
         title: 'Mẫu nhà thờ',
         codeProduct: '12345A',
-        linkImage: mauNhaTuDuong3,
+        linkImage: '/images/nha_tu_duong.Mau-nha-tho.png',
         type: 'nhaTuDuong',
     },
     {
         title: 'Mẫu nhà từ đường bằng gỗ đẹp',
         codeProduct: '12345A',
-        linkImage: mauNhaTuDuong4,
+        linkImage: '/images/nha_tu_duong.Mau-nha-tu-duong-bang-go-dep.png',
         type: 'nhaTuDuong',
     },
     {
         title: 'Mẫu nhà từ đường đẹp',
         codeProduct: '12345A',
-        linkImage: mauNhaTuDuong5,
+        linkImage: '/images/nha_tu_duong.Mau-nha-tu-duong-dep.jpg',
         type: 'nhaTuDuong',
     },
     {
         title: 'Mẫu nhà từ đường mái cong',
         codeProduct: '12345A',
-        linkImage: mauNhaTuDuong6,
+        linkImage: '/images/nha_tu_duong.Mau-nha-tu-duong-mai-cong.jpg',
         type: 'nhaTuDuong',
     },
     {
         title: 'Mẫu nhà từ đường',
         codeProduct: '12345A',
-        linkImage: mauNhaTuDuong7,
+        linkImage: '/images/nha_tu_duong.Mau-nha-tu-duong.jpg',
         type: 'nhaTuDuong',
     },
 ];

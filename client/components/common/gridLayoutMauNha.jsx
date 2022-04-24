@@ -23,6 +23,7 @@ const Item = ({ params }) => {
                     alt='Error while display image'
                     src={params.linkImage}
                     layout='fill'
+
                     // width={450}
                     // height={290}
                 />
@@ -39,7 +40,8 @@ const Item = ({ params }) => {
                 <Image
                     className='z-0  group-hover:brightness-90 transition ease-out duration-500'
                     layout='intrinsic'
-                    // height={900}
+                    width={450}
+                    height={290}
                     priority
                     src={params.linkImage}
                     alt='Error while display image'
