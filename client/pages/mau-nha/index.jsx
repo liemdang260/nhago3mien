@@ -249,8 +249,9 @@ const Item2 = ({ params }) => {
                     src={params.linkImage}
                     alt='mau san pham'
                     priority
-                    layout='responsive'
-                    // height={1250}
+                    layout='fixed'
+                    width={350}
+                    height={200}
                 />
             </div>
             <div className='grow-[2] flex-1 p-4'>
