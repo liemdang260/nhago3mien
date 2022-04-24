@@ -1,6 +1,4 @@
-import { useState } from 'react';
 import Image from 'next/image';
-import mauHinhAnh from '../../public/nhago.jpg';
 import Title from 'components/common/Title';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhoneFlip } from '@fortawesome/free-solid-svg-icons';
@@ -23,7 +21,7 @@ const Item = ({ params }) => {
             >
                 <Image
                     className='z-0 group-hover:scale-110 group-hover:brightness-90 transition ease-out duration-500'
-                    src={params.imgLink}
+                    src={params.linkImage}
                     width={280}
                     height={210}
                     priority

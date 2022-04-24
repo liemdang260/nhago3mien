@@ -16,25 +16,25 @@ const MauNhaData = [
         id: 1,
         title: 'Nhà 5 gian truyền thống',
         codeProduct: '1245D5',
-        imgLink: '/nha-5-gian.jpg',
+        linkImage: '/nha-5-gian.jpg',
     },
     {
         id: 2,
         title: 'Nhà từ đường',
         codeProduct: '1245D5',
-        imgLink: '/nha-tu-duong.jpg',
+        linkImage: '/nha-tu-duong.jpg',
     },
     {
         id: 3,
         title: 'Nhà gỗ',
         codeProduct: '1245D5',
-        imgLink: '/nha-go-truyen-thong.jpg',
+        linkImage: '/nha-go-truyen-thong.jpg',
     },
     {
         id: 4,
         title: 'Chòi hóng mát',
         codeProduct: '1245D5',
-        imgLink: '/choi-hong-mat.jpg',
+        linkImage: '/choi-hong-mat.jpg',
     },
 ];
 
@@ -44,35 +44,35 @@ const ServicesData = [
         title: 'Tư vấn và thiết kế theo yêu cầu',
         description:
             'Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...',
-        imgLink: '/thiet-ke-theo-yeu-cau.jpg',
+        linkImage: '/thiet-ke-theo-yeu-cau.jpg',
     },
     {
         id: 2,
         title: 'Thiết kế và thi công không gian thờ',
         description:
             'Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...',
-        imgLink: '/khong-gian-tho.jpg',
+        linkImage: '/khong-gian-tho.jpg',
     },
     {
         id: 3,
         title: 'Cung cấp đồ gỗ thành phẩm',
         description:
             'Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...',
-        imgLink: '/do-go-thanh-pham.jpg',
+        linkImage: '/do-go-thanh-pham.jpg',
     },
     {
         id: 4,
         title: 'Thiết kế và thi công nội thất',
         description:
             'Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...',
-        imgLink: '/thiet-ke-noi-that.jpg',
+        linkImage: '/thiet-ke-noi-that.jpg',
     },
     {
         id: 5,
         title: 'Thiết kế và thi công nhà gỗ',
         description:
             'Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...',
-        imgLink: '/nhago.jpg',
+        linkImage: '/nhago.jpg',
     },
 ];
 export default function Home() {
