@@ -10,6 +10,7 @@ import Contact from './SideBar/Contact';
 import ArticleInsights from './ArticleInsights';
 import Breadcrumb from './SideBar/Breadcrumb';
 import Tooltip from './Tooltip';
+import { Services } from 'components/common/header';
 
 const mostViewedNews = [
     {
@@ -121,7 +122,7 @@ export const ViewList = ({ title, children }) => {
 export const NewsSidebar = () => {
     return (
         <div>
-            <ViewList title={'XEM NHIỀU NHẤT'}>
+            {/* <ViewList title={'XEM NHIỀU NHẤT'}>
                 <ul className='border-[1px] border-gray-300'>
                     {mostViewedNews &&
                         mostViewedNews.map((item, index) => (
@@ -140,8 +141,8 @@ export const NewsSidebar = () => {
                             </li>
                         ))}
                 </ul>
-            </ViewList>
-            <Category />
+            </ViewList> */}
+            <Category data={Services} title={'Danh mục dịch vụ'} />
             <Support />
             <Contact />
         </div>

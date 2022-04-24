@@ -11,7 +11,24 @@ import {
 // import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
-
+export const Services = [
+    {
+        title: 'THIẾT KẾ VÀ THI CÔNG NHÀ GỖ',
+        link: '/dich-vu/thiet-ke-va-thi-cong-nha-go',
+    },
+    {
+        title: 'THIẾT KẾ, THI CÔNG NỘI THẤT',
+        link: '/dich-vu/thiet-ke-va-thi-cong-noi-that',
+    },
+    {
+        title: 'THIẾT KẾ, THI CÔNG KHÔNG GIAN THỜ',
+        link: '/dich-vu/thiet-ke-va-thi-cong-khong-gian-tho',
+    },
+    {
+        title: 'CUNG CẤP ĐỒ GỖ THÀNH PHẨM',
+        link: '/dich-vu/cung-cap-do-go-thanh-pham',
+    },
+];
 const navTitle = [
     { link: '/', title: 'TRANG CHỦ', isDropdown: false },
     { link: '/gioi-thieu', title: 'GIỚI THIỆU', isDropdown: false },
@@ -31,28 +48,12 @@ const navTitle = [
         link: '/dich-vu',
         title: 'DỊCH VỤ',
         isDropdown: true,
-        dropDownContent: [
-            {
-                title: 'THIẾT KẾ VÀ THI CÔNG NHÀ GỖ',
-                link: '/dich-vu/thiet-ke-va-thi-cong-nha-go',
-            },
-            {
-                title: 'THIẾT KẾ, THI CÔNG NỘI THẤT',
-                link: '/dich-vu/thiet-ke-va-thi-cong-noi-that',
-            },
-            {
-                title: 'THIẾT KẾ, THI CÔNG KHÔNG GIAN THỜ',
-                link: '/dich-vu/thiet-ke-va-thi-cong-khong-gian-tho',
-            },
-            {
-                title: 'CUNG CẤP ĐỒ GỖ THÀNH PHẨM',
-                link: '/dich-vu/cung-cap-do-go-thanh-pham',
-            },
-        ],
+        dropDownContent: Services,
     },
     { link: '/tin-tuc', title: 'TIN TỨC', isDropdown: false },
     { link: '/lien-he', title: 'LIÊN HỆ', isDropdown: false },
 ];
+
 export default function Header() {
     const { pathname } = useRouter();
     const { text } = useTypewriter({
