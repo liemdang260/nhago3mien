@@ -1,9 +1,9 @@
-import PostsTitle from 'components/common/SideBar/PostsTitle';
-import Category from 'components/common/SideBar/Category';
-import Support from 'components/common/SideBar/Support';
-import Contact from 'components/common/SideBar/Contact';
-import BreadCrumb from 'components/common/SideBar/Breadcrumb';
-import { PageItem, PageWrapper } from 'components/common/PageWrapper';
+// import PostsTitle from 'components/common/SideBar/PostsTitle';
+// import Category from 'components/common/SideBar/Category';
+// import Support from 'components/common/SideBar/Support';
+// import Contact from 'components/common/SideBar/Contact';
+// import BreadCrumb from 'components/common/SideBar/Breadcrumb';
+// import { PageItem, PageWrapper } from 'components/common/PageWrapper';
 import Link from 'next/link';
 import NewsWrapper from 'components/common/NewsWrapper';
 const data = [
@@ -399,3 +399,4 @@ const Introduction = () => {
 };
 
 export default Introduction;
+

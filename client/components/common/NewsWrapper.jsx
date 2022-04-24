@@ -12,61 +12,61 @@ import Breadcrumb from './SideBar/Breadcrumb';
 import Tooltip from './Tooltip';
 import { Services } from 'components/common/header';
 
-const mostViewedNews = [
-    {
-        id: 1,
-        title: 'Mẫu nhà gỗ đẹp',
-        imgLink:
-            'https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-tho-tu-duong/NTD-01/nha-tu-duong-2-400x300.jpg',
-        createAt: '16/10/2018',
-        views: 16903,
-    },
-    {
-        id: 2,
-        title: 'Nhà gỗ anphuco',
-        imgLink:
-            'https://nhagoanphu.com/image/cache/catalog/mau-nha-go/Nha-go-hien-dai/NGHD-12/nha-vuon-bang-go-3-400x300.jpg',
-        createAt: '18/10/2018',
-        views: 15309,
-    },
-    {
-        id: 3,
-        title: 'Bản vẽ thiết kế nhà gỗ lục giác',
-        imgLink:
-            'https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-tho-tu-duong/NTD-01/nha-tu-duong-2-400x300.jpg',
-        createAt: '16/10/2018',
-        views: 16903,
-    },
-    {
-        id: 4,
-        title: 'Đặc điểm chung của nhà gỗ lục giác',
-        imgLink:
-            'https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-tho-tu-duong/NTD-01/nha-tu-duong-2-400x300.jpg',
-        createAt: '16/10/2018',
-        views: 16903,
-    },
-    {
-        id: 5,
-        title: 'Báo giá thiết kế nhà thờ họ',
-        imgLink:
-            'https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-tho-tu-duong/NTD-01/nha-tu-duong-2-400x300.jpg',
-        createAt: '16/10/2018',
-        views: 16903,
-    },
-];
+// const mostViewedNews = [
+//     {
+//         id: 1,
+//         title: 'Mẫu nhà gỗ đẹp',
+//         imgLink:
+//             'https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-tho-tu-duong/NTD-01/nha-tu-duong-2-400x300.jpg',
+//         createAt: '16/10/2018',
+//         views: 16903,
+//     },
+//     {
+//         id: 2,
+//         title: 'Nhà gỗ anphuco',
+//         imgLink:
+//             'https://nhagoanphu.com/image/cache/catalog/mau-nha-go/Nha-go-hien-dai/NGHD-12/nha-vuon-bang-go-3-400x300.jpg',
+//         createAt: '18/10/2018',
+//         views: 15309,
+//     },
+//     {
+//         id: 3,
+//         title: 'Bản vẽ thiết kế nhà gỗ lục giác',
+//         imgLink:
+//             'https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-tho-tu-duong/NTD-01/nha-tu-duong-2-400x300.jpg',
+//         createAt: '16/10/2018',
+//         views: 16903,
+//     },
+//     {
+//         id: 4,
+//         title: 'Đặc điểm chung của nhà gỗ lục giác',
+//         imgLink:
+//             'https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-tho-tu-duong/NTD-01/nha-tu-duong-2-400x300.jpg',
+//         createAt: '16/10/2018',
+//         views: 16903,
+//     },
+//     {
+//         id: 5,
+//         title: 'Báo giá thiết kế nhà thờ họ',
+//         imgLink:
+//             'https://nhagoanphu.com/image/cache/catalog/mau-nha-go/nha-tho-tu-duong/NTD-01/nha-tu-duong-2-400x300.jpg',
+//         createAt: '16/10/2018',
+//         views: 16903,
+//     },
+// ];
 
-const hotNews = [
-    'Tìm hiểu về nhà rường Huế',
-    'Nhà rường là gì, đặc điểm chung của nhà Rường',
-    'Đơn vị thiết kế và thi công nhà Rường tại Miền Nam',
-    'Chi phí làm nhà rường',
-    'Cấu tạo chung của nhà rường',
-    'Mẫu nhà rường hiện đại',
-    'Báo giá chi phí thiết kế và thi công nhà Rường Huế',
-    'Các mẫu nhà rường được yêu thích nhất',
-    'Tìm hiểu về nhà rường',
-    'Cách mua nhà gỗ bát giác giá rẻ',
-];
+// const hotNews = [
+//     'Tìm hiểu về nhà rường Huế',
+//     'Nhà rường là gì, đặc điểm chung của nhà Rường',
+//     'Đơn vị thiết kế và thi công nhà Rường tại Miền Nam',
+//     'Chi phí làm nhà rường',
+//     'Cấu tạo chung của nhà rường',
+//     'Mẫu nhà rường hiện đại',
+//     'Báo giá chi phí thiết kế và thi công nhà Rường Huế',
+//     'Các mẫu nhà rường được yêu thích nhất',
+//     'Tìm hiểu về nhà rường',
+//     'Cách mua nhà gỗ bát giác giá rẻ',
+// ];
 export const HotViewedItem = ({ item }) => {
     return (
         <Tooltip title={item}>
@@ -142,9 +142,15 @@ export const NewsSidebar = () => {
                         ))}
                 </ul>
             </ViewList> */}
-            <Category data={Services} title={'Danh mục dịch vụ'} />
-            <Support />
-            <Contact />
+            <div>
+                <Category data={Services} title={'Danh mục dịch vụ'} />
+            </div>
+            <div className='mt-10'>
+                <Support />
+            </div>
+            <div className='mt-10'>
+                <Contact />
+            </div>
         </div>
     );
 };
