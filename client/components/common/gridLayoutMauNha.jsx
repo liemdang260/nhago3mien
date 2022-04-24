@@ -111,14 +111,15 @@ const GridLayoutMauNha = ({ title, data, hasPagination = false }) => {
                 className='mySwiper w-full h-full'
             >
                 {data &&
-                    data.map((item) => (
-                        <SwiperSlide key={item.id}>
+                    data.map((item, index) => (
+                        <SwiperSlide key={index}>
                             {' '}
                             <Item
                                 params={{
                                     title: item.title,
                                     codeProduct: item.codeProduct || '',
                                     description: item.description || '',
+                                    linkImage: item.linkImage,
                                 }}
                             />
                         </SwiperSlide>

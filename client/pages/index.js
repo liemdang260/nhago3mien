@@ -8,14 +8,67 @@ import About from 'components/home/About';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper';
 import Commit from 'components/home/Commit';
+import mauNhaGoCoTruyen from '../public/images/mau-nha-co-truyen.Mau-nha-go-kieu-Hue.jpg';
+import mauNhaGoCoTruyen2 from '../public/images/mau-nha-co-truyen.Mau-nha-ruong-hue.jpg';
+import mauNhaGoCoTruyen3 from '../public/images/mau-nha-co-truyen.Mau-nha-truyen-thong-dep.jpg';
+import mauNhaGoCoTruyen4 from '../public/images/mau-nha-co-truyen.Nha-co-truyen-5-gian.jpg';
+import mauNhaGoCoTruyen5 from '../public/images/mau-nha-co-truyen.Nha-go-3-gian-go-Lim.jpg';
+import mauNhaGoCoTruyen6 from '../public/images/mau-nha-co-truyen.Nha-go-3-gian-kieu-Bac-Bo.jpg';
+import mauNhaGoCoTruyen7 from '../public/images/mau-nha-co-truyen.Nha-go-5-gian-dep.png';
+
+import mauNhaTuDuong from '../public/images/nha_tu_duong.Mau-nha-tho-co.jpg';
+import mauNhaTuDuong2 from '../public/images/nha_tu_duong.Mau-nha-tho-ho-hai-mai.jpg';
+import mauNhaTuDuong3 from '../public/images/nha_tu_duong.Mau-nha-tho.png';
+import mauNhaTuDuong4 from '../public/images/nha_tu_duong.Mau-nha-tu-duong-bang-go-dep.png';
+import mauNhaTuDuong5 from '../public/images/nha_tu_duong.Mau-nha-tu-duong-dep.jpg';
+import mauNhaTuDuong6 from '../public/images/nha_tu_duong.Mau-nha-tu-duong-mai-cong.jpg';
+import mauNhaTuDuong7 from '../public/images/nha_tu_duong.Mau-nha-tu-duong.jpg';
 
 const images = ['/banner1.jpg', '/banner2.jpg', '/banner3.jpg'];
 
 const MauNhaData = [
-    { id: 1, title: 'Nhà 1', codeProduct: '1245D5' },
-    { id: 2, title: 'Nhà 2', codeProduct: '1245D5' },
-    { id: 3, title: 'Nhà 3', codeProduct: '1245D5' },
-    { id: 4, title: 'Nhà 4', codeProduct: '1245D5' },
+    {
+        title: 'Mẫu nhà gỗ kiểu Huế',
+        codeProduct: '12345A',
+        linkImage: mauNhaGoCoTruyen,
+        type: 'nhaGoCoTruyen',
+    },
+    {
+        title: 'Mẫu nhà rường Huế',
+        codeProduct: '12345A',
+        linkImage: mauNhaGoCoTruyen2,
+        type: 'nhaGoCoTruyen',
+    },
+    {
+        title: 'Mẫu nhà truyền thống đẹp',
+        codeProduct: '12345A',
+        linkImage: mauNhaGoCoTruyen3,
+        type: 'nhaGoCoTruyen',
+    },
+    {
+        title: 'Nhà cổ truyền 5 gian',
+        codeProduct: '12345A',
+        linkImage: mauNhaGoCoTruyen4,
+        type: 'nhaGoCoTruyen',
+    },
+    {
+        title: 'Nhà 3 gian gỗ Lim',
+        codeProduct: '12345A',
+        linkImage: mauNhaGoCoTruyen5,
+        type: 'nhaGoCoTruyen',
+    },
+    {
+        title: 'Nhà gỗ 3 gian kiểu Bắc bộ',
+        codeProduct: '12345A',
+        linkImage: mauNhaGoCoTruyen6,
+        type: 'nhaGoCoTruyen',
+    },
+    {
+        title: 'Nhà gỗ 5 gian đẹp',
+        codeProduct: '12345A',
+        linkImage: mauNhaGoCoTruyen7,
+        type: 'nhaGoCoTruyen',
+    },
 ];
 
 const ServicesData = [
@@ -24,30 +77,35 @@ const ServicesData = [
         title: 'Tư vấn và thiết kế theo yêu cầu',
         description:
             'Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...',
+        linkImage: mauNhaTuDuong,
     },
     {
         id: 2,
         title: 'Thiết kế và thi công không gian thờ',
         description:
             'Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...',
+        linkImage: mauNhaTuDuong2,
     },
     {
         id: 3,
         title: 'Cung cấp đồ gỗ thành phẩm',
         description:
             'Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...',
+        linkImage: mauNhaTuDuong3,
     },
     {
         id: 4,
         title: 'Thiết kế và thi công nội thất',
         description:
             'Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...',
+        linkImage: mauNhaTuDuong4,
     },
     {
         id: 5,
         title: 'Thiết kế và thi công nhà gỗ',
         description:
             'Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...',
+        linkImage: mauNhaTuDuong5,
     },
 ];
 export default function Home() {
