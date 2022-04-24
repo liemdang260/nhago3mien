@@ -84,13 +84,13 @@ export default function Home() {
                             </SwiperSlide>
                         ))}
                 </Swiper>
-                <div className='py-20'>
+                <div className='py-20 bg-[#f7f5f3]'>
                     <About />
                 </div>
                 <div className='py-20'>
                     <Trait />
                 </div>
-                <div className='bg-primary-color/5 py-20 pb-24'>
+                <div className='bg-[#f7f5f3] py-20 pb-24'>
                     <GridLayoutMauNha
                         title='Dịch vụ cung cấp'
                         data={ServicesData}

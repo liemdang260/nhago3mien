@@ -12,7 +12,7 @@ function About() {
         <div className='container'>
             <Title title='Về chúng tôi' />
             <div className='flex justify-end relative mt-8'>
-                <div className='z-10 w-[533.3333px] absolute top-1/2 -translate-y-1/2 left-0 after:absolute after:w-full after:h-6 after:bg-white before:absolute before:w-full before:h-6 before:bg-white before:bottom-full'>
+                <div className='z-10 w-[533.3333px] absolute top-1/2 -translate-y-1/2 left-0 after:absolute after:w-full after:h-6 after:bg-[#f7f5f3] before:absolute before:w-full before:h-3 before:bg-[#f7f5f3] before:bottom-full'>
                     <Swiper
                         modules={[Pagination, Autoplay, EffectCube]}
                         effect='cube'
@@ -47,11 +47,11 @@ function About() {
                     <p className='text-primary-color font-bold text-lg mb-4'>
                         Nhà gỗ Ba miền xin kính chào Quý khách hàng!
                     </p>
-                    <p className='mb-2 leading-7 text-color text-justify'>
+                    <p className='mb-2 leading-7 text-justify'>
                         <span className='text-primary-color font-medium'>
                             Nhà gỗ Ba miền
                         </span>{' '}
-                        Là những người con của quê hương Làng mộc Đạt Tài, trải
+                        là những người con của quê hương Làng mộc Đạt Tài, trải
                         qua nhiều thế hệ cha chuyền con nối, chúng tôi tự hào
                         với đội ngũ thợ kinh nghiệm có tay nghề và trình độ cao
                         cùng với nhóm thiết kế tận tâm, chuyên nghiệp, áp dụng
@@ -64,8 +64,10 @@ function About() {
                         mang đến cho bạn sự hài lòng về sản phẩm chất lượng với
                         giá hợp lý nhất!
                     </p>
-                    <h5 className='text-color mb-2'>Quy trình làm việc:</h5>
-                    <ol className='list-decimal ml-4 text-color leading-7 text-justify'>
+                    <h5 className='text-color mb-2 italic'>
+                        Quy trình làm việc:
+                    </h5>
+                    <ol className='list-decimal ml-4 leading-7 text-justify'>
                         <li>
                             Lấy ý tưởng của khách hàng (nếu khách hàng chưa có ý
                             tưởng, chúng tôi sẽ tư vấn).
@@ -76,7 +78,7 @@ function About() {
                         </li>
                         <li>Gia công và láp giáp.</li>
                     </ol>
-                    <p className='bg-white px-4 absolute bottom-0 translate-y-1/2 text-2xl italic font-semibold text-primary-color right-10'>
+                    <p className='bg-[#f7f5f3] px-4 absolute bottom-0 translate-y-1/2 text-2xl italic font-semibold text-primary-color right-10'>
                         Nhà gỗ Ba miền
                     </p>
                 </div>
