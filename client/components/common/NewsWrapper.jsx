@@ -142,7 +142,7 @@ export const NewsSidebar = () => {
                         ))}
                 </ul>
             </ViewList> */}
-            <Category />
+            <Category data={Services} title={'Danh mục dịch vụ'} />
             <Support />
             <Contact />
         </div>
