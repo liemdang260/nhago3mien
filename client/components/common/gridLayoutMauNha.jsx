@@ -15,22 +15,6 @@ const Item = ({ params }) => {
       hover:shadow-primary-color hover:bg-slate-200 group
       '
         >
-            <div
-                className='hidden w-[450px] h-[290px] group-hover:first:block absolute -translate-y-full -m-2
-          border-2 border-solid border-primary-color'
-            >
-                <Image
-                    className='z-50'
-                    alt='Error while display image'
-                    src={mauHinhAnh}
-                    layout='fill'
-                    // width={450}
-                    // height={290}
-                />
-                <div className='absolute left-1/2 top-[100.5%] w-16 overflow-hidden'>
-                    <div className=' h-2 w-2 bg-primary-color -rotate-45 transform origin-top-left'></div>
-                </div>
-            </div>
             <figure
                 className='relative before:absolute before:top-0 before:-left-3/4
                 before:z-[2] before:block before:w-1/2 before:h-full 
@@ -39,10 +23,10 @@ const Item = ({ params }) => {
             >
                 <Image
                     className='z-0 group-hover:scale-110 group-hover:brightness-90 transition ease-out duration-500'
-                    layout='intrinsic'
-                    height={900}
+                    src={params.imgLink}
+                    width={280}
+                    height={210}
                     priority
-                    src={mauHinhAnh}
                     alt='Error while display image'
                 />
             </figure>
@@ -119,6 +103,7 @@ const GridLayoutMauNha = ({ title, data, hasPagination = false }) => {
                                     title: item.title,
                                     codeProduct: item.codeProduct || '',
                                     description: item.description || '',
+                                    imgLink: item.imgLink,
                                 }}
                             />
                         </SwiperSlide>

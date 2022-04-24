@@ -44,7 +44,7 @@ function Footer() {
         <footer className='min-h-screen bg-[#6D594C] text-white relative'>
             <div className='container flex pt-24 pb-4'>
                 <div className='w-4/12 px-3'>
-                    <p className='mb-2 text-lg font-semibold border-b-2 border-b-white inline-block'>
+                    <p className='mb-2 text-lg font-semibold border-b-2 border-b-[#EBC804] inline-block text-[#EBC804]'>
                         Nhà Gỗ Ba Miền
                     </p>
                     <ul>

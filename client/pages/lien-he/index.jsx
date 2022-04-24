@@ -77,7 +77,7 @@ const ContactPage = () => {
                             </div>
                             <div className='row-span-3 col-span-2'>
                                 <textarea
-                                    placeholder='Email (*)'
+                                    placeholder='Nội dung (*)'
                                     className='border-solid border border-slate-400
                                     px-5 py-1 w-full h-full'
                                 />
@@ -123,31 +123,40 @@ const ContactPage = () => {
                             </div>
                         </div>
                     </div>
-
-                    <div className='w-full px-3'>
+                    <div className='w-full p-3'>
                         <p className='text-lg text-[#EBC804] font-medium mb-2'>
                             VĂN PHÒNG
                         </p>
-                        <iframe
-                            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.97203729174618!2d106.66893369473243!3d10.768923021706454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752eeeb053f527%3A0x6e3c75a92c836343!2zTuG7mWkgVGjhuqV0IEFucGh1Y28!5e0!3m2!1svi!2s!4v1633224607454!5m2!1svi!2s'
-                            width='100%'
-                            height='200'
-                            className='border-none'
-                            allowFullScreen
-                            loading='lazy'
-                        ></iframe>
+                        <div className='flex -mx-3'>
+                            <iframe
+                                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.97203729174618!2d106.66893369473243!3d10.768923021706454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752eeeb053f527%3A0x6e3c75a92c836343!2zTuG7mWkgVGjhuqV0IEFucGh1Y28!5e0!3m2!1svi!2s!4v1633224607454!5m2!1svi!2s'
+                                width='100%'
+                                height='220px'
+                                className='border-none w-1/2 px-3'
+                                allowFullScreen
+                                loading='lazy'
+                            ></iframe>
+                            <div className='w-1/2 border-2 border-primary-color text-center px-3'>
+                                Hình ảnh văn phòng
+                            </div>
+                        </div>
 
                         <p className='text-lg text-[#EBC804] font-medium mt-6 mb-2'>
                             XƯỞNG
                         </p>
-                        <iframe
-                            src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d291.1908339905687!2d106.67389955711685!3d10.904252836231274!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6f32a9425d0ef026!2zTmjDoCBn4buXIEFuIFBow7o!5e0!3m2!1svi!2sus!4v1632554411471!5m2!1svi!2sus'
-                            width='100%'
-                            height='200'
-                            className='border-none'
-                            allowFullScreen
-                            loading='lazy'
-                        ></iframe>
+                        <div className='flex -mx-3'>
+                            <iframe
+                                src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d291.1908339905687!2d106.67389955711685!3d10.904252836231274!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6f32a9425d0ef026!2zTmjDoCBn4buXIEFuIFBow7o!5e0!3m2!1svi!2sus!4v1632554411471!5m2!1svi!2sus'
+                                width='100%'
+                                height='220px'
+                                className='border-none w-1/2 px-3'
+                                allowFullScreen
+                                loading='lazy'
+                            ></iframe>
+                            <div className='w-1/2 border-2 border-primary-color text-center px-3'>
+                                Hình ảnh xưởng
+                            </div>
+                        </div>
                     </div>
                 </div>
             </PageItem>
