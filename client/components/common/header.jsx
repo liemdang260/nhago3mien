@@ -5,12 +5,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faMagnifyingGlass,
     faQuoteLeft,
+    faQuoteRight,
     faPhone,
     faEnvelope,
+    fa1,
+    fa2,
 } from '@fortawesome/free-solid-svg-icons';
 // import { useState } from 'react';
 import { useRouter } from 'next/router';
-import { useTypewriter, Cursor } from 'react-simple-typewriter';
+
+import { useTypewriter } from 'react-simple-typewriter';
 export const Services = [
     {
         title: 'THIẾT KẾ VÀ THI CÔNG NHÀ GỖ',
@@ -29,6 +33,7 @@ export const Services = [
         link: '/dich-vu/cung-cap-do-go-thanh-pham',
     },
 ];
+
 const navTitle = [
     { link: '/', title: 'TRANG CHỦ', isDropdown: false },
     { link: '/gioi-thieu', title: 'GIỚI THIỆU', isDropdown: false },
@@ -50,7 +55,6 @@ const navTitle = [
         isDropdown: true,
         dropDownContent: Services,
     },
-    { link: '/tin-tuc', title: 'TIN TỨC', isDropdown: false },
     { link: '/lien-he', title: 'LIÊN HỆ', isDropdown: false },
 ];
 
@@ -64,29 +68,76 @@ export default function Header() {
     });
     return (
         <header>
-            <div className='bg-[#6D594C] text-white py-2'>
+            <div className='bg-[#6D594C] text-white py-[10px]'>
                 <div className='container overflow-hidden'>
-                    <span className='text-[13px] inline-block font-semibold animate-textScrolling'>
-                        CHÀO&nbsp; MỪNG&nbsp; QUÝ&nbsp; KHÁCH&nbsp; ĐẾN&nbsp;
-                        VỚI&nbsp; NHÀ&nbsp; GỖ&nbsp; BA MIỀN!
-                    </span>
+                    <div className='text-[13px] inline-flex items-center font-semibold animate-textScrolling'>
+                        <p className=' leading-none'>
+                            CHÀO&nbsp; MỪNG&nbsp; QUÝ&nbsp; KHÁCH&nbsp;
+                            ĐẾN&nbsp; VỚI&nbsp; NHÀ&nbsp; GỖ&nbsp; BA MIỀN!
+                        </p>
+                        <p className='ml-6 leading-none'>
+                            {' '}
+                            <a
+                                href='tel:0962116789'
+                                className='inline-flex items-center'
+                            >
+                                <FontAwesomeIcon
+                                    icon={faPhone}
+                                    className='border-2 border-solid border-white rounded-full p-1 inline-block'
+                                />
+                                <span className='text-[16px] ml-1'>
+                                    096.211.6789
+                                </span>
+                            </a>
+                        </p>
+                        <p className='ml-4 leading-none'>
+                            {' '}
+                            <a
+                                href='tel:0962116789'
+                                className='inline-flex items-center'
+                            >
+                                <FontAwesomeIcon
+                                    icon={faPhone}
+                                    className='border-2 border-solid border-white rounded-full p-1 inline-block'
+                                />
+                                <span className='text-[16px] ml-1'>
+                                    0977.325.561
+                                </span>
+                            </a>
+                        </p>
+                        <p className='ml-4 leading-none'>
+                            <a
+                                href='mailto:info@nhagobamien.vn'
+                                className='inline-flex items-center'
+                            >
+                                <FontAwesomeIcon
+                                    icon={faEnvelope}
+                                    className='border-2 border-solid border-white rounded-full p-1 inline-block'
+                                />
+                                <span className='text-[16px] ml-1'>
+                                    info@nhagobamien.vn
+                                </span>
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div className='container px-8 py-6 flex justify-between items-center'>
+            <div className='container px-8 py-3 flex justify-between items-center'>
                 <div className=''>
                     <Image
-                        src='https://nhagoanphu.com/image/catalog/logo/Nha-go-An-Phu_03.png'
-                        alt='logo'
-                        width={189}
-                        height={107}
+                        src='/logo_ng3m.jpg'
+                        alt='logo website'
+                        width={170.6666}
+                        height={148.6666}
                     />
                 </div>
                 <div className='px-3 text-[1.625rem]'>
                     <blockquote className='font-nunito text-color'>
                         <FontAwesomeIcon icon={faQuoteLeft} />
-                        <span className='font-semibold ml-2 align-sub'>
+                        <span className='font-semibold mx-2 align-sub'>
                             {text}
                         </span>
+                        <FontAwesomeIcon icon={faQuoteRight} />
                     </blockquote>
                 </div>
                 <div className='flex flex-col basis-[250px]'>
@@ -97,6 +148,12 @@ export default function Header() {
                                     <FontAwesomeIcon
                                         icon={faPhone}
                                         color='#003F5C'
+                                    />
+                                    <FontAwesomeIcon
+                                        icon={fa1}
+                                        color='#003F5C'
+                                        size='xs'
+                                        className='translate-y-2 translate-x-[1px] inline-block'
                                     />
                                     <span className='font-normal ml-2 text-lg text-color'>
                                         096.211.6789
@@ -109,6 +166,12 @@ export default function Header() {
                                         icon={faPhone}
                                         color='#003F5C'
                                     />
+                                    <FontAwesomeIcon
+                                        icon={fa2}
+                                        color='#003F5C'
+                                        size='xs'
+                                        className='translate-y-2 translate-x-[1px] inline-block'
+                                    />
                                     <span className='font-normal ml-2 text-lg text-color'>
                                         0977.325.561
                                     </span>
@@ -119,8 +182,9 @@ export default function Header() {
                                     <FontAwesomeIcon
                                         icon={faEnvelope}
                                         color='#003F5C'
+                                        size='lg'
                                     />
-                                    <span className='font-normal ml-2 text-lg text-color'>
+                                    <span className='font-normal ml-3 text-lg text-color'>
                                         info@nhagobamien.vn
                                     </span>
                                 </a>
@@ -145,7 +209,7 @@ export default function Header() {
                         navTitle.map((title, i) => (
                             <li
                                 key={i}
-                                className={`group grow relative hover:border-b-[5px] hover:border-white hover:bg-[#3B2414] transition ease-in-out duration-200 ${
+                                className={`group grow relative hover:border-b-[4px] hover:border-white hover:bg-[#3B2414] transition ease-in-out duration-200 ${
                                     title.link === pathname ||
                                     (title.link !== '/' &&
                                         pathname.startsWith(title.link))
@@ -155,7 +219,7 @@ export default function Header() {
                             >
                                 <Link href={title.link}>
                                     <a
-                                        className={`py-4 w-full text-center inline-block font-semibold`}
+                                        className={`py-3 w-full text-center inline-block font-semibold`}
                                     >
                                         {title.title}
                                         {title.isDropdown && (
@@ -166,7 +230,7 @@ export default function Header() {
                                     </a>
                                 </Link>
                                 {title.isDropdown && (
-                                    <ul className='absolute z-10 w-auto whitespace-nowrap bg-primary-color mt-1 hidden group-hover:block'>
+                                    <ul className='absolute z-10 min-w-full whitespace-nowrap bg-primary-color mt-1 hidden group-hover:block'>
                                         {title.dropDownContent &&
                                             title.dropDownContent.map(
                                                 (item, index) => (

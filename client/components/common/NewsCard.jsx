@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faClock } from '@fortawesome/free-regular-svg-icons';
 import { faServicestack } from '@fortawesome/free-brands-svg-icons';
 import ArticleInsights from './ArticleInsights';
