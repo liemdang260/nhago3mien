@@ -9,6 +9,20 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper';
 import Commit from 'components/home/Commit';
 import Trait from 'components/home/Trait';
+// import mauNhaGoCoTruyen from '/images/mau-nha-co-truyen.Mau-nha-go-kieu-Hue.jpg';
+// import mauNhaGoCoTruyen2 from '/images/mau-nha-co-truyen.Mau-nha-ruong-hue.jpg';
+// import mauNhaGoCoTruyen3 from '/images/mau-nha-co-truyen.Mau-nha-ruong-hue.jpg';
+// import mauNhaGoCoTruyen4 from '/images/mau-nha-co-truyen.Nha-co-truyen-5-gian.jpg';
+// import mauNhaGoCoTruyen5 from '/images/mau-nha-co-truyen.Nha-go-3-gian-go-Lim.jpg';
+// import mauNhaGoCoTruyen6 from '/images/mau-nha-co-truyen.Nha-go-3-gian-kieu-Bac-Bo.jpg';
+// import mauNhaGoCoTruyen7 from '/images/mau-nha-co-truyen.Nha-go-5-gian-dep.png';
+
+// import mauNhaTuDuong from '/images/nha_tu_duong.Mau-nha-tho-co.jpg';
+// import mauNhaTuDuong2 from '/images/nha_tu_duong.Mau-nha-tho-ho-hai-mai.jpg';
+// import mauNhaTuDuong3 from '/images/nha_tu_duong.Mau-nha-tho.png';
+// import mauNhaTuDuong4 from '/images/nha_tu_duong.Mau-nha-tu-duong-bang-go-dep.png';
+// import mauNhaTuDuong5 from '/images/nha_tu_duong.Mau-nha-tu-duong-dep.jpg';
+
 const images = ['/banner1.jpg', '/banner2.jpg', '/banner3.jpg'];
 
 const MauNhaData = [
@@ -35,6 +49,54 @@ const MauNhaData = [
         title: 'Chòi hóng mát',
         codeProduct: '1245D5',
         linkImage: '/choi-hong-mat.jpg',
+    },{
+        id: 5,
+        title: 'Mẫu nhà gỗ kiểu Huế',
+        codeProduct: '12345A',
+        linkImage: '/images/mau-nha-co-truyen.Mau-nha-go-kieu-Hue.jpg',
+        type: 'nhaGoCoTruyen',
+    },
+    {
+        id: 6,
+        title: 'Mẫu nhà rường Huế',
+        codeProduct: '12345A',
+        linkImage: '/images/mau-nha-co-truyen.Mau-nha-ruong-hue.jpg',
+        type: 'nhaGoCoTruyen',
+    },
+    {
+        id: 7,
+        title: 'Mẫu nhà truyền thống đẹp',
+        codeProduct: '12345A',
+        linkImage: '/images/mau-nha-co-truyen.Mau-nha-ruong-hue.jpg',
+        type: 'nhaGoCoTruyen',
+    },
+    {
+        id: 8,
+        title: 'Nhà cổ truyền 5 gian',
+        codeProduct: '12345A',
+        linkImage: '/images/mau-nha-co-truyen.Nha-co-truyen-5-gian.jpg',
+        type: 'nhaGoCoTruyen',
+    },
+    {
+        id: 9,
+        title: 'Nhà 3 gian gỗ Lim',
+        codeProduct: '12345A',
+        linkImage: '/images/mau-nha-co-truyen.Nha-go-3-gian-go-Lim.jpg',
+        type: 'nhaGoCoTruyen',
+    },
+    {
+        id: 10,
+        title: 'Nhà gỗ 3 gian kiểu Bắc bộ',
+        codeProduct: '12345A',
+        linkImage: '/images/mau-nha-co-truyen.Nha-go-3-gian-kieu-Bac-Bo.jpg',
+        type: 'nhaGoCoTruyen',
+    },
+    {
+        id: 11,
+        title: 'Nhà gỗ 5 gian đẹp',
+        codeProduct: '12345A',
+        linkImage: '/images/mau-nha-co-truyen.Nha-go-5-gian-dep.png',
+        type: 'nhaGoCoTruyen',
     },
 ];
 
@@ -45,6 +107,7 @@ const ServicesData = [
         description:
             'Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...',
         linkImage: '/thiet-ke-theo-yeu-cau.jpg',
+
     },
     {
         id: 2,

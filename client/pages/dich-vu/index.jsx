@@ -63,18 +63,65 @@ const AllServices = () => {
     const { pathname } = useRouter();
     return (
         <NewsWrapper pathname={{ title: 'Dịch vụ', link: pathname }}>
-            <p className='text-primary-color font-bold text-xl text-center p-4 '>
+            <p className='text-primary-color font-bold text-2xl text-center p-4 '>
                 DỊCH VỤ
             </p>
-            <div className='flex flex-wrap'>
+            {/* <div className='flex flex-wrap'>
                 {data &&
                     data.map((item, index) => (
                         <NewsCard key={index} item={item} />
                     ))}
+            </div> */}
+            <div className='border-8 rounded-[15px] border-double border-primary-color p-3'>
+                <p className='indent-[32px]'>
+                    Nhà gỗ 3 gian vốn không còn xa lạ với người dân Việt Nam,
+                    đặc biệt là vùng Bắc bộ, tuy nhiên, cùng với sự du nhập
+                    trong lối kiến trúc, nhà gỗ 3 gian đã có nhiều phát triển
+                    hơn trong nhận thức những người yêu kiến trúc. Nếu bạn muốn
+                    xây dựng một nhà gỗ 3 gian vừa mang nét đẹp truyền thống,
+                    vừa mang nét hiện đại của kiến trúc phương tây nhưng lo ngại
+                    về vấn đề giá cả, thì bài viết dưới đây, Nhà Gỗ Làng Mộc sẽ
+                    gửi đến bạn bảng báo giá chi tiết dịch vụ thiết kế - xây
+                    dựng nhà gỗ 3 gian do chúng tôi cung cấp.
+                </p>
+                <br />
+                <p className='indent-[32px] font-semibold'>
+                    Các yếu tố cấu thành giá làm nhà gỗ 3 gian:
+                </p>
+                <p className='indent-[32px]'>
+                    Để cấu thành nên tổng thể chi phí làm nhà gỗ 3 gian, ta cần
+                    tính toán chi tiết những yếu tố sau:
+                </p>
+                <p className='indent-[32px] font-semibold'>Chi phí thiết kế:</p>
+                <p className='indent-[32px]'>
+                    Giai đoạn đầu tiên để hoàn thiện ngôi nhà gỗ trong mơ của
+                    bản thân chính là hoàn thiện chúng trên giấy, đây được gọi
+                    là giai đoạn thiết kế. Việc thiết kế giúp bạn và đội ngũ xây
+                    dựng xác định được hình dáng, kết cấu của ngôi nhà, từ đó dự
+                    trù được số lượng nguyên – vật liệu cần thiết, các bước tiến
+                    hành để hoàn thiện chúng. Ngoài ra bản vẽ cũng chính là cách
+                    để chúng ta kiểm soát được chất lượng của thành phẩm. Thông
+                    thường một bộ bản vẽ thiết kế căn nhà đầy đủ sẽ gồm 4 loại
+                    bản vẽ:
+                </p>
+                <p className='indent-[60px]'>- Bản vẽ kiến trúc</p>
+                <p className='indent-[60px]'>- Bản vẽ kết cấu</p>
+                <p className='indent-[60px]'>- Bản vẽ điện, nước</p>
+                <p className='indent-[60px]'>- Bản vẽ nội, ngoại thất</p>
+                <p className='indent-[32px]'>
+                    Hiện nay, mức giá thiết kế phổ biến cho một căn nhà gỗ có
+                    diện tích dưới 120m2 là 2 triệu đồng, trên 120m2 sẽ có giá
+                    65.000đ/m2. Ngoài ra, nếu bạn có kỹ năng chuyên môn về thiết
+                    kế, có sẵn ý tưởng trong đầu, bạn hoàn toàn có thể tiết kiệm
+                    chi phí bằng cách tự tạo lập hay tính toán các bản vẽ trên.
+                    Nếu không có thời gian hoặc không chắc chắn về khả năng
+                    thiết kế, bạn có thể tìm đến sự giúp đỡ từ những công ty,
+                    doanh nghiệp hoặc kiến trúc sư chuyên nghiệp với một khoảng
+                    phí như trên.
+                </p>
             </div>
         </NewsWrapper>
     );
 };
 
 export default AllServices;
-
