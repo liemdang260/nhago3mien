@@ -56,23 +56,24 @@ const Item = ({ params }) => {
             >
                 {params.title.substring(0, 35)}
             </div>
-            {params.codeProduct && (
-                <div className='text-base font-semibold text-primary-color'>
-                    Mã SP: {params.codeProduct}
-                </div>
-            )}
-            {params.description && (
-                <div className='py-2 px-3 text-sm text-color text-justify'>
-                    {params.description}
-                </div>
-            )}
-            <div className='w-full border-2 bg-slate-300  mt-2 bg-gradient-to-l'></div>
-            {params.codeProduct && (
-                <div className='uppercase text-gray-500 font-medium text-center py-2'>
-                    Liên hệ: 0333619358{' '}
-                    <FontAwesomeIcon icon={faPhoneFlip} className='mr-4' />
-                </div>
-            )}
+            {/*mauNhaSan, nhaGoHienDai, nhaGoCoTruyen, nhaTuDuongn, mauNhaLucGiac */}
+            <div
+                className={`w-full h-1  mt-4
+            ${
+                params.type == 'nhaTuDuong'
+                    ? 'bg-[#05ed10]'
+                    : params.type == 'nhaGoHienDai'
+                    ? 'bg-[#f00]'
+                    : params.type == 'mauNhaSan'
+                    ? 'bg-[#0aa6a6]'
+                    : params.type == 'nhaGoCoTruyen'
+                    ? 'bg-[#000]'
+                    : params.type == 'mauNhaLucGiac'
+                    ? 'bg-[#42611e]'
+                    : ''
+            }`}
+            ></div>
+            <div className='uppercase text-gray-500 font-medium text-center py-2 h-10'></div>
         </div>
     );
 };
