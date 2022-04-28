@@ -19,28 +19,27 @@ const ContactPage = () => {
                         className='text-red-600'
                         style={{ fontSize: 24, fontWeight: 700 }}
                     >
-                        Nhà gỗ An Phú
+                        Nhà gỗ Ba Miền
                     </h1>
                     <address className='text-lg leading-loose font-normal'>
-                        Địa chỉ: 410 đường 3/2 phường 12, quận 10, TP.HCM <br />
-                        Xưởng: Ấp 2, Nhị Bình 15, Nhị Bình, Hóc Môn, TP. Hồ Chí
-                        Minh. <br />
-                        Mobile:{' '}
+                        Địa chỉ: 72/24 Phan Đăng Lưu, Phường 5, Quận Phú Nhuận,
+                        TP.HCM. <br />
+                        Văn phòng chi nhánh: 72 Lê Thị Riêng, Quận 12, TP.HCM.{' '}
+                        <br />
+                        Xưởng: Thôn Hà Thái, Xã Hoằng Hà, Huyện Hoằng Hóa, Tỉnh
+                        Thanh Hóa. <br />
+                        Điện thoại:{' '}
                         <a className='text-red-500' href='tel:0932112365'>
-                            0932112365
-                        </a>
-                        ,{' '}
-                        <a className='text-red-500' href='tel:1900558805'>
-                            1900558805
+                            096.211.6789
                         </a>
                         ,{' '}
                         <a className='text-red-500' href='tel:0909377365'>
-                            0909377365
+                            0977.325.561
                         </a>{' '}
                         <br />
                         Email:{' '}
-                        <a href='mailto:someone@example.com'>
-                            someone@example.com
+                        <a href='mailto:info@nhagobamien.vn'>
+                            info@nhagobamien.vn
                         </a>
                     </address>
                 </div>
@@ -109,19 +108,38 @@ const ContactPage = () => {
                 </div>
                 <div className='w-full p-3'>
                     <p className='text-lg text-[#EBC804] font-medium mb-2'>
-                        VĂN PHÒNG
+                        VĂN PHÒNG CHÍNH
                     </p>
                     <div className='flex -mx-3'>
                         <iframe
-                            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.97203729174618!2d106.66893369473243!3d10.768923021706454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752eeeb053f527%3A0x6e3c75a92c836343!2zTuG7mWkgVGjhuqV0IEFucGh1Y28!5e0!3m2!1svi!2s!4v1633224607454!5m2!1svi!2s'
+                            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.94332500712235!2d106.68565172082386!3d10.804173565120054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752929eef7c3af%3A0x7d895e1a0f2e8da7!2sBIM%20Solutions%20Viet%20Nam%20JSC!5e0!3m2!1svi!2s!4v1651141887804!5m2!1svi!2s'
                             width='100%'
                             height='220px'
                             className='border-none w-1/2 px-3'
                             allowFullScreen
                             loading='lazy'
+                            referrerPolicy='no-referrer-when-downgrade'
                         ></iframe>
                         <div className='w-1/2 border-2 border-primary-color text-center px-3'>
                             Hình ảnh văn phòng
+                        </div>
+                    </div>
+
+                    <p className='text-lg text-[#EBC804] font-medium mb-2 mt-6'>
+                        VĂN PHÒNG CHI NHÁNH
+                    </p>
+                    <div className='flex -mx-3'>
+                        <iframe
+                            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.89156011577015!2d106.65459986360327!3d10.86744069802732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529c2c8baf797%3A0x2ea5e9a981a6dd0d!2zNzIgxJAuIEzDqiBUaOG7iyBSacOqbmcsIFTDom4gVGjhu5tpIEFuLCBRdeG6rW4gMTIsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1651142129818!5m2!1svi!2s'
+                            width='100%'
+                            height='220px'
+                            className='border-none w-1/2 px-3'
+                            allowFullScreen
+                            loading='lazy'
+                            referrerPolicy='no-referrer-when-downgrade'
+                        ></iframe>
+                        <div className='w-1/2 border-2 border-primary-color text-center px-3'>
+                            Hình ảnh văn phòng chi nhánh
                         </div>
                     </div>
 
@@ -130,12 +148,13 @@ const ContactPage = () => {
                     </p>
                     <div className='flex -mx-3'>
                         <iframe
-                            src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d291.1908339905687!2d106.67389955711685!3d10.904252836231274!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6f32a9425d0ef026!2zTmjDoCBn4buXIEFuIFBow7o!5e0!3m2!1svi!2sus!4v1632554411471!5m2!1svi!2sus'
+                            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.126006595658!2d105.89125381488554!3d19.876900486633485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31365beef9b42659%3A0x195eef7d0bad20cb!2zSMOgIFRow6FpLCBYw6MgSG_hurFuZyBIw6AsIEhv4bqxbmcgSG_DoSwgVGhhbmggSG_DoSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1651142489906!5m2!1svi!2s'
                             width='100%'
                             height='220px'
                             className='border-none w-1/2 px-3'
                             allowFullScreen
                             loading='lazy'
+                            referrerPolicy='no-referrer-when-downgrade'
                         ></iframe>
                         <div className='w-1/2 border-2 border-primary-color text-center px-3'>
                             Hình ảnh xưởng

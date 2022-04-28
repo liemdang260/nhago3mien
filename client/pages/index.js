@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import GridLayoutMauNha from 'components/common/gridLayoutMauNha';
-import Posts from 'components/home/Posts';
-import Services from 'components/home/Services';
+// import Posts from 'components/home/Posts';
+// import Services from 'components/home/Services';
 import Head from 'next/head';
 import Image from 'next/image';
 import About from 'components/home/About';

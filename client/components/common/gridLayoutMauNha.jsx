@@ -4,10 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhoneFlip } from '@fortawesome/free-solid-svg-icons';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const Item = ({ params }) => {
     return (
-        <div
+        <AnimationOnScroll
+            animateOnce={true}
+            animateIn='animate__backInUp'
+            duration={1}
             className='relative bg-slate-50 shadow-[0px_3px_5px_0px_rgba(0,0,0,0.3)] 
         flex flex-col items-center text-base cursor-pointer ease-in-out duration-300
       hover:shadow-primary-color hover:bg-slate-200 group
@@ -73,7 +77,7 @@ const Item = ({ params }) => {
                     <FontAwesomeIcon icon={faPhoneFlip} className='mr-4' />
                 </div>
             )}
-        </div>
+        </AnimationOnScroll>
     );
 };
 

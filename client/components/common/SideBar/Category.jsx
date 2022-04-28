@@ -8,7 +8,7 @@ const datas = [
     { title: 'MẪU NHÀ LỤC GIÁC', link: '' },
     { title: 'MẪU NHÀ TỪ ĐƯỜNG', link: '' },
 ];
-function Category({ title = 'Danh mục sản phẩm', data = datas }) {
+function Category({ title = '', data = datas }) {
     return (
         <div>
             <Title title={title} size={'xl'} />
