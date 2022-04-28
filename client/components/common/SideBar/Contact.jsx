@@ -7,10 +7,11 @@ function Contact() {
     return (
         <div className='text-primary-color'>
             <Title title={'Liên hệ'} size='xl' />
-            <div className='w-[25px] mx-auto'>
+            <div className='w-[40px] mx-auto mt-2'>
                 <FontAwesomeIcon
                     icon={faPhone}
-                    className='border-primary-color border-2  p-1 rounded-[100%] text-[25px]'
+                    size='lg'
+                    className='border-primary-color border-2  p-2 rounded-[100%]'
                 />
             </div>
             <p className='font-semibold text-center'>
@@ -40,3 +41,4 @@ function Contact() {
 }
 
 export default Contact;
+
