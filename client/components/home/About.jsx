@@ -76,7 +76,7 @@ function About() {
                             Thiết kế và diễn họa 3D cho khách hàng xem để xác
                             nhận trước khi làm.
                         </li>
-                        <li>Gia công và láp giáp.</li>
+                        <li>Gia công và lắp ráp.</li>
                     </ol>
                     <p className='bg-[#f7f5f3] px-4 absolute bottom-0 translate-y-1/2 text-2xl italic font-semibold text-primary-color right-10'>
                         Nhà gỗ Ba miền
