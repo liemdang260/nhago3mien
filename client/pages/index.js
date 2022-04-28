@@ -49,7 +49,8 @@ const MauNhaData = [
         title: 'Chòi hóng mát',
         codeProduct: '1245D5',
         linkImage: '/choi-hong-mat.jpg',
-    },{
+    },
+    {
         id: 5,
         title: 'Mẫu nhà gỗ kiểu Huế',
         codeProduct: '12345A',
@@ -107,7 +108,6 @@ const ServicesData = [
         description:
             'Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...',
         linkImage: '/thiet-ke-theo-yeu-cau.jpg',
-
     },
     {
         id: 2,
@@ -162,7 +162,7 @@ export default function Home() {
                     {images &&
                         images.map((value, index) => (
                             <SwiperSlide key={index}>
-                                <div className='w-full h-[calc(100vh_-_280px)]'>
+                                <div className='w-full min-h-[calc(100vh_-_280px)]'>
                                     <Image
                                         src={value}
                                         alt='banner 1'

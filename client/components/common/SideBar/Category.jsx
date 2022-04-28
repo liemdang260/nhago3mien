@@ -12,7 +12,7 @@ function Category({ title = 'Danh mục sản phẩm', data = datas }) {
     return (
         <div>
             <Title title={title} size={'xl'} />
-            <ul className='text-white'>
+            <ul className='text-white mt-3'>
                 {data.map((d, index) => (
                     <li
                         key={index}
@@ -28,3 +28,4 @@ function Category({ title = 'Danh mục sản phẩm', data = datas }) {
 }
 
 export default Category;
+

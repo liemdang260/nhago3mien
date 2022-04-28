@@ -249,8 +249,9 @@ const Item2 = ({ params }) => {
                     src={params.linkImage}
                     alt='mau san pham'
                     priority
-                    layout='responsive'
-                    // height={1250}
+                    layout='fixed'
+                    width={350}
+                    height={200}
                 />
             </div>
             <div className='grow-[2] flex-1 p-4'>
@@ -336,7 +337,7 @@ const AllHomeTemplate = () => {
     };
 
     return (
-        <>
+        <div className='mb-6'>
             <div className='pl-4 pt-4 pr-4 container'>
                 <div className='w-full flex justify-between'>
                     <div className='mt-2'>
@@ -460,7 +461,7 @@ const AllHomeTemplate = () => {
                     handleLandingVision={handleLandingVision}
                 />
             </div>
-        </>
+        </div>
     );
 };
 
