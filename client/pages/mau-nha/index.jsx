@@ -241,7 +241,7 @@ const Item2 = ({ params }) => {
     return (
         <div
             className='border bg-slate-50 shadow-[0px_3px_5px_0px_rgba(0,0,0,0.3)] border-[#ccc] mb-3 h-52
-      flex flex-row hover:shadow-primary-color hover:bg-slate-200
+      flex flex-row hover:shadow-primary-color hover:bg-slate-200 duration-700
     '
         >
             <div className='grow overflow-hidden px-4 border-r border-primary-color flex-1'>
@@ -259,15 +259,11 @@ const Item2 = ({ params }) => {
                     {params.title}
                     <div className='w-full border-2 bg-slate-300 mb-3 mt-2 bg-gradient-to-l'></div>
                     <br />
-                    Mã SP: {params.codeProduct}
                 </div>
 
                 <div className='text-sm'>Mieu ta mau nha</div>
 
-                <div className='uppercase text-gray-500 font-medium w-full bottom-5'>
-                    Liên hệ: 0333619358{' '}
-                    <FontAwesomeIcon icon={faPhoneFlip} className='ml-2' />
-                </div>
+                <div className='uppercase text-gray-500 font-medium w-full bottom-5'></div>
             </div>
         </div>
     );
@@ -387,7 +383,6 @@ const AllHomeTemplate = () => {
                                     type: 'mauNhaLucGiac',
                                 },
                             ].map((_item, _index) => (
-                                // mauNhaSan, nhaGoHienDai, nhaGoCoTruyen, nhaTuDuongn, mauNhaLucGiac
                                 <Label
                                     key={_index}
                                     params={{
@@ -400,7 +395,7 @@ const AllHomeTemplate = () => {
                             ))}
                         </ul>
                     </div>
-                    <div>
+                    <div className='mt-2'>
                         <Select
                             className='w-32 inline-block'
                             value={selectedOption2}
@@ -430,6 +425,7 @@ const AllHomeTemplate = () => {
                                           title: _item.title,
                                           codeProduct: _item.codeProduct,
                                           linkImage: _item.linkImage,
+                                          type: _item.type,
                                       }}
                                   />
                               ))
@@ -446,12 +442,13 @@ const AllHomeTemplate = () => {
                                           title: _item.title,
                                           codeProduct: _item.codeProduct,
                                           linkImage: _item.linkImage,
+                                          type: _item.type,
                                       }}
                                   />
                               ))}
                 </div>
             </div>
-            <div>
+            <div className='mb-5'>
                 <LandingPages
                     handleLandingIndex={handleLandingIndex}
                     itemsPerPage={Number(selectedOption2.value)}
@@ -466,4 +463,4 @@ const AllHomeTemplate = () => {
 };
 
 export default AllHomeTemplate;
-export { Item2 };
+export { Item2, dummyData };
