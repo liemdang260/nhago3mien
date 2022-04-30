@@ -4,10 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhoneFlip } from '@fortawesome/free-solid-svg-icons';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const Item = ({ params }) => {
     return (
-        <div
+        <AnimationOnScroll
+            animateOnce={true}
+            animateIn='animate__backInUp'
+            duration={1}
             className='relative bg-slate-50 shadow-[0px_3px_5px_0px_rgba(0,0,0,0.3)] 
         flex flex-col items-center text-base cursor-pointer ease-in-out duration-700
       hover:shadow-primary-color hover:bg-slate-200 group
@@ -56,7 +60,7 @@ const Item = ({ params }) => {
             >
                 {params.title.substring(0, 35)}
             </div>
-            {/*mauNhaSan, nhaGoHienDai, nhaGoCoTruyen, nhaTuDuongn, mauNhaLucGiac */}
+             {/*mauNhaSan, nhaGoHienDai, nhaGoCoTruyen, nhaTuDuongn, mauNhaLucGiac */}
             <div
                 className={`w-full h-1  mt-4
             ${
@@ -74,7 +78,7 @@ const Item = ({ params }) => {
             }`}
             ></div>
             <div className='uppercase text-gray-500 font-medium text-center py-2 h-10'></div>
-        </div>
+        </AnimationOnScroll>
     );
 };
 

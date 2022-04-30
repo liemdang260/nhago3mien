@@ -2,7 +2,11 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const Search = () => {
     return (
-        <AnimationOnScroll animateIn='animate__bounceIn'>
+        <AnimationOnScroll
+            initiallyVisible={true}
+            animateIn='animate__lightSpeedInLeft'
+            duration={3}
+        >
             <h2>Some Text</h2>
         </AnimationOnScroll>
     );

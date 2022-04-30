@@ -1,32 +1,34 @@
 import Title from '../Title';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, fa1, fa2 } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 // import {} from '@fortawesome/free-brands-svg-icons'
 const data = [
-    { name: 'Mr Long', phone: '0932 112 365' },
-    { name: 'Mr Cường', phone: '0901 379 365' },
+    { name: 'Mr. Cuong', phone: '096.211.6789', icon: fa1 },
+    { name: 'Mr. Manh', phone: '0977.325.561', icon: fa2 },
 ];
 function Support() {
     return (
         <div>
-            <Title title={'Hỗ trợ trực tuyến'} size={'xl'} />
-            <div className='text-primary-color border-primary-color border-4 rounded-xl border-double py-5 px-3 mt-3'>
+            <Title title={'Hotlines'} size={'xl'} />
+            <div className='text-primary-color border-primary-color border-4 rounded-xl border-double p-4 mt-3'>
                 {data.map((d, index) => (
-                    <div key={index} className='flex items-center my-1'>
-                        <FontAwesomeIcon
-                            icon={faPhone}
-                            className='border-primary-color border-2 p-1 rounded-[100%] ml-1'
-                        />
-                        <span className='ml-1 font-semibold'>{d.phone}</span>
-                        <div className='w-[16px] h-[16px] relative inline-block ml-1'>
-                            <Image
-                                src='/skype-logo-icon.png'
-                                alt='skype-logo'
-                                layout='fill'
+                    <div key={index} className='flex items-center my-2'>
+                        <a href='tel:0962116789'>
+                            <FontAwesomeIcon icon={faPhone} color='#003F5C' />
+                            <FontAwesomeIcon
+                                icon={d.icon}
+                                color='#003F5C'
+                                size='xs'
+                                className='translate-y-2 translate-x-[1px] inline-block'
                             />
-                        </div>
-                        <span className='ml-1 font-semibold'>{d.name}</span>
+                            <span className='font-normal ml-2 text-lg text-color'>
+                                {d.phone}
+                            </span>
+                            <span className='ml-2 text-lg text-color font-semibold'>
+                                {d.name}
+                            </span>
+                        </a>
                     </div>
                 ))}
             </div>

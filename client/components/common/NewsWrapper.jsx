@@ -143,13 +143,10 @@ export const NewsSidebar = () => {
                 </ul>
             </ViewList> */}
             <div>
-                <Category data={Services} title={'Danh mục dịch vụ'} />
+                <Category data={Services} title={'Dịch vụ'} />
             </div>
             <div className='mt-10'>
                 <Support />
-            </div>
-            <div className='mt-10'>
-                <Contact />
             </div>
         </div>
     );
