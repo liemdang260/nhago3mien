@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Title from 'components/common/Title';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhoneFlip } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faPhoneFlip } from '@fortawesome/free-solid-svg-icons';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper';
+import { Pagination, Navigation, Autoplay } from 'swiper';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const Item = ({ params }) => {
@@ -12,7 +12,7 @@ const Item = ({ params }) => {
             animateOnce={true}
             animateIn='animate__backInUp'
             duration={1}
-            className='relative bg-slate-50 shadow-[0px_3px_5px_0px_rgba(0,0,0,0.3)] 
+            className='relative h-full bg-slate-50 shadow-[0px_3px_5px_0px_rgba(0,0,0,0.3)] 
         flex flex-col items-center text-base cursor-pointer ease-in-out duration-700
       hover:shadow-primary-color hover:bg-slate-200 group
       '
@@ -26,7 +26,6 @@ const Item = ({ params }) => {
                     alt='Error while display image'
                     src={params.linkImage}
                     layout='fill'
-
                     // width={450}
                     // height={290}
                 />
@@ -41,10 +40,10 @@ const Item = ({ params }) => {
                 group-hover:before:duration-750 group-hover:before:animate-shineToLetf overflow-hidden'
             >
                 <Image
-                    className='z-0  group-hover:brightness-90 transition ease-out duration-500'
-                    layout='intrinsic'
+                    className='z-0 group-hover:brightness-90 transition ease-out duration-500'
+                    // layout='intrinsic'
                     width={450}
-                    height={290}
+                    height={300}
                     priority
                     src={params.linkImage}
                     alt='Error while display image'
@@ -52,15 +51,16 @@ const Item = ({ params }) => {
             </figure>
 
             <div
-                className={`font-semibold text-primary-color text-center ${
-                    params.title.split(' ').length > 7
-                        ? 'text-sm mt-2'
-                        : 'text-lg'
-                }`}
+                className={`font-medium text-white bg-primary-color py-2 px-3 self-stretch -translate-y-[7px] uppercase text-sm`}
             >
                 {params.title.substring(0, 35)}
             </div>
-             {/*mauNhaSan, nhaGoHienDai, nhaGoCoTruyen, nhaTuDuongn, mauNhaLucGiac */}
+            {params.description && (
+                <div className='text-color text-sm leading-6 px-3 text-justify'>
+                    {params.description}
+                </div>
+            )}
+            {/* mauNhaSan, nhaGoHienDai, nhaGoCoTruyen, nhaTuDuongn, mauNhaLucGiac */}
             <div
                 className={`w-full h-1  mt-4
             ${
@@ -77,7 +77,7 @@ const Item = ({ params }) => {
                     : ''
             }`}
             ></div>
-            <div className='uppercase text-gray-500 font-medium text-center py-2 h-10'></div>
+            {/* <div className='uppercase text-gray-500 font-medium text-center py-2 h-10'></div> */}
         </AnimationOnScroll>
     );
 };
@@ -104,6 +104,7 @@ const GridLayoutMauNha = ({ title, data, hasPagination = false }) => {
             <Swiper
                 slidesPerView={4}
                 spaceBetween={30}
+                autoplay={{ delay: 3000, disableOnInteraction: false }}
                 loop={true}
                 pagination={
                     hasPagination && {
@@ -112,7 +113,7 @@ const GridLayoutMauNha = ({ title, data, hasPagination = false }) => {
                     }
                 }
                 navigation={true}
-                modules={[Pagination, Navigation]}
+                modules={[Pagination, Navigation, Autoplay]}
                 className='mySwiper w-full h-full'
             >
                 {data &&
@@ -135,6 +136,9 @@ const GridLayoutMauNha = ({ title, data, hasPagination = false }) => {
                 .swiper:hover .swiper-button-prev, .swiper:hover .swiper-button-next {                    
                     transform: translateX(0) translateY(-40%);
                 }
+                .swiper-slide {
+                    height: initial !important;
+                }
                 .swiper-button-prev,
                 .swiper-button-next {
                     background-color: rgba(0, 0, 0, 0.3);
@@ -156,8 +160,9 @@ const GridLayoutMauNha = ({ title, data, hasPagination = false }) => {
                     transform: translateY(-40%) translateX(100%);
                 }
                 .mySwiper {                    
-                    min-height: 350px;
+                    min-height: 300px;
                     margin-top: 40px;
+                    padding-bottom: 10px;
                 }      
                 .mySwiper .swiper-pagination {
                     bottom: 0

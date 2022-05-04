@@ -154,10 +154,9 @@ export default function Home() {
                     modules={[Navigation, Pagination, Autoplay]}
                     slidesPerView={1}
                     navigation
-                    autoplay={{ delay: 4000 }}
+                    autoplay={{ delay: 4000, disableOnInteraction: false }}
                     loop={true}
                     pagination={{ clickable: true }}
-                    onSlideChange={() => console.log('slide change')}
                 >
                     {images &&
                         images.map((value, index) => (
@@ -172,19 +171,19 @@ export default function Home() {
                             </SwiperSlide>
                         ))}
                 </Swiper>
-                <div className='py-20 bg-[#f7f5f3]'>
+                <div className='py-10 bg-[#f7f5f3]'>
                     <About />
                 </div>
-                <div className='py-20'>
+                <div className='py-10'>
                     <Trait />
                 </div>
-                <div className='bg-[#f7f5f3] py-20 pb-24'>
+                <div className='bg-[#f7f5f3] py-10'>
                     <GridLayoutMauNha
                         title='Dịch vụ cung cấp'
                         data={ServicesData}
                     />
                 </div>
-                <div className='py-20'>
+                <div className='py-10'>
                     <GridLayoutMauNha
                         title='Mẫu nhà gỗ đẹp'
                         data={MauNhaData}

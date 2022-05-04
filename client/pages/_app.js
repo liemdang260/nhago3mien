@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import { faLongArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
+import Script from 'next/script';
 
 // Swiper
 import 'swiper/css';
@@ -81,8 +82,25 @@ function MyApp({ Component, pageProps }) {
                     height={32}
                 />
             </div>
+            <div
+                className='zalo-chat-widget'
+                data-oaid='579745863508352884'
+                data-welcome-message='Rất vui khi được hỗ trợ bạn!'
+                data-autopopup='0'
+                data-width=''
+                data-height=''
+            ></div>
+            <div
+                className='zalo-chat-widget'
+                data-oaid='579745863508352884'
+                data-welcome-message='Rất vui khi được hỗ trợ bạn!'
+                data-autopopup='0'
+                // data-width=''
+                // data-height=''
+            ></div>
             <Header />
             <Component {...pageProps} />
+            <Script defer src='https://sp.zalo.me/plugins/sdk.js'></Script>
             <Footer />
         </>
     );
