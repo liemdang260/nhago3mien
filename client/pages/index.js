@@ -104,14 +104,14 @@ const MauNhaData = [
 const ServicesData = [
     {
         id: 1,
-        title: 'Tư vấn và thiết kế theo yêu cầu',
+        title: 'Tư vấn & thiết kế theo yêu cầu',
         description:
             'Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...',
         linkImage: '/thiet-ke-theo-yeu-cau.jpg',
     },
     {
         id: 2,
-        title: 'Thiết kế và thi công không gian thờ',
+        title: 'Thiết kế & thi công không gian thờ',
         description:
             'Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...',
         linkImage: '/khong-gian-tho.jpg',
@@ -172,19 +172,20 @@ export default function Home() {
                             </SwiperSlide>
                         ))}
                 </Swiper>
-                <div className='py-20 bg-[#f7f5f3]'>
+                <div className='py-10 bg-[#f7f5f3]'>
                     <About />
                 </div>
-                <div className='py-20'>
+                <div className='py-10'>
                     <Trait />
                 </div>
-                <div className='bg-[#f7f5f3] py-20 pb-24'>
+                <div className='bg-[#f7f5f3] pt-5'>
                     <GridLayoutMauNha
                         title='Dịch vụ cung cấp'
                         data={ServicesData}
+                        mode='service'
                     />
                 </div>
-                <div className='py-20'>
+                <div className='pb-5'>
                     <GridLayoutMauNha
                         title='Mẫu nhà gỗ đẹp'
                         data={MauNhaData}

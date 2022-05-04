@@ -24,7 +24,7 @@ const additionalData = [
     },
     {
         title: 'Văn phòng chi nhánh',
-        data: '72 Lê Thị Riêng, Quận 12, TP.HCM.',
+        data: '305/35 TA28, Quận 12, TP.HCM',
         icon: faLocationDot,
     },
     {
