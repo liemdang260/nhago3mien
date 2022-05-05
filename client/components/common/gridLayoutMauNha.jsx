@@ -5,8 +5,17 @@ import Title from 'components/common/Title';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, Autoplay } from 'swiper';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import { useRouter } from 'next/router';
 
 const Item = ({ params }) => {
+    const router = useRouter();
+
+    const handleClickItem = () => {
+        // router.push()
+        router.push(
+            `/mau-nha/${params.type ? params.type : ''}/${params.title}`,
+        );
+    };
     return (
         <AnimationOnScroll
             animateOnce={true}
@@ -61,22 +70,24 @@ const Item = ({ params }) => {
                 </div>
             )}
             {/* mauNhaSan, nhaGoHienDai, nhaGoCoTruyen, nhaTuDuongn, mauNhaLucGiac */}
-            <div
-                className={`w-full h-1  mt-4
-            ${
-                params.type == 'nhaTuDuong'
-                    ? 'bg-[#05ed10]'
-                    : params.type == 'nhaGoHienDai'
-                    ? 'bg-[#f00]'
-                    : params.type == 'mauNhaSan'
-                    ? 'bg-[#0aa6a6]'
-                    : params.type == 'nhaGoCoTruyen'
-                    ? 'bg-[#000]'
-                    : params.type == 'mauNhaLucGiac'
-                    ? 'bg-[#42611e]'
-                    : ''
-            }`}
-            ></div>
+            {params.type && (
+                    <div
+                        className={`w-full h-2 my-2
+          ${
+              params.type == 'nhaTuDuong'
+                  ? 'bg-[#05ed10]'
+                  : params.type == 'nhaGoHienDai'
+                  ? 'bg-[#f00]'
+                  : params.type == 'mauNhaSan'
+                  ? 'bg-[#0aa6a6]'
+                  : params.type == 'nhaGoCoTruyen'
+                  ? 'bg-[#000]'
+                  : params.type == 'mauNhaLucGiac'
+                  ? 'bg-[#42611e]'
+                  : ''
+          }`}
+                    ></div>
+                )}
             {/* <div className='uppercase text-gray-500 font-medium text-center py-2 h-10'></div> */}
         </AnimationOnScroll>
     );
@@ -95,9 +106,12 @@ const Item = ({ params }) => {
 //     );
 // };
 
-const GridLayoutMauNha = ({ title, data, hasPagination = false }) => {
-    // Swiper
-
+const GridLayoutMauNha = ({
+    title,
+    data,
+    hasPagination = false,
+    mode = 'default',
+}) => {
     return (
         <div className='container flex flex-col justify-around'>
             <Title title={title} />
@@ -126,6 +140,7 @@ const GridLayoutMauNha = ({ title, data, hasPagination = false }) => {
                                     codeProduct: item.codeProduct || '',
                                     description: item.description || '',
                                     linkImage: item.linkImage,
+                                    mode: mode,
                                 }}
                             />
                         </SwiperSlide>
