@@ -123,11 +123,11 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <div className='bg-[#603814] h-20 flex flex-col justify-center items-center mt-6'>
-                <p className='text-xs'>
+            <div className='bg-[#603814] h-12 flex flex-col justify-center items-center mt-6'>
+                {/* <p className='text-xs'>
                     <span className='text-red-600 font-bold text-lg'>(*)</span>{' '}
                     Có sử dụng 1 số hình ảnh trên Google để khách hàng tham khảo
-                </p>
+                </p> */}
                 <p className='font-bold text-lg'>
                     Copyright © 2022 nhagobamien.vn
                 </p>

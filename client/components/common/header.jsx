@@ -14,7 +14,7 @@ import {
 // import { useState } from 'react';
 import { useRouter } from 'next/router';
 
-import { useTypewriter } from 'react-simple-typewriter';
+import { useTypewriter, Cursor } from 'react-simple-typewriter';
 export const Services = [
     {
         title: 'THIẾT KẾ VÀ THI CÔNG NHÀ GỖ',
@@ -62,16 +62,17 @@ export default function Header() {
     const { pathname } = useRouter();
     const { text } = useTypewriter({
         words: ['Không gian sống đậm nét truyền thống'],
-        loop: 1,
-        typeSpeed: 100,
+        loop: 0,
+        typeSpeed: 150,
         deleteSpeed: 90,
+        delaySpeed: 3000,
     });
     return (
         <header>
             <div className='bg-[#6D594C] text-white py-[10px]'>
                 <div className='container overflow-hidden'>
                     <div className='text-[13px] inline-flex items-center font-semibold animate-textScrolling'>
-                        <p className=' leading-none'>
+                        <p className='leading-none'>
                             CHÀO&nbsp; MỪNG&nbsp; QUÝ&nbsp; KHÁCH&nbsp;
                             ĐẾN&nbsp; VỚI&nbsp; NHÀ&nbsp; GỖ&nbsp; BA MIỀN!
                         </p>
@@ -131,11 +132,12 @@ export default function Header() {
                         height={148.6666}
                     />
                 </div>
-                <div className='px-3 text-[1.625rem]'>
+                <div className='px-3 w-[550px] text-[1.625rem]'>
                     <blockquote className='font-nunito text-color'>
                         <FontAwesomeIcon icon={faQuoteLeft} />
                         <span className='font-semibold mx-2 align-sub'>
                             {text}
+                            <Cursor />
                         </span>
                         <FontAwesomeIcon icon={faQuoteRight} />
                     </blockquote>

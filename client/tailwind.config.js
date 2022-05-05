@@ -25,8 +25,8 @@ module.exports = {
             },
             keyframes: {
                 textScrolling: {
-                    '0%': { transform: 'translateX(150%)' },
-                    '100%': { transform: 'translateX(-100%)' },
+                    '0%': { transform: 'translateX(138%)' },
+                    '100%': { transform: 'translateX(-105%)' },
                 },
                 shine: {
                     '100%': { left: '125%' },

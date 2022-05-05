@@ -154,10 +154,9 @@ export default function Home() {
                     modules={[Navigation, Pagination, Autoplay]}
                     slidesPerView={1}
                     navigation
-                    autoplay={{ delay: 4000 }}
+                    autoplay={{ delay: 4000, disableOnInteraction: false }}
                     loop={true}
                     pagination={{ clickable: true }}
-                    onSlideChange={() => console.log('slide change')}
                 >
                     {images &&
                         images.map((value, index) => (
@@ -178,14 +177,15 @@ export default function Home() {
                 <div className='py-10'>
                     <Trait />
                 </div>
-                <div className='bg-[#f7f5f3] pt-5'>
+                <div className='bg-[#f7f5f3] py-10'>
+
                     <GridLayoutMauNha
                         title='Dịch vụ cung cấp'
                         data={ServicesData}
                         mode='service'
                     />
                 </div>
-                <div className='pb-5'>
+                <div className='py-10'>
                     <GridLayoutMauNha
                         title='Mẫu nhà gỗ đẹp'
                         data={MauNhaData}
