@@ -14,7 +14,7 @@ import {
 // import { useState } from 'react';
 import { useRouter } from 'next/router';
 
-import { useTypewriter } from 'react-simple-typewriter';
+import { useTypewriter, Cursor } from 'react-simple-typewriter';
 export const Services = [
     {
         title: 'THIẾT KẾ VÀ THI CÔNG NHÀ GỖ',
@@ -63,7 +63,7 @@ export default function Header() {
     const { text } = useTypewriter({
         words: ['Không gian sống đậm nét truyền thống'],
         loop: 0,
-        typeSpeed: 200,
+        typeSpeed: 150,
         deleteSpeed: 90,
         delaySpeed: 3000,
     });
@@ -137,6 +137,7 @@ export default function Header() {
                         <FontAwesomeIcon icon={faQuoteLeft} />
                         <span className='font-semibold mx-2 align-sub'>
                             {text}
+                            <Cursor />
                         </span>
                         <FontAwesomeIcon icon={faQuoteRight} />
                     </blockquote>

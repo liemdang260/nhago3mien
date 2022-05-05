@@ -6,10 +6,11 @@ import { faServicestack } from '@fortawesome/free-brands-svg-icons';
 import { useRouter } from 'next/router';
 
 const ServiceDetail = () => {
-    const { pathname } = useRouter();
+    const { asPath } = useRouter();
+
     return (
         <NewsWrapper
-            pathname={{ title: 'Thiết kế và thi công nhà gỗ', link: pathname }}
+            pathname={{ title: 'Thiết kế và thi công nhà gỗ', link: asPath }}
         >
             <p className='text-primary-color font-semibold text-xl text-center p-4 '>
                 Thiết kế và thi công nhà gỗ

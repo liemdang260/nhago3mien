@@ -20,8 +20,9 @@ import 'swiper/css/effect-cube';
 import 'animate.css';
 config.autoAddCss = false;
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
     // Set toggle for button scroll to top
+    console.log(router);
     const [isVisible, setIsVisible] = useState(false);
     const toggleVisibility = () => {
         if (window.pageYOffset > 300) {
