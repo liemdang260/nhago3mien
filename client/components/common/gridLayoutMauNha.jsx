@@ -61,7 +61,7 @@ const Item = ({ params }) => {
                 </figure>
 
                 <div
-                    className={`font-medium text-white bg-primary-color py-2 px-3 self-stretch -translate-y-[7px] uppercase text-sm`}
+                    className={`font-medium text-white bg-primary-color py-2 px-3 self-stretch -translate-y-[7px] uppercase text-xs md:text-sm`}
                 >
                     {params.title.substring(0, 35)}
                 </div>
