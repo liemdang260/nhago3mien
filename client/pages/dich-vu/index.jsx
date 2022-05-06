@@ -124,3 +124,5 @@ const AllServices = () => {
     );
 };
 
+export default AllServices;
+
