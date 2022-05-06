@@ -277,14 +277,14 @@ const AllHomeTemplate = () => {
     const [landingVisionIndex, setLandingVisionIndex] = useState(0);
 
     const [selectedOption2, setSelectedOption2] = useState({
-        value: '15',
-        label: '15 mục',
+        value: '16',
+        label: '16 mục',
     });
     const options2 = [
-        { value: '15', label: '15 mục' },
-        { value: '30', label: '30 mục' },
-        { value: '45', label: '45 mục' },
-        { value: '60', label: '60 mục' },
+        { value: '16', label: '16 mục' },
+        { value: '32', label: '32 mục' },
+        { value: '48', label: '48 mục' },
+        { value: '62', label: '62 mục' },
     ];
 
     const handleLandingIndex = (index) => {
