@@ -282,7 +282,6 @@ const AllHomeTemplate = () => {
         value: 'tatca',
     });
     useEffect(() => {
-        console.log(selectedOption);
         if (selectedOption.value == 'tatca') setData(dummyData);
         else
             setData(
@@ -434,7 +433,7 @@ const AllHomeTemplate = () => {
                                 />
                             ))}
                         </ul>
-                        <div className='ml-8 inline-block w-40 md:hidden'>
+                        <div className='ml-4 sm:ml-8 inline-block w-32 sm:w-40 md:hidden'>
                             <Select
                                 className='text-xs border-blue-400'
                                 value={selectedOption}
@@ -447,7 +446,7 @@ const AllHomeTemplate = () => {
                     </div>
                     <div className='mt-2'>
                         <Select
-                            className='w-24 md:w-32 inline-block text-xs md:text-base'
+                            className='w-18 md:w-32 inline-block text-xs md:text-base'
                             value={selectedOption2}
                             onChange={(change) => {
                                 setSelectedOption2(change);
@@ -459,7 +458,7 @@ const AllHomeTemplate = () => {
                 <div
                     className={`w-full ${
                         gridLayout
-                            ? 'grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6'
+                            ? 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-6'
                             : ''
                     } mt-6`}
                 >
