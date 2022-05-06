@@ -1,7 +1,6 @@
 import NewsWrapper from 'components/common/NewsWrapper';
 // import NewsCard from 'components/common/NewsCard';
 import { useRouter } from 'next/router';
-import fs from 'fs';
 
 const data = [
     {
@@ -124,12 +123,4 @@ const AllServices = () => {
         </NewsWrapper>
     );
 };
-
-export default AllServices;
-export async function getStaticProps() {
-    console.log(fs.readdirSync('mock-api'));
-    return {
-        props: {},
-    };
-}
 

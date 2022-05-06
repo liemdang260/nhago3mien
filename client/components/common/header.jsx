@@ -69,7 +69,7 @@ export default function Header() {
     });
     return (
         <header>
-            <div className='bg-[#6D594C] text-white py-[10px] 3xl'>
+            <div className='bg-[#6D594C] text-white py-[10px]'>
                 <div className='container overflow-hidden'>
                     <div className='text-[13px] inline-flex items-center font-semibold animate-textScrolling'>
                         <p className='leading-none'>
