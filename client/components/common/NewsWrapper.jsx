@@ -6,11 +6,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Category from './SideBar/Category';
 import Support from './SideBar/Support';
-import Contact from './SideBar/Contact';
+// import Contact from './SideBar/Contact';
 import ArticleInsights from './ArticleInsights';
 import Breadcrumb from './SideBar/Breadcrumb';
 import Tooltip from './Tooltip';
 import { Services } from 'components/common/header';
+import { useRouter } from 'next/router';
 
 // const mostViewedNews = [
 //     {
@@ -120,6 +121,7 @@ export const ViewList = ({ title, children }) => {
 };
 
 export const NewsSidebar = () => {
+    const { asPath } = useRouter();
     return (
         <div>
             {/* <ViewList title={'XEM NHIỀU NHẤT'}>
@@ -143,7 +145,11 @@ export const NewsSidebar = () => {
                 </ul>
             </ViewList> */}
             <div>
-                <Category data={Services} title={'Dịch vụ'} />
+                <Category
+                    data={Services}
+                    title={'Dịch vụ'}
+                    activePath={asPath}
+                />
             </div>
             <div className='mt-10'>
                 <Support />
