@@ -22,7 +22,7 @@ config.autoAddCss = false;
 
 function MyApp({ Component, pageProps, router }) {
     // Set toggle for button scroll to top
-    console.log(router);
+
     const [isVisible, setIsVisible] = useState(false);
     const toggleVisibility = () => {
         if (window.pageYOffset > 300) {
@@ -100,7 +100,7 @@ function MyApp({ Component, pageProps, router }) {
                 // data-height=''
             ></div>
             <Header />
-            <Component {...pageProps} />
+            <Component {...pageProps} router={router} />
             <Script defer src='https://sp.zalo.me/plugins/sdk.js'></Script>
             <Footer />
         </>

@@ -17,7 +17,7 @@ const Item = ({ params }) => {
         );
     };
     return (
-        <div onClick={handleClickItem}>
+        <div onClick={handleClickItem} className='h-full'>
             <AnimationOnScroll
                 animateOnce={true}
                 animateIn='animate__backInUp'
