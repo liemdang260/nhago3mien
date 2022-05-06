@@ -30,11 +30,11 @@ function Trait() {
                 />
                 <AboutStrength
                     strengthTitle='CHẤT LƯỢNG'
-                    strengthSubTitle='SẢN PHẨM CAO'
+                    strengthSubTitle='CỦA TỪNG SẢN PHẨM CAO'
                 />
                 <AboutStrength
-                    strengthTitle='DỊCH VỤ'
-                    strengthSubTitle='KHÁCH HÀNG TẬN TÂM'
+                    strengthTitle='CUNG CẤP '
+                    strengthSubTitle='ĐẾN KHÁCH HÀNG TẬN TÂM'
                 />
             </div>
         </div>

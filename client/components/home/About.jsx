@@ -16,7 +16,7 @@ function About() {
                 <AnimationOnScroll
                     animateIn='animate__flipInY'
                     animateOnce={true}
-                    className='z-10 w-[533.3333px] absolute top-[101.5px] left-0 after:absolute after:w-full after:h-6 after:bg-[#f7f5f3] before:absolute before:w-full before:h-3 before:bg-[#f7f5f3] before:bottom-full'
+                    className='z-10 w-[450px] lg:w-[533.3333px] hidden md:block absolute top-[101.5px] left-0 after:absolute after:w-full after:h-6 after:bg-[#f7f5f3] before:absolute before:w-full before:h-3 before:bg-[#f7f5f3] before:bottom-full'
                 >
                     <Swiper
                         modules={[Pagination, Autoplay, EffectCube]}
@@ -48,7 +48,7 @@ function About() {
                             ))}
                     </Swiper>
                 </AnimationOnScroll>
-                <div className='w-3/4 pl-[17rem] py-10 pr-8 font-nunito border-2 border-primary-color relative'>
+                <div className='w-full md:w-3/4 pl-[1rem] md:pl-[17rem] py-10 pr-8 font-nunito border-2 border-primary-color relative'>
                     <AnimationOnScroll
                         animateIn='animate__fadeIn'
                         animateOnce={true}
