@@ -1,6 +1,7 @@
 import NewsWrapper from 'components/common/NewsWrapper';
-import NewsCard from 'components/common/NewsCard';
+// import NewsCard from 'components/common/NewsCard';
 import { useRouter } from 'next/router';
+import fs from 'fs';
 
 const data = [
     {
@@ -63,7 +64,7 @@ const AllServices = () => {
     const { pathname } = useRouter();
     return (
         <NewsWrapper pathname={{ title: 'Dịch vụ', link: pathname }}>
-            <p className='text-primary-color font-bold text-2xl text-center p-4 '>
+            <p className='text-primary-color font-bold text-2xl text-center p-4'>
                 DỊCH VỤ
             </p>
             {/* <div className='flex flex-wrap'>
@@ -125,3 +126,10 @@ const AllServices = () => {
 };
 
 export default AllServices;
+export async function getStaticProps() {
+    console.log(fs.readdirSync('mock-api'));
+    return {
+        props: {},
+    };
+}
+

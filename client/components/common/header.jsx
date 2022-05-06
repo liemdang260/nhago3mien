@@ -69,7 +69,7 @@ export default function Header() {
     });
     return (
         <header>
-            <div className='bg-[#6D594C] text-white py-[10px]'>
+            <div className='bg-[#6D594C] text-white py-[10px] 3xl'>
                 <div className='container overflow-hidden'>
                     <div className='text-[13px] inline-flex items-center font-semibold animate-textScrolling'>
                         <p className='leading-none'>
@@ -132,7 +132,7 @@ export default function Header() {
                         height={148.6666}
                     />
                 </div>
-                <div className='px-3 w-[550px] text-[1.625rem]'>
+                <div className='px-3 w-[550px] md:text-[1.325rem] lg:text-[1.475rem] xl:text-[1.625rem]'>
                     <blockquote className='font-nunito text-color'>
                         <FontAwesomeIcon icon={faQuoteLeft} />
                         <span className='font-semibold mx-2 align-sub'>
