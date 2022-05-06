@@ -23,7 +23,7 @@ import Trait from 'components/home/Trait';
 // import mauNhaTuDuong4 from '/images/nha_tu_duong.Mau-nha-tu-duong-bang-go-dep.png';
 // import mauNhaTuDuong5 from '/images/nha_tu_duong.Mau-nha-tu-duong-dep.jpg';
 
-const images = ['/banner1.jpg', '/banner2.jpg', '/banner3.jpg'];
+const images = ['/main-banner1.jpg', '/main-banner2.jpg', '/main-banner3.jpg'];
 
 const MauNhaData = [
     {
@@ -178,7 +178,6 @@ export default function Home() {
                     <Trait />
                 </div>
                 <div className='bg-[#f7f5f3] py-10'>
-
                     <GridLayoutMauNha
                         title='Dịch vụ cung cấp'
                         data={ServicesData}

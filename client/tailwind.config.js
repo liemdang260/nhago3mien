@@ -5,6 +5,13 @@ module.exports = {
     ],
     theme: {
         extend: {
+            screens: {
+                sm: '576px',
+                md: '768px',
+                lg: '992px',
+                xl: '1200px',
+                '2xl': '1400px',
+            },
             colors: {
                 'primary-color': '#603814',
                 color: '#333',
@@ -12,9 +19,9 @@ module.exports = {
             container: {
                 screens: {
                     DEFAULT: '100%',
-                    sm: '600px',
-                    md: '728px',
-                    lg: '984px',
+                    sm: '576px',
+                    md: '768px',
+                    lg: '992px',
                     xl: '1200px',
                 },
                 center: true,
