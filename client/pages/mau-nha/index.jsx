@@ -244,7 +244,7 @@ const Item2 = ({ params }) => {
       flex flex-row hover:shadow-primary-color hover:bg-slate-200 duration-700
     '
         >
-            <div className='grow overflow-hidden px-4 border-r border-primary-color flex-1'>
+            <div className='grow-[6] sm:grow=[2] md:grow overflow-hidden px-4 border-r border-primary-color flex-1'>
                 <Image
                     src={params.linkImage}
                     alt='mau san pham'

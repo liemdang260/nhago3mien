@@ -2,13 +2,16 @@ import Image from 'next/image';
 
 const Commit = () => {
     const Item = ({ params }) => (
-        <div className='flex flex-col w-26 mx-8 bg-center'>
-            <div style={{ width: '150px', height: '150px' }} className='p-4'>
-                <div className='overflow-hidden relative bg-white w-full h-full rounded-full'>
+        <div className='flex flex-col w-full bg-center'>
+            <div
+                className='p-4 w-28 sm:w-40 h-28 sm:h-40 text-center'
+                style={{ transform: 'translateX(25%)' }}
+            >
+                <div className='overflow-hidden relative bg-white w-full h-full rounded-full text-center'>
                     <Image src={params.url} alt='cam kết' layout='fill'></Image>
                 </div>
             </div>
-            <h2 className='text-white font-semibold text-lg uppercase w-40 text-center'>
+            <h2 className='text-white font-semibold text-xs sm:text-sm md:text-lg uppercase w-full text-center'>
                 {params.title}
             </h2>
         </div>
@@ -16,10 +19,10 @@ const Commit = () => {
 
     return (
         <div className="w-full min-h-64 bg-[url('../public/banner4.png')] flex flex-col justify-center items-center py-6 bg-no-repeat bg-cover">
-            <div className='text-white text-3xl text-extrabold uppercase my-2'>
+            <div className='text-white text-xl sm:text-2xl md:text-3xl text-extrabold uppercase my-2'>
                 5 cam kết của nhà gỗ ba miền
             </div>
-            <div className='flex flex-row'>
+            <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5'>
                 <Item
                     params={{
                         title: 'Giá cạnh tranh',

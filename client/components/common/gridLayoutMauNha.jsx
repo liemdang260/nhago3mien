@@ -128,6 +128,17 @@ const GridLayoutMauNha = ({
                         type: 'fraction',
                     }
                 }
+                breakpoints={{
+                    320: {
+                        width: 320,
+                        slidesPerView: 1,
+                    },
+                    // when window width is >= 768px
+                    640: {
+                        width: 640,
+                        slidesPerView: 2,
+                    },
+                }}
                 navigation={true}
                 modules={[Pagination, Navigation, Autoplay]}
                 className='mySwiper w-full h-full'
@@ -156,6 +167,7 @@ const GridLayoutMauNha = ({
                 .swiper-slide {
                     height: initial !important;
                 }
+                
                 .swiper-button-prev,
                 .swiper-button-next {
                     background-color: rgba(0, 0, 0, 0.3);

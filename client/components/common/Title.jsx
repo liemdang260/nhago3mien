@@ -2,7 +2,7 @@ function Title({ title, size = '3xl', isDivider = true }) {
     return (
         <div className='relative text-center'>
             <h3
-                className={`text-color inline-block relative px-8 text-${size} font-bold font-nunito after:`}
+                className={`text-color inline-block relative px-8 text-lg md:text-3xl font-bold font-nunito after:`}
             >
                 {title}
 
