@@ -10,13 +10,13 @@ const images = ['/banner1.jpg', '/banner2.jpg', '/banner3.jpg'];
 
 function About() {
     return (
-        <div className='container'>
+        <div className='container p-4 sm:p-0'>
             <Title title='Về chúng tôi' />
             <div className='flex justify-end relative mt-8'>
                 <AnimationOnScroll
                     animateIn='animate__flipInY'
                     animateOnce={true}
-                    className='z-10 w-[450px] lg:w-[533.3333px] hidden md:block absolute top-[101.5px] left-0 after:absolute after:w-full after:h-6 after:bg-[#f7f5f3] before:absolute before:w-full before:h-3 before:bg-[#f7f5f3] before:bottom-full'
+                    className='z-10 hidden lg:block lg:w-[426.6666px] xl:w-[533.3333px] absolute top-[101.5px] left-0 after:absolute after:w-full after:h-6 after:bg-[#f7f5f3] before:absolute before:w-full before:h-3 before:bg-[#f7f5f3] before:bottom-full'
                 >
                     <Swiper
                         modules={[Pagination, Autoplay, EffectCube]}
@@ -37,7 +37,7 @@ function About() {
                         {images &&
                             images.map((value, index) => (
                                 <SwiperSlide key={index}>
-                                    <div className='w-full h-[300px]'>
+                                    <div className='w-full lg:h-[240px] xl:h-[300px]'>
                                         <Image
                                             src={value}
                                             alt={`banner ${index}`}
@@ -48,7 +48,7 @@ function About() {
                             ))}
                     </Swiper>
                 </AnimationOnScroll>
-                <div className='w-full md:w-3/4 pl-[1rem] md:pl-[17rem] py-10 pr-8 font-nunito border-2 border-primary-color relative'>
+                <div className='lg:w-3/4 pl-8 lg:pl-[13rem] xl:pl-[17rem] py-10 pr-8 font-nunito border-2 border-primary-color relative'>
                     <AnimationOnScroll
                         animateIn='animate__fadeIn'
                         animateOnce={true}

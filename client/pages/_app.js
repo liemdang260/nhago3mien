@@ -8,7 +8,7 @@ import { faLongArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import Script from 'next/script';
-
+import Head from 'next/head';
 // Swiper
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -99,6 +99,12 @@ function MyApp({ Component, pageProps, router }) {
                 // data-width=''
                 // data-height=''
             ></div>
+            <Head>
+                <meta
+                    name='viewport'
+                    content='width=device-width; initial-scale=1.0'
+                />
+            </Head>
             <Header />
             <Component {...pageProps} router={router} />
             <Script defer src='https://sp.zalo.me/plugins/sdk.js'></Script>
