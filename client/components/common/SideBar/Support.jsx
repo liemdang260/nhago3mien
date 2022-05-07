@@ -29,7 +29,7 @@ function Support() {
                             <span className='font-normal ml-2 text-sm hidden md:inline-block lg:text-lg text-color'>
                                 {d.phone}
                             </span>
-                            <span className='ml-0 lg:ml-8 md:ml-2 text-xs md:text-lg text-color font-semibold'>
+                            <span className='ml-0 lg:ml-4 md:ml-2 text-xs md:text-lg text-color font-semibold'>
                                 {d.name}
                             </span>
                         </a>
