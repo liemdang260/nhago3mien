@@ -10,8 +10,10 @@ import {
     faEnvelope,
     fa1,
     fa2,
+    faBars,
+    faXmark,
 } from '@fortawesome/free-solid-svg-icons';
-// import { useState } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/router';
 
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
@@ -35,12 +37,23 @@ export const Services = [
 ];
 
 const navTitle = [
-    { link: '/', title: 'TRANG CHỦ', isDropdown: false },
-    { link: '/gioi-thieu', title: 'GIỚI THIỆU', isDropdown: false },
+    {
+        link: '/',
+        title: 'TRANG CHỦ',
+        isDropdown: false,
+        clickableOnMobile: true,
+    },
+    {
+        link: '/gioi-thieu',
+        title: 'GIỚI THIỆU',
+        isDropdown: false,
+        clickableOnMobile: true,
+    },
     {
         link: '/mau-nha',
         title: 'MẪU NHÀ GỖ ĐẸP',
         isDropdown: true,
+        clickableOnMobile: false,
         dropDownContent: [
             { title: 'NHÀ TỪ ĐƯỜNG', link: '/mau-nha/mau-nha-tu-duong' },
             { title: 'NHÀ GỖ HIỆN ĐẠI', link: '/mau-nha/mau-nha-hien-dai' },
@@ -54,12 +67,19 @@ const navTitle = [
         title: 'DỊCH VỤ',
         isDropdown: true,
         dropDownContent: Services,
+        clickableOnMobile: false,
     },
-    { link: '/lien-he', title: 'LIÊN HỆ', isDropdown: false },
+    {
+        link: '/lien-he',
+        title: 'LIÊN HỆ',
+        isDropdown: false,
+        clickableOnMobile: true,
+    },
 ];
 
 export default function Header() {
     const { pathname } = useRouter();
+    const [openMobileMenu, setOpenMobileMenu] = useState(false);
     const { text } = useTypewriter({
         words: ['Không gian sống đậm nét truyền thống'],
         loop: 0,
@@ -67,64 +87,68 @@ export default function Header() {
         deleteSpeed: 90,
         delaySpeed: 3000,
     });
+    const handleClickMenu = (e) => {
+        setOpenMobileMenu((pre) => !pre);
+    };
+    const handleClickItem = (e) => {
+        setOpenMobileMenu(false);
+    };
     return (
-        <header>
+        <header className='relative'>
             <div className='bg-[#6D594C] text-white py-[10px]'>
                 <div className='container overflow-hidden'>
-                    <div className='text-[13px] inline-flex items-center font-semibold animate-textScrolling'>
-                        <p className='leading-none'>
+                    <div className='inline-flex items-center font-semibold animate-textScrolling'>
+                        <p className='md:inline-block text-[13px] leading-none hidden whitespace-nowrap'>
                             CHÀO&nbsp; MỪNG&nbsp; QUÝ&nbsp; KHÁCH&nbsp;
                             ĐẾN&nbsp; VỚI&nbsp; NHÀ&nbsp; GỖ&nbsp; BA MIỀN!
                         </p>
-                        <p className='ml-6 leading-none'>
-                            {' '}
-                            <a
-                                href='tel:0962116789'
-                                className='inline-flex items-center'
-                            >
-                                <FontAwesomeIcon
-                                    icon={faPhone}
-                                    className='border-2 border-solid border-white rounded-full p-1 inline-block'
-                                />
-                                <span className='text-[16px] ml-1'>
-                                    096.211.6789
-                                </span>
-                            </a>
-                        </p>
-                        <p className='ml-4 leading-none'>
-                            {' '}
-                            <a
-                                href='tel:0962116789'
-                                className='inline-flex items-center'
-                            >
-                                <FontAwesomeIcon
-                                    icon={faPhone}
-                                    className='border-2 border-solid border-white rounded-full p-1 inline-block'
-                                />
-                                <span className='text-[16px] ml-1'>
-                                    0977.325.561
-                                </span>
-                            </a>
-                        </p>
-                        <p className='ml-4 leading-none'>
-                            <a
-                                href='mailto:info@nhagobamien.vn'
-                                className='inline-flex items-center'
-                            >
-                                <FontAwesomeIcon
-                                    icon={faEnvelope}
-                                    className='border-2 border-solid border-white rounded-full p-1 inline-block'
-                                />
-                                <span className='text-[16px] ml-1'>
-                                    info@nhagobamien.vn
-                                </span>
-                            </a>
-                        </p>
+                        <div className='inline-flex'>
+                            <p className='md:ml-6 leading-none'>
+                                {' '}
+                                <a
+                                    href='tel:0962116789'
+                                    className='inline-flex items-center text-[14px] lg:text-[16px]'
+                                >
+                                    <FontAwesomeIcon
+                                        icon={faPhone}
+                                        className='border-2 border-solid border-white rounded-full p-1 inline-block'
+                                    />
+                                    <span className='ml-1'>096.211.6789</span>
+                                </a>
+                            </p>
+                            <p className='ml-4 leading-none'>
+                                {' '}
+                                <a
+                                    href='tel:0962116789'
+                                    className='inline-flex items-center text-[14px] lg:text-[16px]'
+                                >
+                                    <FontAwesomeIcon
+                                        icon={faPhone}
+                                        className='border-2 border-solid border-white rounded-full p-1 inline-block'
+                                    />
+                                    <span className='ml-1'>0977.325.561</span>
+                                </a>
+                            </p>
+                            <p className='ml-4 leading-none'>
+                                <a
+                                    href='mailto:info@nhagobamien.vn'
+                                    className='inline-flex items-center text-[14px] md:text-[16px]'
+                                >
+                                    <FontAwesomeIcon
+                                        icon={faEnvelope}
+                                        className='border-2 border-solid border-white rounded-full p-1 inline-block'
+                                    />
+                                    <span className='ml-1'>
+                                        info@nhagobamien.vn
+                                    </span>
+                                </a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div className='container px-8 py-3 flex justify-between items-center'>
-                <div className=''>
+            <div className='lg:flex-row lg:justify-between lg:items-center flex flex-col items-stretch container px-8 py-3'>
+                <div className='self-center'>
                     <Image
                         src='/logo_ng3m.jpg'
                         alt='logo website'
@@ -132,7 +156,7 @@ export default function Header() {
                         height={148.6666}
                     />
                 </div>
-                <div className='px-3 w-[550px] md:text-[1.325rem] lg:text-[1.475rem] xl:text-[1.625rem]'>
+                <div className='sm:block md:text-[1.475rem] lg:w-[550px]  xl:text-[1.625rem] px-3 hidden text-[1.375rem] self-center'>
                     <blockquote className='font-nunito text-color'>
                         <FontAwesomeIcon icon={faQuoteLeft} />
                         <span className='font-semibold mx-2 align-sub'>
@@ -142,10 +166,10 @@ export default function Header() {
                         <FontAwesomeIcon icon={faQuoteRight} />
                     </blockquote>
                 </div>
-                <div className='flex flex-col basis-[250px]'>
-                    <div className='mb-2'>
+                <div className='lg:basis-[250px] flex flex-col'>
+                    <div className='mt-0 sm:mt-4 lg:mt-0 mb-2 w-fit mx-auto'>
                         <ul>
-                            <li>
+                            <li className='w-fit mx-auto sm:w-auto'>
                                 <a href='tel:0962116789'>
                                     <FontAwesomeIcon
                                         icon={faPhone}
@@ -157,12 +181,12 @@ export default function Header() {
                                         size='xs'
                                         className='translate-y-2 translate-x-[1px] inline-block'
                                     />
-                                    <span className='font-normal ml-2 text-lg text-color'>
+                                    <span className='font-normal ml-2 lg:text-lg text-color'>
                                         096.211.6789
                                     </span>
                                 </a>
                             </li>
-                            <li>
+                            <li className='w-fit mx-auto sm:w-auto'>
                                 <a href='tel:0977325561'>
                                     <FontAwesomeIcon
                                         icon={faPhone}
@@ -174,7 +198,7 @@ export default function Header() {
                                         size='xs'
                                         className='translate-y-2 translate-x-[1px] inline-block'
                                     />
-                                    <span className='font-normal ml-2 text-lg text-color'>
+                                    <span className='font-normal ml-2 lg:text-lg text-color'>
                                         0977.325.561
                                     </span>
                                 </a>
@@ -186,7 +210,7 @@ export default function Header() {
                                         color='#003F5C'
                                         size='lg'
                                     />
-                                    <span className='font-normal ml-3 text-lg text-color'>
+                                    <span className='font-normal ml-3 lg:text-lg text-color'>
                                         info@nhagobamien.vn
                                     </span>
                                 </a>
@@ -206,12 +230,12 @@ export default function Header() {
                 </div>
             </div>
             <nav className='bg-primary-color'>
-                <ul className='flex container text-white px-28'>
+                <ul className='container text-white sm:px-0 md:px-12 lg:px-28 hidden md:flex'>
                     {navTitle &&
                         navTitle.map((title, i) => (
                             <li
                                 key={i}
-                                className={`group grow relative hover:border-b-[4px] hover:border-white hover:bg-[#3B2414] transition ease-in-out duration-200 ${
+                                className={`group grow relative text-[0.8rem] lg:text-[1rem] hover:border-b-[4px] hover:border-white hover:bg-[#3B2414] transition ease-in-out duration-200 ${
                                     title.link === pathname ||
                                     (title.link !== '/' &&
                                         pathname.startsWith(title.link))
@@ -257,6 +281,97 @@ export default function Header() {
                             </li>
                         ))}
                 </ul>
+                <div className='block md:hidden'>
+                    <button
+                        className='absolute top-[60px] right-3'
+                        onClick={handleClickMenu}
+                        aria-controls='mobile-menu'
+                    >
+                        <FontAwesomeIcon
+                            icon={openMobileMenu ? faXmark : faBars}
+                            size='lg'
+                            color='#603814'
+                            className='hover:opacity-70 duration-200'
+                        />
+                    </button>
+                    <div
+                        className={`fixed left-0 right-0 bottom-0 top-[89px] bg-primary-color z-[1000] text-white duration-500 ease-out translate-y-full ${
+                            openMobileMenu ? 'translate-y-0 opacity-100' : ''
+                        }`}
+                    >
+                        <ul>
+                            {navTitle &&
+                                navTitle.map((title, i) => (
+                                    <li
+                                        key={i}
+                                        className={`group grow relative text-[0.8rem] hover:bg-[#3B2414] transition ease-in-out duration-200 ${
+                                            title.link === pathname ||
+                                            (title.link !== '/' &&
+                                                pathname.startsWith(title.link))
+                                                ? 'bg-[#3B2414]'
+                                                : ''
+                                        } `}
+                                        onClick={
+                                            title.clickableOnMobile
+                                                ? handleClickItem
+                                                : null
+                                        }
+                                    >
+                                        <Link
+                                            href={title.link}
+                                            passHref={title.clickableOnMobile}
+                                        >
+                                            <a
+                                                className={`py-5 w-full text-center inline-block font-semibold`}
+                                            >
+                                                {title.title}
+                                                {title.isDropdown && (
+                                                    <p className='inline-block ml-3 text-xs -rotate-90'>
+                                                        &#10094;
+                                                    </p>
+                                                )}
+                                            </a>
+                                        </Link>
+                                        {title.isDropdown && (
+                                            <ul className='absolute z-10 min-w-full text-center whitespace-nowrap bg-primary-color hidden group-hover:block'>
+                                                {title.dropDownContent &&
+                                                    title.dropDownContent.map(
+                                                        (item, index) => (
+                                                            <li
+                                                                key={index}
+                                                                onClick={
+                                                                    handleClickItem
+                                                                }
+                                                            >
+                                                                <Link
+                                                                    href={
+                                                                        item.link
+                                                                    }
+                                                                >
+                                                                    <a className='block px-6 py-2 hover:bg-[#3B2414]'>
+                                                                        {
+                                                                            item.title
+                                                                        }
+                                                                    </a>
+                                                                </Link>
+                                                            </li>
+                                                        ),
+                                                    )}
+                                                <li>
+                                                    <Link href={title.link}>
+                                                        <a className='block px-6 py-3 hover:bg-[#3B2414] text-[0.8rem] border-t-2 border-slate-100 font-medium'>
+                                                            XEM TẤT CẢ{' '}
+                                                            {title.title}
+                                                        </a>
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                        )}
+                                    </li>
+                                ))}
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </header>
     );
