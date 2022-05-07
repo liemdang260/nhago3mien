@@ -161,12 +161,11 @@ export default function Home() {
                     {images &&
                         images.map((value, index) => (
                             <SwiperSlide key={index}>
-                                <div className=''>
+                                <div className='w-full min-h-[300px] md:min-h-[400px] lg:min-h-[calc(100vh_-_280px)]'>
                                     <Image
                                         src={value}
                                         alt='banner 1'
-                                        width={1536}
-                                        height={480}
+                                        layout="fill"
                                     />
                                 </div>
                             </SwiperSlide>

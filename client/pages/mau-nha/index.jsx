@@ -244,7 +244,7 @@ const Item2 = ({ params }) => {
       flex flex-row hover:shadow-primary-color hover:bg-slate-200 duration-700
     '
         >
-            <div className='grow overflow-hidden px-4 border-r border-primary-color flex-1'>
+            <div className='grow-[6] sm:grow=[2] md:grow overflow-hidden px-4 border-r border-primary-color flex-1'>
                 <Image
                     src={params.linkImage}
                     alt='mau san pham'
@@ -275,6 +275,45 @@ const AllHomeTemplate = () => {
     const [gridLayout, setGridLayout] = useState(true);
     const [landingIndex, setLandingIndex] = useState(0);
     const [landingVisionIndex, setLandingVisionIndex] = useState(0);
+
+    // Select option when responsive
+    const [selectedOption, setSelectedOption] = useState({
+        label: 'Tất cả',
+        value: 'tatca',
+    });
+    useEffect(() => {
+        if (selectedOption.value == 'tatca') setData(dummyData);
+        else
+            setData(
+                dummyData.filter((item) => {
+                    return item.type == selectedOption.value;
+                }),
+            );
+    }, [selectedOption]);
+
+    const options = [
+        { label: 'Tất cả', value: 'tatca' },
+        {
+            label: 'Nhà từ đường',
+            value: 'nhaTuDuong',
+        },
+        {
+            label: 'Nhà gỗ hiện đại',
+            value: 'nhaGoHienDai',
+        },
+        {
+            label: 'Nhà sàn gỗ',
+            value: 'mauNhaSan',
+        },
+        {
+            label: 'Nhà cỗ truyền',
+            value: 'nhaGoCoTruyen',
+        },
+        {
+            label: 'Nhà lục giác',
+            value: 'mauNhaLucGiac',
+        },
+    ];
 
     const [selectedOption2, setSelectedOption2] = useState({
         value: '16',
@@ -339,7 +378,7 @@ const AllHomeTemplate = () => {
                     <div className='mt-2'>
                         <span
                             onClick={() => setGridLayout(true)}
-                            className={`border-solid border-primary-color py-2 px-3 rounded-l-md ${
+                            className={`border-solid border-primary-color py-1 md:py-2 px-1 md:px-3 rounded-l-md ${
                                 gridLayout ? 'border-4' : 'border'
                             }`}
                         >
@@ -347,14 +386,14 @@ const AllHomeTemplate = () => {
                         </span>
                         <span
                             onClick={() => setGridLayout(false)}
-                            className={`border-solid border-primary-color py-2 px-3 rounded-r-md ${
+                            className={`border-solid border-primary-color  py-1 md:py-2 px-1 md:px-3 rounded-r-md ${
                                 !gridLayout ? 'border-4' : 'border'
                             }`}
                         >
                             <FontAwesomeIcon icon={faBars} size='lg' />
                         </span>
                         {/* Sub label filter header */}
-                        <ul className='inline ml-8'>
+                        <ul className='hidden md:inline ml-8'>
                             {[
                                 { title: 'Tất cả', type: 'tatca' },
                                 {
@@ -394,10 +433,20 @@ const AllHomeTemplate = () => {
                                 />
                             ))}
                         </ul>
+                        <div className='ml-4 sm:ml-8 inline-block w-32 sm:w-40 md:hidden'>
+                            <Select
+                                className='text-xs border-blue-400'
+                                value={selectedOption}
+                                options={options}
+                                onChange={(change) => {
+                                    setSelectedOption(change);
+                                }}
+                            />
+                        </div>
                     </div>
                     <div className='mt-2'>
                         <Select
-                            className='w-32 inline-block'
+                            className='w-18 md:w-32 inline-block text-xs md:text-base'
                             value={selectedOption2}
                             onChange={(change) => {
                                 setSelectedOption2(change);
@@ -408,7 +457,9 @@ const AllHomeTemplate = () => {
                 </div>
                 <div
                     className={`w-full ${
-                        gridLayout ? 'grid grid-cols-4 gap-7' : ''
+                        gridLayout
+                            ? 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-6'
+                            : ''
                     } mt-6`}
                 >
                     {gridLayout

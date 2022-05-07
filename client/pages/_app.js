@@ -47,8 +47,8 @@ function MyApp({ Component, pageProps, router }) {
     return (
         <>
             <button
-                className={`bg-primary-color w-14 h-14 rounded-full flex justify-center 
-          items-center fixed bottom-9 right-8 z-10 ${
+                className={`bg-primary-color w-12 h-12 rounded-full flex justify-center 
+          items-center fixed bottom-14 right-1 z-10 ${
               isVisible ? 'opacity-100' : 'opacity-0'
           }`}
                 onClick={() => scrollToTop()}

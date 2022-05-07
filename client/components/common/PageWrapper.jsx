@@ -12,10 +12,10 @@ function PageWrapper({ children }) {
                 {childrenArray[0]}
             </div>
 
-            <div className='col-span-3 border-r-[1px] border-gray-300 py-4 pr-5'>
+            <div className='col-span-3 border-r-[1px] border-gray-300 py-4 pr-1 md:pr-5'>
                 {childrenArray[1]}
             </div>
-            <div className='col-span-9 border-l-[1px] border-gray-300 py-4 pl-5'>
+            <div className='col-span-9 border-l-[1px] border-gray-300 py-4 pl-1 md:pr-5'>
                 {childrenArray[2]}
             </div>
         </div>

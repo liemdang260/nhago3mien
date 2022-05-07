@@ -64,7 +64,7 @@ const HomeTemplate = () => {
                     <div className='mt-2'>
                         <span
                             onClick={() => setGridLayout(true)}
-                            className={`border-solid border-primary-color py-2 px-3 rounded-l-md ${
+                            className={`border-solid border-primary-color py-1 md:py-2 px-1 md:px-3 rounded-l-md ${
                                 gridLayout ? 'border-4' : 'border'
                             }`}
                         >
@@ -72,7 +72,7 @@ const HomeTemplate = () => {
                         </span>
                         <span
                             onClick={() => setGridLayout(false)}
-                            className={`border-solid border-primary-color py-2 px-3 rounded-r-md ${
+                            className={`border-solid border-primary-color  py-1 md:py-2 px-1 md:px-3 rounded-r-md ${
                                 !gridLayout ? 'border-4' : 'border'
                             }`}
                         >
@@ -80,9 +80,9 @@ const HomeTemplate = () => {
                         </span>
                     </div>
                     <div className='uppercase mt-2'>{loaiNhaID}</div>
-                    <div className='mt-2'>
+                    <div className=''>
                         <Select
-                            className='w-32 inline-block'
+                            className='w-18 md:w-32 inline-block text-xs md:text-base'
                             value={selectedOption2}
                             onChange={(change) => {
                                 setSelectedOption2(change);
@@ -93,7 +93,9 @@ const HomeTemplate = () => {
                 </div>
                 <div
                     className={`w-full ${
-                        gridLayout ? 'grid grid-cols-4 gap-7' : ''
+                        gridLayout
+                            ? 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-6'
+                            : ''
                     } mt-6`}
                 >
                     {gridLayout
