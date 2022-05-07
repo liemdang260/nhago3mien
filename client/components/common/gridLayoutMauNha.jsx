@@ -115,11 +115,11 @@ const GridLayoutMauNha = ({
     mode = 'default',
 }) => {
     return (
-        <div className='container flex flex-col justify-around'>
+        <div className='container flex flex-col justify-around p-4 sm:p-0'>
             <Title title={title} />
             <Swiper
-                slidesPerView={4}
-                spaceBetween={30}
+                slidesPerView={1}
+                spaceBetween={20}
                 autoplay={{ delay: 3000, disableOnInteraction: false }}
                 loop={true}
                 pagination={
@@ -129,14 +129,19 @@ const GridLayoutMauNha = ({
                     }
                 }
                 breakpoints={{
-                    320: {
-                        width: 320,
-                        slidesPerView: 1,
+                    576: {
+                        // width: 320,
+                        slidesPerView: 2,
                     },
                     // when window width is >= 768px
-                    640: {
-                        width: 640,
-                        slidesPerView: 2,
+                    768: {
+                        // width: 640,
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                    992: {
+                        // width: 640,
+                        slidesPerView: 4,
                     },
                 }}
                 navigation={true}
@@ -195,6 +200,11 @@ const GridLayoutMauNha = ({
                 }      
                 .mySwiper .swiper-pagination {
                     bottom: 0
+                }
+                @media screen and (max-width:576px){
+                    .mySwiper {                                            
+                        padding-bottom: 30px;
+                    }
                 }
             `}</style>
         </div>

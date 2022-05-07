@@ -106,16 +106,20 @@ const Introduction = () => {
                     lý.
                 </p>
                 <table className='text-center mx-auto mt-4 mb-2'>
-                    <tr>
-                        <th className='w-[100px]'>LOẠI GỖ</th>
-                        <th className='w-[150px]'>MỨC GIÁ</th>
-                    </tr>
-                    {data.map((d, index) => (
-                        <tr key={index}>
-                            <td className='w-[100px]'>{d.type}</td>
-                            <td className='w-[150px]'>{d.price}</td>
+                    <thead>
+                        <tr>
+                            <th className='w-[100px]'>LOẠI GỖ</th>
+                            <th className='w-[150px]'>MỨC GIÁ</th>
                         </tr>
-                    ))}
+                    </thead>
+                    <tbody>
+                        {data.map((d, index) => (
+                            <tr key={index}>
+                                <td className='w-[100px]'>{d.type}</td>
+                                <td className='w-[150px]'>{d.price}</td>
+                            </tr>
+                        ))}
+                    </tbody>
                 </table>
                 <p className='text-center'>
                     XEM THÊM:{' '}

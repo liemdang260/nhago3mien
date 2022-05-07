@@ -1,9 +1,6 @@
 import { useRouter } from 'next/router';
 import { Navigation, Thumbs } from 'swiper';
 import { Swiper } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/thumbs';
 import { SwiperSlide } from 'swiper/react';
 import AllHomeTemplate, { dummyData } from '..';
 import Image from 'next/image';

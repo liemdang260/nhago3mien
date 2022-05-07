@@ -7,7 +7,7 @@ function AboutStrength({ strengthTitle, strengthSubTitle }) {
         <AnimationOnScroll
             animateIn='animate__backInUp'
             animateOnce={true}
-            className='w-full border-primary-color border-[3px] p-1 m-4'
+            className='w-full border-primary-color border-[3px] p-1 my-4 md:mx-4'
         >
             <div className='border-primary-color border-2 p-2'>
                 <div className='text-primary-color text-center'>
@@ -21,7 +21,7 @@ function AboutStrength({ strengthTitle, strengthSubTitle }) {
 
 function Trait() {
     return (
-        <div className='container'>
+        <div className='container p-4 sm:p-0'>
             <Title title='Nhà gỗ Ba miền' />
             <div className='flex flex-col md:flex-row justify-between mt-8'>
                 <AboutStrength

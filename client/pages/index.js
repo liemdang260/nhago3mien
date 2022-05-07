@@ -165,7 +165,7 @@ export default function Home() {
                                     <Image
                                         src={value}
                                         alt='banner 1'
-                                        layout="fill"
+                                        layout='fill'
                                     />
                                 </div>
                             </SwiperSlide>

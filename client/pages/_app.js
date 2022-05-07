@@ -15,6 +15,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-cube';
+import 'swiper/css/thumbs';
 
 //Animation on scrolling
 import 'animate.css';

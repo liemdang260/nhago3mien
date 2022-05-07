@@ -47,7 +47,7 @@ const additionalData = [
 function Footer() {
     return (
         <footer className='min-h-screen bg-[#6D594C] text-white relative'>
-            <div className='container flex flex-col sm:flex-row pt-24 pb-4'>
+            <div className='container flex flex-col sm:flex-row pt-24 pb-4 px-4 sm:px-0'>
                 <div className='w-full md:w-4/12 px-3'>
                     <div className='w-full'>
                         <p className='w-full sm:w-auto text-center sm:text-left mb-2 m-auto text-3xl md:text-lg font-semibold border-b-2 border-b-[#EBC804] inline-block text-[#EBC804]'>
@@ -57,7 +57,7 @@ function Footer() {
                     <ul>
                         {additionalData &&
                             additionalData.map((value, index) => (
-                                <>
+                                <React.Fragment key={index}>
                                     <li key={index}>
                                         <p className='inline-block py-2'>
                                             <FontAwesomeIcon
@@ -85,7 +85,7 @@ function Footer() {
                                             </div>
                                         </div>
                                     )}
-                                </>
+                                </React.Fragment>
                             ))}
                     </ul>
                 </div>
