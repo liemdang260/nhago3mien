@@ -14,11 +14,11 @@ const DetailHomeTemplate = () => {
     const ProductImagesSlider = (props) => {
         return (
             <div>
-                <div className='flex flex-row my-10'>
-                    <div className='w-3/5 overflow-hidden  inline-block'>
+                <div className='flex flex-col sm:flex-row my-10'>
+                    <div className='w-full sm:w-3/5 overflow-hidden p-2 inline-block'>
                         <Swiper
                             loop={true}
-                            spaceBetween={10}
+                            spaceBetween={8}
                             navigation={true}
                             modules={[Navigation, Thumbs]}
                             gradCursor={true}
@@ -43,10 +43,10 @@ const DetailHomeTemplate = () => {
                             // onSwiper={setThumbsSwiper}
                             watchSlidesProgress={true}
                             loop={true}
-                            spaceBetween={10}
-                            slidesPerView={8}
+                            spaceBetween={5}
+                            slidesPerView={5}
                             modules={[Thumbs]}
-                            className='product-image-thumbnails'
+                            className='product-image-thumbnails p-2'
                         >
                             {props.images.map((_item, _index) => (
                                 <SwiperSlide key={_index}>
@@ -63,7 +63,7 @@ const DetailHomeTemplate = () => {
                             ))}
                         </Swiper>
                     </div>
-                    <div className='inline-block p-7 h-full w-2/5 ml-10 border border-black'>
+                    <div className='inline-block p-7 h-full w-11/12 mx-4 sm:w-2/5 sm:ml-10 border border-black'>
                         <p className='text-primary-color text-lg font-bold inline-block my-2'>
                             Loại nhà:
                         </p>{' '}
@@ -89,7 +89,7 @@ const DetailHomeTemplate = () => {
                 </div>
 
                 {/* hr */}
-                <Title title='Những mẫ nhà đẹp khác' />
+                <Title title='Những mẫu nhà đẹp khác' />
                 <AllHomeTemplate />
             </div>
         );

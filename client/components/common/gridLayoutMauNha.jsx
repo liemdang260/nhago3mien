@@ -28,7 +28,7 @@ const Item = ({ params }) => {
       '
             >
                 <div
-                    className='hidden w-[450px] h-[290px] group-hover:first:block absolute -translate-y-full -m-2
+                    className='hidden w-[450px] h-[290px] sm:group-hover:first:block absolute -translate-y-full -m-2
           border-2 border-solid border-primary-color'
                 >
                     <Image
