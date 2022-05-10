@@ -22,16 +22,19 @@ const additionalData = [
         title: 'Địa chỉ',
         data: '72/24 Phan Đăng Lưu, Phường 5, Quận Phú Nhuận, TP.HCM.',
         icon: faLocationDot,
+        linkImage: '/images/hinh-anh-van-phong.jpg',
     },
     {
         title: 'Văn phòng chi nhánh',
         data: '305/35 TA28, Quận 12, TP.HCM',
         icon: faLocationDot,
+        linkImage: '/images/hinh-anh-chi-nhanh.jpg',
     },
     {
         title: 'Xưởng',
         data: 'Thôn Hà Thái, Xã Hoằng Hà, Huyện Hoằng Hóa, Tỉnh Thanh Hóa.',
         icon: faLocationDot,
+        linkImage: '/images/hinh-anh-xuong.jpg',
     },
     {
         title: 'Điện thoại',
@@ -83,7 +86,7 @@ function Footer() {
                                             ></iframe>
                                             <div className='w-full  px-3 my-2 text-center block'>
                                                 <Image
-                                                    src={`/images/hinh-anh-van-phong.jpg`}
+                                                    src={`${value.linkImage}`}
                                                     layout='responsive'
                                                     height={140}
                                                     width={240}
@@ -131,7 +134,7 @@ function Footer() {
                         ></iframe>
                         <div className='w-1/2 border-2 border-white text-center'>
                             <Image
-                                src={`/images/hinh-anh-van-phong.jpg`}
+                                src={`/images/hinh-anh-chi-nhanh.jpg`}
                                 layout='responsive'
                                 height={140}
                                 width={240}

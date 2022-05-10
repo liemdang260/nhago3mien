@@ -14,6 +14,7 @@ module.exports = {
             },
             colors: {
                 'primary-color': '#603814',
+                'sub-background-color': '#f7f5f3',
                 color: '#333',
             },
             container: {
