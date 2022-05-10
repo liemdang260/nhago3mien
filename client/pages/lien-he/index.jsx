@@ -34,7 +34,7 @@ const ContactPage = () => {
                         </a>
                         ,{' '}
                         <a className='text-red-500' href='tel:0909377365'>
-                            0977.325.561
+                            0977.325.651
                         </a>{' '}
                         <br />
                         Email:{' '}

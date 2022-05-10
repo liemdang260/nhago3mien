@@ -65,7 +65,7 @@ function About() {
                             <span className='text-primary-color font-medium'>
                                 Nhà gỗ Ba Miền
                             </span>{' '}
-                            là những người con của quê hương Làng mộc Đạt Tài,
+                            là những người con của quê hương Làng mộc Hà Thái,
                             trải qua nhiều thế hệ cha chuyền con nối, chúng tôi
                             tự hào với đội ngũ thợ kinh nghiệm có tay nghề và
                             trình độ cao cùng với nhóm thiết kế tận tâm, chuyên
