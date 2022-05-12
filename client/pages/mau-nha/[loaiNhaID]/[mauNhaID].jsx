@@ -49,7 +49,7 @@ const DetailHomeTemplate = () => {
                         </Swiper>
                         {/* Thumbnail swiper */}
                         <Swiper
-                            onSwiper={setAciveItem}
+                            // onSwiper={setAciveItem}
                             loop={true}
                             spaceBetween={5}
                             slidesPerView={5}
