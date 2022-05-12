@@ -1,8 +1,4 @@
-import { PageItem, PageWrapper } from 'components/common/PageWrapper';
-import Breadcrumb from 'components/common/SideBar/Breadcrumb';
-import Category from 'components/common/SideBar/Category';
-import Support from 'components/common/SideBar/Support';
-import Contact from 'components/common/SideBar/Contact';
+import Image from 'next/image';
 import NewsWrapper from 'components/common/NewsWrapper';
 
 const ContactPage = () => {
@@ -24,8 +20,7 @@ const ContactPage = () => {
                     <address className='text-sm md:text-lg leading-loose font-normal'>
                         Địa chỉ: 72/24 Phan Đăng Lưu, Phường 5, Quận Phú Nhuận,
                         TP.HCM. <br />
-                        Văn phòng chi nhánh: 72 Lê Thị Riêng, Quận 12, TP.HCM.{' '}
-                        <br />
+                        Văn phòng chi nhánh: 305/35 TA28, Quận 12, TP.HCM <br />
                         Xưởng: Thôn Hà Thái, Xã Hoằng Hà, Huyện Hoằng Hóa, Tỉnh
                         Thanh Hóa. <br />
                         Điện thoại:{' '}
@@ -121,8 +116,13 @@ const ContactPage = () => {
                             referrerPolicy='no-referrer-when-downgrade'
                             style={{ width: '100%' }}
                         ></iframe>
-                        <div className='w-full md:w-1/2 border-2 border-primary-color text-center px-3'>
-                            Hình ảnh văn phòng
+                        <div className='w-full md:w-1/2 border-1 mt-5 md:mt-1/2 lg:mt-0'>
+                            <Image
+                                src={`/images/hinh-anh-van-phong.jpg`}
+                                layout='responsive'
+                                width={256}
+                                height={205}
+                            />
                         </div>
                     </div>
 
@@ -140,8 +140,13 @@ const ContactPage = () => {
                             referrerPolicy='no-referrer-when-downgrade'
                             style={{ width: '100%' }}
                         ></iframe>
-                        <div className='w-full md:w-1/2 border-2 border-primary-color text-center px-3'>
-                            Hình ảnh văn phòng chi nhánh
+                        <div className='w-full md:w-1/2 border-1 mt-5 md:mt-1/2 lg:mt-0'>
+                            <Image
+                                src={`/images/hinh-anh-chi-nhanh.jpg`}
+                                layout='responsive'
+                                width={256}
+                                height={205}
+                            />
                         </div>
                     </div>
 
@@ -159,8 +164,13 @@ const ContactPage = () => {
                             referrerPolicy='no-referrer-when-downgrade'
                             style={{ width: '100%' }}
                         ></iframe>
-                        <div className='w-full md:w-1/2 border-2 border-primary-color text-center px-3'>
-                            Hình ảnh xưởng
+                        <div className='w-full md:w-1/2 border-1 mt-5 md:mt-1/2 lg:mt-0'>
+                            <Image
+                                src={`/images/hinh-anh-xuong.jpg`}
+                                layout='responsive'
+                                width={256}
+                                height={205}
+                            />
                         </div>
                     </div>
                 </div>

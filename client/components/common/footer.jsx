@@ -157,8 +157,8 @@ function Footer() {
                             <Image
                                 src={`/images/hinh-anh-xuong.jpg`}
                                 layout='responsive'
-                                height={150}
-                                width={150}
+                                height={140}
+                                width={240}
                             />
                         </div>
                     </div>

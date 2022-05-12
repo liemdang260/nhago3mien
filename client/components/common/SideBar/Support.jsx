@@ -11,7 +11,7 @@ function Support() {
     return (
         <div>
             <Title title={'Hỗ trợ'} size={'xl'} />
-            <div className='text-primary-color border-primary-color border-4 rounded-xl border-double p-1 md:p-4 mt-3'>
+            <div className='text-primary-color text-[8px] md:text-[12px] lg:text-[16px] border-primary-color border-4 rounded-xl border-double p-1 md:p-4 mt-3'>
                 {data.map((d, index) => (
                     <div key={index} className='flex items-center my-2'>
                         <a href='tel:0962116789'>

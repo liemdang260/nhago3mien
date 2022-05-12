@@ -1,5 +1,6 @@
 import { PageItem, PageWrapper } from 'components/common/PageWrapper';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useRouter } from 'next/router';
 import {
     faListSquares,
     faBars,
@@ -238,8 +239,17 @@ const dummyData = [
 ];
 
 const Item2 = ({ params }) => {
+    const router = useRouter();
+    const handleClickItem = () => {
+        // router.push()
+        router.push(
+            `/mau-nha/${params.type ? params.type : ''}/${params.title}`,
+        );
+    };
+
     return (
         <div
+            onClick={handleClickItem}
             className='border bg-slate-50 shadow-[0px_3px_5px_0px_rgba(0,0,0,0.3)] border-[#ccc] mb-3 h-52
       flex flex-row hover:shadow-primary-color hover:bg-slate-200 duration-700
     '

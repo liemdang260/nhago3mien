@@ -4,13 +4,21 @@ import { Swiper } from 'swiper/react';
 import { SwiperSlide } from 'swiper/react';
 import AllHomeTemplate, { dummyData } from '..';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Title from 'components/common/Title';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
 
 const DetailHomeTemplate = () => {
     const router = useRouter();
-    const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    const [activeItem, setAciveItem] = useState();
+    useEffect(() => {
+        console.log('ACTIVE: ', activeItem);
+    }, [activeItem]);
     const { loaiNhaID, mauNhaID } = router.query;
+
+    // Cofigurate
     const ProductImagesSlider = (props) => {
         return (
             <div>
@@ -23,7 +31,7 @@ const DetailHomeTemplate = () => {
                             modules={[Navigation, Thumbs]}
                             gradCursor={true}
                             thumbs={{
-                                swiper: thumbsSwiper,
+                                swiper: activeItem,
                             }}
                             className='product-image-sliders'
                         >
@@ -39,26 +47,24 @@ const DetailHomeTemplate = () => {
                                 </SwiperSlide>
                             ))}
                         </Swiper>
+                        {/* Thumbnail swiper */}
                         <Swiper
-                            // onSwiper={setThumbsSwiper}
-                            watchSlidesProgress={true}
+                            onSwiper={setAciveItem}
                             loop={true}
                             spaceBetween={5}
                             slidesPerView={5}
-                            modules={[Thumbs]}
+                            modules={[Navigation, Thumbs]}
                             className='product-image-thumbnails p-2'
                         >
                             {props.images.map((_item, _index) => (
                                 <SwiperSlide key={_index}>
-                                    <div className='product-images-thumbs-wrapper'>
-                                        <Image
-                                            layout='responsive'
-                                            src={_item.linkImage}
-                                            alt='Slider Images'
-                                            height={150}
-                                            width={250}
-                                        />
-                                    </div>
+                                    <Image
+                                        layout='responsive'
+                                        src={_item.linkImage}
+                                        alt='Slider Images'
+                                        height={150}
+                                        width={250}
+                                    />
                                 </SwiperSlide>
                             ))}
                         </Swiper>
@@ -102,53 +108,49 @@ const DetailHomeTemplate = () => {
                 <ProductImagesSlider images={dummyData.slice(0, 10)} />
             </div>
             <style>{`
-                .product-image-sliders .swiper:hover .swiper-button-prev, .swiper:hover .swiper-button-next {                    
+                 .swiper:hover .swiper-button-prev, .swiper:hover .swiper-button-next {                    
                     transform: translateX(0) translateY(-40%);
                 }
-                .product-image-sliders .swiper-button-prev,
-                .product-image-sliders .swiper-button-next {
+                .swiper-slide {
+                    height: initial !important;
+                }
+                
+                .swiper-button-prev,
+                .swiper-button-next {
                     background-color: rgba(0, 0, 0, 0.3);
                     padding: 2rem 1.5rem;                            
                     transition: transform 0.3s;
                     will-change: transform;
                     transform-origin: top;                    
                 }
-                .product-image-sliders .swiper-button-prev:hover,
-                .product-image-sliders .swiper-button-next:hover {                    
+                .swiper-button-prev:hover,
+                .swiper-button-next:hover {                    
                     transform: scale(1.1) translateY(-45%) translateX(0) !important;
                 }
-                .product-image-sliders .swiper-button-prev {
+                .swiper-button-prev {
                     left: 0;
                     transform: translateY(-40%) translateX(-100%);
                 }
-                .product-image-sliders .swiper-button-next {
+                .swiper-button-next {
                     right: 0;
                     transform: translateY(-40%) translateX(100%);
                 }
-                .product-image-sliders .mySwiper {                    
-                    min-height: 350px;
+                .mySwiper {                    
+                    min-height: 300px;
                     margin-top: 40px;
+                    padding-bottom: 10px;
                 }      
-                .product-image-slidersv .mySwiper .swiper-pagination {
-                    bottom: 0
-                }
-
-                .product-image-thumbnails .swiper-slider {
-                    cursor: pointer;
-                    border: 1px solid #dddbdb;
-                }
-                .swiper-slider-thumb-active {
+                .swiper-slide-thumb-active {
                     border-color: #ff02f2;
                 }
-
-                .product-images-thumbs-wrapper{
-                    width: 100%;
-                    padding-top: 30%;
-                    overflow: hidden;
-                    position:  relative
+                .mySwiper .swiper-pagination {
+                    bottom: 0
                 }
-
-
+                @media screen and (max-width:576px){
+                    .mySwiper {                                            
+                        padding-bottom: 30px;
+                    }
+                }
             `}</style>
         </>
     );
