@@ -13,9 +13,7 @@ import 'swiper/css/thumbs';
 const DetailHomeTemplate = () => {
     const router = useRouter();
     const [activeItem, setAciveItem] = useState();
-    useEffect(() => {
-        console.log('ACTIVE: ', activeItem);
-    }, [activeItem]);
+    useEffect(() => {}, [activeItem]);
     const { loaiNhaID, mauNhaID } = router.query;
 
     // Cofigurate
@@ -54,7 +52,7 @@ const DetailHomeTemplate = () => {
                             spaceBetween={5}
                             slidesPerView={5}
                             modules={[Navigation, Thumbs]}
-                            className='product-image-thumbnails p-2'
+                            className='product-image-thumbnails p-2 mt-2'
                         >
                             {props.images.map((_item, _index) => (
                                 <SwiperSlide key={_index}>
