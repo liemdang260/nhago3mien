@@ -260,6 +260,7 @@ const Item2 = ({ params }) => {
                     alt='mau san pham'
                     priority
                     layout='fixed'
+                    loading='lazy'
                     width={350}
                     height={200}
                 />

@@ -90,6 +90,7 @@ export const MostViewedItem = ({ item }) => {
                         alt='Hinh anh tin tuc 1'
                         width={60}
                         height={45}
+                        loading='lazy'
                         objectFit='contain'
                     />
                     <div className='ml-3 w-8/12'>
