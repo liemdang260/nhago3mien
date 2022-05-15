@@ -86,19 +86,11 @@ function MyApp({ Component, pageProps, router }) {
             </div>
             <div
                 className='zalo-chat-widget'
-                data-oaid='579745863508352884'
-                data-welcome-message='Rất vui khi được hỗ trợ bạn!'
-                data-autopopup='0'
-                data-width=''
-                data-height=''
-            ></div>
-            <div
-                className='zalo-chat-widget'
-                data-oaid='579745863508352884'
-                data-welcome-message='Rất vui khi được hỗ trợ bạn!'
-                data-autopopup='0'
-                // data-width=''
-                // data-height=''
+                dataOaid='579745863508352884'
+                dataWelcomeMessage='Rất vui khi được hỗ trợ bạn!'
+                dataAutopopup='3s'
+                dataWidth=''
+                dataHeight=''
             ></div>
             <Head>
                 <meta
