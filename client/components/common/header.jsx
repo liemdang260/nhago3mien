@@ -126,7 +126,7 @@ export default function Header() {
                                         icon={faPhone}
                                         className='border-2 border-solid border-white rounded-full p-1 inline-block'
                                     />
-                                    <span className='ml-1'>0977.325.561</span>
+                                    <span className='ml-1'>0977.325.651</span>
                                 </a>
                             </p>
                             <p className='ml-4 leading-none'>
@@ -187,7 +187,7 @@ export default function Header() {
                                 </a>
                             </li>
                             <li className='w-fit mx-auto sm:w-auto'>
-                                <a href='tel:0977325561'>
+                                <a href='tel:0977325651'>
                                     <FontAwesomeIcon
                                         icon={faPhone}
                                         color='#003F5C'
@@ -199,7 +199,7 @@ export default function Header() {
                                         className='translate-y-2 translate-x-[1px] inline-block'
                                     />
                                     <span className='font-normal ml-2 lg:text-lg text-color'>
-                                        0977.325.561
+                                        0977.325.651
                                     </span>
                                 </a>
                             </li>
@@ -269,13 +269,6 @@ export default function Header() {
                                                     </li>
                                                 ),
                                             )}
-                                        <li>
-                                            <Link href={title.link}>
-                                                <a className='block px-6 py-3 hover:bg-[#3B2414] text-[0.8rem] border-t-2 border-slate-100 font-medium'>
-                                                    XEM TẤT CẢ {title.title}
-                                                </a>
-                                            </Link>
-                                        </li>
                                     </ul>
                                 )}
                             </li>
@@ -357,14 +350,6 @@ export default function Header() {
                                                             </li>
                                                         ),
                                                     )}
-                                                <li>
-                                                    <Link href={title.link}>
-                                                        <a className='block px-6 py-3 hover:bg-[#3B2414] text-[0.8rem] border-t-2 border-slate-100 font-medium'>
-                                                            XEM TẤT CẢ{' '}
-                                                            {title.title}
-                                                        </a>
-                                                    </Link>
-                                                </li>
                                             </ul>
                                         )}
                                     </li>

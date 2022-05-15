@@ -10,7 +10,6 @@ const datas = [
     { title: 'MẪU NHÀ TỪ ĐƯỜNG', link: '' },
 ];
 function Category({ title = '', data = datas, activePath }) {
-    console.log(activePath);
     return (
         <div>
             <Title title={title} size={'xl'} />
@@ -18,7 +17,7 @@ function Category({ title = '', data = datas, activePath }) {
                 {data.map((d, index) => (
                     <li
                         key={index}
-                        className={`p-2 my-2 text-[8px] md:text-[13px] border-[1px] border-primary-color rounded-md font-bold ${
+                        className={`p-2 my-2 text-[8px] md:text-[12px] lg:text-[16px] border-[1px] border-primary-color rounded-md font-bold ${
                             activePath !== d.link ? 'hover:text-red-600' : ''
                         } text-primary-color duration-200 ${
                             activePath === d.link

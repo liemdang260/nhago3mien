@@ -1,5 +1,6 @@
 import { PageItem, PageWrapper } from 'components/common/PageWrapper';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useRouter } from 'next/router';
 import {
     faListSquares,
     faBars,
@@ -52,194 +53,203 @@ const dummyData = [
     {
         title: 'Chòi hóng mát',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-luc-giac.Choi-hong-mat.jpg',
+        linkImage: '/images/nha1.jpg',
         type: 'mauNhaLucGiac',
     },
     {
         title: 'Chòi ngắm cảnh',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-luc-giac.Choi-ngam-canh.jpg',
+        linkImage: '/images/nha2.jpg',
         type: 'mauNhaLucGiac',
     },
     {
         title: 'Mẫu nhà lục giác',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-luc-giac.Mau-nha-luc-giac.jpg',
+        linkImage: '/images/nha3.jpg',
         type: 'mauNhaLucGiac',
     },
     {
         title: 'Nhà chòi kiểu cổ',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-luc-giac.Nha-choi-kieu-co.jpg',
+        linkImage: '/images/nha4.jpg',
         type: 'mauNhaLucGiac',
     },
     {
         title: 'Mẫu nhà gỗ 3 gian cổ truyền',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-san.Mau-nha-go-3-gian-co-truyen.jpg',
+        linkImage: '/images/nha5.jpg',
         type: 'mauNhaSan',
     },
     {
         title: 'Mẫu nhà gỗ 5 gian truyền thống',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-san.Mau-nha-go-5-gian-truyen-thong.png',
+        linkImage: '/images/nha5.jpg',
         type: 'mauNhaSan',
     },
     {
         title: 'Mẫu nhà gỗ 3 gian 2 trái',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-san.Mau-nha-san-3-gian-2-trai.jpg',
+        linkImage: '/images/nha6.jpg',
         type: 'mauNhaSan',
     },
     {
         title: 'Mẫu nhà gỗ 3 gian truyền thống',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-san.Mau-nha-san-3-gian-truyen-thong.jpg',
+        linkImage: '/images/nha7.jpg',
         type: 'mauNhaSan',
     },
     {
         title: 'Mẫu nhà gỗ 5 gian mái thái',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-san.Mau-nha-san-5-gian-mai-thai.jpg',
+        linkImage: '/images/nha8.jpg',
         type: 'mauNhaSan',
     },
     {
         title: 'Mẫu nhà gỗ kiểu thái',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-san.Mau-nha-san-go-kieu-thai.jpg',
+        linkImage: '/images/nha9.jpg',
         type: 'mauNhaSan',
     },
     {
         title: 'Mẫu nhà gỗ Liêm',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-san.Mau-nha-san-go-liem.jpeg',
+        linkImage: '/images/nha10.jpg',
         type: 'mauNhaSan',
     },
     {
         title: 'Mẫu nhà gỗ hiện đại',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-hien-dai.Mau-nha-go-hien-dai-02.jpg',
+        linkImage: '/images/nha11.jpg',
         type: 'nhaGoHienDai',
     },
     {
         title: 'Mẫu nhà gỗ hiện đại 02',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-hien-dai.Mau-nha-go-hien-dai-03.jpg',
+        linkImage: '/images/nha12.jpg',
         type: 'nhaGoHienDai',
     },
     {
         title: 'Mẫu nhà gỗ hiện đại 03',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-hien-dai.Mau-nha-go-hien-dai-04.jpg',
+        linkImage: '/images/nha13.jpg',
         type: 'nhaGoHienDai',
     },
     {
         title: 'Mẫu nhà gỗ hiện đại 04',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-hien-dai.Mau-nha-go-hien-dai.jpg',
+        linkImage: '/images/nha14.jpg',
         type: 'nhaGoHienDai',
     },
     {
         title: 'Mẫu nhà gỗ hiện đại 06',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-hien-dai.Mau-nha-go-lam-homestay.jpg',
+        linkImage: '/images/nha15.jpg',
         type: 'nhaGoHienDai',
     },
     {
         title: 'Mẫu nhà gỗ làm homestay',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-hien-dai.Mau-nha-go-hien-dai-06.jpg',
+        linkImage: '/images/nha30.jpg',
         type: 'nhaGoHienDai',
     },
     {
         title: 'Mẫu nhà gỗ kiểu Huế',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-co-truyen.Mau-nha-go-kieu-Hue.jpg',
+        linkImage: '/images/nha16.jpg',
         type: 'nhaGoCoTruyen',
     },
     {
         title: 'Mẫu nhà rường Huế',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-co-truyen.Mau-nha-ruong-hue.jpg',
+        linkImage: '/images/nha17.jpg',
         type: 'nhaGoCoTruyen',
     },
     {
         title: 'Mẫu nhà truyền thống đẹp',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-co-truyen.Mau-nha-truyen-thong-dep.jpg',
+        linkImage: '/images/nha18.jpg',
         type: 'nhaGoCoTruyen',
     },
     {
         title: 'Nhà cổ truyền 5 gian',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-co-truyen.Nha-co-truyen-5-gian.jpg',
+        linkImage: '/images/nha19.jpg',
         type: 'nhaGoCoTruyen',
     },
     {
         title: 'Nhà 3 gian gỗ Lim',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-co-truyen.Nha-go-3-gian-go-Lim.jpg',
+        linkImage: '/images/nha20.jpg',
         type: 'nhaGoCoTruyen',
     },
     {
         title: 'Nhà gỗ 3 gian kiểu Bắc bộ',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-co-truyen.Nha-go-3-gian-kieu-Bac-Bo.jpg',
+        linkImage: '/images/nha21.jpg',
         type: 'nhaGoCoTruyen',
     },
     {
         title: 'Nhà gỗ 5 gian đẹp',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-co-truyen.Nha-go-5-gian-dep.png',
+        linkImage: '/images/nha18.jpg',
         type: 'nhaGoCoTruyen',
     },
     {
         title: 'Mẫu nhà thờ cổ',
         codeProduct: '12345A',
-        linkImage: '/images/nha_tu_duong.Mau-nha-tho-co.jpg',
+        linkImage: '/images/nha27.jpg',
         type: 'nhaTuDuong',
     },
     {
         title: 'Mẫu nhà thờ cổ hai mái',
         codeProduct: '12345A',
-        linkImage: '/images/nha_tu_duong.Mau-nha-tho-ho-hai-mai.jpg',
+        linkImage: '/images/nha4.jpg',
         type: 'nhaTuDuong',
     },
     {
         title: 'Mẫu nhà thờ',
         codeProduct: '12345A',
-        linkImage: '/images/nha_tu_duong.Mau-nha-tho.png',
+        linkImage: '/images/nha25.jpg',
         type: 'nhaTuDuong',
     },
     {
         title: 'Mẫu nhà từ đường bằng gỗ đẹp',
         codeProduct: '12345A',
-        linkImage: '/images/nha_tu_duong.Mau-nha-tu-duong-bang-go-dep.png',
+        linkImage: '/images/nha26.jpg',
         type: 'nhaTuDuong',
     },
     {
         title: 'Mẫu nhà từ đường đẹp',
         codeProduct: '12345A',
-        linkImage: '/images/nha_tu_duong.Mau-nha-tu-duong-dep.jpg',
+        linkImage: '/images/nha27.jpg',
         type: 'nhaTuDuong',
     },
     {
         title: 'Mẫu nhà từ đường mái cong',
         codeProduct: '12345A',
-        linkImage: '/images/nha_tu_duong.Mau-nha-tu-duong-mai-cong.jpg',
+        linkImage: '/images/nha28.jpg',
         type: 'nhaTuDuong',
     },
     {
         title: 'Mẫu nhà từ đường',
         codeProduct: '12345A',
-        linkImage: '/images/nha_tu_duong.Mau-nha-tu-duong.jpg',
+        linkImage: '/images/nha29.jpg',
         type: 'nhaTuDuong',
     },
-];
+].sort(() => Math.random() - 0.5);
 
 const Item2 = ({ params }) => {
+    const router = useRouter();
+    const handleClickItem = () => {
+        // router.push()
+        router.push(
+            `/mau-nha/${params.type ? params.type : ''}/${params.title}`,
+        );
+    };
+
     return (
         <div
+            onClick={handleClickItem}
             className='border bg-slate-50 shadow-[0px_3px_5px_0px_rgba(0,0,0,0.3)] border-[#ccc] mb-3 h-52
       flex flex-row hover:shadow-primary-color hover:bg-slate-200 duration-700
     '

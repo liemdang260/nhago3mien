@@ -12,9 +12,15 @@ const Item = ({ params }) => {
 
     const handleClickItem = () => {
         // router.push()
-        router.push(
-            `/mau-nha/${params.type ? params.type : ''}/${params.title}`,
-        );
+        if (params.mode == 'service') {
+            router.push(`/dich-vu`);
+        } else {
+            router.push(
+                `/mau-nha/${params.type ? params.type : 'mac-dinh'}/${
+                    params.title
+                }`,
+            );
+        }
     };
     return (
         <div onClick={handleClickItem} className='h-full'>
@@ -28,7 +34,7 @@ const Item = ({ params }) => {
       '
             >
                 <div
-                    className='hidden w-[450px] h-[290px] group-hover:first:block absolute -translate-y-full -m-2
+                    className='hidden w-[450px] h-[290px] sm:group-hover:first:block absolute -translate-y-full -m-2
           border-2 border-solid border-primary-color'
                 >
                     <Image

@@ -5,13 +5,13 @@ import Image from 'next/image';
 // import {} from '@fortawesome/free-brands-svg-icons'
 const data = [
     { name: 'Mr. Cuong', phone: '096.211.6789', icon: fa1 },
-    { name: 'Mr. Manh', phone: '0977.325.561', icon: fa2 },
+    { name: 'Mr. Manh', phone: '0977.325.651', icon: fa2 },
 ];
 function Support() {
     return (
         <div>
             <Title title={'Hỗ trợ'} size={'xl'} />
-            <div className='text-primary-color border-primary-color border-4 rounded-xl border-double p-1 md:p-4 mt-3'>
+            <div className='text-primary-color text-[8px] md:text-[12px] lg:text-[16px] border-primary-color border-4 rounded-xl border-double p-1 md:p-4 mt-3'>
                 {data.map((d, index) => (
                     <div key={index} className='flex items-center my-2'>
                         <a href='tel:0962116789'>
