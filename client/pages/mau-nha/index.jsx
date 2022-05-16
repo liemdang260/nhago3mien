@@ -247,8 +247,8 @@ const Item = ({ params }) => {
     return (
         <motion.div
             layout
-            animate={{ opacity: 1, translateX: 0 }}
-            initial={{ opacity: 0, translateX: -100 }}
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
             onClick={handleClickItem}
@@ -557,6 +557,9 @@ const AllHomeTemplate = () => {
                 </div>
                 <motion.div
                     layout
+                    initial={{ translateX: -100 }}
+                    animate={{ translateX: 0 }}
+                    transition={0.3}
                     className={`w-full ${
                         gridLayout
                             ? 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-6'
