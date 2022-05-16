@@ -159,6 +159,7 @@ export default function Home() {
                                         src={value}
                                         alt='banner 1'
                                         layout='fill'
+                                        loading='lazy'
                                     />
                                 </div>
                             </SwiperSlide>
