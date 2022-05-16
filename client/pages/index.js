@@ -141,8 +141,21 @@ const ServicesData = [
 export default function Home() {
     return (
         <div>
+            <div className='absolute z-10 left-1/2 -translate-x-1/2'>
+                <video
+                    autoPlay
+                    loop
+                    className='h-[300px] md:h-[400px] lg:h-[calc(100vh_-_285px)]'
+                    id='videoPlay'
+                    // style={{
+                    //     height: 'calc(100vh - 285px)',
+                    // }}
+                >
+                    <source src='/video.mp4' />
+                </video>
+            </div>
             {/* begin::Banner */}
-            <div>
+            <div className='blur-sm'>
                 <Swiper
                     modules={[Navigation, Pagination, Autoplay]}
                     slidesPerView={1}
@@ -203,6 +216,10 @@ export default function Home() {
                 <Commit />
             </div>
             {/* end::5camketvang */}
+
+            <style>{`
+           
+            `}</style>
         </div>
     );
 }

@@ -288,7 +288,6 @@ const Item = ({ params }) => {
                         // layout='intrinsic'
                         width={450}
                         height={300}
-                        priority
                         loading='lazy'
                         src={params.linkImage}
                         alt='Error while display image'
@@ -349,7 +348,6 @@ const Item2 = ({ params }) => {
                 <Image
                     src={params.linkImage}
                     alt='mau san pham'
-                    priority
                     layout='fixed'
                     loading='lazy'
                     width={350}

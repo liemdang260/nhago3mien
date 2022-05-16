@@ -257,7 +257,7 @@ export default function Header() {
                                     </a>
                                 </Link>
                                 {title.isDropdown && (
-                                    <ul className='absolute z-10 min-w-full whitespace-nowrap bg-primary-color mt-1 hidden group-hover:block'>
+                                    <ul className='absolute z-20 min-w-full whitespace-nowrap bg-primary-color mt-1 hidden group-hover:block'>
                                         {title.dropDownContent &&
                                             title.dropDownContent.map(
                                                 (item, index) => (
@@ -327,7 +327,7 @@ export default function Header() {
                                             </a>
                                         </Link>
                                         {title.isDropdown && (
-                                            <ul className='absolute z-10 min-w-full text-center whitespace-nowrap bg-primary-color hidden group-hover:block'>
+                                            <ul className='absolute z-20 min-w-full text-center whitespace-nowrap bg-primary-color hidden group-hover:block'>
                                                 {title.dropDownContent &&
                                                     title.dropDownContent.map(
                                                         (item, index) => (
@@ -336,6 +336,7 @@ export default function Header() {
                                                                 onClick={
                                                                     handleClickItem
                                                                 }
+                                                                className='z-20'
                                                             >
                                                                 <Link
                                                                     href={
