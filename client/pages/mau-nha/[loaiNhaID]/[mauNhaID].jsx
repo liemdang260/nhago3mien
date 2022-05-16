@@ -41,6 +41,7 @@ const DetailHomeTemplate = () => {
                                         alt='Slider Images'
                                         height={150}
                                         width={250}
+                                        loading='lazy'
                                     />
                                 </SwiperSlide>
                             ))}
@@ -57,6 +58,7 @@ const DetailHomeTemplate = () => {
                             {props.images.map((_item, _index) => (
                                 <SwiperSlide key={_index}>
                                     <Image
+                                        loading='lazy'
                                         layout='responsive'
                                         src={_item.linkImage}
                                         alt='Slider Images'

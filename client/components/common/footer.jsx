@@ -86,10 +86,12 @@ function Footer() {
                                             ></iframe>
                                             <div className='w-full  px-3 my-2 text-center block'>
                                                 <Image
+                                                    alt='Van phong chinh'
                                                     src={`${value.linkImage}`}
                                                     layout='responsive'
                                                     height={140}
                                                     width={240}
+                                                    loading='lazy'
                                                 />
                                             </div>
                                         </div>
@@ -113,10 +115,12 @@ function Footer() {
                         ></iframe>
                         <div className='w-1/2 border-2 border-white text-center block'>
                             <Image
+                                alt='Van phong chinh'
                                 src={`/images/hinh-anh-van-phong.jpg`}
                                 layout='responsive'
                                 height={140}
                                 width={240}
+                                loading='lazy'
                             />
                         </div>
                     </div>
@@ -134,6 +138,8 @@ function Footer() {
                         ></iframe>
                         <div className='w-1/2 border-2 border-white text-center'>
                             <Image
+                                alt='Van phong chi nhanh'
+                                loading='lazy'
                                 src={`/images/hinh-anh-chi-nhanh.jpg`}
                                 layout='responsive'
                                 height={140}
@@ -155,6 +161,8 @@ function Footer() {
                         ></iframe>
                         <div className='w-1/2 border-2 border-white text-center'>
                             <Image
+                                alt='Xuong'
+                                loading='lazy'
                                 src={`/images/hinh-anh-xuong.jpg`}
                                 layout='responsive'
                                 height={140}

@@ -18,6 +18,7 @@ function NewsCard({ item }) {
                         width={375}
                         height={275}
                         className='cursor-pointer'
+                        loading='lazy'
                     />
                     <p className='text-primary-color text-lg font-medium mt-2 cursor-pointer hover:text-green-700'>
                         {item.title}

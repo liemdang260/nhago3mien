@@ -20,6 +20,7 @@ function Contact() {
             <div className='w-[100px] mx-auto my-2 flex justify-between '>
                 <div className='w-[25px] h-[25px] relative inline-block'>
                     <Image
+                        loading='lazy'
                         src='/facebooks.png'
                         alt='facebook'
                         layout='fill'
@@ -27,13 +28,19 @@ function Contact() {
                 </div>
                 <div className='w-[25px] h-[25px] relative inline-block'>
                     <Image
+                        loading='lazy'
                         src='/youtube.png'
                         alt='facebook'
                         layout='fill'
                     ></Image>
                 </div>
                 <div className='w-[25px] h-[25px] relative inline-block'>
-                    <Image src='/zalo.png' alt='facebook' layout='fill'></Image>
+                    <Image
+                        loading='lazy'
+                        src='/zalo.png'
+                        alt='facebook'
+                        layout='fill'
+                    ></Image>
                 </div>
             </div>
         </div>

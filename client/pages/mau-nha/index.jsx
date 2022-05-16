@@ -269,6 +269,7 @@ const Item = ({ params }) => {
                         alt='Error while display image'
                         src={params.linkImage}
                         layout='fill'
+                        loading='lazy'
                         // width={450}
                         // height={290}
                     />
@@ -288,6 +289,7 @@ const Item = ({ params }) => {
                         width={450}
                         height={300}
                         priority
+                        loading='lazy'
                         src={params.linkImage}
                         alt='Error while display image'
                     />

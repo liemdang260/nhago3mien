@@ -77,24 +77,6 @@ const Item = ({ params }) => {
                     </div>
                 )}
                 {/* mauNhaSan, nhaGoHienDai, nhaGoCoTruyen, nhaTuDuongn, mauNhaLucGiac */}
-                {params.type && (
-                    <div
-                        className={`w-full h-2 my-2
-              ${
-                  params.type == 'nhaTuDuong'
-                      ? 'bg-[#05ed10]'
-                      : params.type == 'nhaGoHienDai'
-                      ? 'bg-[#f00]'
-                      : params.type == 'mauNhaSan'
-                      ? 'bg-[#0aa6a6]'
-                      : params.type == 'nhaGoCoTruyen'
-                      ? 'bg-[#000]'
-                      : params.type == 'mauNhaLucGiac'
-                      ? 'bg-[#42611e]'
-                      : ''
-              }`}
-                    ></div>
-                )}
                 {/* <div className='uppercase text-gray-500 font-medium text-center py-2 h-10'></div> */}
             </AnimationOnScroll>
         </div>

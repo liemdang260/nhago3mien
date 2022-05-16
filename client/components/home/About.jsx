@@ -42,6 +42,7 @@ function About() {
                                             src={value}
                                             alt={`banner ${index}`}
                                             layout='fill'
+                                            loading='lazy'
                                         />
                                     </div>
                                 </SwiperSlide>

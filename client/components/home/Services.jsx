@@ -67,6 +67,7 @@ function Service({ title, image, content, expand, index, handleExpand }) {
                         width={500}
                         height={500}
                         alt={title}
+                        loading='lazy'
                     ></Image>
                 </div>
 

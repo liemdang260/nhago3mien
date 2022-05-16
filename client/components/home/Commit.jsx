@@ -8,7 +8,12 @@ const Commit = () => {
                 style={{ transform: 'translateX(25%)' }}
             >
                 <div className='overflow-hidden relative bg-white w-full h-full rounded-full text-center'>
-                    <Image src={params.url} alt='cam kết' layout='fill'></Image>
+                    <Image
+                        src={params.url}
+                        alt='cam kết'
+                        layout='fill'
+                        loading='lazy'
+                    ></Image>
                 </div>
             </div>
             <h2 className='text-white font-semibold text-xs sm:text-sm md:text-lg uppercase w-full text-center'>

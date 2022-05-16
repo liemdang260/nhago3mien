@@ -118,6 +118,7 @@ const ContactPage = () => {
                         ></iframe>
                         <div className='w-full md:w-1/2 border-1 mt-5 md:mt-1/2 lg:mt-0'>
                             <Image
+                                alt='Van phong chinh'
                                 src={`/images/hinh-anh-van-phong.jpg`}
                                 layout='responsive'
                                 width={256}
@@ -142,6 +143,7 @@ const ContactPage = () => {
                         ></iframe>
                         <div className='w-full md:w-1/2 border-1 mt-5 md:mt-1/2 lg:mt-0'>
                             <Image
+                                alt='Van phong chi nhanh'
                                 src={`/images/hinh-anh-chi-nhanh.jpg`}
                                 layout='responsive'
                                 width={256}
@@ -166,6 +168,7 @@ const ContactPage = () => {
                         ></iframe>
                         <div className='w-full md:w-1/2 border-1 mt-5 md:mt-1/2 lg:mt-0'>
                             <Image
+                                alt='Xuong'
                                 src={`/images/hinh-anh-xuong.jpg`}
                                 layout='responsive'
                                 width={256}
