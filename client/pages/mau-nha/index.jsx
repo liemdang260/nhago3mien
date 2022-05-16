@@ -1,236 +1,227 @@
-import { PageItem, PageWrapper } from 'components/common/PageWrapper';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useRouter } from 'next/router';
-import {
-    faListSquares,
-    faBars,
-    faPhoneFlip,
-} from '@fortawesome/free-solid-svg-icons';
+import { faListSquares, faBars } from '@fortawesome/free-solid-svg-icons';
 import Select from 'react-select';
 import { useEffect, useState } from 'react';
-import { Item } from 'components/common/gridLayoutMauNha';
 import Image from 'next/image';
-
-// import mauNhaGoCoTruyen from '/images/mau-nha-co-truyen.Mau-nha-go-kieu-Hue.jpg';
-// import mauNhaGoCoTruyen2 from '/images/mau-nha-co-truyen.Mau-nha-ruong-hue.jpg';
-// import mauNhaGoCoTruyen3 from '/images/mau-nha-co-truyen.Mau-nha-truyen-thong-dep.jpg';
-// import mauNhaGoCoTruyen4 from '/images/mau-nha-co-truyen.Nha-co-truyen-5-gian.jpg';
-// import mauNhaGoCoTruyen5 from '/images/mau-nha-co-truyen.Nha-go-3-gian-go-Lim.jpg';
-// import mauNhaGoCoTruyen6 from '/images/mau-nha-co-truyen.Nha-go-3-gian-kieu-Bac-Bo.jpg';
-// import mauNhaGoCoTruyen7 from '/images/mau-nha-co-truyen.Nha-go-5-gian-dep.png';
-
-// import mauNhaTuDuong from '/images/nha_tu_duong.Mau-nha-tho-co.jpg';
-// import mauNhaTuDuong2 from '/images/nha_tu_duong.Mau-nha-tho-ho-hai-mai.jpg';
-// import mauNhaTuDuong3 from '/images/nha_tu_duong.Mau-nha-tho.png';
-// import mauNhaTuDuong4 from '/images/nha_tu_duong.Mau-nha-tu-duong-bang-go-dep.png';
-// import mauNhaTuDuong5 from '/images/nha_tu_duong.Mau-nha-tu-duong-dep.jpg';
-// import mauNhaTuDuong6 from '/images/nha_tu_duong.Mau-nha-tu-duong-mai-cong.jpg';
-// import mauNhaTuDuong7 from '/images/nha_tu_duong.Mau-nha-tu-duong.jpg';
-
-// import mauNhaHienDai from '/images/mau-nha-hien-dai.Mau-nha-go-hien-dai-02.jpg';
-// import mauNhaHienDai2 from '/images/mau-nha-hien-dai.Mau-nha-go-hien-dai-03.jpg';
-// import mauNhaHienDai3 from '/images/mau-nha-hien-dai.Mau-nha-go-hien-dai-04.jpg';
-// import mauNhaHienDai4 from '/images/mau-nha-hien-dai.Mau-nha-go-hien-dai.jpg';
-// import mauNhaHienDai5 from '/images/mau-nha-hien-dai.Mau-nha-go-lam-homestay.jpg';
-// import mauNhaHienDai6 from '/images/mau-nha-hien-dai.Mau-nha-go-hien-dai-06.jpg';
-
-// import mauNhaLucGiac from '/images/mau-nha-luc-giac.Choi-hong-mat.jpg';
-// import mauNhaLucGiac2 from '/images/mau-nha-luc-giac.Choi-ngam-canh.jpg';
-// import mauNhaLucGiac3 from '/images/mau-nha-luc-giac.Mau-nha-luc-giac.jpg';
-// import mauNhaLucGiac4 from '/images/mau-nha-luc-giac.Nha-choi-kieu-co.jpg';
-
-// import mauNhaSan from '/images/mau-nha-san.Mau-nha-go-3-gian-co-truyen.jpg';
-// import mauNhaSan2 from '/images/mau-nha-san.Mau-nha-go-5-gian-truyen-thong.png';
-// import mauNhaSan3 from '/images/mau-nha-san.Mau-nha-san-3-gian-2-trai.jpg';
-// import mauNhaSan4 from '/images/mau-nha-san.Mau-nha-san-3-gian-truyen-thong.jpg';
-// import mauNhaSan5 from '/images/mau-nha-san.Mau-nha-san-5-gian-mai-thai.jpg';
-// import mauNhaSan6 from '/images/mau-nha-san.Mau-nha-san-go-kieu-thai.jpg';
-// import mauNhaSan7 from '/images/mau-nha-san.Mau-nha-san-go-liem.jpeg';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import LandingPages from 'components/common/LandingPages';
+// import { PageItem, PageWrapper } from 'components/common/PageWrapper';
+// import { Item } from 'components/common/gridLayoutMauNha';
 
 const dummyData = [
     {
+        id: 0,
         title: 'Chòi hóng mát',
         codeProduct: '12345A',
         linkImage: '/images/nha1.jpg',
         type: 'mauNhaLucGiac',
     },
     {
+        id: 1,
         title: 'Chòi ngắm cảnh',
         codeProduct: '12345A',
         linkImage: '/images/nha2.jpg',
         type: 'mauNhaLucGiac',
     },
     {
+        id: 2,
         title: 'Mẫu nhà lục giác',
         codeProduct: '12345A',
         linkImage: '/images/nha3.jpg',
         type: 'mauNhaLucGiac',
     },
     {
+        id: 3,
         title: 'Nhà chòi kiểu cổ',
         codeProduct: '12345A',
         linkImage: '/images/nha4.jpg',
         type: 'mauNhaLucGiac',
     },
     {
+        id: 4,
         title: 'Mẫu nhà gỗ 3 gian cổ truyền',
         codeProduct: '12345A',
         linkImage: '/images/nha5.jpg',
         type: 'mauNhaSan',
     },
     {
+        id: 5,
         title: 'Mẫu nhà gỗ 5 gian truyền thống',
         codeProduct: '12345A',
         linkImage: '/images/nha5.jpg',
         type: 'mauNhaSan',
     },
     {
+        id: 6,
         title: 'Mẫu nhà gỗ 3 gian 2 trái',
         codeProduct: '12345A',
         linkImage: '/images/nha6.jpg',
         type: 'mauNhaSan',
     },
     {
+        id: 7,
         title: 'Mẫu nhà gỗ 3 gian truyền thống',
         codeProduct: '12345A',
         linkImage: '/images/nha7.jpg',
         type: 'mauNhaSan',
     },
     {
+        id: 8,
         title: 'Mẫu nhà gỗ 5 gian mái thái',
         codeProduct: '12345A',
         linkImage: '/images/nha8.jpg',
         type: 'mauNhaSan',
     },
     {
+        id: 9,
         title: 'Mẫu nhà gỗ kiểu thái',
         codeProduct: '12345A',
         linkImage: '/images/nha9.jpg',
         type: 'mauNhaSan',
     },
     {
+        id: 10,
         title: 'Mẫu nhà gỗ Liêm',
         codeProduct: '12345A',
         linkImage: '/images/nha10.jpg',
         type: 'mauNhaSan',
     },
     {
+        id: 11,
         title: 'Mẫu nhà gỗ hiện đại',
         codeProduct: '12345A',
         linkImage: '/images/nha11.jpg',
         type: 'nhaGoHienDai',
     },
     {
+        id: 12,
         title: 'Mẫu nhà gỗ hiện đại 02',
         codeProduct: '12345A',
         linkImage: '/images/nha12.jpg',
         type: 'nhaGoHienDai',
     },
     {
+        id: 13,
         title: 'Mẫu nhà gỗ hiện đại 03',
         codeProduct: '12345A',
         linkImage: '/images/nha13.jpg',
         type: 'nhaGoHienDai',
     },
     {
+        id: 14,
         title: 'Mẫu nhà gỗ hiện đại 04',
         codeProduct: '12345A',
         linkImage: '/images/nha14.jpg',
         type: 'nhaGoHienDai',
     },
     {
+        id: 15,
         title: 'Mẫu nhà gỗ hiện đại 06',
         codeProduct: '12345A',
         linkImage: '/images/nha15.jpg',
         type: 'nhaGoHienDai',
     },
     {
+        id: 16,
         title: 'Mẫu nhà gỗ làm homestay',
         codeProduct: '12345A',
         linkImage: '/images/nha30.jpg',
         type: 'nhaGoHienDai',
     },
     {
+        id: 17,
         title: 'Mẫu nhà gỗ kiểu Huế',
         codeProduct: '12345A',
         linkImage: '/images/nha16.jpg',
         type: 'nhaGoCoTruyen',
     },
     {
+        id: 18,
         title: 'Mẫu nhà rường Huế',
         codeProduct: '12345A',
         linkImage: '/images/nha17.jpg',
         type: 'nhaGoCoTruyen',
     },
     {
+        id: 19,
         title: 'Mẫu nhà truyền thống đẹp',
         codeProduct: '12345A',
         linkImage: '/images/nha18.jpg',
         type: 'nhaGoCoTruyen',
     },
     {
+        id: 20,
         title: 'Nhà cổ truyền 5 gian',
         codeProduct: '12345A',
         linkImage: '/images/nha19.jpg',
         type: 'nhaGoCoTruyen',
     },
     {
+        id: 21,
         title: 'Nhà 3 gian gỗ Lim',
         codeProduct: '12345A',
         linkImage: '/images/nha20.jpg',
         type: 'nhaGoCoTruyen',
     },
     {
+        id: 22,
         title: 'Nhà gỗ 3 gian kiểu Bắc bộ',
         codeProduct: '12345A',
         linkImage: '/images/nha21.jpg',
         type: 'nhaGoCoTruyen',
     },
     {
+        id: 23,
         title: 'Nhà gỗ 5 gian đẹp',
         codeProduct: '12345A',
         linkImage: '/images/nha18.jpg',
         type: 'nhaGoCoTruyen',
     },
     {
+        id: 24,
         title: 'Mẫu nhà thờ cổ',
         codeProduct: '12345A',
         linkImage: '/images/nha27.jpg',
         type: 'nhaTuDuong',
     },
     {
+        id: 25,
         title: 'Mẫu nhà thờ cổ hai mái',
         codeProduct: '12345A',
         linkImage: '/images/nha4.jpg',
         type: 'nhaTuDuong',
     },
     {
+        id: 26,
         title: 'Mẫu nhà thờ',
         codeProduct: '12345A',
         linkImage: '/images/nha25.jpg',
         type: 'nhaTuDuong',
     },
     {
+        id: 27,
         title: 'Mẫu nhà từ đường bằng gỗ đẹp',
         codeProduct: '12345A',
         linkImage: '/images/nha26.jpg',
         type: 'nhaTuDuong',
     },
     {
+        id: 28,
         title: 'Mẫu nhà từ đường đẹp',
         codeProduct: '12345A',
         linkImage: '/images/nha27.jpg',
         type: 'nhaTuDuong',
     },
     {
+        id: 29,
         title: 'Mẫu nhà từ đường mái cong',
         codeProduct: '12345A',
         linkImage: '/images/nha28.jpg',
         type: 'nhaTuDuong',
     },
     {
+        id: 30,
         title: 'Mẫu nhà từ đường',
         codeProduct: '12345A',
         linkImage: '/images/nha29.jpg',
@@ -238,6 +229,104 @@ const dummyData = [
     },
 ].sort(() => Math.random() - 0.5);
 
+const Item = ({ params }) => {
+    const router = useRouter();
+
+    const handleClickItem = () => {
+        // router.push()
+        if (params.mode == 'service') {
+            router.push(`/dich-vu`);
+        } else {
+            router.push(
+                `/mau-nha/${params.type ? params.type : 'mac-dinh'}/${
+                    params.title
+                }`,
+            );
+        }
+    };
+    return (
+        <motion.div
+            layout
+            animate={{ opacity: 1, translateX: 0 }}
+            initial={{ opacity: 0, translateX: -100 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            onClick={handleClickItem}
+            className='h-full'
+        >
+            <div
+                className='relative h-full bg-slate-50 shadow-[0px_3px_5px_0px_rgba(0,0,0,0.3)]
+                flex flex-col items-center text-base cursor-pointer ease-in-out duration-700
+              hover:shadow-primary-color hover:bg-slate-200 group
+              '
+            >
+                <div
+                    className='hidden w-[450px] h-[290px] sm:group-hover:first:block absolute -translate-y-full -m-2
+          border-2 border-solid border-primary-color'
+                >
+                    <Image
+                        className='z-50'
+                        alt='Error while display image'
+                        src={params.linkImage}
+                        layout='fill'
+                        // width={450}
+                        // height={290}
+                    />
+                    <div className='absolute left-1/2 top-[100.5%] w-16 overflow-hidden'>
+                        <div className=' h-2 w-2 bg-primary-color -rotate-45 transform origin-top-left'></div>
+                    </div>
+                </div>
+                <figure
+                    className='relative before:absolute before:top-0 before:-left-3/4
+                before:z-[2] before:block before:w-1/2 before:h-full 
+                before:bg-gradient-to-r before:from-[#fff] before:to[#fff] before:-skew-x-[25deg] before:opacity-30
+                group-hover:before:duration-750 group-hover:before:animate-shineToLetf overflow-hidden'
+                >
+                    <Image
+                        className='z-0 group-hover:brightness-90 transition ease-out duration-500'
+                        // layout='intrinsic'
+                        width={450}
+                        height={300}
+                        priority
+                        src={params.linkImage}
+                        alt='Error while display image'
+                    />
+                </figure>
+
+                <div
+                    className={`font-medium text-white bg-primary-color py-2 px-3 self-stretch -translate-y-[7px] uppercase text-xs md:text-sm`}
+                >
+                    {params.title.substring(0, 35)}
+                </div>
+                {params.description && (
+                    <div className='text-color text-sm leading-6 px-3 text-justify'>
+                        {params.description}
+                    </div>
+                )}
+                {/* mauNhaSan, nhaGoHienDai, nhaGoCoTruyen, nhaTuDuongn, mauNhaLucGiac */}
+                {params.type && (
+                    <div
+                        className={`w-full h-2 my-2
+          ${
+              params.type == 'nhaTuDuong'
+                  ? 'bg-[#05ed10]'
+                  : params.type == 'nhaGoHienDai'
+                  ? 'bg-[#f00]'
+                  : params.type == 'mauNhaSan'
+                  ? 'bg-[#0aa6a6]'
+                  : params.type == 'nhaGoCoTruyen'
+                  ? 'bg-[#000]'
+                  : params.type == 'mauNhaLucGiac'
+                  ? 'bg-[#42611e]'
+                  : ''
+          }`}
+                    ></div>
+                )}
+                {/* <div className='uppercase text-gray-500 font-medium text-center py-2 h-10'></div> */}
+            </div>
+        </motion.div>
+    );
+};
 const Item2 = ({ params }) => {
     const router = useRouter();
     const handleClickItem = () => {
@@ -443,7 +532,7 @@ const AllHomeTemplate = () => {
                                 />
                             ))}
                         </ul>
-                        <div className='ml-4 sm:ml-8 inline-block w-32 sm:w-40 md:hidden'>
+                        {/* <div className='ml-4 sm:ml-8 inline-block w-32 sm:w-40 md:hidden'>
                             <Select
                                 className='text-xs border-blue-400'
                                 value={selectedOption}
@@ -452,7 +541,7 @@ const AllHomeTemplate = () => {
                                     setSelectedOption(change);
                                 }}
                             />
-                        </div>
+                        </div> */}
                     </div>
                     <div className='mt-2'>
                         <Select
@@ -465,49 +554,56 @@ const AllHomeTemplate = () => {
                         />
                     </div>
                 </div>
-                <div
+                <motion.div
+                    layout
                     className={`w-full ${
                         gridLayout
                             ? 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-6'
                             : ''
                     } mt-6`}
                 >
-                    {gridLayout
-                        ? data
-                              .slice(
-                                  landingIndex * Number(selectedOption2.value),
-                                  landingIndex * Number(selectedOption2.value) +
-                                      Number(selectedOption2.value),
-                              )
-                              .map((_item, _index) => (
-                                  <Item
-                                      key={_index}
-                                      params={{
-                                          title: _item.title,
-                                          codeProduct: _item.codeProduct,
-                                          linkImage: _item.linkImage,
-                                          type: _item.type,
-                                      }}
-                                  />
-                              ))
-                        : data
-                              .slice(
-                                  landingIndex * Number(selectedOption2.value),
-                                  landingIndex * Number(selectedOption2.value) +
-                                      Number(selectedOption2.value),
-                              )
-                              .map((_item, _index) => (
-                                  <Item2
-                                      key={_index}
-                                      params={{
-                                          title: _item.title,
-                                          codeProduct: _item.codeProduct,
-                                          linkImage: _item.linkImage,
-                                          type: _item.type,
-                                      }}
-                                  />
-                              ))}
-                </div>
+                    <AnimatePresence>
+                        {gridLayout
+                            ? data
+                                  .slice(
+                                      landingIndex *
+                                          Number(selectedOption2.value),
+                                      landingIndex *
+                                          Number(selectedOption2.value) +
+                                          Number(selectedOption2.value),
+                                  )
+                                  .map((_item) => (
+                                      <Item
+                                          key={_item.id}
+                                          params={{
+                                              title: _item.title,
+                                              codeProduct: _item.codeProduct,
+                                              linkImage: _item.linkImage,
+                                              type: _item.type,
+                                          }}
+                                      />
+                                  ))
+                            : data
+                                  .slice(
+                                      landingIndex *
+                                          Number(selectedOption2.value),
+                                      landingIndex *
+                                          Number(selectedOption2.value) +
+                                          Number(selectedOption2.value),
+                                  )
+                                  .map((_item) => (
+                                      <Item2
+                                          key={_item.id}
+                                          params={{
+                                              title: _item.title,
+                                              codeProduct: _item.codeProduct,
+                                              linkImage: _item.linkImage,
+                                              type: _item.type,
+                                          }}
+                                      />
+                                  ))}
+                    </AnimatePresence>
+                </motion.div>
             </div>
             <div className='mb-5'>
                 <LandingPages

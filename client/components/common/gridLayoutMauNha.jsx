@@ -4,8 +4,8 @@ import Title from 'components/common/Title';
 // import { faPhoneFlip } from '@fortawesome/free-solid-svg-icons';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, Autoplay } from 'swiper';
-import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { useRouter } from 'next/router';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const Item = ({ params }) => {
     const router = useRouter();
@@ -28,14 +28,14 @@ const Item = ({ params }) => {
                 animateOnce={true}
                 animateIn='animate__backInUp'
                 duration={1}
-                className='relative h-full bg-slate-50 shadow-[0px_3px_5px_0px_rgba(0,0,0,0.3)] 
-        flex flex-col items-center text-base cursor-pointer ease-in-out duration-700
-      hover:shadow-primary-color hover:bg-slate-200 group
-      '
+                className='relative h-full bg-slate-50 shadow-[0px_3px_5px_0px_rgba(0,0,0,0.3)]
+                    flex flex-col items-center text-base cursor-pointer ease-in-out duration-700
+                  hover:shadow-primary-color hover:bg-slate-200 group
+                  '
             >
                 <div
                     className='hidden w-[450px] h-[290px] sm:group-hover:first:block absolute -translate-y-full -m-2
-          border-2 border-solid border-primary-color'
+              border-2 border-solid border-primary-color'
                 >
                     <Image
                         className='z-50'
@@ -51,9 +51,9 @@ const Item = ({ params }) => {
                 </div>
                 <figure
                     className='relative before:absolute before:top-0 before:-left-3/4
-                before:z-[2] before:block before:w-1/2 before:h-full 
-                before:bg-gradient-to-r before:from-[#fff] before:to[#fff] before:-skew-x-[25deg] before:opacity-30
-                group-hover:before:duration-750 group-hover:before:animate-shineToLetf overflow-hidden'
+                    before:z-[2] before:block before:w-1/2 before:h-full
+                    before:bg-gradient-to-r before:from-[#fff] before:to[#fff] before:-skew-x-[25deg] before:opacity-30
+                    group-hover:before:duration-750 group-hover:before:animate-shineToLetf overflow-hidden'
                 >
                     <Image
                         className='z-0 group-hover:brightness-90 transition ease-out duration-500'
@@ -65,7 +65,6 @@ const Item = ({ params }) => {
                         alt='Error while display image'
                     />
                 </figure>
-
                 <div
                     className={`font-medium text-white bg-primary-color py-2 px-3 self-stretch -translate-y-[7px] uppercase text-xs md:text-sm`}
                 >
@@ -80,19 +79,19 @@ const Item = ({ params }) => {
                 {params.type && (
                     <div
                         className={`w-full h-2 my-2
-          ${
-              params.type == 'nhaTuDuong'
-                  ? 'bg-[#05ed10]'
-                  : params.type == 'nhaGoHienDai'
-                  ? 'bg-[#f00]'
-                  : params.type == 'mauNhaSan'
-                  ? 'bg-[#0aa6a6]'
-                  : params.type == 'nhaGoCoTruyen'
-                  ? 'bg-[#000]'
-                  : params.type == 'mauNhaLucGiac'
-                  ? 'bg-[#42611e]'
-                  : ''
-          }`}
+              ${
+                  params.type == 'nhaTuDuong'
+                      ? 'bg-[#05ed10]'
+                      : params.type == 'nhaGoHienDai'
+                      ? 'bg-[#f00]'
+                      : params.type == 'mauNhaSan'
+                      ? 'bg-[#0aa6a6]'
+                      : params.type == 'nhaGoCoTruyen'
+                      ? 'bg-[#000]'
+                      : params.type == 'mauNhaLucGiac'
+                      ? 'bg-[#42611e]'
+                      : ''
+              }`}
                     ></div>
                 )}
                 {/* <div className='uppercase text-gray-500 font-medium text-center py-2 h-10'></div> */}
@@ -124,7 +123,7 @@ const GridLayoutMauNha = ({
         <div className='container flex flex-col justify-around p-4 sm:p-0'>
             <Title title={title} />
             <Swiper
-                slidesPerView={1}
+                slidesPerView={4}
                 spaceBetween={20}
                 autoplay={{ delay: 3000, disableOnInteraction: false }}
                 loop={true}
@@ -134,22 +133,22 @@ const GridLayoutMauNha = ({
                         type: 'fraction',
                     }
                 }
-                breakpoints={{
-                    576: {
-                        // width: 320,
-                        slidesPerView: 2,
-                    },
-                    // when window width is >= 768px
-                    768: {
-                        // width: 640,
-                        slidesPerView: 3,
-                        spaceBetween: 30,
-                    },
-                    992: {
-                        // width: 640,
-                        slidesPerView: 4,
-                    },
-                }}
+                // breakpoints={{
+                //     576: {
+                //         // width: 320,
+                //         slidesPerView: 2,
+                //     },
+                //     // when window width is >= 768px
+                //     768: {
+                //         // width: 640,
+                //         slidesPerView: 3,
+                //         spaceBetween: 30,
+                //     },
+                //     992: {
+                //         // width: 640,
+                //         slidesPerView: 4,
+                //     },
+                // }}
                 navigation={true}
                 modules={[Pagination, Navigation, Autoplay]}
                 className='mySwiper w-full h-full'
