@@ -140,12 +140,13 @@ const ServicesData = [
 ];
 export default function Home() {
     return (
-        <div>
-            <div className='absolute z-10 left-1/2 -translate-x-1/2'>
+        <div className='relative'>
+            <div className='absolute z-10 left-1/2 -translate-x-1/2 w-1/3 h-[calc(100vh_-_280px)]'>
                 <video
-                    autoPlay
-                    loop
-                    className='h-[300px] md:h-[400px] lg:h-[calc(100vh_-_285px)]'
+                    autoPlay={true}
+                    loop={true}
+                    muted={true}
+                    className='h-full w-full object-cover shadow-lg'
                     id='videoPlay'
                     // style={{
                     //     height: 'calc(100vh - 285px)',
@@ -155,7 +156,7 @@ export default function Home() {
                 </video>
             </div>
             {/* begin::Banner */}
-            <div className='blur-sm'>
+            <div className='brightness-75'>
                 <Swiper
                     modules={[Navigation, Pagination, Autoplay]}
                     slidesPerView={1}
