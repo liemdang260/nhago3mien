@@ -106,7 +106,7 @@ const GridLayoutMauNha = ({
         <div className='container flex flex-col justify-around p-4 sm:p-0'>
             <Title title={title} />
             <Swiper
-                slidesPerView={4}
+                slidesPerView={1}
                 spaceBetween={20}
                 autoplay={{ delay: 3000, disableOnInteraction: false }}
                 loop={true}
@@ -116,22 +116,22 @@ const GridLayoutMauNha = ({
                         type: 'fraction',
                     }
                 }
-                // breakpoints={{
-                //     576: {
-                //         // width: 320,
-                //         slidesPerView: 2,
-                //     },
-                //     // when window width is >= 768px
-                //     768: {
-                //         // width: 640,
-                //         slidesPerView: 3,
-                //         spaceBetween: 30,
-                //     },
-                //     992: {
-                //         // width: 640,
-                //         slidesPerView: 4,
-                //     },
-                // }}
+                breakpoints={{
+                    576: {
+                        // width: 320,
+                        slidesPerView: 2,
+                    },
+                    // when window width is >= 768px
+                    768: {
+                        // width: 640,
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                    992: {
+                        // width: 640,
+                        slidesPerView: 4,
+                    },
+                }}
                 navigation={true}
                 modules={[Pagination, Navigation, Autoplay]}
                 className='mySwiper w-full h-full'

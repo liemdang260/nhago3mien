@@ -141,12 +141,20 @@ const ServicesData = [
 export default function Home() {
     return (
         <div className='relative'>
-            <div className='absolute z-10 left-1/2 -translate-x-1/2 w-1/3 h-[calc(100vh_-_280px)]'>
+            <div className='absolute z-10 left-1/2 -translate-x-1/2 w-3/6 h-[400px] hidden md:flex md:justify-center lg:h-[calc(100vh_-_280px)]'>
+                <div className='absolute w-full h-[calc(100vh_-_380px)] self-center flex'>
+                    <div className='skew-x-6 bg-black/40 grow'></div>
+                    <div className='-skew-x-6 bg-black/40 grow'></div>
+                </div>
+                <div className='absolute w-3/4 h-[calc(100vh_-_330px)] self-center flex'>
+                    <div className='skew-x-3 bg-black/40 grow'></div>
+                    <div className='-skew-x-3 bg-black/40 grow'></div>
+                </div>
                 <video
                     autoPlay={true}
                     loop={true}
                     muted={true}
-                    className='h-full w-full object-cover shadow-lg'
+                    className='relative h-full w-1/2 object-cover'
                     id='videoPlay'
                     // style={{
                     //     height: 'calc(100vh - 285px)',
@@ -161,6 +169,7 @@ export default function Home() {
                     modules={[Navigation, Pagination, Autoplay]}
                     slidesPerView={1}
                     navigation
+                    speed={1000}
                     autoplay={{ delay: 4000, disableOnInteraction: false }}
                     loop={true}
                     pagination={{ clickable: true }}
