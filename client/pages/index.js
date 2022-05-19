@@ -141,20 +141,20 @@ const ServicesData = [
 export default function Home() {
     return (
         <div className='relative'>
-            <div className='absolute z-10 left-1/2 -translate-x-1/2 w-3/6 h-[400px] hidden md:flex md:justify-center lg:h-[calc(100vh_-_280px)]'>
+            <div className='relative md:absolute mb-2 md:mb-0 w-1/2 z-10 left-1/2 -translate-x-1/2 md:w-3/6 h-[400px]  md:flex md:justify-center lg:h-[calc(100vh_-_280px)]'>
                 <div className='absolute w-full h-[calc(100vh_-_380px)] self-center flex'>
-                    <div className='skew-x-6 bg-black/40 grow'></div>
-                    <div className='-skew-x-6 bg-black/40 grow'></div>
+                    <div className='skew-x-6 -translate-x-1/2 md:translate-x-0 h-3/4 bg-black/40 grow md:translate-y-1/2 md:h-1/2 lg:h-full lg:translate-y-0'></div>
+                    <div className='-skew-x-6 translate-x-1/2 md:translate-x-0 h-3/4 bg-black/40 grow md:translate-y-1/2 md:h-1/2 lg:h-full lg:translate-y-0'></div>
                 </div>
-                <div className='absolute w-3/4 h-[calc(100vh_-_330px)] self-center flex'>
-                    <div className='skew-x-3 bg-black/40 grow'></div>
-                    <div className='-skew-x-3 bg-black/40 grow'></div>
+                <div className='absolute w-full md:w-3/4 h-[calc(100vh_-_330px)] self-center flex'>
+                    <div className='skew-x-3 -translate-x-1/4 md:translate-x-0 h-2/3 bg-black/40 grow md:translate-y-1/2 md:h-1/2 lg:h-full lg:translate-y-0'></div>
+                    <div className='-skew-x-3 translate-x-1/4 md:translate-x-0 h-2/3 bg-black/40 grow md:translate-y-1/2 md:h-1/2 lg:h-full lg:translate-y-0'></div>
                 </div>
                 <video
                     autoPlay={true}
                     loop={true}
                     muted={true}
-                    className='relative h-full w-1/2 object-cover'
+                    className='relative h-full w-full md:w-1/2 object-cover'
                     id='videoPlay'
                     // style={{
                     //     height: 'calc(100vh - 285px)',
