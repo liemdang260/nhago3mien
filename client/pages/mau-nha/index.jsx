@@ -634,7 +634,7 @@ const AllHomeTemplate = () => {
                                 />
                             </SwiperSlide>
                         ))}
-                        <div className='w-full my-2 text-center text-2xl'>
+                        <div className='w-full my-2 text-center text-base sm:text-2xl'>
                             {params.title}
                         </div>
                     </Swiper>
@@ -705,7 +705,7 @@ const AllHomeTemplate = () => {
                         <div
                             className={`${
                                 gridLayout ? '' : 'my-2'
-                            } col-start-3 col-end-5`}
+                            } col-start-1 col-end-3 sm:col-start-3 sm:col-end-5`}
                         >
                             <GroupMauNha
                                 params={{
@@ -719,7 +719,7 @@ const AllHomeTemplate = () => {
                         <div
                             className={`${
                                 gridLayout ? '' : 'my-2'
-                            }col-start-1 col-end-3`}
+                            } col-start-1 col-end-3`}
                         >
                             <GroupMauNha
                                 params={{
@@ -733,7 +733,7 @@ const AllHomeTemplate = () => {
                         <div
                             className={`${
                                 gridLayout ? '' : 'my-2'
-                            } col-start-3 col-end-5`}
+                            } col-start-1 col-end-3 sm:col-start-3 sm:col-end-5`}
                         >
                             <GroupMauNha
                                 params={{
@@ -747,7 +747,7 @@ const AllHomeTemplate = () => {
                         <div
                             className={`${
                                 gridLayout ? '' : 'my-2'
-                            }col-start-1 col-end-3`}
+                            } col-start-1 col-end-3`}
                         >
                             <GroupMauNha
                                 params={{
@@ -762,7 +762,7 @@ const AllHomeTemplate = () => {
                         <div
                             className={`${
                                 gridLayout ? '' : 'my-2'
-                            } col-start-3 col-end-5`}
+                            } col-start-1 col-end-3 sm:col-start-3 sm:col-end-5`}
                         >
                             <GroupMauNha
                                 params={{
@@ -790,7 +790,7 @@ const AllHomeTemplate = () => {
                         <div
                             className={`${
                                 gridLayout ? '' : 'my-2'
-                            } col-start-3 col-end-5`}
+                            } col-start-1 col-end-3 sm:col-start-3 sm:col-end-5`}
                         >
                             <GroupMauNha
                                 params={{
