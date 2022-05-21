@@ -1,13 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useRouter } from 'next/router';
 import { faListSquares, faBars } from '@fortawesome/free-solid-svg-icons';
-import Select from 'react-select';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import LandingPages from 'components/common/LandingPages';
-// import { PageItem, PageWrapper } from 'components/common/PageWrapper';
-// import { Item } from 'components/common/gridLayoutMauNha';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCards } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/effect-cards';
 
 const dummyData = [
     {
@@ -227,7 +227,7 @@ const dummyData = [
         linkImage: '/images/nha29.jpg',
         type: 'nhaTuDuong',
     },
-].sort(() => Math.random() - 0.5);
+];
 
 const Item = ({ params }) => {
     const router = useRouter();
@@ -373,7 +373,6 @@ const AllHomeTemplate = () => {
     const [data, setData] = useState(dummyData);
     const [activeItem, setAciveItem] = useState(0);
     const [gridLayout, setGridLayout] = useState(true);
-    const [landingIndex, setLandingIndex] = useState(0);
     const [landingVisionIndex, setLandingVisionIndex] = useState(0);
 
     // Select option when responsive
@@ -415,27 +414,6 @@ const AllHomeTemplate = () => {
         },
     ];
 
-    const [selectedOption2, setSelectedOption2] = useState({
-        value: '16',
-        label: '16 mục',
-    });
-    const options2 = [
-        { value: '16', label: '16 mục' },
-        { value: '32', label: '32 mục' },
-        { value: '48', label: '48 mục' },
-        { value: '62', label: '62 mục' },
-    ];
-
-    const handleLandingIndex = (index) => {
-        setLandingIndex(index);
-    };
-    const handleLandingVision = (action) => {
-        setLandingVisionIndex(landingVisionIndex + action);
-    };
-    useEffect(() => {
-        setLandingIndex(landingVisionIndex * 10);
-    }, [landingVisionIndex]);
-
     const Label = ({ params }) => {
         return (
             <div
@@ -471,6 +449,44 @@ const AllHomeTemplate = () => {
         );
     };
 
+    const GroupMauNha = ({ params }) => {
+        return (
+            <>
+                <div className='h-[900] w-full border border-primary-color px-20 pt-5 rounded-md'>
+                    <Swiper
+                        effect={'cards'}
+                        grabCursor={true}
+                        modules={[EffectCards]}
+                    >
+                        {params.dummyData.map((_item, _index) => (
+                            <SwiperSlide>
+                                <Image
+                                    src={_item.linkImage}
+                                    alt='Errow while display image'
+                                    width={500}
+                                    height={350}
+                                />
+                            </SwiperSlide>
+                        ))}
+                        <div className='w-full my-2 text-center text-2xl'>
+                            {params.title}
+                        </div>
+                    </Swiper>
+                </div>
+                <style>
+                    {`
+                    .swiper-slide {
+                        filter: blur(4px);
+                    }
+                    .swiper-slide-active {
+                        filter: blur(0px) !important;
+                    }
+                    `}
+                </style>
+            </>
+        );
+    };
+
     return (
         <div className='mb-6'>
             <div className='pl-4 pt-4 pr-4 container'>
@@ -492,67 +508,6 @@ const AllHomeTemplate = () => {
                         >
                             <FontAwesomeIcon icon={faBars} size='lg' />
                         </span>
-                        {/* Sub label filter header */}
-                        <ul className='hidden md:inline ml-8'>
-                            {[
-                                { title: 'Tất cả', type: 'tatca' },
-                                {
-                                    title: 'Nhà từ đường',
-                                    color: '#05ed10',
-                                    type: 'nhaTuDuong',
-                                },
-                                {
-                                    title: 'Nhà gỗ hiện đại',
-                                    color: '#f00',
-                                    type: 'nhaGoHienDai',
-                                },
-                                {
-                                    title: 'Nhà sàn gỗ',
-                                    color: '#0aa6a6',
-                                    type: 'mauNhaSan',
-                                },
-                                {
-                                    title: 'Nhà cỗ truyền',
-                                    color: '#000',
-                                    type: 'nhaGoCoTruyen',
-                                },
-                                {
-                                    title: 'Nhà lục giác',
-                                    color: '#42611e',
-                                    type: 'mauNhaLucGiac',
-                                },
-                            ].map((_item, _index) => (
-                                <Label
-                                    key={_index}
-                                    params={{
-                                        title: _item.title,
-                                        color: _item.color,
-                                        keyValue: _index,
-                                        type: _item.type,
-                                    }}
-                                />
-                            ))}
-                        </ul>
-                        {/* <div className='ml-4 sm:ml-8 inline-block w-32 sm:w-40 md:hidden'>
-                            <Select
-                                className='text-xs border-blue-400'
-                                value={selectedOption}
-                                options={options}
-                                onChange={(change) => {
-                                    setSelectedOption(change);
-                                }}
-                            />
-                        </div> */}
-                    </div>
-                    <div className='mt-2'>
-                        <Select
-                            className='w-18 md:w-32 inline-block text-xs md:text-base'
-                            value={selectedOption2}
-                            onChange={(change) => {
-                                setSelectedOption2(change);
-                            }}
-                            options={options2}
-                        />
                     </div>
                 </div>
                 <motion.div
@@ -567,57 +522,49 @@ const AllHomeTemplate = () => {
                     } mt-6`}
                 >
                     <AnimatePresence>
-                        {gridLayout
-                            ? data
-                                  .slice(
-                                      landingIndex *
-                                          Number(selectedOption2.value),
-                                      landingIndex *
-                                          Number(selectedOption2.value) +
-                                          Number(selectedOption2.value),
-                                  )
-                                  .map((_item) => (
-                                      <Item
-                                          key={_item.id}
-                                          params={{
-                                              title: _item.title,
-                                              codeProduct: _item.codeProduct,
-                                              linkImage: _item.linkImage,
-                                              type: _item.type,
-                                          }}
-                                      />
-                                  ))
-                            : data
-                                  .slice(
-                                      landingIndex *
-                                          Number(selectedOption2.value),
-                                      landingIndex *
-                                          Number(selectedOption2.value) +
-                                          Number(selectedOption2.value),
-                                  )
-                                  .map((_item) => (
-                                      <Item2
-                                          key={_item.id}
-                                          params={{
-                                              title: _item.title,
-                                              codeProduct: _item.codeProduct,
-                                              linkImage: _item.linkImage,
-                                              type: _item.type,
-                                          }}
-                                      />
-                                  ))}
+                        <div className=' col-start-1 col-end-3'>
+                            <GroupMauNha
+                                params={{
+                                    dummyData: dummyData.filter(
+                                        (_item) => _item.type == 'mauNhaSan',
+                                    ),
+                                    title: 'Mẫu nhà sàn',
+                                }}
+                            />
+                        </div>
+                        <div className='col-start-3 col-end-5 '>
+                            <GroupMauNha
+                                params={{
+                                    dummyData: dummyData.filter(
+                                        (_item) => _item.type == 'nhaGoHienDai',
+                                    ),
+                                    title: 'Mẫu nhà gỗ hiện đại',
+                                }}
+                            />
+                        </div>
+                        <div className='col-start-1 col-end-3 '>
+                            <GroupMauNha
+                                params={{
+                                    dummyData: dummyData.filter(
+                                        (_item) =>
+                                            _item.type == 'nhaGoCoTruyen',
+                                    ),
+                                    title: 'Mẫu nhà gỗ cổ truyền',
+                                }}
+                            />
+                        </div>
+                        <div className='col-start-3 col-end-5 '>
+                            <GroupMauNha
+                                params={{
+                                    dummyData: dummyData.filter(
+                                        (_item) => _item.type == 'nhaTuDuong',
+                                    ),
+                                    title: 'Mẫu nhà từ đường',
+                                }}
+                            />
+                        </div>
                     </AnimatePresence>
                 </motion.div>
-            </div>
-            <div className='mb-5'>
-                <LandingPages
-                    handleLandingIndex={handleLandingIndex}
-                    itemsPerPage={Number(selectedOption2.value)}
-                    landingVisionIndex={landingVisionIndex}
-                    landingIndex={landingIndex}
-                    length={data.length}
-                    handleLandingVision={handleLandingVision}
-                />
             </div>
         </div>
     );
