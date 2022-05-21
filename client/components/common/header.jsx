@@ -51,21 +51,24 @@ const navTitle = [
     },
     {
         link: '/mau-nha',
-        title: 'MẪU NHÀ GỖ ĐẸP',
+        title: 'DỰ ÁN ĐÃ LÀM',
         isDropdown: true,
         clickableOnMobile: false,
         dropDownContent: [
-            { title: 'NHÀ 5 GIAN', link: '/mau-nha/nha-5-duong' },
-            { title: 'CỔNG GỖ', link: '/mau-nha/cong-go' },
-            { title: 'ĐỒ THỜ', link: '/mau-nha/do-tho' },
-            { title: 'NHÀ 3 GIAN', link: '/mau-nha/nha-3-gian' },
+            { title: 'NHÀ 5 GIAN', link: '/mau-nha/mac-dinh/Nhà%205%20gian' },
+            { title: 'CỔNG GỖ', link: '/mau-nha/mac-dinh/Cổng%20gỗ' },
+            { title: 'ĐỒ THỜ', link: '/mau-nha/mac-dinh/Đồ%20thờ' },
+            { title: 'NHÀ 3 GIAN', link: '/mau-nha/mac-dinh/Nhà%203%20gian' },
             {
                 title: 'NHÀ 8 GIAN CỔ ĐIỂN',
-                link: '/mau-nha/nha-8-gian-co-dien',
+                link: '/mau-nha/mac-dinh/Nhà%208%20gian%20cổ%20điển',
             },
-            { title: 'NHÀ CẦU', link: '/mau-nha/mau-nha-cau' },
-            { title: 'NHÀ LỤC GIÁC', link: '/mau-nha/nha-luc-giac' },
-            { title: 'NỘI THẤT', link: '/mau-nha/noi-that' },
+            { title: 'NHÀ CẦU', link: '/mau-nha/mac-dinh/Nhà%20cầu' },
+            {
+                title: 'NHÀ LỤC GIÁC',
+                link: '/mau-nha/mac-dinh/Nhà%20lục%20giác',
+            },
+            { title: 'NỘI THẤT', link: '/mau-nha/mac-dinh/Nội%20thất' },
         ],
     },
     {
