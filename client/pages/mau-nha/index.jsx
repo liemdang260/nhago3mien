@@ -228,6 +228,232 @@ const dummyData = [
         type: 'nhaTuDuong',
     },
 ];
+const dummyData2 = [
+    {
+        type: 'cong_go',
+        linkImage: '/du_an_da_lam/cong_go/1.jpg',
+    },
+    {
+        type: 'cong_go',
+        linkImage: '/du_an_da_lam/cong_go/2.jpg',
+    },
+    {
+        type: 'cong_go',
+        linkImage: '/du_an_da_lam/cong_go/3.jpg',
+    },
+    {
+        type: 'cong_go',
+        linkImage: '/du_an_da_lam/cong_go/4.jpg',
+    },
+    {
+        type: 'cong_go',
+        linkImage: '/du_an_da_lam/cong_go/5.jpg',
+    },
+    {
+        type: 'cong_go',
+        linkImage: '/du_an_da_lam/cong_go/6.jpg',
+    },
+    {
+        type: 'cong_go',
+        linkImage: '/du_an_da_lam/cong_go/7.jpg',
+    },
+    {
+        type: 'do_tho',
+        linkImage: '/du_an_da_lam/do_tho/1.jpg',
+    },
+    {
+        type: 'do_tho',
+        linkImage: '/du_an_da_lam/do_tho/2.jpg',
+    },
+    {
+        type: 'do_tho',
+        linkImage: '/du_an_da_lam/do_tho/3.jpg',
+    },
+    {
+        type: 'do_tho',
+        linkImage: '/du_an_da_lam/do_tho/4.jpg',
+    },
+    {
+        type: 'do_tho',
+        linkImage: '/du_an_da_lam/do_tho/5.jpg',
+    },
+    {
+        type: 'do_tho',
+        linkImage: '/du_an_da_lam/do_tho/6.jpg',
+    },
+    {
+        type: 'do_tho',
+        linkImage: '/du_an_da_lam/do_tho/7.jpg',
+    },
+    {
+        type: 'nha_3_gian',
+        linkImage: '/du_an_da_lam/nha_3_gian/1.jpg',
+    },
+    {
+        type: 'nha_3_gian',
+        linkImage: '/du_an_da_lam/nha_3_gian/2.jpg',
+    },
+    {
+        type: 'nha_3_gian',
+        linkImage: '/du_an_da_lam/nha_3_gian/3.jpg',
+    },
+    {
+        type: 'nha_3_gian',
+        linkImage: '/du_an_da_lam/nha_3_gian/4.jpg',
+    },
+    {
+        type: 'nha_3_gian',
+        linkImage: '/du_an_da_lam/nha_3_gian/5.jpg',
+    },
+    {
+        type: 'nha_3_gian',
+        linkImage: '/du_an_da_lam/nha_3_gian/6.jpg',
+    },
+    {
+        type: 'nha_3_gian',
+        linkImage: '/du_an_da_lam/nha_3_gian/7.jpg',
+    },
+    {
+        type: 'nha_5_gian',
+        linkImage: '/du_an_da_lam/nha_5_gian/1.jpg',
+    },
+    {
+        type: 'nha_5_gian',
+        linkImage: '/du_an_da_lam/nha_5_gian/2.jpg',
+    },
+    {
+        type: 'nha_5_gian',
+        linkImage: '/du_an_da_lam/nha_5_gian/3.jpg',
+    },
+    {
+        type: 'nha_5_gian',
+        linkImage: '/du_an_da_lam/nha_5_gian/4.jpg',
+    },
+    {
+        type: 'nha_5_gian',
+        linkImage: '/du_an_da_lam/nha_5_gian/5.jpg',
+    },
+    {
+        type: 'nha_5_gian',
+        linkImage: '/du_an_da_lam/nha_5_gian/6.jpg',
+    },
+    {
+        type: 'nha_5_gian',
+        linkImage: '/du_an_da_lam/nha_5_gian/7.jpg',
+    },
+    {
+        type: 'nha_8_mai_co_dien',
+        linkImage: '/du_an_da_lam/nha_8_mai_co_dien/1.jpg',
+    },
+    {
+        type: 'nha_8_mai_co_dien',
+        linkImage: '/du_an_da_lam/nha_8_mai_co_dien/2.jpg',
+    },
+    {
+        type: 'nha_8_mai_co_dien',
+        linkImage: '/du_an_da_lam/nha_8_mai_co_dien/3.jpg',
+    },
+    {
+        type: 'nha_8_mai_co_dien',
+        linkImage: '/du_an_da_lam/nha_8_mai_co_dien/4.jpg',
+    },
+    {
+        type: 'nha_8_mai_co_dien',
+        linkImage: '/du_an_da_lam/nha_8_mai_co_dien/5.jpg',
+    },
+    {
+        type: 'nha_8_mai_co_dien',
+        linkImage: '/du_an_da_lam/nha_8_mai_co_dien/6.jpg',
+    },
+    {
+        type: 'nha_8_mai_co_dien',
+        linkImage: '/du_an_da_lam/nha_8_mai_co_dien/7.jpg',
+    },
+    {
+        type: 'nha_cau',
+        linkImage: '/du_an_da_lam/nha_cau/1.jpg',
+    },
+    {
+        type: 'nha_cau',
+        linkImage: '/du_an_da_lam/nha_cau/2.jpg',
+    },
+    {
+        type: 'nha_cau',
+        linkImage: '/du_an_da_lam/nha_cau/3.jpg',
+    },
+    {
+        type: 'nha_cau',
+        linkImage: '/du_an_da_lam/nha_cau/4.jpg',
+    },
+    {
+        type: 'nha_cau',
+        linkImage: '/du_an_da_lam/nha_cau/5.jpg',
+    },
+    {
+        type: 'nha_cau',
+        linkImage: '/du_an_da_lam/nha_cau/6.jpg',
+    },
+    {
+        type: 'nha_cau',
+        linkImage: '/du_an_da_lam/nha_cau/7.jpg',
+    },
+    {
+        type: 'nha_luc_giac',
+        linkImage: '/du_an_da_lam/nha_luc_giac/1.jpg',
+    },
+    {
+        type: 'nha_luc_giac',
+        linkImage: '/du_an_da_lam/nha_luc_giac/2.jpg',
+    },
+    {
+        type: 'nha_luc_giac',
+        linkImage: '/du_an_da_lam/nha_luc_giac/3.jpg',
+    },
+    {
+        type: 'nha_luc_giac',
+        linkImage: '/du_an_da_lam/nha_luc_giac/4.jpg',
+    },
+    {
+        type: 'nha_luc_giac',
+        linkImage: '/du_an_da_lam/nha_luc_giac/5.jpg',
+    },
+    {
+        type: 'nha_luc_giac',
+        linkImage: '/du_an_da_lam/nha_luc_giac/6.jpg',
+    },
+    {
+        type: 'nha_luc_giac',
+        linkImage: '/du_an_da_lam/nha_luc_giac/7.jpg',
+    },
+    {
+        type: 'noi_that',
+        linkImage: '/du_an_da_lam/noi_that/1.jpg',
+    },
+    {
+        type: 'noi_that',
+        linkImage: '/du_an_da_lam/noi_that/2.jpg',
+    },
+    {
+        type: 'noi_that',
+        linkImage: '/du_an_da_lam/noi_that/3.jpg',
+    },
+    {
+        type: 'noi_that',
+        linkImage: '/du_an_da_lam/noi_that/4.jpg',
+    },
+    {
+        type: 'noi_that',
+        linkImage: '/du_an_da_lam/noi_that/5.jpg',
+    },
+    {
+        type: 'noi_that',
+        linkImage: '/du_an_da_lam/noi_that/6.jpg',
+    },
+    {
+        type: 'noi_that',
+        linkImage: '/du_an_da_lam/noi_that/7.jpg',
+    },
+];
 
 const Item = ({ params }) => {
     const router = useRouter();
@@ -370,89 +596,28 @@ const Item2 = ({ params }) => {
 };
 
 const AllHomeTemplate = () => {
-    const [data, setData] = useState(dummyData);
-    const [activeItem, setAciveItem] = useState(0);
     const [gridLayout, setGridLayout] = useState(true);
-    const [landingVisionIndex, setLandingVisionIndex] = useState(0);
-
-    // Select option when responsive
-    const [selectedOption, setSelectedOption] = useState({
-        label: 'Tất cả',
-        value: 'tatca',
-    });
-    useEffect(() => {
-        if (selectedOption.value == 'tatca') setData(dummyData);
-        else
-            setData(
-                dummyData.filter((item) => {
-                    return item.type == selectedOption.value;
-                }),
-            );
-    }, [selectedOption]);
-
-    const options = [
-        { label: 'Tất cả', value: 'tatca' },
-        {
-            label: 'Nhà từ đường',
-            value: 'nhaTuDuong',
-        },
-        {
-            label: 'Nhà gỗ hiện đại',
-            value: 'nhaGoHienDai',
-        },
-        {
-            label: 'Nhà sàn gỗ',
-            value: 'mauNhaSan',
-        },
-        {
-            label: 'Nhà cỗ truyền',
-            value: 'nhaGoCoTruyen',
-        },
-        {
-            label: 'Nhà lục giác',
-            value: 'mauNhaLucGiac',
-        },
-    ];
-
-    const Label = ({ params }) => {
-        return (
-            <div
-                className={`color-[#09357a] font-sans cursor-pointer inline-block mr-5 text-base py-2 px-1
-                rounded text-center
-                ${
-                    params.keyValue === activeItem ? 'bg-[#ccc]' : ''
-                } border-b-4 group`}
-                onClick={() => {
-                    setAciveItem(params.keyValue);
-                    if (params.type == 'tatca') setData(dummyData);
-                    else
-                        setData(
-                            dummyData.filter((item) => {
-                                return item.type == params.type;
-                            }),
-                        );
-                }}
-            >
-                {params.title}
-                <span
-                    style={{
-                        backgroundColor: `${params.color} `,
-                    }}
-                    className={`inline-block h-2 ml-1 w-6 before:absolute before:left-0 before:w-full
-                        before:bg-[#1f31ab] before:opacity-0 before:transition-all before:top-0 before:translate-x-3
-                        after:absolute after:left-0 after:w-full
-                        after:bg-[#1f31ab] after:opacity-0 after:transition-all after:bottom-0 after:-translate-y-1
-                        group-hover:before:opacity-100 group-hover:before:translate-y-0 group-hover:after:opacity-100 group-hover:after:translate-y-0
-                    `}
-                ></span>
-            </div>
-        );
-    };
 
     const GroupMauNha = ({ params }) => {
+        const router = useRouter();
+        const handleClickItem = () => {
+            // router.push()
+            if (params.mode == 'service') {
+                router.push(`/dich-vu`);
+            } else {
+                router.push(
+                    `/mau-nha/${params.type ? params.type : 'mac-dinh'}/${
+                        params.title
+                    }`,
+                );
+            }
+        };
         return (
             <>
-                <div className='h-[900] w-full border border-primary-color px-20 pt-5 rounded-md'>
+                <div
+                    onClick={handleClickItem}
+                    className='h-[900] w-full border border-primary-color px-20 pt-5 rounded-md'
+                >
                     <Swiper
                         effect={'cards'}
                         grabCursor={true}
@@ -463,6 +628,7 @@ const AllHomeTemplate = () => {
                                 <Image
                                     src={_item.linkImage}
                                     alt='Errow while display image'
+                                    loading='lazy'
                                     width={500}
                                     height={350}
                                 />
@@ -518,48 +684,120 @@ const AllHomeTemplate = () => {
                     className={`w-full ${
                         gridLayout
                             ? 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-6'
-                            : ''
+                            : 'mx-2'
                     } mt-6`}
                 >
                     <AnimatePresence>
-                        <div className=' col-start-1 col-end-3'>
+                        <div
+                            className={`${
+                                gridLayout ? '' : 'my-2'
+                            } col-start-1 col-end-3`}
+                        >
                             <GroupMauNha
                                 params={{
-                                    dummyData: dummyData.filter(
-                                        (_item) => _item.type == 'mauNhaSan',
+                                    dummyData: dummyData2.filter(
+                                        (_item) => _item.type == 'nha_5_gian',
                                     ),
-                                    title: 'Mẫu nhà sàn',
+                                    title: 'Nhà 5 gian',
                                 }}
                             />
                         </div>
-                        <div className='col-start-3 col-end-5 '>
+                        <div
+                            className={`${
+                                gridLayout ? '' : 'my-2'
+                            } col-start-3 col-end-5`}
+                        >
                             <GroupMauNha
                                 params={{
-                                    dummyData: dummyData.filter(
-                                        (_item) => _item.type == 'nhaGoHienDai',
+                                    dummyData: dummyData2.filter(
+                                        (_item) => _item.type == 'cong_go',
                                     ),
-                                    title: 'Mẫu nhà gỗ hiện đại',
+                                    title: 'Cổng gỗ',
                                 }}
                             />
                         </div>
-                        <div className='col-start-1 col-end-3 '>
+                        <div
+                            className={`${
+                                gridLayout ? '' : 'my-2'
+                            }col-start-1 col-end-3`}
+                        >
                             <GroupMauNha
                                 params={{
-                                    dummyData: dummyData.filter(
+                                    dummyData: dummyData2.filter(
+                                        (_item) => _item.type == 'do_tho',
+                                    ),
+                                    title: 'Đồ thờ',
+                                }}
+                            />
+                        </div>
+                        <div
+                            className={`${
+                                gridLayout ? '' : 'my-2'
+                            } col-start-3 col-end-5`}
+                        >
+                            <GroupMauNha
+                                params={{
+                                    dummyData: dummyData2.filter(
+                                        (_item) => _item.type == 'nha_3_gian',
+                                    ),
+                                    title: 'Nhà 3 gian',
+                                }}
+                            />
+                        </div>
+                        <div
+                            className={`${
+                                gridLayout ? '' : 'my-2'
+                            }col-start-1 col-end-3`}
+                        >
+                            <GroupMauNha
+                                params={{
+                                    dummyData: dummyData2.filter(
                                         (_item) =>
-                                            _item.type == 'nhaGoCoTruyen',
+                                            _item.type == 'nha_8_mai_co_dien',
                                     ),
-                                    title: 'Mẫu nhà gỗ cổ truyền',
+                                    title: 'Nhà 8 mái cổ điển',
                                 }}
                             />
                         </div>
-                        <div className='col-start-3 col-end-5 '>
+                        <div
+                            className={`${
+                                gridLayout ? '' : 'my-2'
+                            } col-start-3 col-end-5`}
+                        >
                             <GroupMauNha
                                 params={{
-                                    dummyData: dummyData.filter(
-                                        (_item) => _item.type == 'nhaTuDuong',
+                                    dummyData: dummyData2.filter(
+                                        (_item) => _item.type == 'nha_cau',
                                     ),
-                                    title: 'Mẫu nhà từ đường',
+                                    title: 'Nhà cầu',
+                                }}
+                            />
+                        </div>
+                        <div
+                            className={`${
+                                gridLayout ? '' : 'my-2'
+                            }col-start-1 col-end-3`}
+                        >
+                            <GroupMauNha
+                                params={{
+                                    dummyData: dummyData2.filter(
+                                        (_item) => _item.type == 'nha_luc_giac',
+                                    ),
+                                    title: 'Nhà lục giác',
+                                }}
+                            />
+                        </div>
+                        <div
+                            className={`${
+                                gridLayout ? '' : 'my-2'
+                            } col-start-3 col-end-5`}
+                        >
+                            <GroupMauNha
+                                params={{
+                                    dummyData: dummyData2.filter(
+                                        (_item) => _item.type == 'noi_that',
+                                    ),
+                                    title: 'Nội thất',
                                 }}
                             />
                         </div>

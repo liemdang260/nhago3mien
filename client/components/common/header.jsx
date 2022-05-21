@@ -55,11 +55,17 @@ const navTitle = [
         isDropdown: true,
         clickableOnMobile: false,
         dropDownContent: [
-            { title: 'NHÀ TỪ ĐƯỜNG', link: '/mau-nha/mau-nha-tu-duong' },
-            { title: 'NHÀ GỖ HIỆN ĐẠI', link: '/mau-nha/mau-nha-hien-dai' },
-            { title: 'NHÀ SÀN GỖ (DÂN TỘC)', link: '/mau-nha/mau-nha-san' },
-            { title: 'NHÀ CỔ TRUYỀN', link: '/mau-nha/mau-nha-co-truyen' },
-            { title: 'NHÀ LỤC GIÁC', link: '/mau-nha/mau-nha-luc-giac' },
+            { title: 'NHÀ 5 GIAN', link: '/mau-nha/nha-5-duong' },
+            { title: 'CỔNG GỖ', link: '/mau-nha/cong-go' },
+            { title: 'ĐỒ THỜ', link: '/mau-nha/do-tho' },
+            { title: 'NHÀ 3 GIAN', link: '/mau-nha/nha-3-gian' },
+            {
+                title: 'NHÀ 8 GIAN CỔ ĐIỂN',
+                link: '/mau-nha/nha-8-gian-co-dien',
+            },
+            { title: 'NHÀ CẦU', link: '/mau-nha/mau-nha-cau' },
+            { title: 'NHÀ LỤC GIÁC', link: '/mau-nha/nha-luc-giac' },
+            { title: 'NỘI THẤT', link: '/mau-nha/noi-that' },
         ],
     },
     {
