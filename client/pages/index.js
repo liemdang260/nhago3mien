@@ -25,78 +25,98 @@ import Trait from 'components/home/Trait';
 
 const images = ['/main-banner1.jpg', '/main-banner2.jpg', '/main-banner3.jpg'];
 
-const MauNhaData = [
+const LibraryData = [
     {
         id: 1,
-        title: 'Nhà 5 gian truyền thống',
+        title: 'Đức Tràm',
         codeProduct: '1245D5',
-        linkImage: '/nha-5-gian.jpg',
+        linkImage: '/images/Avata_thu_vien_tu_lieu/1.jpg',
     },
     {
         id: 2,
-        title: 'Nhà từ đường',
+        title: 'Đồ thờ',
         codeProduct: '1245D5',
-        linkImage: '/nha-tu-duong.jpg',
+        linkImage: '/images/Avata_thu_vien_tu_lieu/2.jpg',
     },
     {
         id: 3,
-        title: 'Nhà gỗ',
+        title: 'Lắp dựng',
         codeProduct: '1245D5',
-        linkImage: '/nha-go-truyen-thong.jpg',
+        linkImage: '/images/Avata_thu_vien_tu_lieu/3.jpg',
     },
     {
         id: 4,
-        title: 'Chòi hóng mát',
+        title: 'Nhập gỗ',
         codeProduct: '1245D5',
-        linkImage: '/choi-hong-mat.jpg',
+        linkImage: '/images/Avata_thu_vien_tu_lieu/4.jpg',
     },
     {
         id: 5,
-        title: 'Mẫu nhà gỗ kiểu Huế',
+        title: 'Sám gỗ',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-co-truyen.Mau-nha-go-kieu-Hue.jpg',
+        linkImage: '/images/Avata_thu_vien_tu_lieu/5.jpg',
         type: 'nhaGoCoTruyen',
     },
     {
         id: 6,
-        title: 'Mẫu nhà rường Huế',
+        title: 'Vần chuyển đến công trình',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-co-truyen.Mau-nha-ruong-hue.jpg',
+        linkImage: '/images/Avata_thu_vien_tu_lieu/6.jpg',
+        type: 'nhaGoCoTruyen',
+    },
+];
+
+const MauNhaData = [
+    {
+        id: 1,
+        title: 'Cổng gỗ',
+        codeProduct: '1245D5',
+        linkImage: '/images/Avata_du_an_da_lam/1.jpg',
+    },
+    {
+        id: 2,
+        title: 'Đồ thờ',
+        codeProduct: '1245D5',
+        linkImage: '/images/Avata_du_an_da_lam/2.jpg',
+    },
+    {
+        id: 3,
+        title: 'Nhà 5 gian',
+        codeProduct: '1245D5',
+        linkImage: '/images/Avata_du_an_da_lam/3.jpg',
+    },
+    {
+        id: 4,
+        title: 'Nhà 3 gian',
+        codeProduct: '1245D5',
+        linkImage: '/images/Avata_du_an_da_lam/4.jpg',
+    },
+    {
+        id: 5,
+        title: 'Nhà cầu',
+        codeProduct: '12345A',
+        linkImage: '/images/Avata_du_an_da_lam/5.jpg',
+        type: 'nhaGoCoTruyen',
+    },
+    {
+        id: 6,
+        title: 'Nhà có 8 mái',
+        codeProduct: '12345A',
+        linkImage: '/images/Avata_du_an_da_lam/6.jpg',
         type: 'nhaGoCoTruyen',
     },
     {
         id: 7,
-        title: 'Mẫu nhà truyền thống đẹp',
+        title: 'Nhà lục giác',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-co-truyen.Mau-nha-ruong-hue.jpg',
+        linkImage: '/images/Avata_du_an_da_lam/7.jpg',
         type: 'nhaGoCoTruyen',
     },
     {
         id: 8,
-        title: 'Nhà cổ truyền 5 gian',
+        title: 'Nội thất',
         codeProduct: '12345A',
-        linkImage: '/images/mau-nha-co-truyen.Nha-co-truyen-5-gian.jpg',
-        type: 'nhaGoCoTruyen',
-    },
-    {
-        id: 9,
-        title: 'Nhà 3 gian gỗ Lim',
-        codeProduct: '12345A',
-        linkImage: '/images/mau-nha-co-truyen.Nha-go-3-gian-go-Lim.jpg',
-        type: 'nhaGoCoTruyen',
-    },
-    {
-        id: 10,
-        title: 'Nhà gỗ 3 gian kiểu Bắc bộ',
-        codeProduct: '12345A',
-        linkImage: '/images/mau-nha-co-truyen.Nha-go-3-gian-kieu-Bac-Bo.jpg',
-        type: 'nhaGoCoTruyen',
-    },
-    {
-        id: 11,
-        title: 'Nhà gỗ 5 gian đẹp',
-        codeProduct: '12345A',
-        linkImage: '/images/mau-nha-co-truyen.Nha-go-5-gian-dep.png',
+        linkImage: '/images/Avata_du_an_da_lam/8.jpg',
         type: 'nhaGoCoTruyen',
     },
 ];
@@ -104,44 +124,30 @@ const MauNhaData = [
 const ServicesData = [
     {
         id: 1,
-        title: 'Tư vấn & thiết kế theo yêu cầu',
+        title: 'Tư vấn và thiết kế nhà gỗ',
         description:
-            'Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...',
-        linkImage: '/thiet-ke-theo-yeu-cau.jpg',
+            'Chúng tôi cung cấp dịch vụ thiết kế tận tâm đến khách hàn',
+        linkImage: '/images/Avata_dich_vu/1.jpg',
     },
     {
         id: 2,
-        title: 'Thiết kế & thi công không gian thờ',
+        title: 'Thi công',
         description:
-            'Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...',
-        linkImage: '/khong-gian-tho.jpg',
+            'Sau khi chốt ý tưởng, thống nhất với khách hàng về thiết kế, chúng tôi tiến hành các bước trong thi công',
+        linkImage: '/images/Avata_dich_vu/2.jpg',
     },
     {
         id: 3,
-        title: 'Cung cấp đồ gỗ thành phẩm',
-        description:
-            'Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...',
-        linkImage: '/do-go-thanh-pham.jpg',
-    },
-    {
-        id: 4,
         title: 'Thiết kế và thi công nội thất',
         description:
-            'Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...',
-        linkImage: '/thiet-ke-noi-that.jpg',
-    },
-    {
-        id: 5,
-        title: 'Thiết kế và thi công nhà gỗ',
-        description:
-            'Làm thế nào để bạn có thể sở hữu được một không gian sống thoải mái và tiện nghi? Bạn cũng sẽ muốn một ngôi nhà thể hiện được đúng cá tính, sở thích riêng và thỏa mãn được mong muốn của gia đình mình...',
-        linkImage: '/nhago.jpg',
+            'Thiết kế thi công nội thất theo yêu cầu của khách hàng là một trong những dịch vụ cốt lõi của Nhà Gỗ Ba Miền chúng tôi',
+        linkImage: '/images/Avata_dich_vu/3.jpg',
     },
 ];
 export default function Home() {
     return (
         <div className='relative'>
-            <div className='relative md:absolute mb-2 md:mb-0 w-full z-10 left-1/2 -translate-x-1/2 md:w-5/6 h-[400px]  md:flex md:justify-center lg:h-[calc(100vh_-_280px)]'>
+            <div className='relative md:absolute mb-2 md:mb-0 w-1/2 z-10 left-1/2 -translate-x-1/2 md:w-5/6 h-[400px]  md:flex md:justify-center lg:h-[calc(100vh_-_280px)]'>
                 <video
                     autoPlay={true}
                     loop={true}
@@ -182,10 +188,10 @@ export default function Home() {
                 </Swiper>
             </div>
             <style>
-                {` .swiper-slide-active ~ .swiper-slide-active {
-                        filter: blur(8px);
+                {` .swiper-wrapper > .swiper-slide-active ~ .swiper-slide-active {
+                        filter: blur(0) !important;
                     }
-                    .swiper-slide-active {
+                    .swiper-wrapper > .swiper-slide-active {
                         // filter: blur(4px);
                     }
                    
@@ -217,8 +223,16 @@ export default function Home() {
             {/* Begin::Motsomaunha */}
             <div className='py-10'>
                 <GridLayoutMauNha
-                    title='Mẫu nhà gỗ đẹp'
+                    title='Dự án đã làm'
                     data={MauNhaData}
+                    hasPagination
+                />
+            </div>
+
+            <div className='py-10'>
+                <GridLayoutMauNha
+                    title='Thư viện tư liệu'
+                    data={LibraryData}
                     hasPagination
                 />
             </div>
