@@ -229,31 +229,31 @@ const dummyData = [
 const dummyData2 = [
     {
         type: 'cong_go',
-        linkImage: '/du_an_da_lam/cong_go/1.jpg',
+        linkImage: '/du_an_da_lam/cong-go/1.jpg',
     },
     {
         type: 'cong_go',
-        linkImage: '/du_an_da_lam/cong_go/2.jpg',
+        linkImage: '/du_an_da_lam/cong-go/2.jpg',
     },
     {
         type: 'cong_go',
-        linkImage: '/du_an_da_lam/cong_go/3.jpg',
+        linkImage: '/du_an_da_lam/cong-go/3.jpg',
     },
     {
         type: 'cong_go',
-        linkImage: '/du_an_da_lam/cong_go/4.jpg',
+        linkImage: '/du_an_da_lam/cong-go/4.jpg',
     },
     {
         type: 'cong_go',
-        linkImage: '/du_an_da_lam/cong_go/5.jpg',
+        linkImage: '/du_an_da_lam/cong-go/5.jpg',
     },
     {
         type: 'cong_go',
-        linkImage: '/du_an_da_lam/cong_go/6.jpg',
+        linkImage: '/du_an_da_lam/cong-go/6.jpg',
     },
     {
         type: 'cong_go',
-        linkImage: '/du_an_da_lam/cong_go/7.jpg',
+        linkImage: '/du_an_da_lam/cong-go/7.jpg',
     },
     {
         type: 'do_tho',
