@@ -3,10 +3,10 @@ import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faListSquares, faBars } from '@fortawesome/free-solid-svg-icons';
 import Select from 'react-select';
-import { dummyData } from '..';
+import { dummyData } from '../../pages/du-an-da-lam';
 import { Item } from 'components/common/gridLayoutMauNha';
 import LandingPages from 'components/common/LandingPages';
-import { Item2 } from '..';
+import { Item2 } from '../../pages/du-an-da-lam';
 
 const filterFunction = (query) => {
     switch (query) {

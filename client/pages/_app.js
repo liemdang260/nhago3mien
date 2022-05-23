@@ -16,6 +16,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-cube';
 import 'swiper/css/thumbs';
+import 'swiper/css/effect-cards';
+import 'react-image-gallery/styles/css/image-gallery.css';
 
 //Animation on scrolling
 import 'animate.css';

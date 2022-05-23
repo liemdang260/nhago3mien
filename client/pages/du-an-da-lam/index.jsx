@@ -6,8 +6,6 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCards } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/effect-cards';
 
 const dummyData = [
     {
@@ -259,301 +257,301 @@ const dummyData2 = [
     },
     {
         type: 'do_tho',
-        linkImage: '/du_an_da_lam/do_tho/1.jpg',
+        linkImage: '/du_an_da_lam/do-tho/1.jpg',
     },
     {
         type: 'do_tho',
-        linkImage: '/du_an_da_lam/do_tho/2.jpg',
+        linkImage: '/du_an_da_lam/do-tho/2.jpg',
     },
     {
         type: 'do_tho',
-        linkImage: '/du_an_da_lam/do_tho/3.jpg',
+        linkImage: '/du_an_da_lam/do-tho/3.jpg',
     },
     {
         type: 'do_tho',
-        linkImage: '/du_an_da_lam/do_tho/4.jpg',
+        linkImage: '/du_an_da_lam/do-tho/4.jpg',
     },
     {
         type: 'do_tho',
-        linkImage: '/du_an_da_lam/do_tho/5.jpg',
+        linkImage: '/du_an_da_lam/do-tho/5.jpg',
     },
     {
         type: 'do_tho',
-        linkImage: '/du_an_da_lam/do_tho/6.jpg',
+        linkImage: '/du_an_da_lam/do-tho/6.jpg',
     },
     {
         type: 'do_tho',
-        linkImage: '/du_an_da_lam/do_tho/7.jpg',
+        linkImage: '/du_an_da_lam/do-tho/7.jpg',
     },
     {
         type: 'nha_3_gian',
-        linkImage: '/du_an_da_lam/nha_3_gian/1.jpg',
+        linkImage: '/du_an_da_lam/nha-3-gian/1.jpg',
     },
     {
         type: 'nha_3_gian',
-        linkImage: '/du_an_da_lam/nha_3_gian/2.jpg',
+        linkImage: '/du_an_da_lam/nha-3-gian/2.jpg',
     },
     {
         type: 'nha_3_gian',
-        linkImage: '/du_an_da_lam/nha_3_gian/3.jpg',
+        linkImage: '/du_an_da_lam/nha-3-gian/3.jpg',
     },
     {
         type: 'nha_3_gian',
-        linkImage: '/du_an_da_lam/nha_3_gian/4.jpg',
+        linkImage: '/du_an_da_lam/nha-3-gian/4.jpg',
     },
     {
         type: 'nha_3_gian',
-        linkImage: '/du_an_da_lam/nha_3_gian/5.jpg',
+        linkImage: '/du_an_da_lam/nha-3-gian/5.jpg',
     },
     {
         type: 'nha_3_gian',
-        linkImage: '/du_an_da_lam/nha_3_gian/6.jpg',
+        linkImage: '/du_an_da_lam/nha-3-gian/6.jpg',
     },
     {
         type: 'nha_3_gian',
-        linkImage: '/du_an_da_lam/nha_3_gian/7.jpg',
+        linkImage: '/du_an_da_lam/nha-3-gian/7.jpg',
     },
     {
         type: 'nha_5_gian',
-        linkImage: '/du_an_da_lam/nha_5_gian/1.jpg',
+        linkImage: '/du_an_da_lam/nha-5-gian/1.jpg',
     },
     {
         type: 'nha_5_gian',
-        linkImage: '/du_an_da_lam/nha_5_gian/2.jpg',
+        linkImage: '/du_an_da_lam/nha-5-gian/2.jpg',
     },
     {
         type: 'nha_5_gian',
-        linkImage: '/du_an_da_lam/nha_5_gian/3.jpg',
+        linkImage: '/du_an_da_lam/nha-5-gian/3.jpg',
     },
     {
         type: 'nha_5_gian',
-        linkImage: '/du_an_da_lam/nha_5_gian/4.jpg',
+        linkImage: '/du_an_da_lam/nha-5-gian/4.jpg',
     },
     {
         type: 'nha_5_gian',
-        linkImage: '/du_an_da_lam/nha_5_gian/5.jpg',
+        linkImage: '/du_an_da_lam/nha-5-gian/5.jpg',
     },
     {
         type: 'nha_5_gian',
-        linkImage: '/du_an_da_lam/nha_5_gian/6.jpg',
+        linkImage: '/du_an_da_lam/nha-5-gian/6.jpg',
     },
     {
         type: 'nha_5_gian',
-        linkImage: '/du_an_da_lam/nha_5_gian/7.jpg',
+        linkImage: '/du_an_da_lam/nha-5-gian/7.jpg',
     },
     {
         type: 'nha_8_mai_co_dien',
-        linkImage: '/du_an_da_lam/nha_8_mai_co_dien/1.jpg',
+        linkImage: '/du_an_da_lam/nha-8-mai-co-dien/1.jpg',
     },
     {
         type: 'nha_8_mai_co_dien',
-        linkImage: '/du_an_da_lam/nha_8_mai_co_dien/2.jpg',
+        linkImage: '/du_an_da_lam/nha-8-mai-co-dien/2.jpg',
     },
     {
         type: 'nha_8_mai_co_dien',
-        linkImage: '/du_an_da_lam/nha_8_mai_co_dien/3.jpg',
+        linkImage: '/du_an_da_lam/nha-8-mai-co-dien/3.jpg',
     },
     {
         type: 'nha_8_mai_co_dien',
-        linkImage: '/du_an_da_lam/nha_8_mai_co_dien/4.jpg',
+        linkImage: '/du_an_da_lam/nha-8-mai-co-dien/4.jpg',
     },
     {
         type: 'nha_8_mai_co_dien',
-        linkImage: '/du_an_da_lam/nha_8_mai_co_dien/5.jpg',
+        linkImage: '/du_an_da_lam/nha-8-mai-co-dien/5.jpg',
     },
     {
         type: 'nha_8_mai_co_dien',
-        linkImage: '/du_an_da_lam/nha_8_mai_co_dien/6.jpg',
+        linkImage: '/du_an_da_lam/nha-8-mai-co-dien/6.jpg',
     },
     {
         type: 'nha_8_mai_co_dien',
-        linkImage: '/du_an_da_lam/nha_8_mai_co_dien/7.jpg',
+        linkImage: '/du_an_da_lam/nha-8-mai-co-dien/7.jpg',
     },
     {
         type: 'nha_cau',
-        linkImage: '/du_an_da_lam/nha_cau/1.jpg',
+        linkImage: '/du_an_da_lam/nha-cau/1.jpg',
     },
     {
         type: 'nha_cau',
-        linkImage: '/du_an_da_lam/nha_cau/2.jpg',
+        linkImage: '/du_an_da_lam/nha-cau/2.jpg',
     },
     {
         type: 'nha_cau',
-        linkImage: '/du_an_da_lam/nha_cau/3.jpg',
+        linkImage: '/du_an_da_lam/nha-cau/3.jpg',
     },
     {
         type: 'nha_cau',
-        linkImage: '/du_an_da_lam/nha_cau/4.jpg',
+        linkImage: '/du_an_da_lam/nha-cau/4.jpg',
     },
     {
         type: 'nha_cau',
-        linkImage: '/du_an_da_lam/nha_cau/5.jpg',
+        linkImage: '/du_an_da_lam/nha-cau/5.jpg',
     },
     {
         type: 'nha_cau',
-        linkImage: '/du_an_da_lam/nha_cau/6.jpg',
+        linkImage: '/du_an_da_lam/nha-cau/6.jpg',
     },
     {
         type: 'nha_cau',
-        linkImage: '/du_an_da_lam/nha_cau/7.jpg',
+        linkImage: '/du_an_da_lam/nha-cau/7.jpg',
     },
     {
         type: 'nha_luc_giac',
-        linkImage: '/du_an_da_lam/nha_luc_giac/1.jpg',
+        linkImage: '/du_an_da_lam/nha-luc-giac/1.jpg',
     },
     {
         type: 'nha_luc_giac',
-        linkImage: '/du_an_da_lam/nha_luc_giac/2.jpg',
+        linkImage: '/du_an_da_lam/nha-luc-giac/2.jpg',
     },
     {
         type: 'nha_luc_giac',
-        linkImage: '/du_an_da_lam/nha_luc_giac/3.jpg',
+        linkImage: '/du_an_da_lam/nha-luc-giac/3.jpg',
     },
     {
         type: 'nha_luc_giac',
-        linkImage: '/du_an_da_lam/nha_luc_giac/4.jpg',
+        linkImage: '/du_an_da_lam/nha-luc-giac/4.jpg',
     },
     {
         type: 'nha_luc_giac',
-        linkImage: '/du_an_da_lam/nha_luc_giac/5.jpg',
+        linkImage: '/du_an_da_lam/nha-luc-giac/5.jpg',
     },
     {
         type: 'nha_luc_giac',
-        linkImage: '/du_an_da_lam/nha_luc_giac/6.jpg',
+        linkImage: '/du_an_da_lam/nha-luc-giac/6.jpg',
     },
     {
         type: 'nha_luc_giac',
-        linkImage: '/du_an_da_lam/nha_luc_giac/7.jpg',
+        linkImage: '/du_an_da_lam/nha-luc-giac/7.jpg',
     },
     {
         type: 'noi_that',
-        linkImage: '/du_an_da_lam/noi_that/1.jpg',
+        linkImage: '/du_an_da_lam/noi-that/1.jpg',
     },
     {
         type: 'noi_that',
-        linkImage: '/du_an_da_lam/noi_that/2.jpg',
+        linkImage: '/du_an_da_lam/noi-that/2.jpg',
     },
     {
         type: 'noi_that',
-        linkImage: '/du_an_da_lam/noi_that/3.jpg',
+        linkImage: '/du_an_da_lam/noi-that/3.jpg',
     },
     {
         type: 'noi_that',
-        linkImage: '/du_an_da_lam/noi_that/4.jpg',
+        linkImage: '/du_an_da_lam/noi-that/4.jpg',
     },
     {
         type: 'noi_that',
-        linkImage: '/du_an_da_lam/noi_that/5.jpg',
+        linkImage: '/du_an_da_lam/noi-that/5.jpg',
     },
     {
         type: 'noi_that',
-        linkImage: '/du_an_da_lam/noi_that/6.jpg',
+        linkImage: '/du_an_da_lam/noi-that/6.jpg',
     },
     {
         type: 'noi_that',
-        linkImage: '/du_an_da_lam/noi_that/7.jpg',
+        linkImage: '/du_an_da_lam/noi-that/7.jpg',
     },
 ];
 
-const Item = ({ params }) => {
-    const router = useRouter();
+// const Item = ({ params }) => {
+//     const router = useRouter();
 
-    const handleClickItem = () => {
-        // router.push()
-        if (params.mode == 'service') {
-            router.push(`/dich-vu`);
-        } else {
-            router.push(
-                `/mau-nha/${params.type ? params.type : 'mac-dinh'}/${
-                    params.title
-                }`,
-            );
-        }
-    };
-    return (
-        <motion.div
-            layout
-            animate={{ opacity: 1 }}
-            initial={{ opacity: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            onClick={handleClickItem}
-            className='h-full'
-        >
-            <div
-                className='relative h-full bg-slate-50 shadow-[0px_3px_5px_0px_rgba(0,0,0,0.3)]
-                flex flex-col items-center text-base cursor-pointer ease-in-out duration-700
-              hover:shadow-primary-color hover:bg-slate-200 group
-              '
-            >
-                <div
-                    className='hidden w-[450px] h-[290px] sm:group-hover:first:block absolute -translate-y-full -m-2
-          border-2 border-solid border-primary-color'
-                >
-                    <Image
-                        className='z-50'
-                        alt='Error while display image'
-                        src={params.linkImage}
-                        layout='fill'
-                        loading='lazy'
-                        // width={450}
-                        // height={290}
-                    />
-                    <div className='absolute left-1/2 top-[100.5%] w-16 overflow-hidden'>
-                        <div className=' h-2 w-2 bg-primary-color -rotate-45 transform origin-top-left'></div>
-                    </div>
-                </div>
-                <figure
-                    className='relative before:absolute before:top-0 before:-left-3/4
-                before:z-[2] before:block before:w-1/2 before:h-full 
-                before:bg-gradient-to-r before:from-[#fff] before:to[#fff] before:-skew-x-[25deg] before:opacity-30
-                group-hover:before:duration-750 group-hover:before:animate-shineToLetf overflow-hidden'
-                >
-                    <Image
-                        className='z-0 group-hover:brightness-90 transition ease-out duration-500'
-                        // layout='intrinsic'
-                        width={450}
-                        height={300}
-                        loading='lazy'
-                        src={params.linkImage}
-                        alt='Error while display image'
-                    />
-                </figure>
+//     const handleClickItem = () => {
+//         // router.push()
+//         if (params.mode == 'service') {
+//             router.push(`/dich-vu`);
+//         } else {
+//             router.push(
+//                 `/mau-nha/${params.type ? params.type : 'mac-dinh'}/${
+//                     params.title
+//                 }`,
+//             );
+//         }
+//     };
+//     return (
+//         <motion.div
+//             layout
+//             animate={{ opacity: 1 }}
+//             initial={{ opacity: 0 }}
+//             exit={{ opacity: 0 }}
+//             transition={{ duration: 0.5 }}
+//             onClick={handleClickItem}
+//             className='h-full'
+//         >
+//             <div
+//                 className='relative h-full bg-slate-50 shadow-[0px_3px_5px_0px_rgba(0,0,0,0.3)]
+//                 flex flex-col items-center text-base cursor-pointer ease-in-out duration-700
+//               hover:shadow-primary-color hover:bg-slate-200 group
+//               '
+//             >
+//                 <div
+//                     className='hidden w-[450px] h-[290px] sm:group-hover:first:block absolute -translate-y-full -m-2
+//           border-2 border-solid border-primary-color'
+//                 >
+//                     <Image
+//                         className='z-50'
+//                         alt='Error while display image'
+//                         src={params.linkImage}
+//                         layout='fill'
+//                         loading='lazy'
+//                         // width={450}
+//                         // height={290}
+//                     />
+//                     <div className='absolute left-1/2 top-[100.5%] w-16 overflow-hidden'>
+//                         <div className=' h-2 w-2 bg-primary-color -rotate-45 transform origin-top-left'></div>
+//                     </div>
+//                 </div>
+//                 <figure
+//                     className='relative before:absolute before:top-0 before:-left-3/4
+//                 before:z-[2] before:block before:w-1/2 before:h-full
+//                 before:bg-gradient-to-r before:from-[#fff] before:to[#fff] before:-skew-x-[25deg] before:opacity-30
+//                 group-hover:before:duration-750 group-hover:before:animate-shineToLetf overflow-hidden'
+//                 >
+//                     <Image
+//                         className='z-0 group-hover:brightness-90 transition ease-out duration-500'
+//                         // layout='intrinsic'
+//                         width={450}
+//                         height={300}
+//                         loading='lazy'
+//                         src={params.linkImage}
+//                         alt='Error while display image'
+//                     />
+//                 </figure>
 
-                <div
-                    className={`font-medium text-white bg-primary-color py-2 px-3 self-stretch -translate-y-[7px] uppercase text-xs md:text-sm`}
-                >
-                    {params.title.substring(0, 35)}
-                </div>
-                {params.description && (
-                    <div className='text-color text-sm leading-6 px-3 text-justify'>
-                        {params.description}
-                    </div>
-                )}
-                {/* mauNhaSan, nhaGoHienDai, nhaGoCoTruyen, nhaTuDuongn, mauNhaLucGiac */}
-                {params.type && (
-                    <div
-                        className={`w-full h-2 my-2
-          ${
-              params.type == 'nhaTuDuong'
-                  ? 'bg-[#05ed10]'
-                  : params.type == 'nhaGoHienDai'
-                  ? 'bg-[#f00]'
-                  : params.type == 'mauNhaSan'
-                  ? 'bg-[#0aa6a6]'
-                  : params.type == 'nhaGoCoTruyen'
-                  ? 'bg-[#000]'
-                  : params.type == 'mauNhaLucGiac'
-                  ? 'bg-[#42611e]'
-                  : ''
-          }`}
-                    ></div>
-                )}
-                {/* <div className='uppercase text-gray-500 font-medium text-center py-2 h-10'></div> */}
-            </div>
-        </motion.div>
-    );
-};
+//                 <div
+//                     className={`font-medium text-white bg-primary-color py-2 px-3 self-stretch -translate-y-[7px] uppercase text-xs md:text-sm`}
+//                 >
+//                     {params.title.substring(0, 35)}
+//                 </div>
+//                 {params.description && (
+//                     <div className='text-color text-sm leading-6 px-3 text-justify'>
+//                         {params.description}
+//                     </div>
+//                 )}
+//                 {/* mauNhaSan, nhaGoHienDai, nhaGoCoTruyen, nhaTuDuongn, mauNhaLucGiac */}
+//                 {params.type && (
+//                     <div
+//                         className={`w-full h-2 my-2
+//           ${
+//               params.type == 'nhaTuDuong'
+//                   ? 'bg-[#05ed10]'
+//                   : params.type == 'nhaGoHienDai'
+//                   ? 'bg-[#f00]'
+//                   : params.type == 'mauNhaSan'
+//                   ? 'bg-[#0aa6a6]'
+//                   : params.type == 'nhaGoCoTruyen'
+//                   ? 'bg-[#000]'
+//                   : params.type == 'mauNhaLucGiac'
+//                   ? 'bg-[#42611e]'
+//                   : ''
+//           }`}
+//                     ></div>
+//                 )}
+//                 {/* <div className='uppercase text-gray-500 font-medium text-center py-2 h-10'></div> */}
+//             </div>
+//         </motion.div>
+//     );
+// };
 const Item2 = ({ params }) => {
     const router = useRouter();
     const handleClickItem = () => {
@@ -605,11 +603,7 @@ const AllHomeTemplate = () => {
             if (params.mode == 'service') {
                 router.push(`/dich-vu`);
             } else {
-                router.push(
-                    `/mau-nha/${params.type ? params.type : 'mac-dinh'}/${
-                        params.title
-                    }`,
-                );
+                router.push(`/du-an-da-lam/${params.slug}`);
             }
         };
         return (
@@ -624,7 +618,7 @@ const AllHomeTemplate = () => {
                         modules={[EffectCards]}
                     >
                         {params.dummyData.map((_item, _index) => (
-                            <SwiperSlide>
+                            <SwiperSlide key={_index}>
                                 <Image
                                     src={_item.linkImage}
                                     alt='Errow while display image'
@@ -699,6 +693,7 @@ const AllHomeTemplate = () => {
                                         (_item) => _item.type == 'nha_5_gian',
                                     ),
                                     title: 'Nhà 5 gian',
+                                    slug: 'nha-5-gian',
                                 }}
                             />
                         </div>
@@ -713,6 +708,7 @@ const AllHomeTemplate = () => {
                                         (_item) => _item.type == 'cong_go',
                                     ),
                                     title: 'Cổng gỗ',
+                                    slug: 'cong-go',
                                 }}
                             />
                         </div>
@@ -727,6 +723,7 @@ const AllHomeTemplate = () => {
                                         (_item) => _item.type == 'do_tho',
                                     ),
                                     title: 'Đồ thờ',
+                                    slug: 'do-tho',
                                 }}
                             />
                         </div>
@@ -741,6 +738,7 @@ const AllHomeTemplate = () => {
                                         (_item) => _item.type == 'nha_3_gian',
                                     ),
                                     title: 'Nhà 3 gian',
+                                    slug: 'nha-3-gian',
                                 }}
                             />
                         </div>
@@ -756,6 +754,7 @@ const AllHomeTemplate = () => {
                                             _item.type == 'nha_8_mai_co_dien',
                                     ),
                                     title: 'Nhà 8 mái cổ điển',
+                                    slug: 'nha-8-mai-co-dien',
                                 }}
                             />
                         </div>
@@ -770,6 +769,7 @@ const AllHomeTemplate = () => {
                                         (_item) => _item.type == 'nha_cau',
                                     ),
                                     title: 'Nhà cầu',
+                                    slug: 'nha-cau',
                                 }}
                             />
                         </div>
@@ -784,6 +784,7 @@ const AllHomeTemplate = () => {
                                         (_item) => _item.type == 'nha_luc_giac',
                                     ),
                                     title: 'Nhà lục giác',
+                                    slug: 'nha-luc-giac',
                                 }}
                             />
                         </div>
@@ -798,6 +799,7 @@ const AllHomeTemplate = () => {
                                         (_item) => _item.type == 'noi_that',
                                     ),
                                     title: 'Nội thất',
+                                    slug: 'noi-that',
                                 }}
                             />
                         </div>
