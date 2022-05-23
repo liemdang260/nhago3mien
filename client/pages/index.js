@@ -28,13 +28,13 @@ const images = ['/main-banner1.jpg', '/main-banner2.jpg', '/main-banner3.jpg'];
 const LibraryData = [
     {
         id: 1,
-        title: 'Đức Tràm',
+        title: 'Đúc chạm',
         codeProduct: '1245D5',
         linkImage: '/images/Avata_thu_vien_tu_lieu/1.jpg',
     },
     {
         id: 2,
-        title: 'Đồ thờ',
+        title: 'Hoàn thành',
         codeProduct: '1245D5',
         linkImage: '/images/Avata_thu_vien_tu_lieu/2.jpg',
     },
@@ -52,14 +52,14 @@ const LibraryData = [
     },
     {
         id: 5,
-        title: 'Sám gỗ',
+        title: 'Sàm gỗ',
         codeProduct: '12345A',
         linkImage: '/images/Avata_thu_vien_tu_lieu/5.jpg',
         type: 'nhaGoCoTruyen',
     },
     {
         id: 6,
-        title: 'Vần chuyển đến công trình',
+        title: 'Vận chuyển đến công trình',
         codeProduct: '12345A',
         linkImage: '/images/Avata_thu_vien_tu_lieu/6.jpg',
         type: 'nhaGoCoTruyen',

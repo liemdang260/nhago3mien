@@ -72,6 +72,26 @@ const navTitle = [
         ],
     },
     {
+        link: '/thu-vien-tu-lieu',
+        title: 'THƯ VIỆN TƯ LIỆU',
+        isDropdown: true,
+        clickableOnMobile: false,
+        dropDownContent: [
+            { title: 'ĐỤC CHẠM', link: '/thu-vien-tu-lieu/duc-cham' },
+            { title: 'HOÀN THÀNH', link: '/thu-vien-tu-lieu/hoan-thanh' },
+            { title: 'LẮP DỰNG', link: '/thu-vien-tu-lieu/lap-dung' },
+            { title: 'NHẬP GỖ', link: '/thu-vien-tu-lieu/nhap-go' },
+            {
+                title: 'SÀM GỖ',
+                link: '/thu-vien-tu-lieu/sam-go',
+            },
+            {
+                title: 'VẬN CHUYỂN ĐẾN CÔNG TRÌNH',
+                link: '/thu-vien-tu-lieu/van-chuyen-den-cong-trinh',
+            },
+        ],
+    },
+    {
         link: '/dich-vu',
         title: 'DỊCH VỤ',
         isDropdown: true,
