@@ -44,8 +44,8 @@ const navTitle = [
         clickableOnMobile: true,
     },
     {
-        link: '/gioi-thieu',
-        title: 'GIỚI THIỆU',
+        link: '/quy-trinh-phat-trien-du-an',
+        title: 'QUY TRÌNH PHÁT TRIỂN DỰ ÁN',
         isDropdown: false,
         clickableOnMobile: true,
     },
@@ -260,7 +260,7 @@ export default function Header() {
                 </div>
             </div>
             <nav className='bg-primary-color'>
-                <ul className='container text-white sm:px-0 md:px-12 lg:px-28 hidden md:flex'>
+                <ul className='container text-white  hidden md:flex'>
                     {navTitle &&
                         navTitle.map((title, i) => (
                             <li
@@ -319,7 +319,9 @@ export default function Header() {
                     </button>
                     <div
                         className={`fixed left-0 right-0 bottom-0 top-[89px] bg-primary-color z-[1000] text-white duration-500 ease-out translate-y-full ${
-                            openMobileMenu ? 'translate-y-0 opacity-100' : ''
+                            openMobileMenu
+                                ? 'translate-y-0 opacity-100'
+                                : 'translate-y-full opacity-0'
                         }`}
                     >
                         <ul>

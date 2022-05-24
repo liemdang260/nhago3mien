@@ -84,13 +84,17 @@ const Step = ({ step, title, imgLink, alt }) => {
 };
 const Introduction = () => {
     return (
-        <NewsWrapper pathname={{ title: 'Giới Thiệu', link: '/gioi-thieu' }}>
-            <h2 className='font-bold text-xl text-primary-color'>
+        <NewsWrapper
+            pathname={{
+                title: 'Quy trình phát triển dự án',
+                link: '/quy-trinh-phat-trien-du-an',
+            }}
+        >
+            <h2 className='font-black py-4 text-xl text-center text-primary-color'>
                 Quy trình phát triển một dự án
             </h2>
-            <br />
             <div className='border-2 p-3 text-sm'>
-                <p className='text-base'>Các Công đoạn triển khai Công trình</p>
+                <p className='text-lg'>Các công đoạn triển khai Công trình</p>
                 <div className='flex justify-around flex-wrap'>
                     {data.map((d, index) => {
                         return (
@@ -110,3 +114,4 @@ const Introduction = () => {
 };
 
 export default Introduction;
+

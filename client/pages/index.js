@@ -162,7 +162,7 @@ export default function Home() {
                 </video>
             </div>
             {/* begin::Banner */}
-            <div className='brightness-75'>
+            <div className='md:brightness-50'>
                 <Swiper
                     modules={[Navigation, Pagination, Autoplay]}
                     slidesPerView={1}
