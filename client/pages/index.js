@@ -225,6 +225,7 @@ export default function Home() {
                                     link: '',
                                     linkImage: _item.linkImage,
                                     mode: 'dich-vu',
+                                    link: _item.link,
                                 }}
                             />
                         </div>
