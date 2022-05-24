@@ -19,20 +19,16 @@ import { useRouter } from 'next/router';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 export const Services = [
     {
-        title: 'THIẾT KẾ VÀ THI CÔNG NHÀ GỖ',
-        link: '/dich-vu/thiet-ke-va-thi-cong-nha-go',
+        title: 'TƯ VẤN, THIẾT KẾ NHÀ GỖ',
+        link: '/dich-vu/tu-van-thiet-ke-nha-go',
+    },
+    {
+        title: 'THI CÔNG NHÀ GỖ',
+        link: '/dich-vu/thi-cong-nha-go',
     },
     {
         title: 'THIẾT KẾ, THI CÔNG NỘI THẤT',
-        link: '/dich-vu/thiet-ke-va-thi-cong-noi-that',
-    },
-    {
-        title: 'THIẾT KẾ, THI CÔNG KHÔNG GIAN THỜ',
-        link: '/dich-vu/thiet-ke-va-thi-cong-khong-gian-tho',
-    },
-    {
-        title: 'CUNG CẤP ĐỒ GỖ THÀNH PHẨM',
-        link: '/dich-vu/cung-cap-do-go-thanh-pham',
+        link: '/dich-vu/thiet-ke-thi-cong-noi-that',
     },
 ];
 
