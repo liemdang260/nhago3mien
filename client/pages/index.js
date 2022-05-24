@@ -127,11 +127,11 @@ const ServicesData = [
     },
     {
         id: 2,
-        title: 'Thi công',
+        title: 'Thi công nhà gỗ',
         description:
             'Sau khi chốt ý tưởng, thống nhất với khách hàng về thiết kế, chúng tôi tiến hành các bước trong thi công ...',
         linkImage: '/images/Avata_dich_vu/2.jpg',
-        link: 'thi-cong',
+        link: 'thi-cong-nha-go',
     },
     {
         id: 3,
