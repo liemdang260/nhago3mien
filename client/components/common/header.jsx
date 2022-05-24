@@ -28,7 +28,7 @@ export const Services = [
     },
     {
         title: 'THIẾT KẾ, THI CÔNG NỘI THẤT',
-        link: '/dich-vu/thiet-ke-thi-cong-noi-that',
+        link: '/dich-vu/thiet-ke-va-thi-cong-noi-that',
     },
 ];
 
