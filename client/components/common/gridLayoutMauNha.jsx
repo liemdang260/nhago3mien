@@ -139,6 +139,7 @@ const GridLayoutMauNha = ({
                                     description: item.description || '',
                                     linkImage: item.linkImage,
                                     mode: mode,
+                                    link: item.link,
                                 }}
                             />
                         </SwiperSlide>
