@@ -109,7 +109,7 @@ const GridLayoutMauNha = ({
                 slidesPerView={1}
                 spaceBetween={20}
                 autoplay={{ delay: 3000, disableOnInteraction: false }}
-                loop={true}
+                loop={`${mode == 'service' ? false : true}`}
                 pagination={
                     hasPagination && {
                         clickable: true,
