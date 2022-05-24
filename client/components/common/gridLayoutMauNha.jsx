@@ -12,15 +12,7 @@ const Item = ({ params }) => {
 
     const handleClickItem = () => {
         // router.push()
-        if (params.mode == 'service') {
-            router.push(`/dich-vu`);
-        } else {
-            router.push(
-                `/mau-nha/${params.type ? params.type : 'mac-dinh'}/${
-                    params.title
-                }`,
-            );
-        }
+        router.push(`/${params.mode}/${params.link}`);
     };
     return (
         <div onClick={handleClickItem} className='h-full'>
