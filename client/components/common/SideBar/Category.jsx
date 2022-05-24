@@ -17,7 +17,7 @@ function Category({ title = '', data = datas, activePath }) {
                 {data.map((d, index) => (
                     <li
                         key={index}
-                        className={`p-2 my-2 text-[8px] md:text-[12px] lg:text-[16px] border-[1px] border-primary-color rounded-md font-bold ${
+                        className={`my-2 text-[8px] md:text-[12px] lg:text-[16px] border-[1px] border-primary-color rounded-md font-bold ${
                             activePath !== d.link ? 'hover:text-red-600' : ''
                         } text-primary-color duration-200 ${
                             activePath === d.link
@@ -25,9 +25,14 @@ function Category({ title = '', data = datas, activePath }) {
                                 : ''
                         }`}
                     >
-                        <FontAwesomeIcon icon={faCaretRight} className='mr-3' />
-                        <Link href={d.link}>
-                            <a>{d.title}</a>
+                        <Link href={d.link} passHref>
+                            <div className='p-2 cursor-pointer'>
+                                <FontAwesomeIcon
+                                    icon={faCaretRight}
+                                    className='mr-3'
+                                />
+                                <span className=''>{d.title}</span>
+                            </div>
                         </Link>
                     </li>
                 ))}

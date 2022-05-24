@@ -10,9 +10,25 @@ import fs from 'fs';
 import path from 'path';
 import Album from 'components/common/Album';
 import references from 'constants/thu-vien-tu-lieu';
+import Breadcrumb from 'components/common/SideBar/Breadcrumb';
 
-function ReferencesAlbum({ data, title }) {
-    return <Album title={title} data={data} />;
+function ReferencesAlbum({ data, title, slug }) {
+    return (
+        <>
+            <div className='col-span-12 border-b-[1px] border-gray-300 py-4 container'>
+                <Breadcrumb
+                    location={[
+                        { title: 'Trang chủ', link: '/' },
+                        {
+                            title,
+                            link: slug + '',
+                        },
+                    ]}
+                />
+            </div>
+            <Album title={title} data={data} />
+        </>
+    );
 }
 export default ReferencesAlbum;
 
@@ -52,6 +68,7 @@ export async function getStaticProps(context) {
         props: {
             data,
             title: references[params.tulieuID],
+            slug: params.tulieuID,
         },
     };
 }

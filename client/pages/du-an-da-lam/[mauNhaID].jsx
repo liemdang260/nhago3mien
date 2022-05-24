@@ -9,9 +9,25 @@ import projects from 'constants/du-an-da-lam';
 import fs from 'fs';
 import path from 'path';
 import Album from 'components/common/Album';
+import Breadcrumb from 'components/common/SideBar/Breadcrumb';
 
-function DetailHomeTemplate({ data, title }) {
-    return <Album title={title} data={data} />;
+function DetailHomeTemplate({ data, title, slug }) {
+    return (
+        <>
+            <div className='col-span-12 border-b-[1px] border-gray-300 py-4 container'>
+                <Breadcrumb
+                    location={[
+                        { title: 'Trang chủ', link: '/' },
+                        {
+                            title,
+                            link: slug + '',
+                        },
+                    ]}
+                />
+            </div>
+            <Album title={title} data={data} />
+        </>
+    );
 }
 export default DetailHomeTemplate;
 
@@ -51,6 +67,7 @@ export async function getStaticProps(context) {
         props: {
             data,
             title: projects[params.mauNhaID],
+            slug: params.mauNhaID,
         },
     };
 }

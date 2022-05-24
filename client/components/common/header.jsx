@@ -179,7 +179,6 @@ export default function Header() {
                         alt='logo website'
                         width={170.6666}
                         height={148.6666}
-                        loading='lazy'
                     />
                 </div>
                 <div className='sm:block md:text-[1.475rem] lg:w-[550px]  xl:text-[1.625rem] px-3 hidden text-[1.375rem] self-center'>

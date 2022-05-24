@@ -247,12 +247,18 @@ class Album extends React.Component {
                             margin: 0 auto;
                             height: 362px;
                         }
+                        .featured-slide {
+                            height: 450px;
+                        }
                         @media screen and (min-width: 576px){
+                            .featured-slide {
+                                height: 550px;
+                            }
                             .video-slide {                               
                                 height: 432px;
                             }
                         }
-                        @media screen and (min-width: 768px){     
+                        @media screen and (min-width: 768px){                            
                             .video-slide {                                
                                 height: 575px;
                             }

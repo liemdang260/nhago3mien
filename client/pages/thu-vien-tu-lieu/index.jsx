@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCards } from 'swiper';
+import Breadcrumb from 'components/common/SideBar/Breadcrumb';
 
 const dummyData2 = [
     {
@@ -235,8 +236,19 @@ const References = () => {
 
     return (
         <div className='mb-6'>
-            <div className='pl-4 pt-4 pr-4 container'>
-                <div className='w-full flex justify-between'>
+            <div className='pl-4 pr-4 container'>
+                <div className='col-span-12 border-b-[1px] border-gray-300 py-4'>
+                    <Breadcrumb
+                        location={[
+                            { title: 'Trang chủ', link: '/' },
+                            {
+                                title: 'Thư viện tư liệu',
+                                link: 'thu-vien-tu-lieu',
+                            },
+                        ]}
+                    />
+                </div>
+                {/* <div className='w-full flex justify-between'>
                     <div className='mt-2'>
                         <span
                             onClick={() => setGridLayout(true)}
@@ -255,7 +267,10 @@ const References = () => {
                             <FontAwesomeIcon icon={faBars} size='lg' />
                         </span>
                     </div>
-                </div>
+                </div> */}
+                <h2 className='text-primary-color font-black text-2xl text-center py-8'>
+                    Thư viện tư liệu
+                </h2>
                 <motion.div
                     layout
                     initial={{ translateX: -100 }}
