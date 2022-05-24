@@ -1,5 +1,5 @@
 // import { useState, useEffect } from 'react';
-import GridLayoutMauNha from 'components/common/gridLayoutMauNha';
+import GridLayoutMauNha, { Item } from 'components/common/gridLayoutMauNha';
 // import Posts from 'components/home/Posts';
 // import Services from 'components/home/Services';
 import Head from 'next/head';
@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper';
 import Commit from 'components/home/Commit';
 import Trait from 'components/home/Trait';
+import Title from 'components/common/Title';
 // import mauNhaGoCoTruyen from '/images/mau-nha-co-truyen.Mau-nha-go-kieu-Hue.jpg';
 // import mauNhaGoCoTruyen2 from '/images/mau-nha-co-truyen.Mau-nha-ruong-hue.jpg';
 // import mauNhaGoCoTruyen3 from '/images/mau-nha-co-truyen.Mau-nha-ruong-hue.jpg';
@@ -126,21 +127,21 @@ const ServicesData = [
         id: 1,
         title: 'Tư vấn và thiết kế nhà gỗ',
         description:
-            'Chúng tôi cung cấp dịch vụ thiết kế tận tâm đến khách hàn',
+            'Chúng tôi cung cấp dịch vụ thiết kế tận tâm đến khách hàng. Với quy trình phát triển dự án rõ ràng chúng tôi mong muốn mang lại chất lượng tốt nhất ...',
         linkImage: '/images/Avata_dich_vu/1.jpg',
     },
     {
         id: 2,
         title: 'Thi công',
         description:
-            'Sau khi chốt ý tưởng, thống nhất với khách hàng về thiết kế, chúng tôi tiến hành các bước trong thi công',
+            'Sau khi chốt ý tưởng, thống nhất với khách hàng về thiết kế, chúng tôi tiến hành các bước trong thi công ...',
         linkImage: '/images/Avata_dich_vu/2.jpg',
     },
     {
         id: 3,
         title: 'Thiết kế và thi công nội thất',
         description:
-            'Thiết kế thi công nội thất theo yêu cầu của khách hàng là một trong những dịch vụ cốt lõi của Nhà Gỗ Ba Miền chúng tôi',
+            'Thiết kế thi công nội thất theo yêu cầu của khách hàng là một trong những dịch vụ cốt lõi của Nhà Gỗ Ba Miền chúng tôi ...',
         linkImage: '/images/Avata_dich_vu/3.jpg',
     },
 ];
@@ -213,11 +214,24 @@ export default function Home() {
 
             {/* begin:Dichvucungcap */}
             <div className='bg-sub-background-color py-10'>
-                <GridLayoutMauNha
-                    title='Dịch vụ cung cấp'
-                    data={ServicesData}
-                    mode='service'
-                />
+                <Title title='Dịch vụ cung cấp' />
+                <div className='flex flex-col sm:flex-row justify-between items-center h-[300] w-full lg:w-3/4 m-auto'>
+                    {ServicesData.map((_item, _index) => (
+                        <div
+                            key={_index}
+                            className='h-[350px] w-full sm:w-[500px] mx-[15px] mt-[50px] '
+                        >
+                            <Item
+                                params={{
+                                    title: _item.title,
+                                    codeProduct: _item.codeProduct || '',
+                                    description: _item.description || '',
+                                    linkImage: _item.linkImage,
+                                }}
+                            />
+                        </div>
+                    ))}
+                </div>
             </div>
             {/* end::Dichvucungcap */}
             {/* Begin::Motsomaunha */}
