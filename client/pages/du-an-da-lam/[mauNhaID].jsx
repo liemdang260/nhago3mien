@@ -49,20 +49,73 @@ export async function getStaticProps(context) {
     const files = fs.readdirSync(
         path.join('public', 'du_an_da_lam', params.mauNhaID),
     );
-    const data = files
-        .filter((filename) => !filename.includes('.mp4'))
-        .map((filename, index) => ({
-            original: `/du_an_da_lam/${params.mauNhaID}/${filename}`,
-            thumbnail: `/du_an_da_lam/${params.mauNhaID}/${filename}`,
-            embedUrl: filename.includes('.mp4')
-                ? `/du_an_da_lam/${params.mauNhaID}/${filename}`
-                : '',
-            thumbnailClass: filename.includes('.mp4')
-                ? 'video-featured-thumb'
-                : '',
-            originalClass: 'featured-slide',
-            thumbnailClass: 'featured-thumb',
-        }));
+    const renderVideo = (item) => {
+        return (
+            <div>
+                {/* {item.isVideo ? ( */}
+                <div className='video-wrapper'>
+                    {/* <a
+                        className='close-video'
+                        onClick={this._toggleShowVideo.bind(
+                            this,
+                            item.embedUrl,
+                        )}
+                    ></a> */}
+                    <video
+                        autoPlay={true}
+                        loop={true}
+                        muted={true}
+                        id='videoPlay'
+                        className='video-slide'
+                        controls
+                    >
+                        <source src={item.embedUrl} />
+                    </video>
+                </div>
+                {/* ) : (
+                    <a
+                        onClick={this._toggleShowVideo.bind(
+                            this,
+                            item.embedUrl,
+                        )}
+                    >
+                        <div className='play-button'></div>
+                        <Image
+                            className='image-gallery-image'
+                            src={item.original}
+                            alt='Hinh mau nha'
+                            width={906}
+                            height={680}
+                            loading='lazy'
+                        />
+                        {item.description && (
+                            <span
+                                className='image-gallery-description'
+                                style={{ right: '0', left: 'initial' }}
+                            >
+                                {item.description}
+                            </span>
+                        )}
+                    </a>
+                )} */}
+            </div>
+        );
+    };
+    const data = files.map((filename, index) => ({
+        id: index,
+        original: `/du_an_da_lam/${params.mauNhaID}/${filename}`,
+        thumbnail: filename.includes('.mp4')
+            ? '/images/placeholderThumbnail.jpeg'
+            : `/du_an_da_lam/${params.mauNhaID}/${filename}`,
+        embedUrl: filename.includes('.mp4')
+            ? `/du_an_da_lam/${params.mauNhaID}/${filename}`
+            : '',
+        thumbnailClass: filename.includes('.mp4')
+            ? 'video-featured-thumb'
+            : 'featured-thumb',
+        originalClass: filename.includes('.mp4') ? '' : 'featured-slide',
+        isVideo: filename.includes('.mp4'),
+    }));
     return {
         props: {
             data,

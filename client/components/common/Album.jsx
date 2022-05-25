@@ -14,6 +14,7 @@ class Album extends React.Component {
             slideInterval: 3000,
             slideOnThumbnailOver: false,
             showVideo: {},
+            currentIndex: 0,
         };
 
         // this.images = [
@@ -21,7 +22,7 @@ class Album extends React.Component {
         //         original: `/du_an_da_lam/cong-go/1.jpg`,
         //         thumbnail: `/du_an_da_lam/cong-go/1.jpg`,
         //         embedUrl: '/video.mp4',
-        //         renderItem: this._renderVideo.bind(this),
+        //         renderItem: this._renderVideo,
         //         thumbnailClass: 'video-featured-thumb',
         //         // description: 'Render custom slides (such as videos)',
         //     },
@@ -30,6 +31,7 @@ class Album extends React.Component {
         //         thumbnail: `/du_an_da_lam/cong-go/2.jpg`,
         //         originalClass: 'featured-slide',
         //         thumbnailClass: 'featured-thumb',
+        //         renderItem: null,
         //         // description: 'Custom class for slides & thumbnails',
         //     },
         // ].concat(this._getStaticImages());
@@ -37,7 +39,7 @@ class Album extends React.Component {
     }
 
     _onImageClick(event) {
-        console.debug(
+        console.log(
             'clicked on image',
             event.target,
             'at index',
@@ -46,26 +48,36 @@ class Album extends React.Component {
     }
 
     _onImageLoad(event) {
-        console.debug('loaded image', event.target.src);
+        // console.log('loaded image', event.target.src);
     }
 
     _onSlide(index) {
         this._resetVideo();
-        console.debug('slid to index', index);
-        // console.log();
-        // console.log(index);
+        console.log('slid to index', index);
+        this.setState((preState) => {
+            const videoRef = document.getElementById(
+                'videoPlay' + preState.currentIndex,
+            );
+            if (videoRef) {
+                videoRef.pause();
+            }
+            return {
+                ...preState,
+                currentIndex: index,
+            };
+        });
     }
 
     _onPause(index) {
-        console.debug('paused on index', index);
+        console.log('paused on index', index);
     }
 
     _onScreenChange(fullScreenElement) {
-        console.debug('isFullScreen?', !!fullScreenElement);
+        console.log('isFullScreen?', !!fullScreenElement);
     }
 
     _onPlay(index) {
-        console.debug('playing from index', index);
+        console.log('playing from index', index);
     }
 
     _handleInputChange(state, event) {
@@ -112,52 +124,25 @@ class Album extends React.Component {
     _renderVideo(item) {
         return (
             <div>
-                {/* {item.isVideo ? ( */}
                 <div className='video-wrapper'>
-                    <a
+                    {/* <a
                         className='close-video'
                         onClick={this._toggleShowVideo.bind(
                             this,
                             item.embedUrl,
                         )}
-                    ></a>
+                    ></a> */}
                     <video
                         autoPlay={true}
                         loop={true}
                         muted={true}
-                        id='videoPlay'
+                        id={'videoPlay' + item.id}
                         className='video-slide'
                         controls
                     >
                         <source src={item.embedUrl} />
                     </video>
                 </div>
-                {/* ) : (
-                    <a
-                        onClick={this._toggleShowVideo.bind(
-                            this,
-                            item.embedUrl,
-                        )}
-                    >
-                        <div className='play-button'></div>
-                        <Image
-                            className='image-gallery-image'
-                            src={item.original}
-                            alt='Hinh mau nha'
-                            width={906}
-                            height={680}
-                            loading='lazy'
-                        />
-                        {item.description && (
-                            <span
-                                className='image-gallery-description'
-                                style={{ right: '0', left: 'initial' }}
-                            >
-                                {item.description}
-                            </span>
-                        )}
-                    </a>
-                )} */}
             </div>
         );
     }
@@ -175,6 +160,14 @@ class Album extends React.Component {
         return images;
     }
     render() {
+        const itemData =
+            this.props?.data.map((item) => {
+                return {
+                    ...item,
+                    renderItem: item.isVideo ? this._renderVideo : null,
+                };
+            }) || [];
+
         return (
             <section className='app'>
                 <div className='my-5'>
@@ -183,7 +176,7 @@ class Album extends React.Component {
                 <div className='container px-4'>
                     <ImageGallery
                         ref={(i) => (this._imageGallery = i)}
-                        items={this.props.data}
+                        items={itemData}
                         onClick={this._onImageClick.bind(this)}
                         onImageLoad={this._onImageLoad}
                         onSlide={this._onSlide.bind(this)}

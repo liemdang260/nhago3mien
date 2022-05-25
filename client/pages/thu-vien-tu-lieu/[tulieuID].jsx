@@ -50,20 +50,21 @@ export async function getStaticProps(context) {
     const files = fs.readdirSync(
         path.join('public', 'thu-vien-tu-lieu', params.tulieuID),
     );
-    const data = files
-        .filter((filename) => !filename.includes('.mp4'))
-        .map((filename, index) => ({
-            original: `/thu-vien-tu-lieu/${params.tulieuID}/${filename}`,
-            thumbnail: `/thu-vien-tu-lieu/${params.tulieuID}/${filename}`,
-            embedUrl: filename.includes('.mp4')
-                ? `/thu-vien-tu-lieu/${params.tulieuID}/${filename}`
-                : '',
-            thumbnailClass: filename.includes('.mp4')
-                ? 'video-featured-thumb'
-                : '',
-            originalClass: 'featured-slide',
-            thumbnailClass: 'featured-thumb',
-        }));
+    const data = files.map((filename, index) => ({
+        id: index,
+        original: `/thu-vien-tu-lieu/${params.tulieuID}/${filename}`,
+        thumbnail: filename.includes('.mp4')
+            ? '/images/placeholderThumbnail.jpeg'
+            : `/thu-vien-tu-lieu/${params.tulieuID}/${filename}`,
+        embedUrl: filename.includes('.mp4')
+            ? `/thu-vien-tu-lieu/${params.tulieuID}/${filename}`
+            : '',
+        thumbnailClass: filename.includes('.mp4')
+            ? 'video-featured-thumb'
+            : 'featured-thumb',
+        originalClass: filename.includes('.mp4') ? '' : 'featured-slide',
+        isVideo: filename.includes('.mp4'),
+    }));
     return {
         props: {
             data,
