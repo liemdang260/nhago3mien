@@ -122,7 +122,7 @@ const ServicesData = [
         title: 'Tư vấn và thiết kế nhà gỗ',
         description:
             'Chúng tôi cung cấp dịch vụ thiết kế tận tâm đến khách hàng. Với quy trình phát triển dự án rõ ràng chúng tôi mong muốn mang lại chất lượng tốt nhất ...',
-        linkImage: '/images/Avata_dich_vu/1.jpg',
+        linkImage: '/images/Avata_dich_vu/3.jpg',
         link: 'tu-van-thiet-ke-nha-go',
     },
     {
@@ -138,14 +138,14 @@ const ServicesData = [
         title: 'Thiết kế và thi công nội thất',
         description:
             'Thiết kế thi công nội thất theo yêu cầu của khách hàng là một trong những dịch vụ cốt lõi của Nhà Gỗ Ba Miền chúng tôi ...',
-        linkImage: '/images/Avata_dich_vu/3.jpg',
+        linkImage: '/images/Avata_dich_vu/1.jpg',
         link: 'thiet-ke-va-thi-cong-noi-that',
     },
 ];
 export default function Home() {
     return (
         <div className='relative'>
-            <div className='relative md:absolute mb-2 md:mb-0 w-1/2 z-10 left-1/2 -translate-x-1/2 md:w-5/6 h-[400px]  md:flex md:justify-center lg:h-[calc(100vh_-_280px)]'>
+            <div className='relative md:absolute mb-2 md:mb-0 w-full z-10 left-1/2 -translate-x-1/2 md:w-5/6 h-[400px]  md:flex md:justify-center lg:h-[calc(100vh_-_280px)]'>
                 <video
                     autoPlay={true}
                     loop={true}
@@ -160,7 +160,7 @@ export default function Home() {
                 </video>
             </div>
             {/* begin::Banner */}
-            <div className='md:brightness-50'>
+            <div className='hidden sm:block md:brightness-50'>
                 <Swiper
                     modules={[Navigation, Pagination, Autoplay]}
                     slidesPerView={1}
