@@ -4,11 +4,12 @@ import Footer from 'components/common/footer';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { useEffect, useState } from 'react';
-import { faLongArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { faLongArrowUp, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import Script from 'next/script';
 import Head from 'next/head';
+import Link from 'next/link';
 // Swiper
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -79,19 +80,24 @@ function MyApp({ Component, pageProps, router }) {
             </div>
 
             {/*  end:::SocialMediaButton*/}
-
+            {/*  begin::phone button */}
+            <Link href='tel:0962116789' passHref>
+                <div className='phone-wrapper fixed top-28 left-16 z-50'>
+                    <div className='flex justify-center items-center'>
+                        <div className='z-50 absolute  bg-[#9BF080] p-3 rounded-full animate-pulse'>
+                            <FontAwesomeIcon
+                                icon={faPhone}
+                                color='#fff'
+                                size='2x'
+                            />
+                        </div>
+                        <div className='h-12 w-12 rounded-full absolute animate-scaling'></div>
+                        <div className='h-12 w-12 rounded-full absolute animate-[scaling_2s_linear_infinite_1s]'></div>
+                    </div>
+                </div>
+            </Link>
+            {/*  end::phone button */}
             {/* begin::ZaloButton */}
-            <div
-                className='fixed w-9 h-w-9 bottom-9 left-8 z-10'
-                style={{ transform: 'translateX(200%)' }}
-            >
-                <Image
-                    src={'/zalo.png'}
-                    alt='zalo icon'
-                    width={32}
-                    height={32}
-                />
-            </div>
             <div
                 className='zalo-chat-widget'
                 data-oaid='3764014308364109214'
