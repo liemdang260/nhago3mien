@@ -106,7 +106,7 @@ function Footer() {
                     </p>
                     <div className='hidden sm:flex -mx-3 my-5'>
                         <iframe
-                            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.94332500712235!2d106.68565172082386!3d10.804173565120054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752929eef7c3af%3A0x7d895e1a0f2e8da7!2sBIM%20Solutions%20Viet%20Nam%20JSC!5e0!3m2!1svi!2s!4v1651141887804!5m2!1svi!2s'
+                            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62705.53437710092!2d106.63766845716528!3d10.803966838364328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529891df6c3e7%3A0x797d1b1fe35dcd9d!2zQ1QgQ1AgVMavIFbhuqROIFRISeG6vlQgS-G6viBUSEkgQ8OUTkcgTkjDgCBH4buWIEJBIE1J4buATg!5e0!3m2!1svi!2s!4v1654134665962!5m2!1svi!2s'
                             width='100%'
                             className='border-none w-1/2 px-3'
                             allowFullScreen
