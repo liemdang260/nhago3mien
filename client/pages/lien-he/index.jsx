@@ -130,14 +130,12 @@ const ContactPage = () => {
                     </p>
                     <div className='flex flex-col md:flex-row -mx-3'>
                         <iframe
-                            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.89156011577015!2d106.65459986360327!3d10.86744069802732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529c2c8baf797%3A0x2ea5e9a981a6dd0d!2zNzIgxJAuIEzDqiBUaOG7iyBSacOqbmcsIFTDom4gVGjhu5tpIEFuLCBRdeG6rW4gMTIsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1651142129818!5m2!1svi!2s'
+                            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.305555999136!2d106.65815361477222!3d10.864348292261921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529c45cf9c395%3A0x67974eda959a5baf!2zMzA1LCAzNSBUQTI4LCBUw6JuIFRo4bubaSBBbiwgUXXhuq1uIDEyLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1653400777791!5m2!1svi!2s'
                             width='100%'
-                            height='220px'
                             className='border-none w-1/2 px-3'
                             allowFullScreen
                             loading='lazy'
                             referrerPolicy='no-referrer-when-downgrade'
-                            style={{ width: '100%' }}
                         ></iframe>
                         <div className='w-full md:w-1/2 border-1 mt-5 md:mt-1/2 lg:mt-0'>
                             <Image
