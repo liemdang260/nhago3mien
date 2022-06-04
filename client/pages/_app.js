@@ -22,6 +22,11 @@ import 'react-image-gallery/styles/css/image-gallery.css';
 
 //Animation on scrolling
 import 'animate.css';
+import {
+    faFacebookSquare,
+    faYoutube,
+    faYoutubeSquare,
+} from '@fortawesome/free-brands-svg-icons';
 config.autoAddCss = false;
 
 function MyApp({ Component, pageProps, router }) {
@@ -62,24 +67,28 @@ function MyApp({ Component, pageProps, router }) {
             </button>
             {/* end::ScrollToTop */}
             {/* begin::SocialMediaButton */}
-            <div className='fixed w-9 h-w-9 bottom-9 left-8 z-10'>
-                <Image
-                    src={'/youtube.png'}
-                    alt='zalo icon'
-                    width={32}
-                    height={32}
+            <a
+                href='https://m.facebook.com/110707611644240/'
+                target='_blank'
+                className='fixed z-10 bottom-10 left-5  bg-white'
+            >
+                <FontAwesomeIcon
+                    icon={faFacebookSquare}
+                    color='#4267B2'
+                    size='3x'
                 />
-            </div>
-            <div className='fixed w-9 h-w-9 bottom-9 left-8  translate-x-full z-10'>
-                <Image
-                    src={'/facebooks.png'}
-                    alt='zalo icon'
-                    width={32}
-                    height={32}
+            </a>
+            <a
+                href='https://youtube.com/channel/UCXw1ZjGS13Rgjoc2wNlBrrA'
+                target='_blank'
+                className='fixed z-10 bottom-10 left-8 translate-x-full bg-white'
+            >
+                <FontAwesomeIcon
+                    icon={faYoutubeSquare}
+                    color='#FF0000'
+                    size='3x'
                 />
-            </div>
-
-            {/*  end:::SocialMediaButton*/}
+            </a>
             {/*  begin::phone button */}
             <Link href='tel:0962116789' passHref>
                 <div className='phone-wrapper fixed top-28 left-16 z-50'>
@@ -107,7 +116,6 @@ function MyApp({ Component, pageProps, router }) {
                 data-height=''
             ></div>
             {/* end::ZaloButton */}
-
             <Head>
                 <title>Nhà gỗ Ba miền</title>
                 <meta
