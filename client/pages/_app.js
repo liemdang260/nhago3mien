@@ -67,28 +67,30 @@ function MyApp({ Component, pageProps, router }) {
             </button>
             {/* end::ScrollToTop */}
             {/* begin::SocialMediaButton */}
-            <a
+            <Link
                 href='https://m.facebook.com/110707611644240/'
                 target='_blank'
-                className='fixed z-10 bottom-10 left-5  bg-white'
             >
-                <FontAwesomeIcon
-                    icon={faFacebookSquare}
-                    color='#4267B2'
-                    size='3x'
-                />
-            </a>
-            <a
+                <a className='fixed z-10 bottom-10 left-5  bg-white'>
+                    <FontAwesomeIcon
+                        icon={faFacebookSquare}
+                        color='#4267B2'
+                        size='3x'
+                    />
+                </a>
+            </Link>
+            <Link
                 href='https://youtube.com/channel/UCXw1ZjGS13Rgjoc2wNlBrrA'
                 target='_blank'
-                className='fixed z-10 bottom-10 left-8 translate-x-full bg-white'
             >
-                <FontAwesomeIcon
-                    icon={faYoutubeSquare}
-                    color='#FF0000'
-                    size='3x'
-                />
-            </a>
+                <a className='fixed z-10 bottom-10 left-8 translate-x-full bg-white'>
+                    <FontAwesomeIcon
+                        icon={faYoutubeSquare}
+                        color='#FF0000'
+                        size='3x'
+                    />
+                </a>
+            </Link>
             {/*  begin::phone button */}
             <Link href='tel:0962116789' passHref>
                 <div className='phone-wrapper fixed top-28 left-16 z-50'>
