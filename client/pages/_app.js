@@ -143,11 +143,19 @@ function MyApp({ Component, pageProps, router }) {
                 async
                 src='https://www.googletagmanager.com/gtag/js?id=G-ER7B5SMDFQ'
             ></script>
-            <script>
-                window.dataLayer = window.dataLayer || []; function gtag()
-                {dataLayer.push(arguments)}
-                gtag('js', new Date()); gtag('config', 'G-ER7B5SMDFQ');
-            </script>
+            <script
+                id='gtag-analytic'
+                dangerouslySetInnerHTML={{
+                    __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ER7B5SMDFQ}', {
+              page_path: window.location.pathname,
+            });
+          `,
+                }}
+            />
             <Footer />
         </>
     );
