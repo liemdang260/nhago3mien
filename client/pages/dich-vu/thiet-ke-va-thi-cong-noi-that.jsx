@@ -77,7 +77,8 @@ function Furniture() {
                     <address className='text-sm md:text-lg leading-loose font-normal'>
                         Địa chỉ: 72/24 Phan Đăng Lưu, Phường 5, Quận Phú Nhuận,
                         TP.HCM. <br />
-                        Văn phòng chi nhánh: 305/35 TA28, Quận 12, TP.HCM <br />
+                        Văn phòng chi nhánh: 305/35 Đường TA28, KP5, Quận 12,
+                        TP.HCM <br />
                         Xưởng: Thôn Hà Thái, Xã Hoằng Hà, Huyện Hoằng Hóa, Tỉnh
                         Thanh Hóa. <br />
                         Điện thoại:{' '}
