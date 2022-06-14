@@ -141,9 +141,10 @@ function MyApp({ Component, pageProps, router }) {
             <Header />
             <Component {...pageProps} router={router} />
             <Script defer src='https://sp.zalo.me/plugins/sdk.js'></Script>
+
             <script
                 async
-                src='https://www.googletagmanager.com/gtag/js?id=G-ER7B5SMDFQ'
+                src='https://www.googletagmanager.com/gtag/js?id=AW-10932546613'
             ></script>
             <script
                 id='gtag-analytic'
@@ -152,7 +153,7 @@ function MyApp({ Component, pageProps, router }) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-ER7B5SMDFQ}', {
+            gtag('config', 'AW-10932546613}', {
               page_path: window.location.pathname,
             });
           `,
