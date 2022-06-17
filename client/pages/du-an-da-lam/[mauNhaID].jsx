@@ -49,24 +49,7 @@ export async function getStaticProps(context) {
     const files = fs.readdirSync(
         path.join('public', 'du_an_da_lam', params.mauNhaID),
     );
-    const renderVideo = (item) => {
-        return (
-            <div>
-                <div className='video-wrapper'>
-                    <video
-                        autoPlay={true}
-                        loop={true}
-                        muted={true}
-                        id='videoPlay'
-                        className='video-slide'
-                        controls
-                    >
-                        <source src={item.embedUrl} />
-                    </video>
-                </div>
-            </div>
-        );
-    };
+
     const addDescription = (title) => {
         let description = '';
         switch (title) {

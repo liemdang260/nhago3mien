@@ -6,7 +6,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import { useEffect, useState } from 'react';
 import { faLongArrowUp, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Image from 'next/image';
+// import Image from 'next/image';
 import Script from 'next/script';
 import Head from 'next/head';
 import Link from 'next/link';

@@ -124,13 +124,6 @@ class Album extends React.Component {
         return (
             <div>
                 <div className='video-wrapper'>
-                    {/* <a
-                        className='close-video'
-                        onClick={this._toggleShowVideo.bind(
-                            this,
-                            item.embedUrl,
-                        )}
-                    ></a> */}
                     <video
                         autoPlay={true}
                         loop={true}
