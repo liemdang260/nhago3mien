@@ -26,7 +26,7 @@ const additionalData = [
     },
     {
         title: 'Văn phòng chi nhánh',
-        data: '305/35 TA28, Quận 12, TP.HCM',
+        data: '305/24 Đường TA28, KP5, Quận 12, TP.HCM',
         icon: faLocationDot,
         linkImage: '/images/hinh-anh-chi-nhanh.jpg',
     },

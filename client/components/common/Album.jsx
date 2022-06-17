@@ -53,7 +53,6 @@ class Album extends React.Component {
 
     _onSlide(index) {
         this._resetVideo();
-        console.log('slid to index', index);
         this.setState((preState) => {
             const videoRef = document.getElementById(
                 'videoPlay' + preState.currentIndex,
