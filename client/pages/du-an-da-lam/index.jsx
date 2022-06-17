@@ -1,6 +1,6 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useRouter } from 'next/router';
-import { faListSquares, faBars } from '@fortawesome/free-solid-svg-icons';
+// import { faListSquares, faBars } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -231,6 +231,8 @@ const dummyData2 = [
     {
         type: 'cong_go',
         linkImage: '/du_an_da_lam/cong-go/1.jpg',
+        description:
+            'Cần một cổng gỗ cho lối vào của bạn? Hãy chọn ngay cửa cổng gỗ tốt nhất từ Nhagobamien.vn chuyên cung cấp các loại cổng gỗ chất lượng cao với giá thành hợp lý nhất!',
     },
     {
         type: 'cong_go',
@@ -343,6 +345,8 @@ const dummyData2 = [
     {
         type: 'nha_8_mai_co_dien',
         linkImage: '/du_an_da_lam/nha-8-mai-co-dien/1.jpg',
+        description:
+            'Tìm ngay mẫu nhà cấp 4 mái thái cổ điển đẹp hoàn hảo tại Nhagobamien.vn. Nó giúp bạn chọn vật liệu lợp phù hợp để giúp bảo vệ ngôi nhà của bạn. Gọi cho chúng tôi ngay!',
     },
     {
         type: 'nha_8_mai_co_dien',
@@ -399,6 +403,8 @@ const dummyData2 = [
     {
         type: 'nha_luc_giac',
         linkImage: '/du_an_da_lam/nha-luc-giac/1.jpg',
+        description:
+            'Mẫu nhà gỗ hình lục giác đẹp đã có trên Nhagobamien.vn. Kiểm tra lựa chọn của chúng tôi về các thiết kế nhà lục giác để có những ngôi nhà gỗ độc đáo hoặc tùy chỉnh tốt nhất.',
     },
     {
         type: 'nha_luc_giac',
@@ -427,6 +433,8 @@ const dummyData2 = [
     {
         type: 'noi_that',
         linkImage: '/du_an_da_lam/noi-that/1.jpg',
+        description:
+            'Thiết kế và thi công nội thất theo yêu cầu của khách hàng là một trong những dịch vụ cốt lõi của Nhà Gỗ Ba Miền. Đó là Công Ty Dịch Vụ Thiết Kế Nội Thất Được Tin Cậy Nhất.',
     },
     {
         type: 'noi_that',

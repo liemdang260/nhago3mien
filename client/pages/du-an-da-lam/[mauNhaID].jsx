@@ -4,10 +4,16 @@ import fs from 'fs';
 import path from 'path';
 import Album from 'components/common/Album';
 import Breadcrumb from 'components/common/SideBar/Breadcrumb';
+import Head from 'next/head';
 
-function DetailHomeTemplate({ data, title, slug }) {
+function DetailHomeTemplate({ data, title, slug, description }) {
     return (
         <>
+            <Head>
+                <title>{title} | Nhagobamien.vn</title>
+                <meta name='description' content={description} />
+                <meta name='keyword' content={title} />
+            </Head>
             <div className='col-span-12 border-b-[1px] border-gray-300 py-4 container'>
                 <Breadcrumb
                     location={[
@@ -43,58 +49,30 @@ export async function getStaticProps(context) {
     const files = fs.readdirSync(
         path.join('public', 'du_an_da_lam', params.mauNhaID),
     );
-    const renderVideo = (item) => {
-        return (
-            <div>
-                {/* {item.isVideo ? ( */}
-                <div className='video-wrapper'>
-                    {/* <a
-                        className='close-video'
-                        onClick={this._toggleShowVideo.bind(
-                            this,
-                            item.embedUrl,
-                        )}
-                    ></a> */}
-                    <video
-                        autoPlay={true}
-                        loop={true}
-                        muted={true}
-                        id='videoPlay'
-                        className='video-slide'
-                        controls
-                    >
-                        <source src={item.embedUrl} />
-                    </video>
-                </div>
-                {/* ) : (
-                    <a
-                        onClick={this._toggleShowVideo.bind(
-                            this,
-                            item.embedUrl,
-                        )}
-                    >
-                        <div className='play-button'></div>
-                        <Image
-                            className='image-gallery-image'
-                            src={item.original}
-                            alt='Hinh mau nha'
-                            width={906}
-                            height={680}
-                            loading='lazy'
-                        />
-                        {item.description && (
-                            <span
-                                className='image-gallery-description'
-                                style={{ right: '0', left: 'initial' }}
-                            >
-                                {item.description}
-                            </span>
-                        )}
-                    </a>
-                )} */}
-            </div>
-        );
+
+    const addDescription = (title) => {
+        let description = '';
+        switch (title) {
+            case 'cong-go':
+                description =
+                    'Cần một cổng gỗ cho lối vào của bạn? Hãy chọn ngay cửa cổng gỗ tốt nhất từ Nhagobamien.vn chuyên cung cấp các loại cổng gỗ chất lượng cao với giá thành hợp lý nhất!';
+                break;
+            case 'nha-luc-giac':
+                description =
+                    'Mẫu nhà gỗ hình lục giác đẹp đã có trên Nhagobamien.vn. Kiểm tra lựa chọn của chúng tôi về các thiết kế nhà lục giác để có những ngôi nhà gỗ độc đáo hoặc tùy chỉnh tốt nhất.';
+                break;
+            case 'noi-that':
+                description =
+                    'Thiết kế và thi công nội thất theo yêu cầu của khách hàng là một trong những dịch vụ cốt lõi của Nhà Gỗ Ba Miền. Đó là Công Ty Dịch Vụ Thiết Kế Nội Thất Được Tin Cậy Nhất.';
+                break;
+            case 'nha-5-gian':
+                description =
+                    'Tìm ngôi nhà gỗ Năm gian? Nhagobamien.vn chuyên thiết kế, thi công, lắp đặt nhà gỗ và cung cấp các sản phẩm đồ gỗ với giá cả hợp lý nhất! Gọi cho chúng tôi ngay.';
+                break;
+        }
+        return description;
     };
+
     const data = files.map((filename, index) => ({
         id: index,
         original: `/du_an_da_lam/${params.mauNhaID}/${filename}`,
@@ -115,6 +93,7 @@ export async function getStaticProps(context) {
             data,
             title: projects[params.mauNhaID],
             slug: params.mauNhaID,
+            description: addDescription(params.mauNhaID),
         },
     };
 }

@@ -1,11 +1,4 @@
-//import { withRouter } from 'next/router';
-// import { Navigation, Thumbs } from 'swiper';
-// import { Swiper } from 'swiper/react';
-// import { SwiperSlide } from 'swiper/react';
-//import Image from 'next/image';
-// import Image from 'next/image';
 import React from 'react';
-import projects from 'constants/du-an-da-lam';
 import fs from 'fs';
 import path from 'path';
 import Album from 'components/common/Album';

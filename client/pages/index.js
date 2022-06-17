@@ -130,22 +130,8 @@ const ServicesData = [
 export default function Home() {
     return (
         <div className='relative'>
-            <div className='relative md:absolute mb-2 md:mb-0 w-full z-10 left-1/2 -translate-x-1/2 md:w-5/6 h-[400px]  md:flex md:justify-center lg:h-[calc(100vh_-_280px)]'>
-                <video
-                    autoPlay={true}
-                    loop={true}
-                    muted={true}
-                    className='relative h-full w-full md:w-full object-cover'
-                    id='videoPlay'
-                    // style={{
-                    //     height: 'calc(100vh - 285px)',
-                    // }}
-                >
-                    <source src='/video.mp4' />
-                </video>
-            </div>
             {/* begin::Banner */}
-            <div className='hidden sm:block md:brightness-50'>
+            <div className='hidden sm:block'>
                 <Swiper
                     modules={[Navigation, Pagination, Autoplay]}
                     slidesPerView={1}
