@@ -57,21 +57,21 @@ function MyApp({ Component, pageProps, router }) {
         <>
             {/* begin::ScrollToTop */}
             <button
-                className={`bg-primary-color w-12 h-12 rounded-full flex justify-center 
-          items-center fixed bottom-14 right-1 z-10 ${
+                className={`bg-primary-color w-11 h-11 rounded-full flex justify-center 
+          items-center fixed bottom-4 right-6 z-10 ${
               isVisible ? 'opacity-100' : 'opacity-0'
           }`}
                 onClick={() => scrollToTop()}
             >
-                <FontAwesomeIcon icon={faLongArrowUp} color='white' size='2x' />
+                <FontAwesomeIcon icon={faLongArrowUp} color='white' size='lg' />
             </button>
             {/* end::ScrollToTop */}
             {/* begin::SocialMediaButton */}
-            <Link
-                href='https://m.facebook.com/110707611644240/'
-                target='_blank'
-            >
-                <a className='fixed z-10 bottom-10 left-5  bg-white'>
+            <Link href='https://facebook.com/110707611644240/'>
+                <a
+                    className='fixed z-10 bottom-[122px] right-6 bg-white'
+                    target='_blank'
+                >
                     <FontAwesomeIcon
                         icon={faFacebookSquare}
                         color='#4267B2'
@@ -79,11 +79,11 @@ function MyApp({ Component, pageProps, router }) {
                     />
                 </a>
             </Link>
-            <Link
-                href='https://youtube.com/channel/UCXw1ZjGS13Rgjoc2wNlBrrA'
-                target='_blank'
-            >
-                <a className='fixed z-10 bottom-10 left-8 translate-x-full bg-white'>
+            <Link href='https://youtube.com/channel/UCXw1ZjGS13Rgjoc2wNlBrrA'>
+                <a
+                    className='fixed z-10 bottom-44 right-6 bg-white'
+                    target='_blank'
+                >
                     <FontAwesomeIcon
                         icon={faYoutubeSquare}
                         color='#FF0000'
@@ -108,17 +108,6 @@ function MyApp({ Component, pageProps, router }) {
                 </div>
             </Link>
             {/*  end::phone button */}
-            {/* begin::ZaloButton */}
-            <div
-                className='zalo-chat-widget'
-                data-oaid='3764014308364109214'
-                data-welcome-message='Rất vui khi được hỗ trợ bạn!'
-                data-autopopup='3'
-                data-width='50'
-                data-height='50'
-            ></div>
-
-            {/* end::ZaloButton */}
             <Head>
                 <title>
                     Nhà gỗ Truyền thống & Nguyên | Nhà thờ - Nhagobamien.vn
@@ -139,8 +128,26 @@ function MyApp({ Component, pageProps, router }) {
                     href='/logo_ng3m.jpg'
                 />
             </Head>
+            <Header />
             <Component {...pageProps} router={router} />
-
+            {/* begin::ZaloButton */}
+            <div
+                className='zalo-chat-widget'
+                data-oaid='3764014308364109214'
+                data-welcome-message='Rất vui khi được hỗ trợ bạn!'
+                data-autopopup='3'
+                data-width=''
+                data-height=''
+            ></div>
+            <style>
+                {`
+                    .zalo-chat-widget {
+                        bottom: 65px !important;
+                        right: 16px !important;
+                    }
+                `}
+            </style>
+            {/* end::ZaloButton */}
             <Script defer src='https://sp.zalo.me/plugins/sdk.js'></Script>
 
             <Script
