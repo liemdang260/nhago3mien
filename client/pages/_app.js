@@ -119,7 +119,7 @@ function MyApp({ Component, pageProps, router }) {
             ></div>
 
             {/* end::ZaloButton */}
-            {/* <Head>
+            <Head>
                 <title>
                     Nhà gỗ Truyền thống & Nguyên | Nhà thờ - Nhagobamien.vn
                 </title>
@@ -138,11 +138,12 @@ function MyApp({ Component, pageProps, router }) {
                     sizes='64x64'
                     href='/logo_ng3m.jpg'
                 />
-            </Head> */}
+            </Head>
             <Component {...pageProps} router={router} />
 
             <Script defer src='https://sp.zalo.me/plugins/sdk.js'></Script>
-            {/* <Script
+
+            <Script
                 async
                 src='https://www.googletagmanager.com/gtag/js?id=AW-10932546613'
             ></Script>
@@ -158,7 +159,7 @@ function MyApp({ Component, pageProps, router }) {
             });
           `,
                 }}
-            /> */}
+            />
             <Footer />
         </>
     );
