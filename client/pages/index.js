@@ -1,7 +1,5 @@
 // import { useState, useEffect } from 'react';
 import GridLayoutMauNha, { Item } from 'components/common/gridLayoutMauNha';
-// import Posts from 'components/home/Posts';
-// import Services from 'components/home/Services';
 import Head from 'next/head';
 import Image from 'next/image';
 import About from 'components/home/About';
@@ -10,19 +8,6 @@ import { Navigation, Pagination, Autoplay } from 'swiper';
 import Commit from 'components/home/Commit';
 import Trait from 'components/home/Trait';
 import Title from 'components/common/Title';
-// import mauNhaGoCoTruyen from '/images/mau-nha-co-truyen.Mau-nha-go-kieu-Hue.jpg';
-// import mauNhaGoCoTruyen2 from '/images/mau-nha-co-truyen.Mau-nha-ruong-hue.jpg';
-// import mauNhaGoCoTruyen3 from '/images/mau-nha-co-truyen.Mau-nha-ruong-hue.jpg';
-// import mauNhaGoCoTruyen4 from '/images/mau-nha-co-truyen.Nha-co-truyen-5-gian.jpg';
-// import mauNhaGoCoTruyen5 from '/images/mau-nha-co-truyen.Nha-go-3-gian-go-Lim.jpg';
-// import mauNhaGoCoTruyen6 from '/images/mau-nha-co-truyen.Nha-go-3-gian-kieu-Bac-Bo.jpg';
-// import mauNhaGoCoTruyen7 from '/images/mau-nha-co-truyen.Nha-go-5-gian-dep.png';
-
-// import mauNhaTuDuong from '/images/nha_tu_duong.Mau-nha-tho-co.jpg';
-// import mauNhaTuDuong2 from '/images/nha_tu_duong.Mau-nha-tho-ho-hai-mai.jpg';
-// import mauNhaTuDuong3 from '/images/nha_tu_duong.Mau-nha-tho.png';
-// import mauNhaTuDuong4 from '/images/nha_tu_duong.Mau-nha-tu-duong-bang-go-dep.png';
-// import mauNhaTuDuong5 from '/images/nha_tu_duong.Mau-nha-tu-duong-dep.jpg';
 
 const images = ['/main-banner1.jpg', '/main-banner2.jpg', '/main-banner3.jpg'];
 
