@@ -40,10 +40,11 @@ const navTitle = [
         clickableOnMobile: true,
     },
     {
-        link: '/quy-trinh-phat-trien-du-an',
-        title: 'QUY TRÌNH PHÁT TRIỂN DỰ ÁN',
-        isDropdown: false,
-        clickableOnMobile: true,
+        link: '/dich-vu',
+        title: 'DỊCH VỤ',
+        isDropdown: true,
+        dropDownContent: Services,
+        clickableOnMobile: false,
     },
     {
         link: '/du-an-da-lam',
@@ -88,11 +89,16 @@ const navTitle = [
         ],
     },
     {
-        link: '/dich-vu',
-        title: 'DỊCH VỤ',
-        isDropdown: true,
-        dropDownContent: Services,
-        clickableOnMobile: false,
+        link: '/quy-trinh-phat-trien-du-an',
+        title: 'QUY TRÌNH PHÁT TRIỂN DỰ ÁN',
+        isDropdown: false,
+        clickableOnMobile: true,
+    },
+    {
+        link: '/tin-tuc',
+        title: 'TIN TỨC',
+        isDropdown: false,
+        clickableOnMobile: true,
     },
     {
         link: '/lien-he',
