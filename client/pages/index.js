@@ -8,6 +8,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper';
 import Commit from 'components/home/Commit';
 import Trait from 'components/home/Trait';
 import Title from 'components/common/Title';
+import { projectMedia } from '../constants/du-an-da-lam';
 
 const images = ['/main-banner1.jpg', '/main-banner2.jpg', '/main-banner3.jpg'];
 
@@ -100,7 +101,6 @@ const MauNhaData = [
         link: 'noi-that',
     },
 ];
-
 const ServicesData = [
     {
         id: 1,
@@ -127,7 +127,16 @@ const ServicesData = [
         link: 'thiet-ke-va-thi-cong-noi-that',
     },
 ];
+
 export default function Home() {
+    const dataMediaService = projectMedia.filter(
+        (_item) => _item.slug == 'dich-vu-cung-cap',
+    )[0].media;
+
+    const dataMediaBannerChinh = projectMedia.filter(
+        (_item) => _item.slug == 'banner-chinh',
+    )[0].media;
+
     return (
         <div className='relative'>
             {/* begin::Banner */}
@@ -141,12 +150,12 @@ export default function Home() {
                     loop={true}
                     pagination={{ clickable: true }}
                 >
-                    {images &&
-                        images.map((value, index) => (
+                    {dataMediaBannerChinh &&
+                        dataMediaBannerChinh.map((value, index) => (
                             <SwiperSlide key={index}>
                                 <div className='w-full min-h-[300px] md:min-h-[400px] lg:min-h-[calc(100vh_-_280px)]'>
                                     <Image
-                                        src={value}
+                                        src={`https://drive.google.com/uc?export=view&id=${value.link}`}
                                         alt='banner 1'
                                         layout='fill'
                                         loading='lazy'
@@ -194,7 +203,7 @@ export default function Home() {
                                     title: _item.title,
                                     description: _item.description || '',
                                     link: '',
-                                    linkImage: _item.linkImage,
+                                    linkImage: `https://drive.google.com/uc?export=view&id=${dataMediaService[_index].link}`,
                                     mode: 'dich-vu',
                                     link: _item.link,
                                 }}
