@@ -63,7 +63,7 @@ export const projectMedia = [
     {
         id: 3,
         title: 'Dự án đã làm',
-        slug: 'du-an-da-lam/avatar',
+        slug: 'avatar',
         media: [
             {
                 name: 'conggo',
@@ -107,10 +107,13 @@ export const projectMedia = [
             },
         ],
     },
+];
+
+export const projectMediaFiles = [
     {
-        id: 4,
-        title: 'Dự án đã làm',
-        slug: 'du-an-da-lam/conggo',
+        id: 1,
+        title: 'Cổng gỗ',
+        slug: 'cong-go',
         media: [
             {
                 type: 'image',
@@ -147,9 +150,9 @@ export const projectMedia = [
         ],
     },
     {
-        id: 5,
-        title: 'Dự án đã làm',
-        slug: 'du-an-da-lam/dotho',
+        id: 2,
+        title: 'Đồ thờ',
+        slug: 'do-tho',
         media: [
             {
                 type: 'video',
@@ -157,11 +160,11 @@ export const projectMedia = [
             },
             {
                 type: 'video',
-                link: '1CnKTz6OmvbCQwQsq*TGYAWv5yECp8MHR',
+                link: '1DGzD1qJAeiAFH96PIYnf9JVaEQjRFmC_',
             },
             {
                 type: 'video',
-                link: '1DGzD1qJAeiAFH96PIYnf9JVaEQjRFmC*',
+                link: '1CnKTz6OmvbCQwQsq_TGYAWv5yECp8MHR',
             },
             {
                 type: 'video',
@@ -243,9 +246,9 @@ export const projectMedia = [
         ],
     },
     {
-        id: 6,
-        title: 'Dự án đã làm',
-        slug: 'du-an-da-lam/nhabagian',
+        id: 3,
+        title: 'Nhà 3 gian',
+        slug: 'nha-3-gian',
         media: [
             {
                 type: 'video',
@@ -319,9 +322,9 @@ export const projectMedia = [
         ],
     },
     {
-        id: 7,
-        title: 'Dự án đã làm',
-        slug: 'du-an-da-lam/nhanamgian',
+        id: 4,
+        title: 'Nhà 5 gian',
+        slug: 'nha-5-gian',
         media: [
             {
                 type: 'image',
@@ -383,9 +386,9 @@ export const projectMedia = [
         ],
     },
     {
-        id: 8,
-        title: 'Dự án đã làm',
-        slug: 'du-an-da-lam/nhatammaicodien',
+        id: 5,
+        title: 'Nhà 8 mái cổ điển',
+        slug: 'nha-8-mai-co-dien',
         media: [
             {
                 type: 'image',
@@ -431,9 +434,9 @@ export const projectMedia = [
         ],
     },
     {
-        id: 9,
-        title: 'Dự án đã làm',
-        slug: 'du-an-da-lam/nhacau',
+        id: 6,
+        title: 'Nhà cầu',
+        slug: 'nha-cau',
         media: [
             {
                 type: 'video',
@@ -466,9 +469,9 @@ export const projectMedia = [
         ],
     },
     {
-        id: 10,
-        title: 'Dự án đã làm',
-        slug: 'du-an-da-lam/nhalucgiac',
+        id: 7,
+        title: 'Nhà lục giác',
+        slug: 'nha-luc-giac',
         media: [
             {
                 type: 'video',
@@ -501,9 +504,9 @@ export const projectMedia = [
         ],
     },
     {
-        id: 11,
-        title: 'Dự án đã làm',
-        slug: 'du-an-da-lam/noithat',
+        id: 8,
+        title: 'Nội thất',
+        slug: 'noi-that',
         media: [
             {
                 type: 'image',

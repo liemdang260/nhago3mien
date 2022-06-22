@@ -5,18 +5,7 @@ import { Pagination, Autoplay, EffectCube } from 'swiper';
 import Image from 'next/image';
 import Title from 'components/common/Title';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-
-const images = [
-    '/images/Banner_con/1.jpg',
-    '/images/Banner_con/2.jpg',
-    '/images/Banner_con/3.jpg',
-    '/images/Banner_con/4.jpg',
-    '/images/Banner_con/5.jpg',
-    '/images/Banner_con/6.jpg',
-    '/images/Banner_con/7.jpg',
-    '/images/Banner_con/8.jpg',
-    '/images/Banner_con/9.jpg',
-];
+import { asideBanner } from 'constants/hinh-anh-va-video';
 
 function About() {
     return (
@@ -44,12 +33,12 @@ function About() {
                             shadowScale: 0.94,
                         }}
                     >
-                        {images &&
-                            images.map((value, index) => (
+                        {asideBanner &&
+                            asideBanner.map((value, index) => (
                                 <SwiperSlide key={index}>
                                     <div className='w-full lg:h-[240px] xl:h-[300px]'>
                                         <Image
-                                            src={value}
+                                            src={`https://drive.google.com/uc?export=view&id=${value.link}`}
                                             alt={`banner ${index}`}
                                             layout='fill'
                                             loading='lazy'

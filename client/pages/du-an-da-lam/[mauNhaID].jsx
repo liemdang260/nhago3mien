@@ -1,10 +1,10 @@
 import React from 'react';
-import projects from 'constants/du-an-da-lam';
-import fs from 'fs';
-import path from 'path';
+// import fs from 'fs';
+// import path from 'path';
 import Album from 'components/common/Album';
 import Breadcrumb from 'components/common/SideBar/Breadcrumb';
 import Head from 'next/head';
+import projects, { projectMediaFiles } from 'constants/du-an-da-lam';
 
 function DetailHomeTemplate({ data, title, slug, description }) {
     return (
@@ -32,11 +32,14 @@ function DetailHomeTemplate({ data, title, slug, description }) {
 export default DetailHomeTemplate;
 
 export async function getStaticPaths() {
-    const dirs = fs.readdirSync(path.join('public', 'du_an_da_lam'), {
-        encoding: 'utf-8',
-    });
-    const paths = dirs.map((dir, index) => ({
-        params: { mauNhaID: dir },
+    // const dirs = fs.readdirSync(path.join('public', 'du_an_da_lam'), {
+    //     encoding: 'utf-8',
+    // });
+    // const paths = dirs.map((dir, index) => ({
+    //     params: { mauNhaID: dir },
+    // }));
+    const paths = Object.keys(projects).map((projectSlug) => ({
+        params: { mauNhaID: projectSlug },
     }));
     return {
         paths,
@@ -46,10 +49,12 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
     const { params } = context;
-    const files = fs.readdirSync(
-        path.join('public', 'du_an_da_lam', params.mauNhaID),
+    // const files = fs.readdirSync(
+    //     path.join('public', 'du_an_da_lam', params.mauNhaID),
+    // );
+    const mediaObject = projectMediaFiles.find(
+        (project) => project.slug === params.mauNhaID,
     );
-
     const addDescription = (title) => {
         let description = '';
         switch (title) {
@@ -73,20 +78,38 @@ export async function getStaticProps(context) {
         return description;
     };
 
-    const data = files.map((filename, index) => ({
+    // const data = files.map((filename, index) => ({
+    //     id: index,
+    //     original: `/du_an_da_lam/${params.mauNhaID}/${filename}`,
+    //     thumbnail: filename.includes('.mp4')
+    //         ? '/images/placeholderThumbnail.jpeg'
+    //         : `/du_an_da_lam/${params.mauNhaID}/${filename}`,
+    //     embedUrl: filename.includes('.mp4')
+    //         ? `/du_an_da_lam/${params.mauNhaID}/${filename}`
+    //         : '',
+    //     thumbnailClass: filename.includes('.mp4')
+    //         ? 'video-featured-thumb'
+    //         : 'featured-thumb',
+    //     originalClass: filename.includes('.mp4') ? '' : 'featured-slide',
+    //     isVideo: filename.includes('.mp4'),
+    // }));
+    const data = mediaObject.media.map((mediaData, index) => ({
         id: index,
-        original: `/du_an_da_lam/${params.mauNhaID}/${filename}`,
-        thumbnail: filename.includes('.mp4')
-            ? '/images/placeholderThumbnail.jpeg'
-            : `/du_an_da_lam/${params.mauNhaID}/${filename}`,
-        embedUrl: filename.includes('.mp4')
-            ? `/du_an_da_lam/${params.mauNhaID}/${filename}`
-            : '',
-        thumbnailClass: filename.includes('.mp4')
-            ? 'video-featured-thumb'
-            : 'featured-thumb',
-        originalClass: filename.includes('.mp4') ? '' : 'featured-slide',
-        isVideo: filename.includes('.mp4'),
+        original: `https://drive.google.com/uc?export=view&id=${mediaData.link}`,
+        thumbnail:
+            mediaData.type === 'video'
+                ? '/images/placeholderThumbnail.jpeg'
+                : `https://drive.google.com/uc?export=view&id=${mediaData.link}`,
+        embedUrl:
+            mediaData.type === 'video'
+                ? `https://drive.google.com/uc?export=view&id=${mediaData.link}`
+                : '',
+        thumbnailClass:
+            mediaData.type === 'video'
+                ? 'video-featured-thumb'
+                : 'featured-thumb',
+        originalClass: mediaData.type === 'video' ? '' : 'featured-slide',
+        isVideo: mediaData.type === 'video',
     }));
     return {
         props: {

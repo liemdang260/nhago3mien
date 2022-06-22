@@ -10,7 +10,7 @@ import Trait from 'components/home/Trait';
 import Title from 'components/common/Title';
 import { projectMedia } from '../constants/du-an-da-lam';
 
-const images = ['/main-banner1.jpg', '/main-banner2.jpg', '/main-banner3.jpg'];
+// const images = ['/main-banner1.jpg', '/main-banner2.jpg', '/main-banner3.jpg'];
 
 const LibraryData = [
     {
