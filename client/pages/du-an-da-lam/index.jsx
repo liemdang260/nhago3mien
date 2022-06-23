@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCards } from 'swiper';
 import Breadcrumb from 'components/common/SideBar/Breadcrumb';
+import { projectMediaFiles } from 'constants/du-an-da-lam';
 
 const dummyData = [
     {
@@ -628,13 +629,29 @@ const AllHomeTemplate = () => {
                     >
                         {params.dummyData.map((_item, _index) => (
                             <SwiperSlide key={_index}>
-                                <Image
-                                    src={_item.linkImage}
-                                    alt='Errow while display image'
-                                    loading='lazy'
-                                    width={500}
-                                    height={350}
-                                />
+                                {_item.type === 'video' ? (
+                                    <video
+                                        autoPlay
+                                        muted
+                                        style={{
+                                            height: '293px',
+                                            width: '410px',
+                                        }}
+                                    >
+                                        <source
+                                            src={`https://drive.google.com/uc?export=download&id=${_item.link}`}
+                                            type='video/mp4'
+                                        ></source>
+                                    </video>
+                                ) : (
+                                    <Image
+                                        src={`https://drive.google.com/uc?export=view&id=${_item.link}`}
+                                        alt='Errow while display image'
+                                        loading='lazy'
+                                        width={500}
+                                        height={350}
+                                    />
+                                )}
                             </SwiperSlide>
                         ))}
                         <div className='w-full my-2 text-center text-base sm:text-2xl'>
@@ -702,127 +719,41 @@ const AllHomeTemplate = () => {
                     } mt-6`}
                 >
                     <AnimatePresence>
-                        <div
-                            className={`${
-                                gridLayout ? '' : 'my-2'
-                            } col-start-1 col-end-3`}
-                        >
-                            <GroupMauNha
-                                params={{
-                                    dummyData: dummyData2.filter(
-                                        (_item) => _item.type == 'nha_5_gian',
-                                    ),
-                                    title: 'Nhà 5 gian',
-                                    slug: 'nha-5-gian',
-                                }}
-                            />
-                        </div>
-                        <div
-                            className={`${
-                                gridLayout ? '' : 'my-2'
-                            } col-start-1 col-end-3 sm:col-start-3 sm:col-end-5`}
-                        >
-                            <GroupMauNha
-                                params={{
-                                    dummyData: dummyData2.filter(
-                                        (_item) => _item.type == 'cong_go',
-                                    ),
-                                    title: 'Cổng gỗ',
-                                    slug: 'cong-go',
-                                }}
-                            />
-                        </div>
-                        <div
-                            className={`${
-                                gridLayout ? '' : 'my-2'
-                            } col-start-1 col-end-3`}
-                        >
-                            <GroupMauNha
-                                params={{
-                                    dummyData: dummyData2.filter(
-                                        (_item) => _item.type == 'do_tho',
-                                    ),
-                                    title: 'Đồ thờ',
-                                    slug: 'do-tho',
-                                }}
-                            />
-                        </div>
-                        <div
-                            className={`${
-                                gridLayout ? '' : 'my-2'
-                            } col-start-1 col-end-3 sm:col-start-3 sm:col-end-5`}
-                        >
-                            <GroupMauNha
-                                params={{
-                                    dummyData: dummyData2.filter(
-                                        (_item) => _item.type == 'nha_3_gian',
-                                    ),
-                                    title: 'Nhà 3 gian',
-                                    slug: 'nha-3-gian',
-                                }}
-                            />
-                        </div>
-                        <div
-                            className={`${
-                                gridLayout ? '' : 'my-2'
-                            } col-start-1 col-end-3`}
-                        >
-                            <GroupMauNha
-                                params={{
-                                    dummyData: dummyData2.filter(
-                                        (_item) =>
-                                            _item.type == 'nha_8_mai_co_dien',
-                                    ),
-                                    title: 'Nhà 8 mái cổ điển',
-                                    slug: 'nha-8-mai-co-dien',
-                                }}
-                            />
-                        </div>
-                        <div
-                            className={`${
-                                gridLayout ? '' : 'my-2'
-                            } col-start-1 col-end-3 sm:col-start-3 sm:col-end-5`}
-                        >
-                            <GroupMauNha
-                                params={{
-                                    dummyData: dummyData2.filter(
-                                        (_item) => _item.type == 'nha_cau',
-                                    ),
-                                    title: 'Nhà cầu',
-                                    slug: 'nha-cau',
-                                }}
-                            />
-                        </div>
-                        <div
-                            className={`${
-                                gridLayout ? '' : 'my-2'
-                            }col-start-1 col-end-3`}
-                        >
-                            <GroupMauNha
-                                params={{
-                                    dummyData: dummyData2.filter(
-                                        (_item) => _item.type == 'nha_luc_giac',
-                                    ),
-                                    title: 'Nhà lục giác',
-                                    slug: 'nha-luc-giac',
-                                }}
-                            />
-                        </div>
-                        <div
-                            className={`${
-                                gridLayout ? '' : 'my-2'
-                            } col-start-1 col-end-3 sm:col-start-3 sm:col-end-5`}
-                        >
-                            <GroupMauNha
-                                params={{
-                                    dummyData: dummyData2.filter(
-                                        (_item) => _item.type == 'noi_that',
-                                    ),
-                                    title: 'Nội thất',
-                                    slug: 'noi-that',
-                                }}
-                            />
-                        </div>
+                        {projectMediaFiles.map((_item, _index) => {
+                            if (_index % 2 == 0)
+                                return (
+                                    <div
+                                        className={`${
+                                            gridLayout ? '' : 'my-2'
+                                        } col-start-1 col-end-3`}
+                                    >
+                                        <GroupMauNha
+                                            params={{
+                                                dummyData: _item.media,
+                                                title: _item.title,
+                                                slug: _item.slug,
+                                            }}
+                                        />
+                                    </div>
+                                );
+                            else {
+                                return (
+                                    <div
+                                        className={`${
+                                            gridLayout ? '' : 'my-2'
+                                        } col-start-1 col-end-3 sm:col-start-3 sm:col-end-5`}
+                                    >
+                                        <GroupMauNha
+                                            params={{
+                                                dummyData: _item.media,
+                                                title: _item.title,
+                                                slug: _item.slug,
+                                            }}
+                                        />
+                                    </div>
+                                );
+                            }
+                        })}
                     </AnimatePresence>
                 </motion.div>
             </div>

@@ -13,56 +13,6 @@ import { referenceThumbnail } from 'constants/thu-vien-tu-lieu';
 
 // const images = ['/main-banner1.jpg', '/main-banner2.jpg', '/main-banner3.jpg'];
 
-const MauNhaData = [
-    {
-        id: 1,
-        title: 'Cổng gỗ',
-        linkImage: '/images/Avata_du_an_da_lam/1.jpg',
-        link: 'cong-go',
-    },
-    {
-        id: 2,
-        title: 'Đồ thờ',
-        linkImage: '/images/Avata_du_an_da_lam/2.jpg',
-        link: 'do-tho',
-    },
-    {
-        id: 3,
-        title: 'Nhà 5 gian',
-        linkImage: '/images/Avata_du_an_da_lam/3.jpg',
-        link: 'nha-5-gian',
-    },
-    {
-        id: 4,
-        title: 'Nhà 3 gian',
-        linkImage: '/images/Avata_du_an_da_lam/4.jpg',
-        link: 'nha-3-gian',
-    },
-    {
-        id: 5,
-        title: 'Nhà cầu',
-        linkImage: '/images/Avata_du_an_da_lam/5.jpg',
-        link: 'nha-cau',
-    },
-    {
-        id: 6,
-        title: 'Nhà có 8 mái',
-        linkImage: '/images/Avata_du_an_da_lam/6.jpg',
-        link: 'nha-co-8-mai',
-    },
-    {
-        id: 7,
-        title: 'Nhà lục giác',
-        linkImage: '/images/Avata_du_an_da_lam/7.jpg',
-        link: 'nha-luc-giac',
-    },
-    {
-        id: 8,
-        title: 'Nội thất',
-        linkImage: '/images/Avata_du_an_da_lam/8.jpg',
-        link: 'noi-that',
-    },
-];
 const ServicesData = [
     {
         id: 1,
@@ -97,6 +47,10 @@ export default function Home() {
 
     const dataMediaBannerChinh = projectMedia.filter(
         (_item) => _item.slug == 'banner-chinh',
+    )[0].media;
+
+    const dataMediaBannerService = projectMedia.filter(
+        (_item) => _item.slug == 'avatar',
     )[0].media;
 
     return (
@@ -179,7 +133,7 @@ export default function Home() {
             <div className='py-10'>
                 <GridLayoutMauNha
                     title='Dự án đã làm'
-                    data={MauNhaData}
+                    data={dataMediaBannerService}
                     hasPagination
                     mode='du-an-da-lam'
                 />

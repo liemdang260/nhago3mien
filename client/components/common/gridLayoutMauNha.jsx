@@ -137,9 +137,9 @@ const GridLayoutMauNha = ({
                                     title: item.title,
                                     codeProduct: item.codeProduct || '',
                                     description: item.description || '',
-                                    linkImage: item.linkImage,
+                                    linkImage: `https://drive.google.com/uc?export=view&id=${item.link}`,
                                     mode: mode,
-                                    link: item.link,
+                                    link: item.name,
                                 }}
                             />
                         </SwiperSlide>
