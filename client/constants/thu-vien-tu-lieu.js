@@ -7,6 +7,50 @@ const references = {
     'van-chuyen-den-cong-trinh': 'Vận chuyển đến công trình',
 };
 
+export const referenceThumbnail = [
+    {
+        id: 1,
+        title: 'Đúc chạm',
+        linkImage:
+            'https://drive.google.com/uc?export=view&id=1IHe-PMohe0f1RIqR_9yHttwlic8EfYEf',
+        link: 'duc-cham',
+    },
+    {
+        id: 2,
+        title: 'Hoàn thành',
+        linkImage:
+            'https://drive.google.com/uc?export=view&id=17Pbbtp4eBVIKi3w2QcN1fFmZoK5XcMkV',
+        link: 'hoan-thanh',
+    },
+    {
+        id: 3,
+        title: 'Lắp dựng',
+        linkImage:
+            'https://drive.google.com/uc?export=view&id=11b0JMkMDq_zaBd_LPGDER8_0R2eMa4aZ',
+        link: 'lap-dung',
+    },
+    {
+        id: 4,
+        title: 'Nhập gỗ',
+        linkImage:
+            'https://drive.google.com/uc?export=view&id=1wLCYOWwKihNbn4MV6qD8Y4bVN5LnC8pH',
+        link: 'nhap-go',
+    },
+    {
+        id: 5,
+        title: 'Sàm gỗ',
+        linkImage:
+            'https://drive.google.com/uc?export=view&id=1PXSTFU39vRKKP-8YXNONkHwSMcgVKvaB',
+        link: 'sam-go',
+    },
+    {
+        id: 6,
+        title: 'Vận chuyển đến công trình',
+        linkImage:
+            'https://drive.google.com/uc?export=view&id=1Z3hBEkdkbbbPFwu3-EZa2xVBOESOe2MY',
+        link: 'van-chuyen-den-cong-trinh',
+    },
+];
 export const referenceMediaFiles = [
     {
         id: 1,
@@ -533,44 +577,203 @@ export const referenceMediaFiles = [
         media: [
             {
                 type: 'image',
-                link: '16tCfwJgKZ4kSJ444AgYjZCCE1m1*mBI0',
+                link: '1VSl2wtiRDNpyfFdooPNh4lWn5zeqXxGj',
             },
             {
                 type: 'image',
-                link: '18dnMFCzkVSUoz1xZXOU1sf7e9NWP4v3o',
+                link: '1GlE6I7ND2ak8AXABziY8-Rtf9fLZCgbp',
             },
             {
                 type: 'image',
-                link: '1NJGH3sipgCkI-Jmd-MF7V0XX5zMnu7Tv',
+                link: '1JIPjlz72X5PMAkq1jz1wtfmYRW5BNIYS',
             },
             {
                 type: 'image',
-                link: '1RRcBzLCgSdywjuoIPbr7vLEj2tcZIBeP',
+                link: '1pbftX-DSqBckROb1urjyYR26IRkCHnhY',
             },
             {
                 type: 'image',
-                link: '1R*-BdKX2BA1vD5RUZ-NUH2ujxkfc3uC6',
+                link: '1OIQLJP4khGCv0GARoQeLBg8h42IoQPrL',
             },
             {
                 type: 'image',
-                link: '1WGGvDXK4glEA2RJZmXfCZPNRLn5fn-HP',
+                link: '1npdkLYFgRlZo3HhYCqTyyoVlISfSYdq5',
             },
             {
                 type: 'image',
-                link: '1YN_CGkAW_Lb4ZUAB3dUDgbi4XTRpH7GW',
+                link: '1_fpEbuWnafHTdbiRjtpkxCMnOxkmLVRX',
             },
             {
                 type: 'image',
-                link: '1ZLLDyy121aRQStUhHI7KfRnICyUVgUsg',
+                link: '1JQbiK7jgpNr73Bn67a7U5ZSYv1RCap1P',
             },
             {
                 type: 'image',
-                link: '1lbX6A0-jSAj1EnMaIU7W16303OdhXpRn',
+                link: '1LepVtg0jdQfM90Xlp7dOnjZbedVmHG4n',
             },
-
             {
                 type: 'image',
-                link: '1pHdor1NJ36HFgQ2MLfgGkiMCJzjxX9ZH',
+                link: '19pkJF2Peayj2azut0YupWNZFi73R3xTz',
+            },
+            {
+                type: 'image',
+                link: '1Uv0Tvl187qjfmPvZiVJvblwDIh4PTKIe',
+            },
+            {
+                type: 'image',
+                link: '1kjuvWWpss0vCF4-0ucqPEMFfJX7tjmrT',
+            },
+            {
+                type: 'image',
+                link: '1gfn5eZGXe6fB3PZ-qiRBRSggDdcTAhOu',
+            },
+            {
+                type: 'image',
+                link: '1K-uYB2rsfJEHfsczTD_MEwdCJXyh30OE',
+            },
+            {
+                type: 'image',
+                link: '15bvS_RyVR6WdZdoj0cGcNpIwSRIRkGyJ',
+            },
+            {
+                type: 'image',
+                link: '1rfV-oDfj6v1-gYp7TJHttamONZNjN3ET',
+            },
+            {
+                type: 'image',
+                link: '1n3h7jb9TXI048FR9uS8dLwXi4bn1VPpf',
+            },
+            {
+                type: 'image',
+                link: '1MLbqR2RHLiX-E545bxBC419OWh_mDHOa',
+            },
+            {
+                type: 'image',
+                link: '1L7_a2ZifiWKmXwUtJ3Qylg03GCfwuFMM',
+            },
+            {
+                type: 'image',
+                link: '13Z8BA59R_w5OqNxvWmLuOyp1Sul3S2Hb',
+            },
+            {
+                type: 'image',
+                link: '1QewZ1Aveg3J9HLjNribY66EJi0zdvHBw',
+            },
+            {
+                type: 'image',
+                link: '12P-almpsFk68nYWDC9WNFG3Y6WCX2qud',
+            },
+            {
+                type: 'image',
+                link: '1wV1C3SjXbEM9EXXVjzDqf8grOdDvf615',
+            },
+            {
+                type: 'image',
+                link: '1YLpuF9JCZNQC1YxtzWV0YpVRO7nv1cTh',
+            },
+            {
+                type: 'image',
+                link: '1pi64bWl9r7q3KQP3Um3Q2ECqIHambuon',
+            },
+            {
+                type: 'image',
+                link: '1EOOMaA1xxqMah30-C4_Vwd1kNNVcYKTj',
+            },
+            {
+                type: 'image',
+                link: '1TECTN909FQrBA7JSo9cDL0MWz--IIRwY',
+            },
+            {
+                type: 'image',
+                link: '1IoyEc_r-bx570R63l8DXm1-XC7O5bmAr',
+            },
+            {
+                type: 'image',
+                link: '1J9WreCpUb4UWSw88n2Q5IxwRhSWDInKm',
+            },
+            {
+                type: 'image',
+                link: '1PT5ZbxzKU7PfY-wzELz9D9vzB6cxiqb0',
+            },
+            {
+                type: 'image',
+                link: '12Kfj5ZduerYdieCYY6TnNVVKR_LygMXg',
+            },
+            {
+                type: 'image',
+                link: '1Q9jXBLZ-GrPAEhVYTiEWm2ECWUwVM7xq',
+            },
+            {
+                type: 'image',
+                link: '1rbA2dic06gXBAqYCet7PwmWmFG8_kD31',
+            },
+            {
+                type: 'image',
+                link: '1D90_3yX7UkyTO22HOSHe-VG8WbnLtf6X',
+            },
+            {
+                type: 'image',
+                link: '1x1Hsql4zMgTKgML3JhRD-tWS2gqcqYyY',
+            },
+            {
+                type: 'image',
+                link: '1wtvZI4nu7op11jbLzVqBbHKa9fjXsxyR',
+            },
+            {
+                type: 'image',
+                link: '15B6h2DULas6CwcaRAnpZlmGYOrXouu-_',
+            },
+            {
+                type: 'image',
+                link: '1rPX8XgjCzWBrYv8wrBczu205gMy_kOU3',
+            },
+            {
+                type: 'image',
+                link: '14u28IuUjlsrnUB-oeb-DzFfcgOfTCq6-',
+            },
+            {
+                type: 'image',
+                link: '1pGowmUYZhzKFg-id0lSZGS-SQwup2wkO',
+            },
+            {
+                type: 'image',
+                link: '1RNcr76XHs8mNU1JIM9HE6aqJCRIGvj7X',
+            },
+            {
+                type: 'image',
+                link: '1hBBPOQvj3TkvG6ARE9hEp_GqRf8JHOXy',
+            },
+            {
+                type: 'image',
+                link: '16XRZhyTzqzLIgn517nY50YgmlGKi911G',
+            },
+            {
+                type: 'image',
+                link: '1Jw5B4u_jnowhyydqY6NTyBx4Pv3Z0KDh',
+            },
+            {
+                type: 'image',
+                link: '1WLXCu0MOX-3vHTJ8C8Qd_iiZT4ZKCmCB',
+            },
+            {
+                type: 'image',
+                link: '177vXjfQBimcyGINleBJvGCCjDbOBD_UG',
+            },
+            {
+                type: 'image',
+                link: '1fwoI8wFDeFrP5_H1w8mR8Xgftkuafxg7',
+            },
+            {
+                type: 'image',
+                link: '1DEVrP6TZf5YXuJBf4ebWslfgzzlrwhr9',
+            },
+            {
+                type: 'video',
+                link: '1gxYscpaJe2pFMVc4vJIgjGUd4PrOUCTx',
+            },
+            {
+                type: 'video',
+                link: '1yESYuTYE_01EfnDEzRsdWrsEJ2_TGSNP',
             },
         ],
     },

@@ -9,47 +9,9 @@ import Commit from 'components/home/Commit';
 import Trait from 'components/home/Trait';
 import Title from 'components/common/Title';
 import { projectMedia } from '../constants/du-an-da-lam';
+import { referenceThumbnail } from 'constants/thu-vien-tu-lieu';
 
 // const images = ['/main-banner1.jpg', '/main-banner2.jpg', '/main-banner3.jpg'];
-
-const LibraryData = [
-    {
-        id: 1,
-        title: 'Đúc chạm',
-        linkImage: '/images/Avata_thu_vien_tu_lieu/1.jpg',
-        link: 'duc-cham',
-    },
-    {
-        id: 2,
-        title: 'Hoàn thành',
-        linkImage: '/images/Avata_thu_vien_tu_lieu/2.jpg',
-        link: 'hoan-thanh',
-    },
-    {
-        id: 3,
-        title: 'Lắp dựng',
-        linkImage: '/images/Avata_thu_vien_tu_lieu/3.jpg',
-        link: 'lap-dung',
-    },
-    {
-        id: 4,
-        title: 'Nhập gỗ',
-        linkImage: '/images/Avata_thu_vien_tu_lieu/4.jpg',
-        link: 'nhap-go',
-    },
-    {
-        id: 5,
-        title: 'Sàm gỗ',
-        linkImage: '/images/Avata_thu_vien_tu_lieu/5.jpg',
-        link: 'sam-go',
-    },
-    {
-        id: 6,
-        title: 'Vận chuyển đến công trình',
-        linkImage: '/images/Avata_thu_vien_tu_lieu/6.jpg',
-        link: 'van-chuyen-den-cong-trinh',
-    },
-];
 
 const MauNhaData = [
     {
@@ -226,7 +188,7 @@ export default function Home() {
             <div className='py-10'>
                 <GridLayoutMauNha
                     title='Thư viện tư liệu'
-                    data={LibraryData}
+                    data={referenceThumbnail}
                     hasPagination
                     mode='thu-vien-tu-lieu'
                 />
