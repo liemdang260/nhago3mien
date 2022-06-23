@@ -74,7 +74,6 @@ export default function Home() {
                                         src={`https://drive.google.com/uc?export=view&id=${value.link}`}
                                         alt='banner 1'
                                         layout='fill'
-                                        loading='lazy'
                                     />
                                 </div>
                             </SwiperSlide>
