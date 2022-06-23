@@ -11,44 +11,38 @@ export const referenceThumbnail = [
     {
         id: 1,
         title: 'Đúc chạm',
-        linkImage:
-            'https://drive.google.com/uc?export=view&id=1IHe-PMohe0f1RIqR_9yHttwlic8EfYEf',
-        link: 'duc-cham',
+        link: '1IHe-PMohe0f1RIqR_9yHttwlic8EfYEf',
+        name: 'duc-cham',
     },
     {
         id: 2,
         title: 'Hoàn thành',
-        linkImage:
-            'https://drive.google.com/uc?export=view&id=17Pbbtp4eBVIKi3w2QcN1fFmZoK5XcMkV',
-        link: 'hoan-thanh',
+        link: '17Pbbtp4eBVIKi3w2QcN1fFmZoK5XcMkV',
+        name: 'hoan-thanh',
     },
     {
         id: 3,
         title: 'Lắp dựng',
-        linkImage:
-            'https://drive.google.com/uc?export=view&id=11b0JMkMDq_zaBd_LPGDER8_0R2eMa4aZ',
-        link: 'lap-dung',
+        link: '11b0JMkMDq_zaBd_LPGDER8_0R2eMa4aZ',
+        name: 'lap-dung',
     },
     {
         id: 4,
         title: 'Nhập gỗ',
-        linkImage:
-            'https://drive.google.com/uc?export=view&id=1wLCYOWwKihNbn4MV6qD8Y4bVN5LnC8pH',
-        link: 'nhap-go',
+        link: '1wLCYOWwKihNbn4MV6qD8Y4bVN5LnC8pH',
+        name: 'nhap-go',
     },
     {
         id: 5,
         title: 'Sàm gỗ',
-        linkImage:
-            'https://drive.google.com/uc?export=view&id=1PXSTFU39vRKKP-8YXNONkHwSMcgVKvaB',
-        link: 'sam-go',
+        link: '1PXSTFU39vRKKP-8YXNONkHwSMcgVKvaB',
+        name: 'sam-go',
     },
     {
         id: 6,
         title: 'Vận chuyển đến công trình',
-        linkImage:
-            'https://drive.google.com/uc?export=view&id=1Z3hBEkdkbbbPFwu3-EZa2xVBOESOe2MY',
-        link: 'van-chuyen-den-cong-trinh',
+        link: '1Z3hBEkdkbbbPFwu3-EZa2xVBOESOe2MY',
+        name: 'van-chuyen-den-cong-trinh',
     },
 ];
 export const referenceMediaFiles = [
