@@ -125,6 +125,10 @@ export const projectMediaFiles = [
         media: [
             {
                 type: 'image',
+                link: '1nu6jDy_hD2YixgxUNFNwyosSKPg-CoLH',
+            },
+            {
+                type: 'image',
                 link: '10xY20eJXbW_BE7g0ivhWT4yVc0Adtc6M',
             },
             {
@@ -151,10 +155,6 @@ export const projectMediaFiles = [
                 type: 'image',
                 link: '1q4y9Nvg24bd50gYx-VoFZBse9pk88Qru',
             },
-            {
-                type: 'image',
-                link: '1q4y9Nvg24bd50gYx-VoFZBse9pk88Qru',
-            },
         ],
     },
     {
@@ -163,9 +163,14 @@ export const projectMediaFiles = [
         slug: 'do-tho',
         media: [
             {
+                type: 'image',
+                link: '13TN7d2V6PE8kRVZybrhyjk5SjmV4KI8U',
+            },
+            {
                 type: 'video',
                 link: '15BZMluhjpHcPRHNKFX88mUz0iGJWSMeW',
             },
+
             {
                 type: 'video',
                 link: '1DGzD1qJAeiAFH96PIYnf9JVaEQjRFmC_',
@@ -201,10 +206,6 @@ export const projectMediaFiles = [
 
             {
                 type: 'image',
-                link: '12T9Vw0BZlDjoPL0wuJ*gPFKreqCkwWFw',
-            },
-            {
-                type: 'image',
                 link: '13Fh90dW5Dm7d6GjHmEFawhqgWuvh-A0Y',
             },
             {
@@ -219,10 +220,7 @@ export const projectMediaFiles = [
                 type: 'image',
                 link: '1Ewcxun6zudu3UUDU7usWzF7TZ6240nyJ',
             },
-            {
-                type: 'image',
-                link: '1PGUR1cz6hgqD_OuQJIhGDxauB5tioMO',
-            },
+
             {
                 type: 'image',
                 link: '1RoaokV8OxI5-lN03n77IjjFLTeKSG7xD',
@@ -259,16 +257,12 @@ export const projectMediaFiles = [
         slug: 'nha-3-gian',
         media: [
             {
+                type: 'image',
+                link: '1Daxk2jyU7PNTPlKbDG8tM24jNE0-NOgV',
+            },
+            {
                 type: 'video',
                 link: '1GEfT7fq5zSOz3mZ4Sv7YbFewBiJZNz22',
-            },
-            {
-                type: 'image',
-                link: '183REnUW*vHLQPc6BvdBIjW8ddQxFEIcD',
-            },
-            {
-                type: 'image',
-                link: '18uN1jsbDlhPENO_eFbVpxMl_BQ-u4u7J*',
             },
             {
                 type: 'image',
@@ -336,6 +330,10 @@ export const projectMediaFiles = [
         media: [
             {
                 type: 'image',
+                link: '1Ryu1PNXCUneHW7RTHOmTqcc4kr28u3MI',
+            },
+            {
+                type: 'image',
                 link: '10Qsk-_W2yFZZu2dYrKqwk7hCv5yk7nQV',
             },
             {
@@ -400,8 +398,9 @@ export const projectMediaFiles = [
         media: [
             {
                 type: 'image',
-                link: '16tCfwJgKZ4kSJ444AgYjZCCE1m1*mBI0',
+                link: '1XRRdq_DFLH_1nNE4mH2Uimf__qI5Kw1A',
             },
+
             {
                 type: 'image',
                 link: '18dnMFCzkVSUoz1xZXOU1sf7e9NWP4v3o',
@@ -414,10 +413,7 @@ export const projectMediaFiles = [
                 type: 'image',
                 link: '1RRcBzLCgSdywjuoIPbr7vLEj2tcZIBeP',
             },
-            {
-                type: 'image',
-                link: '1R*-BdKX2BA1vD5RUZ-NUH2ujxkfc3uC6',
-            },
+
             {
                 type: 'image',
                 link: '1WGGvDXK4glEA2RJZmXfCZPNRLn5fn-HP',
@@ -447,6 +443,10 @@ export const projectMediaFiles = [
         slug: 'nha-cau',
         media: [
             {
+                type: 'image',
+                link: '1Pa67vGYJdAS7Y78_qXdZnCFYokR2nOrX',
+            },
+            {
                 type: 'video',
                 link: '1GpkU3W8FkWCCyCAxYCJmEXPqyjKS7aH5',
             },
@@ -462,10 +462,7 @@ export const projectMediaFiles = [
                 type: 'image',
                 link: '1UXzF9HiXSkiODutbP4giDoMzknDkTvYu',
             },
-            {
-                type: 'image',
-                link: '1X8OJfRmbsFwv88CejC2dO4kdSk5STjqf6',
-            },
+
             {
                 type: 'image',
                 link: '1bTflA795a_EG5ef1rtAbPQmr77strLGP',
@@ -481,6 +478,10 @@ export const projectMediaFiles = [
         title: 'Nhà lục giác',
         slug: 'nha-luc-giac',
         media: [
+            {
+                type: 'image',
+                link: '1vZmObmpOaE2TCvd-I_sdCN4ik2tqOpcC',
+            },
             {
                 type: 'video',
                 link: '10Op7DYTZCuGDH221Lh3WzuNDdsSzZy5G',
@@ -518,12 +519,13 @@ export const projectMediaFiles = [
         media: [
             {
                 type: 'image',
-                link: '12zkcsJoHeaLV4-pliLvcKzCsTG19opBd',
+                link: '13qqG0acAWpN5zrcxnpnZ9a0MW3ZUjsaQ',
             },
             {
                 type: 'image',
-                link: '14otc*0fG4vCKNlBdz8S0RznzkjxLk-I3',
+                link: '12zkcsJoHeaLV4-pliLvcKzCsTG19opBd',
             },
+
             {
                 type: 'image',
                 link: '1659MXAOomgi8tbDpQqlEY_29ET011aeJ',
@@ -609,10 +611,7 @@ export const projectMediaFiles = [
                 type: 'image',
                 link: '1pY_e7B4TQAp_h4JyIrkl8RpP7GxTrj6V',
             },
-            {
-                type: 'image',
-                link: '1rafWjAPi32TEa2GhLQ0O08EZ4JAO5UB*',
-            },
+
             {
                 type: 'image',
                 link: '1tYVPYfsuvge3_GeGnYPqh1DX2rXGoq8B',
